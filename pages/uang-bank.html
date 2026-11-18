@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uang, Kas &amp; Bank — Warteg Simulator Wiki</title>
+<meta name="description" content="Semua soal uang di Warteg Simulator: kas tunai 9 pecahan dan modal awal, bank dan ATM, QRIS, tagihan listrik dan air, ojek online, order online, sampai hadiah login harian.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="uang-bank">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Uang, Kas &amp; Bank</h1>
+      <p class="lede">Uang di game ini punya dua tempat tinggal: lembaran tunai di laci warung
+      dan saldo di bank. Keduanya punya peran masing-masing, dan beberapa pembayaran memotong
+      saldo bank lebih dulu sebelum menyentuh kas tunai.</p>
+
+      <h2>Kas fisik: 9 pecahan</h2>
+      <p>Laci warung menyimpan uang dalam 9 pecahan, dari Rp 100 sampai Rp 100.000, dan
+      masing-masing berupa lembar atau koin utuh. Jumlah awalmu seperti pada tabel berikut.</p>
+      <table class="price-table">
+        <thead><tr><th>Pecahan</th><th class="num">Jumlah Awal</th><th class="num">Subtotal</th></tr></thead>
+        <tbody>
+          <tr><td class="rp">100</td><td class="num">10</td><td class="rp">1.000</td></tr>
+          <tr><td class="rp">500</td><td class="num">8</td><td class="rp">4.000</td></tr>
+          <tr><td class="rp">1.000</td><td class="num">10</td><td class="rp">10.000</td></tr>
+          <tr><td class="rp">2.000</td><td class="num">5</td><td class="rp">10.000</td></tr>
+          <tr><td class="rp">5.000</td><td class="num">3</td><td class="rp">15.000</td></tr>
+          <tr><td class="rp">10.000</td><td class="num">1</td><td class="rp">10.000</td></tr>
+          <tr><td class="rp">20.000</td><td class="num">0</td><td class="rp">0</td></tr>
+          <tr><td class="rp">50.000</td><td class="num">0</td><td class="rp">0</td></tr>
+          <tr><td class="rp">100.000</td><td class="num">0</td><td class="rp">0</td></tr>
+        </tbody>
+      </table>
+      <p>Total kas awalmu Rp 50.000 tunai, ditambah saldo bank awal Rp 50.000. Kalau
+      dijumlah, kekayaan awalmu Rp 100.000.</p>
+      <div class="callout warn"><b>Kas fisik itu nyata:</b> uang kembalian pelanggan diambil
+      langsung dari laci. Sistem memakai pecahan terbesar dulu, lalu sisanya dikembalikan
+      sebagai kembalian. Pecahan kecil mudah habis, jadi sisakan selalu Rp 100, Rp 500, dan
+      Rp 1.000 di kas.</div>
+      <ul>
+        <li>Tunai yang masuk langsung dirapikan ke pecahan besar. Receh masuk dengan komposisi
+        berbeda: pecahan 5.000, 2.000, dan 1.000 diambil setengah rasionya, sedangkan 500 dan
+        100 masuk penuh.</li>
+        <li>Total uangmu dihitung dari jumlah kas ditambah saldo bank.</li>
+        <li>Riwayat mutasi bank menyimpan 30 transaksi terakhir.</li>
+      </ul>
+
+      <h2>Bank &amp; ATM</h2>
+      <ul>
+        <li><strong>QRIS masuk bank:</strong> sekitar 35% pelanggan warteg membayar lewat
+        QRIS. Uangnya langsung masuk saldo bank dan tidak perlu kembalian.</li>
+        <li><strong>ATM</strong> menawarkan <em>Tarik Tunai</em> dan <em>Setor Tunai</em>.
+        Penarikan keluar sebagai lembar utuh, sedangkan setoran bisa diketik sendiri atau
+        dipilih dari nominal cepat. Saldo kas dan bank diperiksa dulu sebelum transaksi
+        jalan.</li>
+        <li>Belanja dan pembayaran bisa memakai tunai dari kas atau QRIS dari bank.</li>
+      </ul>
+
+      <h2>Tagihan listrik &amp; air</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Hari notifikasi</td><td class="num">22</td><td>SMS "Tagihan Bulanan" dikirim pada hari ke-22 musim</td></tr>
+          <tr><td>Listrik</td><td class="rp">20.000 sampai 50.000</td><td>20.000 + acak 0 sampai 6 × 5.000</td></tr>
+          <tr><td>Air</td><td class="rp">10.000 sampai 22.500</td><td>10.000 + acak 0 sampai 5 × 2.500</td></tr>
+          <tr><td>Hasil tetap</td><td colspan="2">Besaran tagihan dihitung dari nomor periode, jadi periode yang sama selalu memberi tagihan yang sama</td></tr>
+          <tr><td>Pembayaran otomatis</td><td colspan="2">Saat musim berganti, yaitu hari ke-1 periode baru: dari <strong>bank dulu</strong>, sisanya dari kas tunai</td></tr>
+          <tr><td>Tunggakan</td><td colspan="2">Sisa yang tidak terbayar dicatat sebagai tunggakan listrik atau air, lalu ditambahkan ke tagihan periode berikutnya</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn"><b>Pastikan saldo cukup:</b> SMS tagihan mengingatkanmu bahwa
+      potongan otomatis jalan saat musim berganti, dari saldo bank lalu uang tunai. Kalau
+      saldonya kurang, kamu dapat SMS "baru terbayar sebagian" dan sisanya menunggak.</div>
+
+      <h2>Ojek online</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Tarif dasar</td><td class="rp">10.000</td></tr>
+          <tr><td>Tambahan</td><td class="rp">3.000 per peta</td><td>Dihitung dari jarak antar peta. Tarifnya 10.000 ditambah 3.000 kali jarak dikurangi satu, minimal nol</td></tr>
+          <tr><td>Tujuan</td><td class="num">9 destinasi</td><td>Warteg, Jalan 1 (Kafe), Sekolah, Jalan 2 (Masjid &amp; Papan Quest), Taman, Pasar, Pantai (Dermaga), Lapangan, Jalan Serba Ada</td></tr>
+          <tr><td>VIP</td><td class="chip good">gratis</td><td>Tarif 0 untuk pemain VIP</td></tr>
+          <tr><td>Batasan</td><td colspan="2">Tidak bisa dipesan saat acara warga berlangsung, atau dari peta yang tidak terhubung jalur, misalnya Gunung. Turun dulu lewat angkot</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Order online</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Ongkir</td><td class="rp">8.000</td></tr>
+          <tr><td>Gratis ongkir</td><td colspan="2">Pesanan lanjutan ke toko yang sama pada hari kirim yang sama tidak kena ongkir lagi</td></tr>
+          <tr><td>Kirim</td><td class="num">H+1</td><td>Barang tiba keesokan hari, masuk stok warung atau perabot, dan diumumkan lewat SMS</td></tr>
+          <tr><td>Toko</td><td colspan="2">Kang Cecep (ayam, ikan), Bu Lala (nasi, telur, bihun, orek, kentang, kangkung, sambal merah, sambal ijo, lalapan, minyak), Mei (perabot)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Login harian</h2>
+      <p>Hadiah login berputar dalam siklus 5 hari dan uangnya masuk ke kas tunai. Bolong
+      sehari saja, hitungan streak mulai dari awal lagi. Progresnya tersimpan di perangkatmu.</p>
+      <table class="price-table">
+        <thead><tr><th>Hari</th><th class="num">Uang</th><th>Bonus VIP</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="rp">10.000</td><td>5× nasi</td></tr>
+          <tr><td>2</td><td class="rp">20.000</td><td>5× orek tempe</td></tr>
+          <tr><td>3</td><td class="rp">30.000</td><td>5× bihun</td></tr>
+          <tr><td>4</td><td class="rp">50.000</td><td>5× sambal merah</td></tr>
+          <tr><td>5</td><td class="rp">100.000</td><td>5× lalapan</td></tr>
+        </tbody>
+      </table>
+      <p>Bonus item di kolom terakhir hanya untuk pemain VIP. Kalender game terdiri dari
+      3 musim (Panas, Cerah, Hujan) dengan 28 hari per musim, jadi satu tahun penuh 84 hari.
+      Tiap hari terbagi menjadi tiga fase: Pagi, Siang, dan Malam.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

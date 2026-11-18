@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buka Warung — Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan menjalankan warung Warteg Simulator: menyiapkan etalase, memasak, melayani pembeli, sampai menutup buku di akhir shift.">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../assets/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="warteg-shop">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Buka Warung</h1>
+      <p class="lede">Satu shift di warteg: menyiapkan etalase, memasak, melayani pembeli,
+      lalu menutup buku. Halaman ini menjelaskan urutannya dan angka yang membuat warung
+      ramai atau sepi.</p>
+
+      <div class="callout"><b>Sebelum bisa buka:</b> etalase wajib berisi nasi dan minimal
+      satu lauk. Tanpa itu, tombol buka warung tidak aktif.</div>
+
+      <h2>Dari buka sampai tutup</h2>
+      <ol>
+        <li><strong>Persiapan pagi.</strong> Isi nampan etalase, atur harga di panel kelola,
+        dan goreng stok awal.</li>
+        <li><strong>Buka warung.</strong> Membuka warung menghabiskan seluruh jatah action
+        di fase itu. Satu fase berjalan 300 detik.</li>
+        <li><strong>Layani pembeli.</strong> Ambil pesanan, masak, susun piring, lalu terima
+        pembayaran.</li>
+        <li><strong>Tutup buku.</strong> Rekap pelanggan, pendapatan, dan reputasi muncul di
+        akhir shift.</li>
+      </ol>
+      <p>Kalau kamu buka saat siang dan waktunya habis, warung lanjut buka sendiri di fase
+      malam dengan waktu yang direset. Stok yang habis total menutup warung lebih cepat,
+      dengan pesan “Dagangan ludes!”.</p>
+
+      <h2>Etalase dan nampan</h2>
+      <ul>
+        <li>Etalase punya 8 slot nampan. Di awal permainan baru 3 yang terbuka.</li>
+        <li>Slot sisanya dibeli di Toko Perabotan milik Mei.</li>
+        <li>Isi antar nampan bisa ditukar dengan menarik dan melepas.</li>
+      </ul>
+
+      <h2>Siapa yang datang</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Jeda datang</td><td>2-6 detik × pengali</td><td>Makin tinggi reputasi, makin ramai. Pengali turun dari 3,0 ke 1,25 saat reputasi mencapai 60</td></tr>
+          <tr><td>Kapasitas antrian</td><td>1 + reputasi ÷ 15</td><td>Maksimum 5 orang</td></tr>
+          <tr><td>Kesabaran dasar</td><td>40 detik</td><td>+6 detik per item pesanan, +8 per item gorengan</td></tr>
+          <tr><td>Pelanggan NPC</td><td>35%</td><td>Sisanya warga biasa</td></tr>
+          <tr><td>Bungkus (take away)</td><td>40%</td><td>Pilih piring atau bungkus saat menyusun</td></tr>
+          <tr><td>Kabur karena antrian penuh</td><td class="chip bad">rep −1</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Kabur karena harga mahal</td><td class="chip bad">rep −2</td><td>Pesanan batal bila harga lebih dari 1,6× harga wajar</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Memasak di wajan</h2>
+      <table class="price-table">
+        <thead><tr><th>Kondisi</th><th>Arti</th></tr></thead>
+        <tbody>
+          <tr><td>KOSONG</td><td>Siap dipakai</td></tr>
+          <tr><td>MINYAK</td><td>Minyak sudah dituang. Satu sesi goreng memakai 1 unit, dan 1 liter cukup untuk 10 kali masak</td></tr>
+          <tr><td>GORENG</td><td>6 detik. Jangan diangkat dulu</td></tr>
+          <tr><td>MATANG</td><td>Siap dipindah ke rak</td></tr>
+          <tr><td>GOSONG</td><td>8 detik setelah matang. Hangus dan harus dibuang</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Bintang dan reputasi</h2>
+      <p>Waktu kamu menekan “Selesaikan”, pesanan mulai dari 5 bintang. Setiap kesalahan
+      memotong nilainya:</p>
+      <table class="price-table">
+        <thead><tr><th>Kondisi</th><th>Efek</th></tr></thead>
+        <tbody>
+          <tr><td>Item kurang, lebih, atau salah mode (piring vs bungkus)</td><td>−1 per kesalahan</td></tr>
+          <tr><td>Menunggu &gt; 50% kesabaran</td><td>−1</td></tr>
+          <tr><td>Menunggu &gt; 80% kesabaran</td><td>−2</td></tr>
+          <tr><td>Harga &gt; 1,6× harga wajar</td><td>−2</td></tr>
+          <tr><td>Harga &gt; 1,25× harga wajar</td><td>−1</td></tr>
+          <tr><td>Harga &lt; 0,85× harga wajar</td><td><span class="chip good">+1</span></td></tr>
+        </tbody>
+      </table>
+      <p>Reputasi yang didapat per bintang: 5★ +3, 4★ +2, 3★ +1, 2★ tidak berubah,
+      1★ <span class="chip bad">−2</span>.</p>
+
+      <h2>Bayar dan kembalian</h2>
+      <ul>
+        <li>Sekitar 35% pembeli memilih QRIS. Uangnya langsung masuk bank dan tidak perlu
+        kembalian.</li>
+        <li>Sisanya bayar tunai: 20% pas, selebihnya pakai uang besar antara Rp 5.000 dan
+        Rp 100.000. Ada 15% kemungkinan mereka hanya membawa Rp 50.000 atau Rp 100.000.</li>
+        <li>Uang yang lebih besar dari harga membuka minigame kembalian. Susun pecahan
+        sesuai selisihnya.</li>
+        <li>Kalau gagal, sistem menawarkan QRIS. Menolaknya bisa memicu komplain
+        “Masa warteg gak ada kembalian sih…” dengan peluang 30% dan
+        <span class="chip bad">−2★</span>.</li>
+      </ul>
+      <div class="callout warn"><b>Kas di laci ikut berkurang:</b> uang kembalian diambil
+      dari laci. Pecahan kecil bisa habis, jadi sisakan selalu Rp 100, Rp 500, dan Rp 1.000.</div>
+
+      <h2>Laporan tutup warung</h2>
+      <p>Setelah tutup, laporan shift merangkum jumlah pelanggan yang dilayani, yang puas,
+      yang salah, yang kabur karena harga atau antrian, gorengan hangus, pendapatan,
+      perubahan reputasi, serta rasio QRIS dan tunai. Satu warung hanya bisa dibuka sekali
+      per fase.</p>
+
+      <h2>Bungkus untuk dibawa pulang</h2>
+      <p>Mode bungkus tersedia saat pagi, atau malam setelah shift selesai. Isinya wajib
+      nasi plus minimal satu lauk. Nasi bungkus tersimpan di tas dengan isi yang tercatat,
+      dan bisa dipakai untuk pesanan antar maupun kado.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

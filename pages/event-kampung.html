@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Kampung — Warteg Simulator Wiki</title>
+<meta name="description" content="Event Kampung Warteg Simulator: Kampung Meriah dan Cerdas Cermat, tanggalnya di tiap musim, lokasi acara, urutan jalannya, skor, hadiah juara Rp 50.000, dan pengumuman lewat SMS.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="event-kampung">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Event Kampung</h1>
+      <p class="lede">Ada dua acara besar di kampung: Kampung Meriah dan Cerdas Cermat. Keduanya
+      punya tanggal tetap di kalender, lengkap dengan hadiah dan urutan acara yang sudah
+      ditentukan.</p>
+
+      <h2>Dua acara yang terdaftar</h2>
+      <table class="price-table">
+        <thead><tr><th>Butir</th><th>Kampung Meriah</th><th>Cerdas Cermat</th></tr></thead>
+        <tbody>
+          <tr><td>Musim</td><td>Panas</td><td>Cerah</td></tr>
+          <tr><td>Hari dalam musim</td><td>17</td><td>20</td></tr>
+          <tr><td>Hadiah juara</td><td class="rp">Rp 50.000</td><td class="rp">Rp 75.000</td></tr>
+          <tr><td>Hadiah peserta</td><td class="rp">Rp 12.500</td><td class="rp">Rp 15.000</td></tr>
+          <tr><td>Poin relasi</td><td>3</td><td>3</td></tr>
+          <tr><td>Minigame</td><td>tidak ada</td><td>kuis cerdas cermat</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Kalender:</b> permainan punya 3 musim, yaitu Panas, Cerah,
+      dan Hujan. Tiap musim 28 hari. Jadi Kampung Meriah jatuh di hari ke-17 musim Panas,
+      sedangkan Cerdas Cermat di hari ke-20 musim Cerah.</div>
+
+      <h2>Isi bawaan tiap acara</h2>
+      <p>Masing-masing acara punya pengaturan sendiri, dan sebagian besar punya nilai bawaan.</p>
+      <table class="price-table">
+        <thead><tr><th>Pengaturan</th><th>Nilai bawaan</th></tr></thead>
+        <tbody>
+          <tr><td>Skor minimal untuk jadi juara</td><td class="num">5</td></tr>
+          <tr><td>Hadiah juara</td><td class="rp">Rp 50.000</td></tr>
+          <tr><td>Hadiah peserta</td><td class="rp">Rp 12.500</td></tr>
+          <tr><td>Poin relasi</td><td class="num">3</td></tr>
+          <tr><td>Waktu acara</td><td>Pagi, Siang, atau Malam</td></tr>
+          <tr><td>Minigame</td><td>minigame yang bisa diikuti saat acara</td></tr>
+          <tr><td>NPC tetap</td><td>NPC yang tetap tampil saat event</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Urutan acara</h2>
+      <p>Acaranya berjalan dengan urutan yang tetap:</p>
+      <ol>
+        <li>Begitu tanggalnya cocok (musim, hari, dan fase), acara aktif. Peta berganti ke lokasi
+        acara, dan NPC yang tidak termasuk daftar tetap disembunyikan.</li>
+        <li>Dialog pembuka diputar.</li>
+        <li>Kamu bisa ikut minigame, dengan NPC di antrean mengajak lewat dialog biasa, atau menolak
+        dan melewatinya.</li>
+        <li>Kalau action habis sebelum acara selesai, muncul dialog capek.</li>
+        <li>Setelah selesai, Pak Damar sebagai pembawa acara menyampaikan hasil. NPC lain memakai
+        dialog penutupnya sendiri.</li>
+        <li>Hadiah dan poin relasi dibagikan, lalu NPC kembali ke jadwal normal dan dialog sesudah
+        acara terbuka.</li>
+      </ol>
+      <p>Tiap acara memakai tujuh berkas dialog: pembuka, juara, percakapan biasa, capek, Damar,
+      penutup Damar, dan lewati. Formatnya dijelaskan di halaman
+      <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
+
+      <h2>Skor dan peringkat</h2>
+      <p>Tiap lomba memberi skor ke kamu. Total skormu menentukan posisi akhirnya:</p>
+      <table class="price-table">
+        <thead><tr><th>Lomba</th><th>Skor yang didapat</th></tr></thead>
+        <tbody>
+          <tr><td>Lomba makan kerupuk</td><td>menang 3, kalah 1</td></tr>
+          <tr><td>Cerdas Cermat RT</td><td>juara 5, Final 3, Semifinal 2, Kualifikasi 1</td></tr>
+          <tr><td>Balap karung</td><td>juara 3, kedua 2, sisanya 1</td></tr>
+        </tbody>
+      </table>
+      <p>Kalau total skormu mencapai 5, kamu jadi juara dan membawa pulang Rp 50.000.
+      Kalau belum, kamu tetap pulang dengan Rp 12.500 sebagai peserta. Semua warga yang hadir
+      juga makin dekat denganmu 3 poin, juara atau bukan.</p>
+
+      <h2>Pengumuman dan syarat lain</h2>
+      <ul>
+        <li><strong>Pengumuman sehari sebelumnya:</strong> acara besok diumumkan lewat SMS
+        menjelang hari-H. Isi pesan dan jam kirimnya tidak tercatat di data wiki.</li>
+        <li><strong>Syarat tidur:</strong> apakah kamu harus tidur dulu sebelum ikut acara tidak
+        tercatat di data wiki, jadi lebih aman dicek langsung di permainan.</li>
+        <li>Selain SMS acara, ada juga SMS terjadwal lain pada hari 2 sampai 7 dari Kang Cecep dan
+        Bu Lala, serta SMS acak dari NPC yang relasinya sudah jalan. Keduanya terpisah dari
+        pengumuman acara.</li>
+      </ul>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tips &amp; Trik — Warteg Simulator Wiki</title>
+<meta name="description" content="Tips dan trik Warteg Simulator yang terverifikasi dari kode: modal awal murah, batas harga aman, kelola pecahan kembalian, buff kafe, optimasi action, dan naikkan reputasi cepat.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="tips-trik">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Tips &amp; Trik</h1>
+      <p class="lede">Strategi di halaman ini mengikuti mekanik asli kode versi 0.1A, jadi
+      angkanya bisa kamu cek sendiri. Angka merujuk ke halaman terkait:
+      <a href="warteg-shop.html">Buka Warung</a>,
+      <a href="menu-harga.html">Menu &amp; Harga</a>, <a href="buff-kafe.html">Buff Kafe</a>.</p>
+
+      <h2>Modal awal: stok nasi + telur</h2>
+      <p>Nasi dan telur ceplok adalah dua menu termurah untuk diproduksi dan keduanya tidak butuh alat
+      apa pun (tanpa wajan, tanpa wadah): nasi modal <span class="rp">2.000</span> jual <span class="rp">4.000</span>,
+      telur modal <span class="rp">3.000</span> jual <span class="rp">5.000</span>. Keduanya juga stok awal yang
+      sudah terisi 10 porsi. Kombinasi keduanya menutup dua peluang pesanan terbesar di awal game
+      (nasi 0,9 dan telur 0,4) dengan risiko modal paling kecil.</p>
+
+      <h2>Jangan overprice</h2>
+      <table class="price-table">
+        <thead><tr><th>Rasio harga vs harga wajar</th><th>Efek</th></tr></thead>
+        <tbody>
+          <tr><td>&gt; 1,6×</td><td><span class="chip bad">kabur, rep −2</span> dan penilaian <span class="chip bad">−2★</span></td></tr>
+          <tr><td>&gt; 1,25×</td><td>penilaian <span class="chip bad">−1★</span></td></tr>
+          <tr><td>0,85× sampai 1,25×</td><td>netral, zona aman</td></tr>
+          <tr><td>&lt; 0,85×</td><td>penilaian <span class="chip good">+1★</span></td></tr>
+        </tbody>
+      </table>
+      <p>Batas praktis: jangan pernah lewat 1,25× harga wajar. Untung ekstra di atas itu kehilangan
+      bintang dan reputasi yang jauh lebih berharga (reputasi mengatur keramaian pelanggan).</p>
+
+      <h2>Harga murah: +1 bintang, margin tipis</h2>
+      <p>Harga di bawah 0,85× harga wajar memberi <span class="chip good">+1★</span> otomatis.
+      Berguna saat butuh menaikkan reputasi cepat, tapi hitung dulu: selisih margin yang hilang
+      harus lebih kecil dari manfaat +1★ (reputasi 5★ +3). Cocok dipakai selektif pada menu bahan
+      murah seperti bihun atau orek tempe, bukan pada menu bermodal besar.</p>
+
+      <h2>Kelola pecahan kecil untuk kembalian</h2>
+      <ul>
+        <li>Hanya <strong>35%</strong> pelanggan bayar QRIS; sisanya tunai, dan 80% di antaranya
+        membayar dengan uang besar. Artinya hampir setiap transaksi tunai butuh kembalian.</li>
+        <li>Kembalian diambil dari kas fisik di laci. Kalau pecahan kecilnya habis, kamu tidak
+        bisa memberi kembalian.</li>
+        <li>Sisakan selalu <span class="rp">100</span>, <span class="rp">500</span>, dan <span class="rp">1.000</span> di kas;
+        upah kerja masuk sebagai pecahan pas, jadi kas cepat terisi lagi kalau rutin kerja.</li>
+        <li>QRIS adalah cadangan saat laci kosong, tapi menolak tawaran QRIS berisiko komplain
+        "Masa warteg gak ada kembalian sih…" dengan peluang 30% dan
+        <span class="chip bad">−2★</span>.</li>
+      </ul>
+
+      <h2>Buff kafe sebelum aktivitas</h2>
+      <p>Minum di kafe sebelum aktivitas besar; efeknya menempel pada aktivitas targetnya.
+      Daftar lengkap di <a href="buff-kafe.html">Buff Kafe</a>:</p>
+      <table class="price-table">
+        <thead><tr><th>Sebelum apa</th><th>Minum</th><th>Efek</th></tr></thead>
+        <tbody>
+          <tr><td>Mancing</td><td>Es Teh Manis</td><td>Ikan menyambar lebih cepat (waktu tunggu ×0,6)</td></tr>
+          <tr><td>Mancing</td><td>Jus Jeruk</td><td>Kotak reel 25% lebih besar</td></tr>
+          <tr><td>Tangkap Serangga</td><td>Kopi Susu</td><td>Radius jaring ×1,35</td></tr>
+          <tr><td>Tangkap Serangga</td><td>Es Campur</td><td>Waktu +10 detik</td></tr>
+          <tr><td>Potong Rumput</td><td>Roti Bakar</td><td>Upah Pak RT +30%</td></tr>
+          <tr><td>Sapu Lapangan</td><td>Pisang Goreng</td><td>Waktu +10 detik</td></tr>
+          <tr><td>Belajar Iqro</td><td>Susu Jahe</td><td>1 kesalahan kuis dimaafkan</td></tr>
+          <tr><td>Buka Warung</td><td>Mie Goreng Spesial</td><td>Pelanggan 30% lebih sabar (sekali buka)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Optimasi 2 action per fase</h2>
+      <ul>
+        <li>Jatah normal hanya <strong>2 action per fase</strong> (3 untuk VIP), jadi tiap action terasa mahal.</li>
+        <li>Mancing = 1 action untuk <strong>5 lemparan</strong>; tangkap serangga = 1 action untuk sampai
+        <strong>4 tangkapan</strong>. Dua aktivitas ini paling hemat action per hasil.</li>
+        <li>Buka warung menghabiskan seluruh action fase tersebut. Jadikan itu satu fase penuh
+        (Siang atau Malam), dan pakai fase lain untuk belanja, kerja, atau belajar.</li>
+        <li>Action habis saat belum Malam memicu fase maju otomatis; jangan biarkan action tersisa
+        terbuang saat fase berganti.</li>
+      </ul>
+
+      <h2>Naikkan reputasi cepat</h2>
+      <p>Reputasi hanya bergerak lewat penilaian pesanan: <strong>5★ +3</strong>, 4★ +2, 3★ +1,
+      2★ 0, 1★ <span class="chip bad">−2</span>. Resep 5★ dari kode:</p>
+      <ul>
+        <li>Susun pesanan persis: setiap item kurang/lebih/salah mode (piring vs bungkus) = −1.</li>
+        <li>Sajikan sebelum kesabaran lewat 50% (menunggu lebih lama = −1, lewat 80% = −2). Buff Mie Goreng
+        Spesial menambah kesabaran 30% saat shift ramai.</li>
+        <li>Harga di zona 0,85× sampai 1,25× harga wajar.</li>
+        <li>Cegah kabur: antrian penuh (rep −1) dan harga mahal (rep −2) adalah kebocoran reputasi terbesar.</li>
+      </ul>
+
+      <h2>Jadwal NPC penting untuk kado</h2>
+      <p>Kado di hari ulang tahun memberi hati <strong>×2</strong>. Tanggal lengkap ada di
+      <a href="kalender-waktu.html">Kalender &amp; Waktu</a> dan detail selera tiap warga di
+      <a href="npc.html">NPC</a>. Cek daftar suka sebelum membeli hadiah, karena hadiah yang tidak disukai
+      tetap mengurangi hasil. Ingat juga: saat hujan kebanyakan NPC tidak tampil di luar ruangan,
+      jadi rencanakan kado di hari cerah.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

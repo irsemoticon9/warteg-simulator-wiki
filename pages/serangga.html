@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serangga — Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan Tangkap Serangga di Warteg Simulator: aturan 30 detik, radius jaring dan kaget, tabel 8 serangga dengan harga, bobot, pola gerak, dan cara menjaring tiap pola.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="serangga">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Serangga</h1>
+      <p class="lede">Tangkap serangga berlangsung singkat: 30 detik, jaring yang sedikit telat,
+      dan delapan jenis serangga dengan tingkah berbeda. Halaman ini mencatat aturannya sekaligus
+      cara membaca gerak tiap serangga.</p>
+
+      <h2>Aturan minigame</h2>
+      <ul>
+        <li>Durasi <strong>30 detik</strong>, dengan maksimal <strong>4 tangkapan</strong> per sesi.</li>
+        <li>Tap berarti mengayun jaring. Jaring baru aktif <strong>0,12 detik</strong> setelah tap, jadi bidik ke arah gerak serangga, bukan ke posisinya sekarang.</li>
+        <li>Radius jaring <strong>58 px</strong> ditambah 14 kali ukuran serangga. Jeda antar ayunan <strong>0,4 detik</strong>.</li>
+        <li>Di layar ada paling banyak <strong>5 serangga aktif</strong>, dan tidak pernah lebih dari 2 ekor jenis yang sama.</li>
+        <li>Jaring meleset membuat serangga dalam radius <strong>190 px</strong> panik <strong>0,9 detik</strong>. Selama panik, kecepatannya jadi 2× lipat.</li>
+        <li>Serangga pergi sendiri setelah 9-14 detik kalau harga jualnya di bawah 15.000, atau 7-10 detik kalau 15.000 ke atas.</li>
+        <li>Sesi yang berakhir tanpa tangkapan tetap memberi 1 serangga paling umum yang "nyasar" ke tas.</li>
+        <li>Hasil tangkapan masuk tas, dan layar hasil menampilkan nilai jual totalnya ke Kang Cecep.</li>
+        <li>Satu sesi memakai <strong>1 action</strong>, dan satu spot hanya bisa dimainkan <strong>sekali per hari</strong>.</li>
+      </ul>
+
+      <h3>Buff yang berlaku</h3>
+      <ul>
+        <li>Kopi Susu: radius jaring <strong>×1,35</strong>.</li>
+        <li>Es Campur: waktu <strong>+10 detik</strong>.</li>
+      </ul>
+
+      <h2>Syarat muncul</h2>
+      <p>Tiap serangga punya daftar fase sendiri: ada yang cuma pagi, ada yang pagi dan malam.
+      Musim dan cuaca tidak berpengaruh sama sekali. Jenis yang muncul diundi menurut bobotnya,
+      jadi bobot besar berarti lebih sering kelihatan.</p>
+
+      <h2>Tabel 8 serangga</h2>
+      <table class="price-table scroll-x">
+        <thead><tr><th>Nama</th><th class="num">Harga Jual</th><th class="num">Bobot</th><th>Muncul (fase)</th><th>Pola Gerak</th><th class="num">Kecepatan</th><th class="num">Ukuran</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td>Jangkrik</td><td class="rp">3.000</td><td class="num">26,0</td><td>Pagi + Malam</td><td>Lompat jeda</td><td class="num">190,0</td><td class="num">0,9</td><td>Melompat pendek, sering sembunyi; dengarkan bunyi kriiik-nya</td></tr>
+          <tr><td>Belalang Hijau</td><td class="rp">4.000</td><td class="num">24,0</td><td>Pagi + Siang</td><td>Lompat</td><td class="num">300,0</td><td class="num">1,0</td><td>Jaring saat baru mendarat</td></tr>
+          <tr><td>Kupu-kupu</td><td class="rp">6.000</td><td class="num">16,0</td><td>Pagi + Siang</td><td>Gelombang</td><td class="num">150,0</td><td class="num">1,1</td><td>Terbang melayang pelan di antara bunga</td></tr>
+          <tr><td>Capung</td><td class="rp">8.000</td><td class="num">12,0</td><td>Siang</td><td>Melesat</td><td class="num">260,0</td><td class="num">1,1</td><td>Melayang diam sebentar lalu melesat; jaring saat melayang</td></tr>
+          <tr><td>Belalang Sembah</td><td class="rp">9.000</td><td class="num">9,0</td><td>Siang</td><td>Lompat</td><td class="num">120,0</td><td class="num">1,05</td><td>Kamuflase hijau, gerak pelan</td></tr>
+          <tr><td>Tonggeret</td><td class="rp">12.000</td><td class="num">7,0</td><td>Pagi + Siang</td><td>Hinggap</td><td class="num">0,0</td><td class="num">1,0</td><td>Nempel di batang; sekali jaring meleset di dekatnya, dia terbang</td></tr>
+          <tr><td>Kunang-kunang</td><td class="rp">15.000</td><td class="num">6,0</td><td>Malam</td><td>Kedip</td><td class="num">90,0</td><td class="num">1,0</td><td>Hanya malam hari; jaring saat ekornya menyala</td></tr>
+          <tr><td>Kumbang Badak</td><td class="rp">25.000</td><td class="num">3,0</td><td>semua fase</td><td>Merayap</td><td class="num">70,0</td><td class="num">1,3</td><td>Besar, bertanduk, langka; kolektor bayar mahal</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Quest harian</b> tipe serangga hanya memilih serangga dengan
+      bobot <strong>≥ 6,0</strong>. Daftar permintaannya ada di halaman
+      <a href="quest-harian.html">Quest Harian</a>.</div>
+      <p>Semua serangga bisa kamu berikan sebagai hadiah. Tidak ada serangga yang masuk daftar
+      suka atau tidak suka warga mana pun, jadi reaksinya selalu normal.</p>
+
+      <h2>Cara menjaring tiap pola</h2>
+      <p>Pola yang melompat-lompat dan yang melesat hanya bisa dijaring <strong>saat diam</strong>.
+      Selama badannya melayang di udara, jaringmu lewat begitu saja menembusnya.</p>
+      <table class="price-table">
+        <thead><tr><th>Pola</th><th>Patokan angkanya</th><th>Cara menjaring</th></tr></thead>
+        <tbody>
+          <tr><td>Lompat</td><td class="num">lompatan 120-200 px, durasi 0,36 detik, diam 0,7-1,5 detik</td><td>Tunggu sampai mendarat, lalu tap sedikit di depan titik pendaratannya. Saat panik, jeda diamnya dipangkas setengah.</td></tr>
+          <tr><td>Lompat jeda</td><td class="num">lompatan 60-110 px, durasi 0,3 detik, diam 1,1-2,3 detik</td><td>Lompatannya pendek dan diamnya panjang, jadi jeda itu waktu terbaik untuk menjaring. Jangkrik ditandai simbol nada saat diam.</td></tr>
+          <tr><td>Gelombang</td><td class="num">terbang terus, ketinggian bergelombang</td><td>Bisa dijaring kapan pun selama terbang. Kejar jalurnya, bukan posisinya.</td></tr>
+          <tr><td>Melesat</td><td class="num">diam 0,7-1,4 detik, melesat 0,35 detik dengan kecepatan ×2,8</td><td>Jaring saat dia melayang diam. Meleset di saat itu malah membuatnya langsung melesat menjauh.</td></tr>
+          <tr><td>Merayap</td><td class="num">bergantian diam dan jalan tiap 1-2 detik, jalan 70% kecepatan</td><td>Gerak paling lambat, dan bisa dijaring saat diam maupun merayap. Ukurannya besar (1,3), jadi radius jaring efektifnya longgar.</td></tr>
+          <tr><td>Hinggap</td><td class="num">kecepatan 0,0, tidak bergerak sendiri</td><td>Tonggeret diam terus, tapi sekali jaringmu meleset di dekatnya, dia kabur dan tidak kembali. Jangan tap asal.</td></tr>
+          <tr><td>Kedip</td><td class="num">hanya bisa dijaring saat nyala &gt; 0,55</td><td>Kunang-kunang tembus jaring saat ekornya redup. Sabar, tap tepat ketika badannya terang.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn"><b>Jangan asal tap:</b> setiap jaring meleset mengusir semua serangga
+      dalam radius 190 px dan mempercepat mereka 2× selama 0,9 detik. Di area padat, satu tap gegabah
+      bisa mengosongkan layar.</div>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

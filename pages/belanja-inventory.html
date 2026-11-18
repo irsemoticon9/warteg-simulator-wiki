@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belanja &amp; Inventory — Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan belanja di Warteg Simulator: bahan pokok dari pasar, 5 perabot Toko Perabotan Mei dengan harga bertingkat, outfit di butik, hadiah, dan vitamin dari Puskesmas.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="belanja-inventory">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Belanja &amp; Inventory</h1>
+      <p class="lede">Setiap kebutuhanmu punya tempatnya sendiri: bahan pokok dari pasar,
+      perabot dari Toko Perabotan Mei, outfit lewat Lemari kamar, hadiah dari Toko Hadiah
+      Pelangi, dan vitamin dari Puskesmas. Halaman ini mengumpulkan daftar barangnya,
+      harganya, dan tempat membelinya.</p>
+
+      <h2>Bahan pokok dari pasar</h2>
+      <p>Bahan dibeli dari dua pedagang pasar. Harganya mengikuti harga pasar mingguan yang
+      dihitung dari modal dasar tiap bahan; naik turunnya dijelaskan di halaman
+      Menu &amp; Harga.</p>
+      <table class="price-table">
+        <thead><tr><th>Bahan</th><th>Dijual di</th><th class="num">Modal Dasar</th><th>Dipakai untuk</th></tr></thead>
+        <tbody>
+          <tr><td>Ayam potong</td><td>Kang Cecep</td><td class="rp">6.000</td><td>ayam goreng</td></tr>
+          <tr><td>Ikan</td><td>Kang Cecep</td><td class="rp">6.000</td><td>ikan goreng</td></tr>
+          <tr><td>Beras</td><td>Bu Lala</td><td class="rp">2.000</td><td>nasi</td></tr>
+          <tr><td>Telur ayam</td><td>Bu Lala</td><td class="rp">3.000</td><td>telur ceplok</td></tr>
+          <tr><td>Bihun</td><td>Bu Lala</td><td class="rp">1.500</td><td>bihun goreng</td></tr>
+          <tr><td>Tempe</td><td>Bu Lala</td><td class="rp">1.500</td><td>orek tempe</td></tr>
+          <tr><td>Kentang</td><td>Bu Lala</td><td class="rp">1.500</td><td>balado kentang</td></tr>
+          <tr><td>Kangkung</td><td>Bu Lala</td><td class="rp">1.500</td><td>tumis kangkung</td></tr>
+          <tr><td>Cabai merah</td><td>Bu Lala</td><td class="rp">500</td><td>sambal merah</td></tr>
+          <tr><td>Cabai ijo</td><td>Bu Lala</td><td class="rp">500</td><td>sambal ijo</td></tr>
+          <tr><td>Sayur lalapan</td><td>Bu Lala</td><td class="rp">1.000</td><td>lalapan</td></tr>
+          <tr><td>Minyak goreng</td><td>Bu Lala</td><td class="rp">18.000/liter</td><td>10 kali masak</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Belanja dari rumah:</b> pemain VIP bisa memesan semua bahan
+      lewat Order Online dengan ongkir Rp 8.000. Barang tiba H+1, jadi tidak perlu jalan ke
+      pasar.</div>
+
+      <h2>Perabot &amp; alat (Toko Perabotan Mei)</h2>
+      <p>Semua perabot dibeli di Toko Perabotan Rumah Indah milik Mei, yang berkenalan
+      denganmu lewat cutscene di hari ke-2. Harga unit berikutnya naik bertahap: harga yang
+      berlaku ditentukan oleh jumlah unit yang sudah kamu punya.</p>
+      <table class="price-table">
+        <thead><tr><th>Perabot</th><th class="num">Awal</th><th class="num">Maks</th><th>Harga per Unit (berurutan)</th><th>Fungsi</th></tr></thead>
+        <tbody>
+          <tr><td>Nampan</td><td class="num">3</td><td class="num">8</td><td class="rp">30.000 → 35.000 → 40.000 → 50.000 → 60.000</td><td>Menambah kapasitas nampan etalase, maksimal 8 nampan</td></tr>
+          <tr><td>Wajan</td><td class="num">0</td><td class="num">2</td><td class="rp">120.000 → 180.000</td><td>Syarat memasak menu yang digoreng</td></tr>
+          <tr><td>Wadah Sambal Merah</td><td class="num">0</td><td>tidak tercantum di data</td><td class="rp">25.000</td><td>Syarat menu pelengkap sambal merah</td></tr>
+          <tr><td>Wadah Sambal Hijau</td><td class="num">0</td><td>tidak tercantum di data</td><td class="rp">25.000</td><td>Syarat menu pelengkap sambal ijo</td></tr>
+          <tr><td>Wadah Lalapan</td><td class="num">0</td><td>tidak tercantum di data</td><td class="rp">30.000</td><td>Syarat menu pelengkap lalapan</td></tr>
+        </tbody>
+      </table>
+      <p>Perabot juga bisa dipesan lewat Order Online dari Mei dengan ongkir Rp 8.000.
+      Kiriman tiba H+1 dan langsung masuk ke perabot warung.</p>
+
+      <h2>Outfit (Butik)</h2>
+      <p>Outfit diganti lewat Lemari di Kamar. Harga outfit tidak tercatat di data game,
+      dan memang tidak ada toko yang menjualnya.</p>
+      <table class="price-table">
+        <thead><tr><th>Outfit</th><th>Gender</th><th>Kategori</th><th>Cara Dapat</th></tr></thead>
+        <tbody>
+          <tr><td>Pakaian Harian</td><td>cowok</td><td>Harian</td><td>Bawaan sejak awal</td></tr>
+          <tr><td>Pakaian Harian</td><td>cewek</td><td>Harian</td><td>Bawaan sejak awal</td></tr>
+          <tr><td>Special Launch Edition</td><td>cowok</td><td>Special</td><td>Perlu Special Kit, dibeli terpisah</td></tr>
+          <tr><td>Special Launch Edition</td><td>cewek</td><td>Special</td><td>Perlu Special Kit, dibeli terpisah</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Hanya outfit yang sesuai gender pemain yang muncul di Lemari.</li>
+        <li>Kalau outfit yang aktif tidak valid atau masih terkunci, game kembali ke pakaian
+        bawaan sesuai gender.</li>
+        <li>Pemain VIP juga bisa membuka butik dan mengubah tampilan depan warung.</li>
+      </ul>
+
+      <h2>Toko hadiah</h2>
+      <p>Toko Hadiah Pelangi ada di Jalan Serba Ada. Satu transaksi maksimal 9 hadiah, dan
+      bayarnya bisa tunai atau QRIS. Tiap hadiah menambah poin relasi: NPC
+      <span class="chip good">suka +10</span>, biasa +2,
+      <span class="chip bad">tidak suka −3</span>.</p>
+      <table class="price-table">
+        <thead><tr><th>Hadiah</th><th class="num">Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Gantungan Kunci Lucu</td><td class="rp">10.000</td></tr>
+          <tr><td>Buku Catatan Cantik</td><td class="rp">15.000</td></tr>
+          <tr><td>Buket Bunga Kain</td><td class="rp">25.000</td></tr>
+          <tr><td>Pulpen Mewah</td><td class="rp">30.000</td></tr>
+          <tr><td>Bingkai Foto</td><td class="rp">30.000</td></tr>
+          <tr><td>Pot Tanaman Hias</td><td class="rp">30.000</td></tr>
+          <tr><td>Boneka Beruang</td><td class="rp">35.000</td></tr>
+          <tr><td>Payung Lipat</td><td class="rp">35.000</td></tr>
+          <tr><td>Tasbih Kayu</td><td class="rp">35.000</td></tr>
+          <tr><td>Lilin Aromaterapi</td><td class="rp">40.000</td></tr>
+          <tr><td>Topi Rajut</td><td class="rp">40.000</td></tr>
+          <tr><td>Syal Hangat</td><td class="rp">45.000</td></tr>
+          <tr><td>Peci Bordir</td><td class="rp">45.000</td></tr>
+          <tr><td>Bola Sepak Mini</td><td class="rp">50.000</td></tr>
+          <tr><td>Puzzle Kayu</td><td class="rp">50.000</td></tr>
+          <tr><td>Kacamata Hitam</td><td class="rp">55.000</td></tr>
+          <tr><td>Jam Meja Kecil</td><td class="rp">60.000</td></tr>
+          <tr><td>Kalung Manik-manik</td><td class="rp">70.000</td></tr>
+          <tr><td>Termos Stainless</td><td class="rp">75.000</td></tr>
+          <tr><td>Kotak Musik</td><td class="rp">80.000</td></tr>
+        </tbody>
+      </table>
+      <p>Selera tiap NPC, termasuk lauk dan ikan kesukaannya, tercatat di data hadiah dan
+      data NPC. Hadiah di luar daftar selera dianggap biasa saja.</p>
+
+      <h2>Vitamin</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Nama</td><td>Vitamin</td></tr>
+          <tr><td>Harga</td><td class="rp">35.000</td></tr>
+          <tr><td>Beli di</td><td>Apotek Puskesmas (Dokter Tirto)</td></tr>
+          <tr><td>Efek</td><td>Memulihkan <span class="chip good">1 energi (1 action)</span> di fase berjalan</td></tr>
+          <tr><td>Syarat pakai</td><td>Hanya bisa diminum saat action tersisa lebih sedikit dari jatah action fase; kalau energi masih penuh, vitamin tidak bisa dipakai</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Tips:</b> vitamin berguna saat action habis padahal masih ada
+      kerjaan, misalnya melanjutkan shift atau mengantar pesanan. Pemain VIP punya 3 action
+      per fase, jadi lebih jarang membutuhkannya.</div>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

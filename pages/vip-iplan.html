@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIP, IAP &amp; Iklan — Warteg Simulator Wiki</title>
+<meta name="description" content="Manfaat VIP di Warteg Simulator, pembelian dalam aplikasi, Special Launch Kit Rp 5.000, tabel peluang hadiah Kotak Tips, iklan wajib tiap 7 hari, dan proteksi crash iklan.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="vip-iplan">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>VIP, IAP &amp; Iklan</h1>
+      <p class="lede">Halaman ini merangkum status VIP, pembelian dalam aplikasi, Special
+      Launch Kit, dan sistem iklan. Semua manfaat dan angkanya dibaca dari data game
+      versi 0.1A.</p>
+
+      <h2>VIP</h2>
+      <p>Status VIP tersimpan di perangkat dan tetap berlaku selama pembeliannya masih sah.
+      Manfaat yang tercatat:</p>
+      <ul>
+        <li><strong>Action per fase jadi 3</strong>, sedangkan pemain biasa mendapat 2.</li>
+        <li><strong>Bebas iklan</strong>.</li>
+        <li><strong>Buka Kotak Tips tanpa nonton iklan</strong>.</li>
+        <li><strong>Ojek online gratis</strong>, tarif 0 ke semua tujuan.</li>
+        <li><strong>Order Online</strong>, jadi kebutuhan warung bisa dibeli dari rumah.</li>
+        <li>Terakhir, kamu ikut mendukung developer gamenya. Terima kasih banyak.</li>
+      </ul>
+      <p>Beberapa bonus lain ikut mengecek status VIP: bonus item login harian, akses butik
+      sejak awal, izin mengubah tampilan depan warung, dan kecepatan x2 tanpa iklan. Angka
+      25.000 memang tercatat sebagai harga VIP di data, tetapi pembelian yang sebenarnya
+      lewat Google Play Billing. Harga yang tampil diatur di Play Console dan tidak
+      tercantum di data game.</p>
+
+      <h2>IAP (pembelian dalam aplikasi)</h2>
+      <table class="price-table">
+        <thead><tr><th>Produk</th><th>Isi</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>VIP</td><td>Status VIP permanen</td><td>Ada fitur pulihkan pembelian. Verifikasi berkala mencabut VIP kalau pembeliannya tidak ditemukan di Google Play, misalnya karena refund</td></tr>
+          <tr><td>Special Launch Kit</td><td>Bonus modal Rp 150.000 dan outfit spesial</td><td>Sekali beli dan juga diverifikasi. Kalau di-refund, outfit special dikunci lagi</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Pembelian hanya lewat Google Play di Android. Di versi uji, proses bayar hanya
+        disimulasikan selama 1,5 detik.</li>
+        <li>Batas waktu tunggu: koneksi atau pengecekan 20 detik, pembayaran maksimal 180 detik.</li>
+        <li>Pembelian langsung dikonfirmasi otomatis setelah sukses.</li>
+      </ul>
+
+      <h2>Special Launch Kit</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Harga</td><td>Rp 5.000, sekali beli</td></tr>
+          <tr><td>Modal bonus</td><td>Rp 150.000 tunai, masuk ke kas sebagai pecahan: 20.000×2, 10.000×3, 5.000×8, 2.000×10, 1.000×10, 500×10, 100×50</td></tr>
+          <tr><td>Outfit</td><td>Membuka outfit Special Launch Edition (cowok/cewek) di Lemari</td></tr>
+          <tr><td>Periode penawaran</td><td>7 hari, terhitung sejak pertama main; popup penawaran tampil sekali</td></tr>
+          <tr><td>Sekali saja</td><td>Bonus modal hanya diberikan satu kali</td></tr>
+          <tr><td>Penyimpanan</td><td>Tersimpan di perangkat dan tetap ada setelah game ditutup</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Hitungan modal:</b> pecahan bonus di atas totalnya tepat
+      Rp 150.000 (40.000 + 30.000 + 40.000 + 20.000 + 10.000 + 5.000 + 5.000).</div>
+
+      <h2>Iklan dengan hadiah (AdMob)</h2>
+      <p>Iklan dengan hadiah dipakai di dua tempat: Kotak Tips dan kecepatan x2. Pemain VIP
+      melewati semua iklan dan tetap dapat hadiahnya.</p>
+      <h3>Kotak Tips</h3>
+      <p>Isi Kotak Tips berupa uang acak antara Rp 5.000 dan Rp 100.000, diundi memakai tabel
+      bobot. Persen di bawah dihitung dari total bobot 99,06.</p>
+      <table class="price-table">
+        <thead><tr><th class="num">Hadiah</th><th class="num">Bobot</th><th class="num">Peluang</th></tr></thead>
+        <tbody>
+          <tr><td class="rp">5.000</td><td class="num">36,0</td><td class="num">36,34%</td></tr>
+          <tr><td class="rp">10.000</td><td class="num">25,0</td><td class="num">25,24%</td></tr>
+          <tr><td class="rp">15.000</td><td class="num">14,0</td><td class="num">14,13%</td></tr>
+          <tr><td class="rp">20.000</td><td class="num">9,0</td><td class="num">9,09%</td></tr>
+          <tr><td class="rp">25.000</td><td class="num">6,0</td><td class="num">6,06%</td></tr>
+          <tr><td class="rp">30.000</td><td class="num">4,0</td><td class="num">4,04%</td></tr>
+          <tr><td class="rp">40.000</td><td class="num">2,5</td><td class="num">2,52%</td></tr>
+          <tr><td class="rp">50.000</td><td class="num">1,5</td><td class="num">1,51%</td></tr>
+          <tr><td class="rp">60.000</td><td class="num">0,7</td><td class="num">0,71%</td></tr>
+          <tr><td class="rp">70.000</td><td class="num">0,25</td><td class="num">0,25%</td></tr>
+          <tr><td class="rp">80.000</td><td class="num">0,08</td><td class="num">0,08%</td></tr>
+          <tr><td class="rp">90.000</td><td class="num">0,025</td><td class="num">0,03%</td></tr>
+          <tr><td class="rp">100.000</td><td class="num">0,005</td><td class="num">0,01%</td></tr>
+        </tbody>
+      </table>
+      <h3>Kecepatan x2</h3>
+      <ul>
+        <li>Setelah menonton iklan, tombol kecepatan menawarkan x2 selama 5 menit, alias
+        300 detik.</li>
+        <li>Kecepatan yang benar-benar dipakai mesin game adalah 1,5 kali, sementara label di
+        layar menulis x2.</li>
+        <li>Tidak berlaku saat minigame terbuka (warteg, mancing, serangga, kerja RT, kuli, Iqro,
+        sepak bola, kerupuk, balap karung, cerdas cermat). Timer tetap berjalan.</li>
+        <li>VIP bisa menyalakan x2 terus tanpa iklan, dan sisa waktunya ikut tersimpan di save.</li>
+      </ul>
+      <h3>Iklan wajib &amp; jaga-jaga crash</h3>
+      <ul>
+        <li>Iklan wajib tiap 7 hari: pemain non-VIP mendapat iklan saat jumlah hari game
+        kelipatan 7.</li>
+        <li>Jaga-jaga kalau iklan bikin game tertutup: sebelum iklan tampil, game menulis
+        penanda kecil di penyimpanan perangkat, lalu menghapusnya setelah iklan selesai.
+        Kalau penanda itu masih ada saat game dibuka lagi, berarti iklan sempat bikin game
+        tertutup. Fitur iklannya dimatikan dan game mencatat bahwa iklan gagal dimuat.</li>
+        <li>Batas muat iklan 15 detik dan tonton maksimal 180 detik. ID unit iklannya
+        tercantum di catatan sumber di bawah.</li>
+      </ul>
+
+      <div class="callout"><b>Catatan netral:</b> halaman ini wiki fan-made dan datanya dibaca
+      dari file game versi 0.1A. Membeli VIP atau Special Launch Kit adalah cara langsung
+      mendukung developer gamenya.</div>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

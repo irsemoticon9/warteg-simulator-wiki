@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semua Mini-Game — Warteg Simulator Wiki</title>
+<meta name="description" content="Daftar lengkap mini-game Warteg Simulator: makan kerupuk, balap karung, penalti, cerdas cermat, tangkap serangga, kerja RT, kuli, Iqro, dan Hiragana, lengkap dengan angkanya.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="minigame">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Semua Mini-Game</h1>
+      <p class="lede">Sembilan mini-game, masing-masing dengan aturan dan angkanya sendiri. Halaman
+      ini merangkum cara mainnya, dari mengunyah kerupuk sampai menulis hiragana.</p>
+
+      <div class="callout"><b>Kecepatan x2 tidak berlaku</b> saat mini-game terbuka. Semua mini-game
+      selalu jalan di kecepatan normal.</div>
+
+      <h2>Warteg Shop (Buka Warung)</h2>
+      <p>Alur inti permainan: isi etalase, masak di wajan, layani pelanggan selama 300 detik per fase,
+      susun piring, lalu hitung kembalian. Penilaian bintang dan reputasi ikut menentukan hasilnya.
+      Uraian lengkapnya ada di halaman <a href="warteg-shop.html">Buka Warung</a>.</p>
+
+      <h2>Lomba Makan Kerupuk</h2>
+      <ul>
+        <li>Kerupuk mengayun di depan mulut. Tekan <strong>GIGIT!</strong> atau Spasi saat kerupuk ada di zona hijau.</li>
+        <li>Menang kalau kamu menghabiskan <strong>8 gigitan</strong> lebih dulu dari Jamal.</li>
+        <li>Zona hijaunya selebar <strong>±46 px</strong>, dengan ayunan sejauh <strong>190 px</strong>.</li>
+        <li>Ayunan makin cepat tiap gigitan: kecepatannya 2,2 ditambah 0,22 kali jumlah gigitan.</li>
+        <li>Gigit meleset membuatmu tersedak <strong>0,55 detik</strong> dan tidak bisa gigit selama itu.</li>
+        <li>Jamal menggigit otomatis tiap <strong>1,05-1,7 detik</strong>.</li>
+      </ul>
+      <p>Ritmenya naik terus, jadi jangan menunggu kerupuk pas di tengah. Gigit di tepi zona
+      sebelum ayunannya makin kencang.</p>
+
+      <h2>Balap Karung</h2>
+      <ul>
+        <li>Ketuk <strong>KIRI</strong> dan <strong>KANAN</strong> bergantian (tombol atau panah ← →) sampai <strong>26 lompatan</strong>.</li>
+        <li>Mengetuk sisi yang sama dua kali membuatmu tersandung <strong>0,45 detik</strong>.</li>
+        <li>Ada hitung mundur 3 detik sebelum start.</li>
+        <li>Lawannya <strong>Jamal</strong> (jeda 0,17-0,27 detik per lompatan) dan <strong>Dani</strong> (0,18-0,30 detik). Keduanya cepat sekali, jadi kalau tidak tersandung kamu harus mengetuk hampir tanpa jeda.</li>
+        <li>Peringkat ditentukan urutan finis, dan hasilnya dipakai di event Kampung Meriah.</li>
+      </ul>
+
+      <h2>Penalti Bola</h2>
+      <p>Adu penalti melawan Jamal, <strong>5 tembakan per ronde</strong>, dua ronde: ronde pertama
+      kamu menendang, ronde kedua kamu jadi kiper.</p>
+      <h3>Ronde 1: kamu menendang</h3>
+      <ul>
+        <li>Geser melewati bola ke arah gawang. Geser minimal <strong>350 px/detik</strong>, dan bola melaju secepat geseranmu dikali 0,75 dengan batas 600-1400.</li>
+        <li>Geseran yang melengkung membuat bola ikut melengkung (faktor 2,2, maksimum 2,4).</li>
+        <li>Kiper Jamal berkeliling dengan kecepatan 320 dikali (1 + 0,15 kali tembakan), jangkauan tepisnya <strong>56 px</strong>.</li>
+        <li>Peluang kiper membaca arah bola = <strong>0,45 + 0,1 × tembakan</strong>, yaitu 45% di tembakan pertama dan 85% di tembakan kelima. Begitu membaca, kiper mengejar bola dengan kecepatan 420. Tembakan awal lebih aman daripada tembakan akhir.</li>
+      </ul>
+      <h3>Ronde 2: Jamal menendang</h3>
+      <ul>
+        <li>Geser kiper (tahan dan geser, atau panah) dengan kecepatan <strong>620</strong>, jangkauan tepis <strong>58 px</strong>.</li>
+        <li>Bola Jamal melaju 780 ditambah 40 kali tembakan, tanpa aba-aba, dengan jeda 0,8-1,4 detik.</li>
+        <li>Jamal menyasarkan sudut gawang 60% waktu, menembak ke tengah sisanya, dan punya peluang meleset sendiri 7%.</li>
+      </ul>
+
+      <h2>Cerdas Cermat RT</h2>
+      <p>Turnamen 1-lawan-1: <strong>Kualifikasi → Semifinal → FINAL</strong>. Siapa pun yang lebih dulu
+      mencapai <strong>3 poin</strong> menang babaknya. Maksimal <strong>5 soal</strong> per babak, dan skor
+      seri di soal kelima dimenangkan pihak dengan poin lebih banyak. Tiap soal diberi waktu
+      <strong>12 detik</strong>; menjawab benar lebih cepat dari lawan bernilai +1.</p>
+      <h3>Lawan</h3>
+      <p>Kualifikasi dan Semifinal diundi dari 7 warga; <strong>FINAL selalu melawan Rani</strong>,
+      pemain paling pintar dengan waktu jawab tercepat.</p>
+      <table class="price-table">
+        <thead><tr><th>Lawan</th><th class="num">Akurasi</th><th class="num">Waktu Jawab (detik)</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td>Jamal</td><td class="num">0,50</td><td class="num">3,0-8,0</td><td>Terlemah di pool</td></tr>
+          <tr><td>Pak Yanto</td><td class="num">0,55</td><td class="num">4,0-9,0</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Dani</td><td class="num">0,60</td><td class="num">3,0-7,0</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Bu Yani</td><td class="num">0,60</td><td class="num">3,0-7,5</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Pak Damar</td><td class="num">0,68</td><td class="num">3,5-8,0</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Mei</td><td class="num">0,70</td><td class="num">3,0-7,0</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Ustad Saipul</td><td class="num">0,72</td><td class="num">3,5-8,0</td><td>Tersulit di pool</td></tr>
+          <tr><td>Rani</td><td class="num">0,88</td><td class="num">2,2-5,5</td><td>Lawan FINAL selalu</td></tr>
+        </tbody>
+      </table>
+      <h3>Komposisi soal</h3>
+      <table class="price-table">
+        <thead><tr><th>Kategori</th><th class="num">Bobot</th><th>Sumber</th></tr></thead>
+        <tbody>
+          <tr><td>Umum</td><td class="num">0,40</td><td>28 soal tetap</td></tr>
+          <tr><td>Hitung</td><td class="num">0,25</td><td>Soal hitung dibuat otomatis</td></tr>
+          <tr><td>Kampung</td><td class="num">0,35</td><td>Dari data warga</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Soal hitung memakai angka acak 3-12 berupa perkalian, penjumlahan, dan pengurangan. Pilihan jawaban salah sengaja diletakkan dekat: selisihnya 1, 2, 5, atau 10 dari jawaban benar.</li>
+        <li>Soal kampung ada 3 jenis: "Siapa warga yang menjadi [peran]?", "Siapa warga yang berulang tahun di [musim] tanggal [hari]?", dan "Mana lauk kesukaan [NPC]?" (dari daftar suka NPC yang termasuk menu isi).</li>
+        <li>Contoh peran: Pak Damar Ketua RT, Rani guru BK, Dani hansip, Ustad Saipul pengurus masjid, Mei pemilik Toko Perabotan, Pak Yanto penjual pancing, Bu Lala pedagang sembako, Kang Cecep pedagang ayam &amp; ikan.</li>
+      </ul>
+      <h3>Contoh soal umum</h3>
+      <ul>
+        <li>"Proses tumbuhan membuat makanan dengan bantuan cahaya matahari disebut..." Jawabannya: <strong>Fotosintesis</strong></li>
+        <li>"Mata uang negara Jepang adalah..." Jawabannya: <strong>Yen</strong> (berguna juga untuk kelas Hiragana)</li>
+        <li>"Alat musik tradisional bambu dari Jawa Barat adalah..." Jawabannya: <strong>Angklung</strong></li>
+        <li>"Bilangan prima terkecil adalah..." Jawabannya: <strong>2</strong></li>
+        <li>"Sambal ijo biasanya dibuat dari cabai..." Jawabannya: <strong>Hijau</strong></li>
+        <li>"Nama ibu kota negara Malaysia adalah..." Jawabannya: <strong>Kuala Lumpur</strong></li>
+      </ul>
+      <div class="callout"><b>Cerdas Cermat juga event kampung:</b> diadakan Musim Cerah tanggal 20,
+      hadiah juara <span class="rp">75.000</span>, hadiah peserta <span class="rp">15.000</span>,
+      poin relasi 3. Skor event: juara 3, kedua 2, lainnya 1. Detail di
+      <a href="event-kampung.html">Event Kampung</a>.</div>
+
+      <h2>Tangkap Serangga</h2>
+      <p>Minigame 30 detik, maksimal 4 tangkapan, radius kaget 190 px, dengan 8 serangga
+      berbeda pola gerak. Detail penuh di halaman <a href="serangga.html">Serangga</a>.</p>
+
+      <h2>Kerja Bakti RT</h2>
+      <p>Dua mode, keduanya <strong>40 detik</strong> dan upahnya dibayar Pak Damar (Pak RT) langsung ke kas,
+      dibulatkan ke kelipatan 500:</p>
+      <table class="price-table">
+        <thead><tr><th>Mode</th><th class="num">Upah</th><th>Mekanik</th></tr></thead>
+        <tbody>
+          <tr><td>Potong Rumput di Taman</td><td class="rp">5.000-15.000</td><td>Tahan-geser mesin pemotong (radius 32) di ladang 22×12 kotak; ada 6 batu, dan menabrak membuat mesin mogok 0,9 detik. Upah = 5.000 + 15.000 × persen terpotong.</td></tr>
+          <tr><td>Sapu Lapangan</td><td class="rp">4.000-11.000</td><td>Dorong daun (radius sapu 56) ke tempat sampah; target 30 daun, maksimal 46 daun turun, angin bertiup tiap 7-11 detik selama 1,4 detik. Upah = 4.000 + 11.000 × (terkumpul ÷ 30).</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Buff Roti Bakar: upah potong rumput <strong>×1,3</strong>.</li>
+        <li>Buff Pisang Goreng: waktu sapu <strong>+10 detik</strong>.</li>
+        <li>Potong rumput selesai otomatis kalau semua kotak yang bisa dipotong sudah habis.</li>
+      </ul>
+
+      <h2>Kerja Kuli</h2>
+      <p>Tiga mode kerja serabutan, masing-masing <strong>30 detik</strong>, upah <span class="rp">4.000-20.000</span>
+      sesuai skor (target penuh: 12 / 14 / 16), dibayar mandor ke kas dalam kelipatan 500:</p>
+      <table class="price-table">
+        <thead><tr><th>Mode</th><th>Target</th><th>Mekanik</th></tr></thead>
+        <tbody>
+          <tr><td>Pindahin Pasir dari Mobil</td><td class="num">12 sekop penuh</td><td>Tap saat penunjuk di zona hijau: tengah zona = sempurna (1,0), tepi = bagus (0,7), meleset = tumpah (0,2). Zona bergeser tiap sekop dan penunjuk makin cepat (+0,06, maks 2,4).</td></tr>
+          <tr><td>Angkat Karung Semen</td><td class="num">14 karung</td><td>Karung meluncur di ban berjalan (kecepatan 230, naik sampai 320); tap saat karung di zona kuning. Jarak ≤ 16 = sempurna, ≤ 50 = angkat; salah tap = keseleo 0,7 detik.</td></tr>
+          <tr><td>Tangkap Bata</td><td class="num">16 bata</td><td>Mandor melempar bata tiap 0,6-1,1 detik; tahan-geser gerobak (jangkauan ±58 px). Bata yang jatuh pecah.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Belajar Iqro</h2>
+      <p>Bersama Ustad Saipul. Kurikulumnya <strong>6 jilid, 12 pelajaran</strong>, dan progresmu
+      tersimpan otomatis. Tamat bila tingkat sudah mencapai 12, dengan gelar "Tamat Iqro 6".</p>
+      <ol>
+        <li><strong>Belajar:</strong> ketuk semua kartu huruf sampai terbaca semua (tombol kuis terkunci sampai lengkap).</li>
+        <li><strong>Kuis:</strong> <strong>5 soal</strong> pilihan ganda. Yang tampil huruf Arab, kamu menjawab bacaannya, atau sebaliknya.</li>
+        <li><strong>Lulus</strong> jika salah ≤ toleransi. Toleransi normal 0; dengan buff Susu Jahe toleransi jadi <strong>1</strong> ("1 kesalahan dimaafkan").</li>
+        <li>Lulus = naik tingkat; gagal = pelajaran yang sama diulang pekan depan.</li>
+      </ol>
+      <table class="price-table">
+        <thead><tr><th>Jilid</th><th>Isi Pelajaran</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Huruf berfathah (6 pelajaran): ba-ta-tsa sampai na-wa-ha-ya</td></tr>
+          <tr><td class="num">2</td><td>Berkasrah (i) dan Berdammah (u)</td></tr>
+          <tr><td class="num">3</td><td>Tanwin (an, in, un)</td></tr>
+          <tr><td class="num">4</td><td>Huruf mati (sukun)</td></tr>
+          <tr><td class="num">5</td><td>Tasydid (huruf ganda)</td></tr>
+          <tr><td class="num">6</td><td>Bacaan kalimat (tamat): bismi, illahi, ar-rahmani, ar-rahimi, al-hamdu</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Kelas Hiragana</h2>
+      <p>Di sekolah, pengajarnya <strong>Rani</strong>. Kurikulumnya <strong>15 pelajaran</strong>:
+      vokal, baris K sampai R, WA/WO/N, dakuten, handakuten, sampai kombinasi kecil seperti
+      kya/sha/cha. Tamat bila tingkat sudah mencapai 15. Mekanik belajarnya sama dengan Iqro,
+      kartu dulu lalu kuis, tetapi:</p>
+      <ul>
+        <li>Kuis <strong>5 soal</strong>; soalnya diambil dari pelajaran saat ini ditambah maksimal 2 pelajaran sebelumnya.</li>
+        <li>Arah soal bergantian: nomor genap menampilkan kana dan kamu menjawab romajinya, nomor ganjil sebaliknya.</li>
+        <li>Setiap soal ke-4 diambil dari gabungan semua pelajaran tadi; sisanya murni dari pelajaran yang sedang dipelajari.</li>
+        <li>Tidak ada buff yang menarget kelas Hiragana (toleransi selalu 0).</li>
+      </ul>
+      <div class="callout warn"><b>Catatan data:</b> karakter Arab dan kana di file hasil dekompilasi mengalami
+      mojibake (encoding rusak), jadi wiki hanya mengutip judul pelajaran dan romajinya.</div>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

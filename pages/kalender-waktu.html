@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalender &amp; Waktu — Warteg Simulator Wiki</title>
+<meta name="description" content="Sistem waktu Warteg Simulator: 3 musim 28 hari (84 hari per tahun), nama hari, fase Pagi/Siang/Malam dengan 2 action, cuaca dan efeknya, warna lighting, dan ulang tahun NPC.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="kalender-waktu">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Kalender &amp; Waktu</h1>
+      <p class="lede">Satu tahun di game berumur 84 hari, dibagi ke tiga musim. Halaman ini
+      merangkum nama hari, fase waktu beserta action-nya, cuaca, warna langit, sampai ulang
+      tahun warga.</p>
+
+      <h2>Musim &amp; hari</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th class="num">Nilai</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Jumlah musim</td><td class="num">3</td><td>Musim Panas, Musim Cerah, Musim Hujan</td></tr>
+          <tr><td>Hari per musim</td><td class="num">28</td><td>Hari dalam musim dihitung 1-28</td></tr>
+          <tr><td>Hari per tahun</td><td class="num">84</td><td>28 × 3; setelah Hujan hari ke-28 kembali ke Panas dan tahun bertambah</td></tr>
+          <tr><td>Nama hari</td><td class="num">7</td><td>Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu</td></tr>
+        </tbody>
+      </table>
+      <p>Nama hari mengikuti nomor hari dalam musim, jadi <strong>hari ke-1 tiap musim selalu
+      Senin</strong>. Tanggal ditampilkan sebagai <em>"Tgl 17, Sabtu"</em> beserta nama musimnya.</p>
+
+      <h2>Fase &amp; action</h2>
+      <ul>
+        <li>Tiga fase per hari: <strong>Pagi Hari, Siang Hari, Malam Hari</strong>.</li>
+        <li>Jatah action per fase: <strong>2</strong> biasa, <strong>3</strong> untuk VIP. Jatah direset penuh setiap ganti fase.</li>
+        <li>Action habis saat fase belum Malam berarti fase langsung maju otomatis.</li>
+        <li>Malam berakhir, hari baru dimulai di Pagi. Tidur juga langsung melompat ke pagi hari berikutnya.</li>
+      </ul>
+      <div class="callout"><b>Satu hari maksimal 6 action</b> (8 jika VIP), terbagi rata ke 3 fase.
+      Bagi jatahnya sejak awal: Pagi untuk belanja dan persiapan, Siang untuk buka warung, Malam
+      untuk aktivitas lain. Lihat <a href="vip-iplan.html">VIP</a> untuk action ekstra.</div>
+
+      <h2>Cuaca</h2>
+      <p>Tiga jenis: <strong>Cerah, Mendung, Hujan</strong>. Cuaca ditentukan per hari,
+      bukan acak per sesi:</p>
+      <ul>
+        <li>Hanya <strong>Musim Hujan</strong> yang bisa hujan. Musim Panas dan Cerah selalu Cerah.</li>
+        <li>Di Musim Hujan, tiap minggu (7 hari) tepat <strong>2 hari hujan</strong>, dan polanya sama setiap kali kamu memulai permainan baru pada minggu yang sama.</li>
+        <li>Hari lainnya di Musim Hujan Mendung.</li>
+        <li>Hari event kampung dipaksa selalu Cerah.</li>
+      </ul>
+      <h3>Efek cuaca</h3>
+      <table class="price-table">
+        <thead><tr><th>Efek</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>NPC masuk rumah</td><td>Saat hujan, NPC tidak tampil di luar ruangan. Pengecualiannya <strong>Pak Yanto, Bu Lala, Kang Cecep, dan Dani</strong></td></tr>
+          <tr><td>Langit gelap</td><td>Mendung dan Hujan menggelapkan pencahayaan peta (lihat tabel di bawah)</td></tr>
+          <tr><td>Ikan yang muncul</td><td>Syarat cuaca pada tabel ikan berlaku di sini; banyak ikan hanya muncul saat Mendung atau Hujan. Lihat <a href="ikan-mancing.html">Ikan &amp; Mancing</a></td></tr>
+          <tr><td>Hari libur</td><td>NPC juga tidak tampil di hari libur, terpisah dari aturan cuaca</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Warna langit &amp; lighting</h2>
+      <p>Setiap ganti fase, warna seluruh peta berubah perlahan dengan transisi
+      <strong>2,5 detik</strong>:</p>
+      <table class="price-table">
+        <thead><tr><th>Kondisi</th><th>Warna (R, G, B)</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Pagi</td><td class="num">1,0 · 0,92 · 0,82</td><td>kuning hangat lembut</td></tr>
+          <tr><td>Siang</td><td class="num">1,0 · 1,0 · 1,0</td><td>netral penuh</td></tr>
+          <tr><td>Malam</td><td class="num">0,16 · 0,19 · 0,38</td><td>biru gelap</td></tr>
+          <tr><td>Mendung (siang/pagi)</td><td class="num">0,52 · 0,58 · 0,70</td><td>kebiruan pucat</td></tr>
+          <tr><td>Hujan (siang/pagi)</td><td class="num">0,40 · 0,45 · 0,60</td><td>kelabu gelap</td></tr>
+          <tr><td>Malam + Mendung</td><td class="num">× 0,85 · 0,88 · 0,95</td><td>malam sedikit lebih terang kebiruan</td></tr>
+          <tr><td>Malam + Hujan</td><td class="num">× 0,70 · 0,75 · 0,88</td><td>malam paling gelap</td></tr>
+        </tbody>
+      </table>
+      <p>Di dalam ruangan efek cuaca diredam: kekuatan penggelapan hanya <strong>0,35</strong> dari penuh.</p>
+
+      <h2>Kecepatan waktu ×2</h2>
+      <ul>
+        <li>Tombol kecepatan ×2 bisa dibuka dengan menonton iklan, aktif <strong>5 menit</strong> (300 detik).</li>
+        <li>Pemain VIP mengaktifkannya kapan pun tanpa iklan; sisa waktu dijeda, bukan hilang.</li>
+        <li>Kecepatan otomatis kembali ×1 saat mini-game terbuka.</li>
+      </ul>
+
+      <h2>Ulang tahun NPC</h2>
+      <p>Tanggal ulang tahun tiap warga ditandai di panel kalender. Menghadiahkan kado di hari
+      ulang tahun memberi hati <strong>×2</strong> ("ulang tahun x2!"). Lihat
+      <a href="npc.html">NPC</a> untuk daftar suka/tidak suka tiap warga.</p>
+      <table class="price-table">
+        <thead><tr><th>NPC</th><th>Musim</th><th class="num">Tanggal (hari dalam musim)</th></tr></thead>
+        <tbody>
+          <tr><td>Bu Yani</td><td>Panas</td><td class="num">23</td></tr>
+          <tr><td>Ustad Saipul</td><td>Panas</td><td class="num">6</td></tr>
+          <tr><td>Jamal</td><td>Panas</td><td class="num">15</td></tr>
+          <tr><td>Kang Cecep</td><td>Cerah</td><td class="num">3</td></tr>
+          <tr><td>Rani</td><td>Cerah</td><td class="num">11</td></tr>
+          <tr><td>Pak Damar</td><td>Cerah</td><td class="num">19</td></tr>
+          <tr><td>Mei</td><td>Cerah</td><td class="num">26</td></tr>
+          <tr><td>Pak Yanto</td><td>Hujan</td><td class="num">17</td></tr>
+          <tr><td>Dani</td><td>Hujan</td><td class="num">8</td></tr>
+          <tr><td>Tirto</td><td>Hujan</td><td class="num">21</td></tr>
+          <tr><td>Bu Lala</td><td>Hujan</td><td class="num">24</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

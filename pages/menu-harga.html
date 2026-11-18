@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu &amp; Harga — Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan menu warteg di Warteg Simulator: 11 menu lengkap dengan harga jual, modal, stok awal, dan peluang dipesan, plus cara mengatur harga sendiri dan mengikuti harga pasar mingguan.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="menu-harga">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Menu &amp; Harga</h1>
+      <p class="lede">Ada 11 menu yang bisa kamu jual di warung, dari nasi sampai lalapan.
+      Di sini kamu bisa lihat harga jual, modal, jumlah porsi, dan kapan tiap menu mulai
+      dijual pedagang. Semua angka dibaca langsung dari data game versi 0.1A.</p>
+
+      <div class="callout"><b>Catatan data:</b> sebagian isian di tabel tidak ditentukan
+      khusus di data menu, jadi game memakai nilai bawaannya: jenis etalase, harga 3.000,
+      modal 1.500, 5 porsi per pembelian, stok awal 15, tersedia mulai hari ke-1, dan
+      peluang dipesan 0,3. Isi mana saja yang memakai nilai bawaan tercatat di catatan
+      sumber di bawah.</div>
+
+      <h2>Daftar menu (11 item)</h2>
+      <table class="price-table scroll-x">
+        <thead><tr><th>Menu</th><th>Jenis</th><th class="num">Harga Jual</th><th class="num">Modal</th><th class="num">Porsi/Beli</th><th class="num">Stok Awal</th><th class="num">Hari ke-</th><th>Butuh Alat</th><th class="num">Peluang Dipesan</th></tr></thead>
+        <tbody>
+          <tr><td>Nasi</td><td>Etalase</td><td class="rp">4.000</td><td class="rp">2.000</td><td class="num">10</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,9</td></tr>
+          <tr><td>Ayam Goreng</td><td>Digoreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">5</td><td class="num">0</td><td class="num">5</td><td>wajan</td><td class="num">0,35</td></tr>
+          <tr><td>Ikan Goreng</td><td>Digoreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td>wajan</td><td class="num">0,3</td></tr>
+          <tr><td>Telur</td><td>Etalase</td><td class="rp">5.000</td><td class="rp">3.000</td><td class="num">5</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,4</td></tr>
+          <tr><td>Bihun</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,3</td></tr>
+          <tr><td>Orek Tempe</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td>tidak ada</td><td class="num">0,3</td></tr>
+          <tr><td>Balado Kentang</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">4</td><td>tidak ada</td><td class="num">0,3</td></tr>
+          <tr><td>Tumis Kangkung</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">5</td><td>tidak ada</td><td class="num">0,35</td></tr>
+          <tr><td>Sambal Merah</td><td>Pelengkap</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">10</td><td class="num">0</td><td class="num">3</td><td>wadah sambal merah</td><td class="num">0,35</td></tr>
+          <tr><td>Sambal Ijo</td><td>Pelengkap</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">10</td><td class="num">0</td><td class="num">6</td><td>wadah sambal ijo</td><td class="num">0,25</td></tr>
+          <tr><td>Lalapan</td><td>Pelengkap</td><td class="rp">2.000</td><td class="rp">1.000</td><td class="num">5</td><td class="num">0</td><td class="num">7</td><td>wadah lalapan</td><td class="num">0,25</td></tr>
+        </tbody>
+      </table>
+      <p>Tiap menu mengandalkan satu bahan utama. Nasi dibuat dari beras, ayam goreng dari
+      ayam potong, ikan goreng dari ikan, telur dari telur ayam, bihun goreng dari bihun,
+      orek tempe dari tempe, balado kentang dari kentang, dan tumis kangkung dari kangkung.
+      Sambal merah dibuat dari cabai merah, sambal ijo dari cabai ijo, dan lalapan dari
+      sayur lalapan.</p>
+      <ul>
+        <li>Menu yang harus digoreng butuh wajan. Menu pelengkap butuh wadahnya masing-masing,
+        dan wadah itu dibeli di Toko Perabotan Mei. Cara belanjanya ada di halaman
+        Belanja &amp; Inventory.</li>
+        <li>Saat memilih pesanan, pelanggan mengundi menu memakai peluang di kolom terakhir
+        tabel.</li>
+        <li>Barang baru mulai dijual pedagang setelah hari game mencapai batasnya. Sebelum
+        hari itu, barangnya belum ada di etalase.</li>
+        <li>Belanja bisa dibayar tunai atau QRIS.</li>
+      </ul>
+
+      <h2>Atur harga sendiri</h2>
+      <p>Harga jual tiap menu bisa kamu atur sendiri dari panel kelola.</p>
+      <ul>
+        <li>Sekali klik menaikkan atau menurunkan harga Rp 500.</li>
+        <li>Harga tidak bisa turun di bawah modal menu, atau Rp 500 kalau modalnya lebih
+        kecil dari itu.</li>
+        <li>Batas atasnya 4 kali harga jual dasar menu.</li>
+        <li>Semua hasil dibulatkan ke kelipatan 500 terdekat.</li>
+      </ul>
+      <div class="callout warn"><b>Harga wajar memengaruhi bintang:</b> harga di atas
+      1,6 kali harga wajar membuat pelanggan kabur, sedangkan harga di bawah 0,85 kali harga
+      wajar memberi bonus bintang. Rinciannya ada di halaman Buka Warung.</div>
+
+      <h2>Harga pasar mingguan</h2>
+      <p>Modal bahan tidak diam di tempat. Harganya bergerak tiap minggu, jadi modal satu
+      porsi bisa berbeda dari minggu sebelumnya.</p>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Periode</td><td class="num">7 hari</td><td>Satu harga pasar berlaku untuk satu minggu game</td></tr>
+          <tr><td>Gerak harga</td><td class="num">±12%</td><td>Pengali mingguan diacak antara −12% dan +12% dari minggu sebelumnya</td></tr>
+          <tr><td>Batas pengali</td><td class="num">80% sampai 130%</td><td>Pengali tidak pernah keluar dari 0,8 sampai 1,3 kali harga normal</td></tr>
+          <tr><td>Pembulatan</td><td class="num">Rp 100</td><td>Harga dibulatkan ke kelipatan Rp 100, minimal Rp 100</td></tr>
+          <tr><td>Hasil tetap</td><td colspan="2">Minggu yang sama selalu memberi harga yang sama, karena angkanya dihitung dari nomor minggu</td></tr>
+          <tr><td>Minggu pertama</td><td class="num">pengali 1,0</td><td>Minggu ke-0 memakai harga normal</td></tr>
+        </tbody>
+      </table>
+      <p>Panel kelola menampilkan modal per porsi versi pasar beserta persen selisihnya dari
+      harga normal, lengkap dengan arah naik atau turunnya. Untung per porsi juga dihitung
+      dari harga pasar yang sedang berlaku.</p>
+
+      <h2>Minyak goreng</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Harga</td><td class="rp">18.000 per liter (nilai bawaan)</td></tr>
+          <tr><td>Isi</td><td class="num">10 kali masak per liter</td></tr>
+          <tr><td>Pemakaian</td><td>Satu unit minyak terpakai setiap kali menggoreng di wajan</td></tr>
+          <tr><td>Stok awal</td><td class="num">20 unit minyak</td></tr>
+          <tr><td>Beli di</td><td>Bu Lala (Pasar)</td></tr>
+        </tbody>
+      </table>
+      <p>Kalau minyak habis, wajan tidak bisa dipakai sama sekali dan game menolak dengan
+      alasan minyak. Satu-satunya jenis persediaan lain yang dikenali game adalah gas, dan
+      untuk sekarang belum ada barang gas di daftar menu.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

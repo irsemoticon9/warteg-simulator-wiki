@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relasi &amp; Kado — Warteg Simulator Wiki</title>
+<meta name="description" content="Cara menaikkan poin relasi di Warteg Simulator, dari ngobrol harian sampai kado. Ada aturan level, 20 hadiah di Toko Hadiah Pelangi, selera 11 warga, dan cara nasi bungkus dinilai.">
+<link rel="icon" href="../assets/img/icon.png">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=7">
+</head>
+<body data-page="relasi-hadiah">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>Relasi &amp; Kado</h1>
+      <p class="lede">Poin relasi naiknya pelan-pelan. Satu obrolan sehari, satu kado sehari,
+      plus tebakan yang pas soal selera orangnya. Di halaman ini ada daftar 20 hadiah
+      beserta harganya, tabel selera 11 warga, dan cara nasi bungkus buatanmu dinilai.</p>
+
+      <h2>Poin relasi</h2>
+      <p>Tiap orang punya catatan poinnya sendiri, dan angkanya berhenti di
+      <strong>100</strong>. Cara menambahnya cuma dua: ngobrol dan ngasih kado.</p>
+      <table class="price-table">
+        <thead><tr><th>Aksi</th><th>Poin</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Ngobrol</td><td><span class="chip good">+1</span></td><td>Sekali per hari untuk tiap warga; percobaan kedua di hari yang sama tidak menambah poin</td></tr>
+          <tr><td>Kado suka</td><td><span class="chip good">+5</span> / <span class="chip good">+10</span></td><td>Nilai bawaan +5; warga yang punya nilai sendiri dapat +10</td></tr>
+          <tr><td>Kado normal</td><td><span class="chip">+3</span> / <span class="chip">+2</span></td><td>Bawaan +3; nilai khusus +2</td></tr>
+          <tr><td>Kado tidak suka</td><td><span class="chip bad">−2</span> / <span class="chip bad">−3</span></td><td>Bawaan −2; nilai khusus −3</td></tr>
+          <tr><td>Kado saat ulang tahun warga</td><td>×2</td><td>Poin didobel, kecuali item tidak disukai</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Kado dibatasi <strong>sekali per hari untuk tiap warga</strong>. Ngasih lagi di hari yang
+        sama tidak membawa efek apa pun.</li>
+        <li>Sembilan warga punya nilai kado versi mereka sendiri (+10/+2/−3), yaitu Bu Yani,
+        Pak Yanto, Jamal, Ustad Saipul, Rani, Pak Damar, Mei, Tirto, dan Dani.
+        <strong>Bu Lala dan Kang Cecep</strong> mengikuti nilai bawaan (+5/+3/−2).</li>
+        <li>Level naik setiap 10 poin, jadi level tertingginya 10. Tingkat obrolan mengikuti
+        poin: <strong>0 sampai 20</strong>, <strong>21 sampai 50</strong>, dan
+        <strong>51 sampai 100</strong> untuk warga teman. Warga romantis punya satu tingkat
+        tambahan; rinciannya ada di halaman <a href="romansa.html">Romansa</a>.</li>
+        <li>Begitu kamu pertama kali berkenalan, permainan mencatat bahwa kalian sudah saling
+        kenal. Catatan itu dipakai untuk dialog dan pesan selanjutnya.</li>
+      </ul>
+
+      <h2>Daftar hadiah</h2>
+      <p>Semua hadiah di bawah ini dijual di <strong>Toko Hadiah Pelangi</strong> di Jalan
+      Serba Ada. Belinya bisa sekaligus sampai 9 item, dan pembayarannya tunai atau QRIS.</p>
+      <table class="price-table">
+        <thead><tr><th>No</th><th>Nama</th><th class="num">Harga</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Gantungan Kunci Lucu</td><td class="num rp">Rp 10.000</td></tr>
+          <tr><td>2</td><td>Buku Catatan Cantik</td><td class="num rp">Rp 15.000</td></tr>
+          <tr><td>3</td><td>Buket Bunga Kain</td><td class="num rp">Rp 25.000</td></tr>
+          <tr><td>4</td><td>Pulpen Mewah</td><td class="num rp">Rp 30.000</td></tr>
+          <tr><td>5</td><td>Bingkai Foto</td><td class="num rp">Rp 30.000</td></tr>
+          <tr><td>6</td><td>Pot Tanaman Hias</td><td class="num rp">Rp 30.000</td></tr>
+          <tr><td>7</td><td>Boneka Beruang</td><td class="num rp">Rp 35.000</td></tr>
+          <tr><td>8</td><td>Payung Lipat</td><td class="num rp">Rp 35.000</td></tr>
+          <tr><td>9</td><td>Tasbih Kayu</td><td class="num rp">Rp 35.000</td></tr>
+          <tr><td>10</td><td>Lilin Aromaterapi</td><td class="num rp">Rp 40.000</td></tr>
+          <tr><td>11</td><td>Topi Rajut</td><td class="num rp">Rp 40.000</td></tr>
+          <tr><td>12</td><td>Syal Hangat</td><td class="num rp">Rp 45.000</td></tr>
+          <tr><td>13</td><td>Peci Bordir</td><td class="num rp">Rp 45.000</td></tr>
+          <tr><td>14</td><td>Bola Sepak Mini</td><td class="num rp">Rp 50.000</td></tr>
+          <tr><td>15</td><td>Puzzle Kayu</td><td class="num rp">Rp 50.000</td></tr>
+          <tr><td>16</td><td>Kacamata Hitam</td><td class="num rp">Rp 55.000</td></tr>
+          <tr><td>17</td><td>Jam Meja Kecil</td><td class="num rp">Rp 60.000</td></tr>
+          <tr><td>18</td><td>Kalung Manik-manik</td><td class="num rp">Rp 70.000</td></tr>
+          <tr><td>19</td><td>Termos Stainless</td><td class="num rp">Rp 75.000</td></tr>
+          <tr><td>20</td><td>Kotak Musik</td><td class="num rp">Rp 80.000</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Matriks selera kado</h2>
+      <p>Angka di tabel ini adalah poin relasi yang masuk buatmu. Item di luar daftar suka
+      maupun tidak suka dihitung biasa saja. Bu Lala dan Kang Cecep memakai skala bawaan
+      (+5/+3/−2), sedangkan warga lain memakai +10/+2/−3.</p>
+      <table class="price-table scroll-x">
+        <thead><tr>
+          <th>Hadiah</th><th>Lala</th><th>Cecep</th><th>Yani</th><th>Yanto</th><th>Jamal</th>
+          <th>Saipul</th><th>Rani</th><th>Damar</th><th>Mei</th><th>Tirto</th><th>Dani</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Gantungan Kunci</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Buku Catatan</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Buket Bunga</td><td>+3</td><td>−2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Pulpen Mewah</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Bingkai Foto</td><td>+5</td><td>+3</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>−3</td></tr>
+          <tr><td>Pot Tanaman</td><td>+5</td><td>+3</td><td>+10</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Boneka Beruang</td><td>+3</td><td>−2</td><td>+10</td><td>−3</td><td>+2</td><td>+2</td><td>−3</td><td>−3</td><td>+2</td><td>−3</td><td>+2</td></tr>
+          <tr><td>Payung Lipat</td><td>+3</td><td>+3</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Tasbih Kayu</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Lilin Aromaterapi</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Topi Rajut</td><td>+3</td><td>+5</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Syal Hangat</td><td>+3</td><td>+3</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Peci Bordir</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Bola Sepak Mini</td><td>−2</td><td>+3</td><td>−3</td><td>−3</td><td>+10</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>−3</td><td>+10</td></tr>
+          <tr><td>Puzzle Kayu</td><td>+3</td><td>+3</td><td>−3</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Kacamata Hitam</td><td>−2</td><td>+5</td><td>−3</td><td>+10</td><td>+10</td><td>−3</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Jam Meja</td><td>+5</td><td>+5</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>−3</td></tr>
+          <tr><td>Kalung Manik</td><td>+5</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>+10</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Termos Stainless</td><td>+3</td><td>+5</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Kotak Musik</td><td>+3</td><td>+3</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Di luar daftar kado:</b> sebagian warga juga punya lauk atau
+      ikan favorit. Bu Lala senang kalau diberi bandeng atau kangkung, dan Kang Cecep suka
+      kerapu serta kakap merah. Daftar ini dipakai untuk kado, sekaligus untuk quest Cerdas
+      Cermat soal lauk kesukaan.</div>
+
+      <h2>Skor rasa nasi bungkus</h2>
+      <p>Nasi bungkus buatanmu juga bisa jadi kado. Isinya wajib ada <strong>nasi</strong> dan
+      minimal <strong>1 lauk selain nasi</strong>. Sambal merah, sambal hijau, dan lalapan
+      dihitung pelengkap saja, jadi tidak bisa menggantikan lauk.</p>
+      <p>Penilaiannya sederhana. Isi bungkus dicocokkan dengan daftar suka dan tidak suka
+      penerimanya, lalu hasilnya jatuh ke salah satu dari tiga kemungkinan:</p>
+      <table class="price-table">
+        <thead><tr><th>Isi bungkus</th><th>Hasil selera</th></tr></thead>
+        <tbody>
+          <tr><td>Ada item suka, tanpa item tidak suka</td><td><span class="chip good">suka</span></td></tr>
+          <tr><td>Ada item tidak suka, tanpa item suka</td><td><span class="chip bad">tidak suka</span></td></tr>
+          <tr><td>Campuran keduanya, atau semua netral</td><td><span class="chip">normal</span></td></tr>
+        </tbody>
+      </table>
+      <p>Bungkus yang isinya campuran tetap dapat reaksi khusus: <em>"Sebenarnya ada isi yang aku
+      kurang suka... tapi kamu sudah repot-repot ngasih, jadi aku terima."</em> Poin yang
+      masuk tetap mengikuti hasil di tabel atas.</p>
+
+      <h2>Ulang tahun</h2>
+      <p>Tanggal ulang tahun dicek lewat musim dan hari di kalender permainan. Beri kado tepat di
+      hari itu dan poinnya berlipat dua, kecuali itemnya justru yang tidak disukai.
+      Ucapannya ikut berganti, dan versi bawaannya begini: <em>"Wah, [nama hadiahnya]! Ini
+      hadiah ulang tahunku, ya? Terima kasih, [panggilanmu]!"</em> Kang Cecep, Bu Yani, Jamal,
+      dan Ustad Saipul punya reaksi versi sendiri, sementara Rani dan Dani memakai teks
+      bawaan.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Warteg Simulator Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=7"></script>
+</body>
+</html>

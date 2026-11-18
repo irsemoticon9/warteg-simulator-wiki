@@ -1,0 +1,356 @@
+/* Warteg Simulator Wiki — v3 "editorial warteg"
+   Newsreader (baca panjang) + Plus Jakarta Sans (UI). Satu aksen hijau terpal.
+   Shape lock: kartu 10, input 8, chip pill. Tabel hemat garis, angka tabular. */
+
+:root {
+  --paper: #faf6eb;
+  --paper-2: #f2ecdc;
+  --board: #fffcf3;
+  --ink: #26251c;
+  --ink-strong: #171610;
+  --muted: #6e6a58;
+  --faint: #97917c;
+  --line: #e3dcc6;
+  --line-strong: #ccc3a4;
+  --wash: #efe8d4;
+
+  --accent: #1e6b44;
+  --accent-hover: #175536;
+  --accent-soft: #1e6b4416;
+  --accent-ink: #f6f2e4;
+
+  --gold: #a16207;
+  --gold-soft: #a162071a;
+  --red: #b8402e;
+  --red-soft: #b8402e15;
+
+  --stripe-a: #1e6b44;
+  --stripe-b: #faf6eb;
+
+  --radius-card: 10px;
+  --radius-input: 8px;
+  --shadow-note: 0 1px 2px #26251c12, 0 6px 18px #26251c0a;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #10150f;
+  --paper-2: #161d14;
+  --board: #141b12;
+  --ink: #e6e0cb;
+  --ink-strong: #f3eeda;
+  --muted: #a29b85;
+  --faint: #6e6957;
+  --line: #2b3428;
+  --line-strong: #3d4a36;
+  --wash: #1e2719;
+  --accent: #5cb884;
+  --accent-hover: #7ac99b;
+  --accent-soft: #5cb88420;
+  --accent-ink: #0c130d;
+  --gold: #d9b45f;
+  --gold-soft: #d9b45f20;
+  --red: #d97a5f;
+  --red-soft: #d97a5f22;
+  --stripe-a: #234933;
+  --stripe-b: #10150f;
+  --shadow-note: none;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 122px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.7 "Plus Jakarta Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+a, button { touch-action: manipulation; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+}
+h1, h2, h3 { text-wrap: balance; }
+.skip-link {
+  position: absolute; left: 12px; top: -48px; z-index: 50;
+  padding: 8px 14px; border-radius: 8px;
+  background: var(--accent); color: var(--accent-ink);
+  font: 700 12px "Plus Jakarta Sans"; transition: top 0.15s;
+}
+.skip-link:focus { top: 12px; text-decoration: none; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+
+/* Masthead */
+.masthead {
+  position: sticky; top: 0; z-index: 30;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.masthead::after {
+  content: ""; display: block; height: 4px;
+  background: repeating-linear-gradient(-45deg, var(--stripe-a) 0 12px, var(--stripe-b) 12px 24px);
+}
+.masthead-row {
+  display: flex; align-items: center; gap: 16px; height: 64px;
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+.brand { display: flex; align-items: center; gap: 11px; color: var(--ink-strong); flex: 0 0 auto; }
+.brand:hover { text-decoration: none; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow-note); }
+.brand strong { display: block; font: 600 18px/1.1 "Newsreader"; letter-spacing: 0.2px; }
+.brand small { display: block; font-size: 9px; letter-spacing: 2.4px; color: var(--accent); font-weight: 700; }
+.masthead-search {
+  margin-left: auto; display: flex; align-items: center; gap: 8px;
+  width: min(300px, 38vw); height: 38px; padding: 0 12px;
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius-input);
+  color: var(--faint); transition: border-color 0.15s;
+}
+.masthead-search:focus-within { border-color: var(--accent); }
+.masthead-search svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.masthead-search input { width: 100%; background: none; border: 0; outline: 0; color: var(--ink); font: 13px "Plus Jakarta Sans"; }
+.masthead-search input::placeholder { color: var(--faint); }
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: var(--radius-input);
+  border: 1px solid var(--line); background: var(--paper-2); color: var(--ink);
+  cursor: pointer; transition: border-color 0.15s, color 0.15s;
+}
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+.icon-btn:active { transform: translateY(1px); }
+.icon-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.icon-btn svg { width: 16px; height: 16px; }
+#search-out {
+  position: absolute; top: 68px; right: max(22px, calc((100vw - 1120px) / 2 + 22px));
+  width: min(380px, calc(100vw - 44px)); z-index: 40;
+}
+#search-out:empty { display: none; }
+.search-results { background: var(--board); border: 1px solid var(--line-strong); border-radius: var(--radius-card); padding: 12px; box-shadow: var(--shadow-note); }
+.search-results h3 { font: 600 12px "Plus Jakarta Sans"; margin: 0 0 6px; color: var(--muted); }
+.result-item { display: block; padding: 8px 10px; border-radius: 7px; color: var(--ink); }
+.result-item:hover { background: var(--wash); text-decoration: none; }
+.result-item b { display: block; font: 600 14px "Newsreader"; }
+.result-item small { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+/* Chip kategori */
+.cat-nav { position: sticky; top: 69px; z-index: 25; background: var(--paper); border-bottom: 1px solid var(--line); }
+.cat-row { display: flex; gap: 6px; overflow-x: auto; padding: 9px 0; scrollbar-width: none; overscroll-behavior-x: contain; }
+.cat-row::-webkit-scrollbar { display: none; }
+.cat-chip {
+  flex: 0 0 auto; padding: 6px 14px; border-radius: 30px;
+  border: 1px solid var(--line); background: var(--paper-2);
+  color: var(--muted); font-size: 12.5px; font-weight: 600;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.cat-chip:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.cat-chip.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+/* Hero imersif: map warteg asli + scrim gelap */
+.hero-board {
+  position: relative;
+  margin: 26px 0 8px;
+  min-height: 440px;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  background-color: #1a2418;
+  background-image: url("../img/hero-warteg.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  box-shadow: 0 2px 6px #26251c14, 0 18px 44px #26251c26;
+}
+.hero-board::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, #0d120b00 0%, #0d120b14 40%, #0d120b66 76%, #0d120bb8 100%),
+    linear-gradient(90deg, #0d120b8c 0%, #0d120b14 64%, #0d120b00 100%);
+}
+.hero-inner { position: relative; z-index: 1; width: 100%; padding: 30px 32px 30px; color: #f6f2e4; }
+.hero-copy {
+  max-width: 620px;
+  padding: 14px 16px 12px;
+  border-radius: 10px;
+  background: linear-gradient(158deg, #0c110a33 0%, #0c110a47 60%, #0c110a66 100%);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+}
+.hero-kicker { font-size: 10.5px; letter-spacing: 2.6px; font-weight: 700; color: #f0d9a3; text-shadow: 0 1px 8px #0d120b66; }
+.hero-inner h1 {
+  font: 600 clamp(34px, 5vw, 58px)/1.02 "Newsreader";
+  letter-spacing: -0.015em; margin: 12px 0 10px;
+  color: #fffdf6; text-shadow: 0 1px 2px #0d120b8c, 0 2px 20px #0d120b66;
+}
+.hero-inner h1 em { font-style: italic; font-weight: 500; color: #f0d9a3; }
+.hero-standfirst {
+  max-width: 560px; margin: 0 0 16px;
+  color: #ece5d2; font: 400 16.5px/1.6 "Newsreader";
+  text-shadow: 0 1px 2px #0d120b99, 0 1px 12px #0d120b80;
+}
+.hero-meta { display: flex; flex-wrap: wrap; gap: 7px; }
+.hero-meta span {
+  font: 600 11px "Plus Jakarta Sans";
+  color: #f4eeda; padding: 4px 11px;
+  border: 1px solid #ffffff2e; border-radius: 30px;
+  background: #0d120b40;
+}
+
+/* Papan daftar isi */
+.board-section { margin: 36px 0 0; scroll-margin-top: 132px; }
+.board-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 12px; }
+.board-head h2 { font: 600 24px/1.2 "Newsreader"; margin: 0; color: var(--ink-strong); letter-spacing: -0.01em; }
+.board-head small { color: var(--faint); font-size: 10.5px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 700; }
+.board { border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--board); overflow: hidden; }
+.board-item {
+  display: grid; grid-template-columns: auto auto 1fr auto auto; gap: 12px; align-items: baseline;
+  padding: 13px 18px; color: var(--ink);
+  border-top: 1px solid var(--line);
+  transition: background 0.12s;
+}
+.board-item:first-child { border-top: 0; }
+.board-item:hover { background: var(--paper-2); text-decoration: none; }
+.board-item:active { background: var(--wash); }
+.board-item .no { font: 600 11px/1 "Plus Jakarta Sans"; color: var(--faint); min-width: 20px; font-variant-numeric: tabular-nums; }
+.board-item .name { font: 600 17px/1.3 "Newsreader"; color: var(--ink-strong); white-space: nowrap; }
+.board-item .dots { border-bottom: 2px dotted var(--line-strong); transform: translateY(-4px); min-width: 24px; }
+.board-item .desc { color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.board-item .tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; color: var(--accent); border: 1px solid var(--accent-soft); background: var(--accent-soft); border-radius: 30px; padding: 2px 9px; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .board-item { gap: 8px; padding: 12px 14px; }
+  .board-item .desc { display: none; }
+  .board-item .dots { min-width: 12px; }
+}
+
+/* Artikel editorial */
+.article { max-width: 780px; margin: 36px 0 0; }
+.crumb { font-size: 11px; letter-spacing: 1.2px; color: var(--faint); font-weight: 600; margin-bottom: 14px; }
+.crumb a { color: var(--muted); }
+.crumb i { font-style: normal; padding: 0 7px; color: var(--line-strong); }
+.article-card { background: var(--board); border: 1px solid var(--line); border-radius: var(--radius-card); padding: 38px 44px 48px; }
+.article-card h1 {
+  font: 600 clamp(28px, 3.6vw, 40px)/1.12 "Newsreader";
+  letter-spacing: -0.015em; margin: 0 0 8px; color: var(--ink-strong);
+}
+.article-card .lede {
+  font: 400 17.5px/1.65 "Newsreader"; font-style: italic;
+  color: var(--muted); margin: 0 0 6px; padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.article-card .lede code { font-style: normal; }
+.article-card code { background: var(--wash); color: var(--accent); padding: 1px 6px; border-radius: 5px; font-size: 0.84em; font-family: ui-monospace, "Cascadia Mono", monospace; }
+.article-card h2 {
+  font: 600 26px/1.25 "Newsreader"; margin: 42px 0 14px;
+  color: var(--ink-strong); letter-spacing: -0.01em; scroll-margin-top: 124px;
+}
+.article-card h2:first-of-type { margin-top: 30px; }
+.article-card h3 { font: 600 18px/1.35 "Newsreader"; margin: 28px 0 9px; color: var(--ink-strong); scroll-margin-top: 124px; }
+.article-card p { margin: 12px 0; font: 400 16px/1.85 "Newsreader"; }
+.article-card ul, .article-card ol { padding-left: 22px; margin: 12px 0; font: 400 16px/1.8 "Newsreader"; }
+.article-card li { padding: 4px 0; }
+.article-card li::marker { color: var(--accent); font-weight: 700; }
+.article-card li code, .article-card p code { font-family: ui-monospace, "Cascadia Mono", monospace; font-size: 0.82em; }
+.article-card hr { border: 0; border-top: 1px solid var(--line); margin: 30px 0; }
+.article-card a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent-soft); }
+.article-card a:hover { text-decoration-color: var(--accent); }
+.article-card strong { color: var(--ink-strong); font-weight: 700; }
+
+/* Tabel data: hemat garis, header small-caps */
+.price-table {
+  width: auto; max-width: 100%; border-collapse: collapse; margin: 18px 0 26px; font-size: 13.5px;
+  border-top: 2px solid var(--ink-strong); border-bottom: 1px solid var(--line-strong);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.price-table td, .price-table th { overflow-wrap: break-word; }
+/* tabel lebar: digulung menyamping, tidak dipaksakan menyusut */
+.price-table.scroll-x { display: block; overflow-x: auto; white-space: nowrap; }
+.price-table thead th {
+  color: var(--ink-strong); text-align: left; font-weight: 700; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 13px 8px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.price-table td { padding: 9px 13px; border-bottom: 1px solid var(--line); color: var(--ink); font-variant-numeric: tabular-nums; }
+.price-table tr:last-child td { border-bottom: 0; }
+.price-table td.num, .price-table th.num { text-align: right; }
+.price-table .rp::before { content: "Rp"; font-size: 0.8em; color: var(--faint); margin-right: 4px; }
+.price-table strong { color: var(--ink-strong); }
+
+/* Daftar adegan: kartu editorial, pengganti tabel naratif */
+.scene-list { margin: 18px 0 26px; border-top: 2px solid var(--ink-strong); border-bottom: 1px solid var(--line-strong); }
+.scene-list .scene-item { padding: 13px 2px 15px; border-bottom: 1px solid var(--line); }
+.scene-list .scene-item:last-child { border-bottom: 0; }
+.scene-list .scene-title { font: 700 17px/1.3 "Newsreader", serif; color: var(--ink-strong); margin: 0; }
+.scene-list .scene-npc { font: 700 10.5px/1.4 "Plus Jakarta Sans", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 3px 0 5px; }
+.scene-list .scene-desc { font: 400 13.5px/1.6 "Plus Jakarta Sans", sans-serif; color: var(--ink); margin: 0; }
+
+.callout {
+  margin: 18px 0; padding: 14px 18px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--paper-2); font: 400 14.5px/1.7 "Newsreader";
+}
+.callout b { color: var(--ink-strong); font-family: "Plus Jakarta Sans"; font-size: 12.5px; letter-spacing: 0.02em; }
+.callout.warn { border-left: 3px solid var(--red); padding-left: 16px; }
+.callout.warn b { color: var(--red); }
+
+.chip { display: inline-block; padding: 2px 9px; border-radius: 30px; font: 700 11px "Plus Jakarta Sans"; letter-spacing: 0.3px; }
+.chip.good { color: var(--accent); background: var(--accent-soft); }
+.chip.bad { color: var(--red); background: var(--red-soft); }
+.chip.gold { color: var(--gold); background: var(--gold-soft); }
+
+/* TOC */
+.toc-note {
+  position: sticky; top: 134px;
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 14px 16px; box-shadow: var(--shadow-note);
+}
+.toc-note .rail-heading { font-size: 9.5px; letter-spacing: 2px; color: var(--faint); font-weight: 700; margin-bottom: 8px; }
+.toc-note nav { display: flex; flex-direction: column; gap: 1px; max-height: 52vh; overflow: auto; }
+.toc-note a { font-size: 12px; color: var(--muted); padding: 4px 8px; border-radius: 6px; line-height: 1.45; }
+.toc-note a:hover, .toc-note a.active { color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.toc-note .rail-note { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line-strong); color: var(--faint); font-size: 10.5px; line-height: 1.6; }
+.with-toc { display: grid; grid-template-columns: minmax(0, 1fr) 215px; gap: 30px; align-items: start; max-width: 1120px; }
+.with-toc .article { max-width: none; margin: 36px 0 0; }
+
+/* Footer */
+.footer { margin-top: 52px; border-top: 1px solid var(--line); padding: 22px 0 30px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--faint); font-size: 11.5px; }
+.footer b { font: 600 13px "Newsreader"; letter-spacing: 0.5px; color: var(--muted); }
+.footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.footer a:hover { color: var(--ink-strong); }
+
+@media (max-width: 860px) {
+  .with-toc { display: block; }
+  .toc-note { display: none; }
+  .hero-board { min-height: 420px; background-position: 58% center; }
+  .hero-inner { padding: 18px 16px; }
+  .hero-copy { max-width: none; padding: 14px 15px 13px; }
+  .hero-standfirst { font-size: 15.5px; }
+  .hero-meta span { font-size: 10.5px; padding: 3px 9px; }
+  .article-card { padding: 26px 20px 32px; }
+  /* Chip kategori di-wrap — tanpa geser manual di layar sempit */
+  .cat-row { flex-wrap: wrap; overflow-x: visible; gap: 5px; }
+  .cat-chip { padding: 5px 12px; font-size: 12px; }
+  html { scroll-padding-top: 150px; }
+}
+@media (max-width: 640px) {
+  html { scroll-padding-top: 150px; }
+  .brand small { display: none; }
+  .masthead-search { width: min(220px, 44vw); }
+  .cat-nav { top: 65px; }
+  .wrap { padding: 0 14px; }
+  .hero-board { min-height: 400px; margin-top: 16px; border-radius: 12px; background-position: 42% center; }
+  .board-head h2 { font-size: 21px; }
+  /* Tabel di layar sempit: rapatkan, biarkan teks membungkus */
+  .price-table { font-size: 12.5px; margin: 14px 0 22px; }
+  .price-table thead th { padding: 8px 9px 7px; font-size: 10px; letter-spacing: 0.06em; }
+  .price-table td { padding: 8px 9px; }
+  .price-table.scroll-x { -webkit-overflow-scrolling: touch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
