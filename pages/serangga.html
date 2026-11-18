@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=8">
+<link rel="stylesheet" href="../assets/css/style.css?v=9">
 </head>
 <body data-page="serangga">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -29,7 +29,7 @@
 
       <h2>Aturan minigame</h2>
       <ul>
-        <li>Durasi <strong>30 detik</strong>, dengan maksimal <strong>4 tangkapan</strong> per sesi.</li>
+        <li>Durasi <strong>30 detik</strong>, dengan maksimal <strong>5 tangkapan</strong> per sesi (sebelum versi 0.1b hanya 4).</li>
         <li>Tap berarti mengayun jaring. Jaring baru aktif <strong>0,12 detik</strong> setelah tap, jadi bidik ke arah gerak serangga, bukan ke posisinya sekarang.</li>
         <li>Radius jaring <strong>58 px</strong> ditambah 14 kali ukuran serangga. Jeda antar ayunan <strong>0,4 detik</strong>.</li>
         <li>Di layar ada paling banyak <strong>5 serangga aktif</strong>, dan tidak pernah lebih dari 2 ekor jenis yang sama.</li>
@@ -37,7 +37,8 @@
         <li>Serangga pergi sendiri setelah 9-14 detik kalau harga jualnya di bawah 15.000, atau 7-10 detik kalau 15.000 ke atas.</li>
         <li>Sesi yang berakhir tanpa tangkapan tetap memberi 1 serangga paling umum yang "nyasar" ke tas.</li>
         <li>Hasil tangkapan masuk tas, dan layar hasil menampilkan nilai jual totalnya ke Kang Cecep.</li>
-        <li>Satu sesi memakai <strong>1 action</strong>, dan satu spot hanya bisa dimainkan <strong>sekali per hari</strong>.</li>
+        <li>Satu sesi memakai <strong>1 action</strong>. Sejak versi 0.1b satu spot bisa dimainkan
+        berkali-kali dalam sehari, selama action masih ada (dulu hanya sekali per hari).</li>
       </ul>
 
       <h3>Buff yang berlaku</h3>
@@ -67,7 +68,9 @@
       </table>
       <div class="callout"><b>Quest harian</b> tipe serangga hanya memilih serangga dengan
       bobot <strong>≥ 6,0</strong>. Daftar permintaannya ada di halaman
-      <a href="quest-harian.html">Quest Harian</a>.</div>
+      <a href="quest-harian.html">Quest Harian</a>. Saat quest serangga aktif, serangga yang
+      diminta punya peluang <strong>80%</strong> muncul di setiap gelombang — selama persediaan
+      di tas masih di bawah 2 ekor.</div>
       <p>Semua serangga bisa kamu berikan sebagai hadiah. Tidak ada serangga yang masuk daftar
       suka atau tidak suka warga mana pun, jadi reaksinya selalu normal.</p>
 
@@ -96,9 +99,9 @@
 </main>
 
 <footer class="footer wrap">
-  <span><b>Warteg Simulator Wiki</b></span>
+  <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=8"></script>
+<script src="../assets/js/app.js?v=9"></script>
 </body>
 </html>

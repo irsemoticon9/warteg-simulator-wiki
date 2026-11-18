@@ -37,7 +37,8 @@
     { id: "panduan", label: "Panduan", items: [
       { id: "vip-iplan", href: "pages/vip-iplan.html", title: "VIP, IAP & Iklan", desc: "Keuntungan VIP, kit, iklan" },
       { id: "kalender-waktu", href: "pages/kalender-waktu.html", title: "Kalender & Waktu", desc: "Musim, fase, action, cuaca" },
-      { id: "tips-trik", href: "pages/tips-trik.html", title: "Tips & Trik", desc: "Strategi awal & efisiensi" }
+      { id: "tips-trik", href: "pages/tips-trik.html", title: "Tips & Trik", desc: "Strategi awal & efisiensi" },
+      { id: "changelog", href: "pages/changelog.html", title: "Catatan Versi", desc: "Perubahan antar versi game" }
     ]}
   ];
 
@@ -152,7 +153,7 @@
       html += '<a href="#' + h.id + '">' + h.textContent + "</a>";
     });
     note.innerHTML = html + "</nav>" +
-      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.1A (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
+      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.1b (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
     var links = note.querySelectorAll("nav a");
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
