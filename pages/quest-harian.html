@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quest Harian — Warteg Simulator Wiki</title>
 <meta name="description" content="Quest Harian Warteg Simulator: tiga jenis pekerjaan di papan quest, cara hadiah dihitung, pembulatan 500, denda reputasi 6 kalau gagal, dan tawaran yang selalu sama untuk hari yang sama.">
-<link rel="icon" href="../assets/img/og-banner.png">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 </head>
 <body data-page="quest-harian">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -35,18 +35,34 @@
     <div class="article-card">
       <h1>Quest Harian</h1>
       <p class="lede">Papan Quest menawarkan dua pekerjaan setiap hari, dan hadiahnya dihitung
-      dengan rumus yang tetap. Halaman ini menjelaskan tiga jenis quest, besaran hadiahnya, dan
-      apa yang terjadi kalau pekerjaannya tidak selesai.</p>
+      dengan rumus yang tetap. Halaman ini menjelaskan tiga jenis quest, batas waktunya, besaran
+      hadiahnya, dan apa yang terjadi kalau pekerjaannya tidak selesai.</p>
 
       <h2>Cara kerja papan quest</h2>
       <ul>
-        <li>Pekerjaan diambil dari <strong>Papan Quest</strong>.</li>
+        <li>Pekerjaan diambil dari <strong>Papan Quest</strong> di Jalan 2.</li>
         <li>Tiap hari tersedia <strong>2 tawaran</strong>. Isinya diambil dari 3 jenis quest yang
         diacak urutannya.</li>
+        <li>Hanya boleh <strong>satu quest berjalan</strong>. Papan baru bisa diambil lagi setelah
+        quest itu selesai, gagal, atau kamu batalkan.</li>
         <li>Penerima quest dipilih acak dari <strong>11 NPC</strong>, dan tidak ada yang muncul dua
         kali dalam sehari: Bu Lala, Kang Cecep, Bu Yani, Pak Yanto, Jamal, Ustad Saipul, Rani,
         Pak Damar, Mei, Tirto, Dani.</li>
       </ul>
+
+      <h2>Batas waktu dan pembatalan</h2>
+      <table class="price-table">
+        <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Batas waktu</td><td class="num">3-7 hari</td><td>Diundi acak saat quest diambil, bukan lagi harus selesai di hari yang sama</td></tr>
+          <tr><td>Sisa waktu</td><td class="num">ditampilkan</td><td>Tampil di kartu papan quest dan di pelacak quest di layar</td></tr>
+          <tr><td>Biaya batal</td><td class="rp">Rp 5.000</td><td>Diambil dari kas warung; kalau kas kurang, dipotong dari bank</td></tr>
+          <tr><td>Konfirmasi batal</td><td class="num">2 ketukan</td><td>Ketukan pertama mengubah tombol jadi "Yakin batalkan?", ketukan kedua baru membatalkan</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Kapan sebaiknya batal:</b> kalau barangnya mustahil didapat sebelum batas
+      waktu, misalnya butuh ikan yang belum muncul di level pancingmu. Membatalkan lebih murah
+      daripada kena denda reputasi 6 poin saat quest gagal.</div>
 
       <h2>Tawaran yang tidak berubah-ubah</h2>
       <p>Undiannya tidak benar-benar bebas setiap kali papan dibuka. Bibit acaknya dibuat sekali
@@ -60,7 +76,7 @@
         <tbody>
           <tr><td>Pengali hadiah</td><td class="num">1,3</td><td>Pengali nilai item untuk hadiah</td></tr>
           <tr><td>Bonus hadiah</td><td class="rp">Rp 1.000</td><td>Bonus tetap (untuk quest ikan/serangga)</td></tr>
-          <tr><td>Denda reputasi</td><td class="num">6</td><td>Reputasi warung turun jika quest kemarin gagal</td></tr>
+          <tr><td>Denda reputasi</td><td class="num">6</td><td>Reputasi warung turun jika quest lewat batas waktu tanpa diserahkan</td></tr>
           <tr><td>Pembulatan hadiah</td><td class="num">kelipatan 500</td><td>Dibulatkan ke kelipatan 500 terdekat</td></tr>
         </tbody>
       </table>
@@ -84,7 +100,7 @@
           <tr>
             <td>serangga</td>
             <td>Serangga acak dengan bobot minimal 6,0</td>
-            <td>1</td>
+            <td>2 (jika bobot ≥ 20 dan peluang 50%) atau 1</td>
             <td>harga jual × jumlah × 1,3 + 1.000</td>
           </tr>
         </tbody>
@@ -104,23 +120,66 @@
       aktif, barang buruannya punya peluang <strong>80%</strong> muncul langsung saat memancing
       atau menjaring — asalkan persediaan di tas masih di bawah 2 buah.</div>
 
+      <h2>Cara menyelesaikan quest</h2>
+      <p>Urutannya selalu sama: ambil, siapkan barangnya, lalu antar ke orangnya.</p>
+      <ol>
+        <li><strong>Ambil dari papan.</strong> Buka Papan Quest di Jalan 2, baca nama penerima
+        dan barang yang diminta, lalu ambil. Cuma boleh satu quest berjalan.</li>
+        <li><strong>Siapkan barangnya</strong> sesuai jenis quest:
+          <ul>
+            <li><strong>Bungkus:</strong> buka warung, masuk mode bungkus, ambil kertas bungkus,
+            lalu ketuk nasi dan lauk sesuai pesanan. Wajib ada nasi dan minimal satu lauk. Tekan
+            <em>Simpan ke Tas</em> setelah susunannya benar.</li>
+            <li><strong>Ikan:</strong> mancing di Dermaga. Ikan yang diminta ikut menyesuaikan
+            musim, fase, dan level pancingmu. Selama jumlah ikan itu di tas masih di bawah 2,
+            peluangnya muncul 80% tiap kali dapat ikan.</li>
+            <li><strong>Serangga:</strong> jaring di tempat biasa. Yang bisa ditangkap hanya
+            serangga yang sedang diam atau melayang, dan peluang 80% yang sama berlaku.</li>
+          </ul>
+        </li>
+        <li><strong>Antar ke penerima.</strong> Temui NPC yang namanya tertulis di quest — dia
+        bisa ada di mana saja saat itu — lalu ajak bicara. Kalau barangnya sudah cukup, dialog
+        penyerahan muncul sendiri dan hadiahnya langsung masuk kas.</li>
+      </ol>
+      <div class="callout"><b>Tanda barang sudah lengkap:</b> pelacak quest di layar berubah jadi
+      <em>"LENGKAP, antar sekarang!"</em>. Kalau belum, pelacak menulis "barang belum lengkap".
+      Kalau diajak bicara sebelum lengkap, NPC cuma mengingatkan sisa waktunya.</div>
+      <p>Untuk <strong>pesanan NPC</strong> lewat SMS, langkahnya mirip: tekan Terima, pastikan
+      etalase berisi nasi dan lauk yang diminta, lalu antar ke pengirimnya sebelum 5 hari habis.
+      Pesanan yang berhasil menambah 3 poin relasi.</p>
+
       <h2>Kalau quest tidak selesai</h2>
-      <p>Quest yang belum diserahkan saat hari berganti dianggap gagal. Pesan yang muncul:
-      <em>"Quest kemarin gagal: %s tidak sampai. Reputasi warung turun 6."</em> Reputasi warung
-      berkurang 6 poin, dan angkanya tidak bisa turun di bawah 0.</p>
+      <p>Quest yang belum diserahkan sampai batas waktunya lewat dianggap gagal. Pesan yang muncul:
+      <em>"Quest gagal: batas waktu lewat, %s tidak sampai. Reputasi warung turun 6."</em>
+      Reputasi warung berkurang 6 poin, dan angkanya tidak bisa turun di bawah 0.</p>
       <div class="callout warn"><b>Catatan:</b> penurunan 6 poin itu tercatat jelas di kode. Efek
       lain yang beredar, misalnya review turun satu bintang gara-gara quest gagal, tidak ditemukan
       di catatan sumber.</div>
 
       <h2>Pesanan NPC, sistem yang terpisah</h2>
-      <p>Di luar papan quest ada <strong>Pesanan NPC</strong>, yang berjalan sendiri dan hadiahnya
+      <p>Di luar papan quest ada <strong>Pesanan NPC</strong> berupa nasi bungkus, yang hadiahnya
       lebih besar.</p>
+      <p>Sejak versi 0.1c pesanan datang sebagai tawaran lewat SMS, bukan langsung masuk daftar
+      pekerjaan:</p>
+      <ul>
+        <li>Warga mengirim SMS berisi isi bungkus dan hadiahnya, lalu kamu memilih
+        <strong>Terima</strong> atau <strong>Tolak</strong> di bawah pesan itu.</li>
+        <li>Tawaran yang didiamkan sampai hari berganti otomatis ditolak, tanpa denda.</li>
+        <li>Jumlah tawaran <strong>3-5 per musim</strong>, tersebar di hari-hari tertentu — bukan
+        lagi undian harian yang bisa datang tiap hari.</li>
+        <li>Pesanan hanya berisi lauk yang <strong>sedang ada di etalase</strong>, dan warung harus
+        sudah berisi nasi plus minimal satu lauk.</li>
+        <li>Maksimal <strong>3 pesanan aktif</strong> sekaligus.</li>
+        <li>Pesanan berhasil menambah <strong>+3 poin relasi</strong>; pesanan gagal atau telat
+        hanya mengurangi <strong>1 poin</strong>.</li>
+      </ul>
       <table class="price-table">
         <thead><tr><th>Butir</th><th>Nilai</th></tr></thead>
         <tbody>
           <tr><td>Pengali hadiah</td><td class="num">1,5</td></tr>
-          <tr><td>Bonus hadiah</td><td class="rp">Rp 2.000</td><td>dikali jumlah isi</td></tr>
-          <tr><td>Rumus hadiah</td><td colspan="2">biaya × 1,5 + 2.000 × jumlah isi, lalu dibulatkan ke kelipatan 500</td></tr>
+          <tr><td>Bonus hadiah</td><td class="rp">Rp 2.000 per isi</td></tr>
+          <tr><td>Rumus hadiah</td><td>biaya × 1,5 + 2.000 × jumlah isi, lalu dibulatkan ke kelipatan 500</td></tr>
+          <tr><td>Batas antar</td><td class="num">5 hari</td><td>Dihitung sejak kamu menekan Terima</td></tr>
         </tbody>
       </table>
       <p>Bandingkan: quest harian memakai pengali 1,3 ditambah bonus Rp 1.000, sedangkan pesanan NPC
@@ -135,6 +194,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=9"></script>
+<script src="../assets/js/app.js?v=16"></script>
 </body>
 </html>

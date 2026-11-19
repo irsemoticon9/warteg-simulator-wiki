@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Belanja &amp; Inventory — Warteg Simulator Wiki</title>
 <meta name="description" content="Panduan belanja di Warteg Simulator: bahan pokok dari pasar, 5 perabot Toko Perabotan Mei dengan harga bertingkat, outfit di butik, hadiah, dan vitamin dari Puskesmas.">
-<link rel="icon" href="../assets/img/og-banner.png">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 </head>
 <body data-page="belanja-inventory">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -38,6 +38,29 @@
       perabot dari Toko Perabotan Mei, outfit lewat Lemari kamar, hadiah dari Toko Hadiah
       Pelangi, dan vitamin dari Puskesmas. Halaman ini mengumpulkan daftar barangnya,
       harganya, dan tempat membelinya.</p>
+
+      <h2>Jam buka toko &amp; tempat belanja</h2>
+      <p>Game ini tidak memakai jam 24 jam. Waktu dibagi tiga fase: <strong>Pagi</strong>,
+      <strong>Siang</strong>, <strong>Malam</strong>, dan tiap pintu punya daftar fase kapan bisa
+      dibuka. Kalau di luar jadwal, label pintunya berubah jadi "Tutup" atau "Mei sedang tidak
+      di tempat".</p>
+      <table class="price-table">
+        <thead><tr><th>Tempat</th><th>Penjaga</th><th>Buka</th></tr></thead>
+        <tbody>
+          <tr><td>Pasar</td><td>Bu Lala (sembako, sayur, tempe, minyak)</td><td>Pagi &amp; Siang, tiap hari</td></tr>
+          <tr><td>Pasar</td><td>Kang Cecep (ayam &amp; ikan)</td><td>Pagi &amp; Siang, mulai hari ke-2</td></tr>
+          <tr><td>Dermaga</td><td>Pak Yanto (pancing &amp; umpan)</td><td>Pagi &amp; Malam, tiap hari</td></tr>
+          <tr><td>Kafe Kopi Senja</td><td>Kasir kafe</td><td>Pagi &amp; Siang</td></tr>
+          <tr><td>Toko Hadiah Pelangi (Jalan Serba Ada)</td><td>Kasir toko</td><td>Pagi &amp; Siang</td></tr>
+          <tr><td>Puskesmas (Lapangan)</td><td>Dokter Tirto</td><td>Pagi &amp; Siang. Vitamin hanya bisa dibeli saat Tirto ada: Senin-Jumat Pagi &amp; Siang, Sabtu Pagi</td></tr>
+          <tr><td>Toko Perabotan Rumah Indah (Lapangan)</td><td>Mei</td><td>Pagi &amp; Siang. <strong>Selasa hanya Siang</strong>, <strong>Jumat tutup</strong>. Ikut tutup kalau Mei sedang ada acara kampung</td></tr>
+          <tr><td>Toko Butik Cantika &amp; Toko Bangunan Jaya Abadi</td><td>-</td><td><span class="chip bad">segera hadir</span> pintunya belum bisa dibuka</td></tr>
+          <tr><td>Warungmu sendiri</td><td>Kamu</td><td>Siang &amp; Malam, sesuai jatah action</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Praktisnya:</b> belanja bahan cuma bisa Pagi atau Siang, karena Bu Lala
+      dan Kang Cecep pulang saat Malam. Di Malam tinggal Dermaga yang masih ada orang.
+      Kalau mau memborong perabot, ingat Selasa cuma buka Siang dan Jumat tutup.</div>
 
       <h2>Bahan pokok dari pasar</h2>
       <p>Bahan dibeli dari dua pedagang pasar. Harganya mengikuti harga pasar mingguan yang
@@ -60,6 +83,10 @@
           <tr><td>Minyak goreng</td><td>Bu Lala</td><td class="rp">18.000/liter</td><td>10 kali masak</td></tr>
         </tbody>
       </table>
+      <div class="callout"><b>Kalau muncul "bahan habis":</b> pesan seperti "Bahan Orek Tempe
+      habis. Butuh 1 Tempe." artinya stok menu itu yang kosong. Beli <strong>Orek Tempe</strong>
+      di Bu Lala, bukan tempe mentah terpisah. Satu porsi yang dibeli langsung masuk stok dan
+      bisa dipakai memasak.</div>
       <div class="callout"><b>Belanja dari rumah:</b> pemain VIP bisa memesan semua bahan
       lewat Order Online dengan ongkir Rp 8.000. Barang tiba H+1, jadi tidak perlu jalan ke
       pasar.</div>
@@ -101,7 +128,8 @@
         <li>Hanya outfit yang sesuai gender pemain yang muncul di Lemari.</li>
         <li>Kalau outfit yang aktif tidak valid atau masih terkunci, game kembali ke pakaian
         bawaan sesuai gender.</li>
-        <li>Pemain VIP juga bisa membuka butik dan mengubah tampilan depan warung.</li>
+        <li>Toko Butik Cantika di Jalan Serba Ada masih berstatus <span class="chip bad">segera hadir</span>,
+        jadi pintunya belum bisa dibuka siapa pun, termasuk pemain VIP.</li>
       </ul>
 
       <h2>Toko hadiah</h2>
@@ -162,6 +190,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=9"></script>
+<script src="../assets/js/app.js?v=16"></script>
 </body>
 </html>

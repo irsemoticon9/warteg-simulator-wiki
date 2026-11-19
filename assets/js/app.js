@@ -13,32 +13,32 @@
       { id: "index", href: "index.html", title: "Beranda", desc: "Peta lengkap wiki" }
     ]},
     { id: "quest", label: "Quest & Cerita", items: [
-      { id: "cerita-utama", href: "pages/cerita-utama.html", title: "Cerita & Cutscene", desc: "Adegan khusus dan pemicunya" },
-      { id: "quest-harian", href: "pages/quest-harian.html", title: "Quest Harian", desc: "Papan quest, hadiah, denda" },
-      { id: "event-kampung", href: "pages/event-kampung.html", title: "Event Kampung", desc: "Agustusan, lomba, hadiah" }
+      { id: "cerita-utama", href: "pages/cerita-utama.html", title: "Cerita & Cutscene", desc: "Adegan khusus dan pemicunya", kw: "cutscene cerita alur adegan cerita utama cerita serangga cara menyelesaikan syarat hp bintang relasi" },
+      { id: "quest-harian", href: "pages/quest-harian.html", title: "Quest Harian", desc: "Papan quest, hadiah, denda", kw: "quest papan batas waktu batal pesanan sms bungkus ikan serangga denda reputasi cara menyelesaikan langkah antar penerima" },
+      { id: "event-kampung", href: "pages/event-kampung.html", title: "Event Kampung", desc: "Agustusan, lomba, hadiah", kw: "agustusan 17an lomba kampung kerupuk balap karung cerdas cermat hadiah" }
     ]},
     { id: "karakter", label: "Karakter", items: [
-      { id: "npc", href: "pages/npc.html", title: "NPC & Pelanggan", desc: "11 warga, jadwal, peran" },
-      { id: "relasi-hadiah", href: "pages/relasi-hadiah.html", title: "Relasi & Kado", desc: "Poin, preferensi, ulang tahun" },
-      { id: "romansa", href: "pages/romansa.html", title: "Romansa", desc: "Rani & Dani, tier dialog" }
+      { id: "npc", href: "pages/npc.html", title: "NPC & Pelanggan", desc: "11 warga, jadwal, peran", kw: "npc warga profil jadwal lokasi peta pelanggan kontak hp" },
+      { id: "relasi-hadiah", href: "pages/relasi-hadiah.html", title: "Relasi & Kado", desc: "Poin, preferensi, ulang tahun", kw: "relasi poin kado hadiah toko pelangi selera suka tidak suka ulang tahun teman" },
+      { id: "romansa", href: "pages/romansa.html", title: "Romansa", desc: "Rani & Dani, tier dialog", kw: "romansa cinta rani dani tier dialog pacar" }
     ]},
     { id: "ekonomi", label: "Data & Ekonomi", items: [
-      { id: "warteg-shop", href: "pages/warteg-shop.html", title: "Buka Warung", desc: "Loop inti: etalase, masak, layani", tag: "INTI" },
-      { id: "menu-harga", href: "pages/menu-harga.html", title: "Menu & Harga", desc: "11 menu, harga pasar mingguan" },
-      { id: "uang-bank", href: "pages/uang-bank.html", title: "Uang, Kas & Bank", desc: "Pecahan, QRIS, tagihan" },
-      { id: "belanja-inventory", href: "pages/belanja-inventory.html", title: "Belanja & Inventory", desc: "Bahan, perabot, outfit" },
-      { id: "buff-kafe", href: "pages/buff-kafe.html", title: "Buff Kafe", desc: "8 minuman & efeknya" }
+      { id: "warteg-shop", href: "pages/warteg-shop.html", title: "Buka Warung", desc: "Loop inti: etalase, masak, layani", tag: "INTI", kw: "warung buka etalase masak goreng wajan layani pelanggan tutup shift nasi bungkus" },
+      { id: "menu-harga", href: "pages/menu-harga.html", title: "Menu & Harga", desc: "11 menu, harga pasar mingguan", kw: "menu harga jual modal untung nasi ayam ikan telur sayur" },
+      { id: "uang-bank", href: "pages/uang-bank.html", title: "Uang, Kas & Bank", desc: "Pecahan, QRIS, tagihan", kw: "uang kas bank tabungan qris tunai tagihan ojek online ongkir" },
+      { id: "belanja-inventory", href: "pages/belanja-inventory.html", title: "Belanja & Inventory", desc: "Bahan, perabot, outfit", kw: "belanja toko pasar jam buka tutup bahan perabot mei butik outfit hadiah pelangi vitamin puskesmas inventory tas" },
+      { id: "buff-kafe", href: "pages/buff-kafe.html", title: "Buff Kafe", desc: "8 minuman & efeknya", kw: "kafe kopi minuman buff teh jus jeruk mie goreng" }
     ]},
     { id: "koleksi", label: "Koleksi & Mini-Game", items: [
-      { id: "ikan-mancing", href: "pages/ikan-mancing.html", title: "Ikan & Mancing", desc: "DB ikan, syarat, umpan" },
-      { id: "serangga", href: "pages/serangga.html", title: "Serangga", desc: "8 jenis, pola gerak, harga" },
+      { id: "ikan-mancing", href: "pages/ikan-mancing.html", title: "Ikan & Mancing", desc: "DB ikan, syarat, umpan", kw: "mancing ikan pancing umpan dermaga joran reel" },
+      { id: "serangga", href: "pages/serangga.html", title: "Serangga", desc: "8 jenis, pola gerak, harga", kw: "serangga jaring kupu kupu belalang capung tangkap" },
       { id: "minigame", href: "pages/minigame.html", title: "Semua Mini-Game", desc: "Kerupuk, balap karung, penalti…" }
     ]},
     { id: "panduan", label: "Panduan", items: [
-      { id: "vip-iplan", href: "pages/vip-iplan.html", title: "VIP, IAP & Iklan", desc: "Keuntungan VIP, kit, iklan" },
-      { id: "kalender-waktu", href: "pages/kalender-waktu.html", title: "Kalender & Waktu", desc: "Musim, fase, action, cuaca" },
-      { id: "tips-trik", href: "pages/tips-trik.html", title: "Tips & Trik", desc: "Strategi awal & efisiensi" },
-      { id: "changelog", href: "pages/changelog.html", title: "Catatan Versi", desc: "Perubahan antar versi game" }
+      { id: "vip-iplan", href: "pages/vip-iplan.html", title: "VIP, IAP & Iklan", desc: "Keuntungan VIP, kit, iklan", kw: "vip iap iklan special launch kit beli premium" },
+      { id: "kalender-waktu", href: "pages/kalender-waktu.html", title: "Kalender & Waktu", desc: "Musim, fase, action, cuaca", kw: "kalender musim hari fase pagi siang malam action energi cuaca hujan panas cerah lewati rumah tidur kamar kasur" },
+      { id: "tips-trik", href: "pages/tips-trik.html", title: "Tips & Trik", desc: "Strategi awal & efisiensi", kw: "tips trik strategi hemat cepat untung pemula" },
+      { id: "changelog", href: "pages/changelog.html", title: "Catatan Versi", desc: "Perubahan antar versi game", kw: "changelog catatan versi update pembaruan 0.1c 0.1b 0.1a" }
     ]}
   ];
 
@@ -69,7 +69,8 @@
       '<img src="' + px + 'assets/img/icon.png" alt="" width="40" height="40">' +
       '<span><strong>Warteg Simulator</strong><small>UNOFFICIAL WIKI</small></span></a>' +
       '<div class="masthead-search">' + ICONS.search +
-      '<input id="search-input" type="search" placeholder="Cari panduan…" aria-label="Cari panduan"></div>' +
+      '<input id="search-input" type="search" placeholder="Cari panduan…" aria-label="Cari panduan">' +
+      '<div id="search-out"></div></div>' +
       '<button class="icon-btn" id="theme-btn" aria-label="Ganti tema terang/gelap">' + ICONS.sun + "</button>" +
       "</div></header>" +
       '<nav class="cat-nav" aria-label="Kategori"><div class="wrap cat-row">';
@@ -153,7 +154,7 @@
       html += '<a href="#' + h.id + '">' + h.textContent + "</a>";
     });
     note.innerHTML = html + "</nav>" +
-      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.1b (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
+      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.1c (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
     var links = note.querySelectorAll("nav a");
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

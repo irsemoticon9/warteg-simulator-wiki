@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NPC &amp; Pelanggan — Warteg Simulator Wiki</title>
 <meta name="description" content="Kenalan dengan 11 warga kampung Warteg Simulator: siapa mereka, ulang tahunnya, jadwal harian, siapa yang suka mampir ke warung, dan celetukan yang keluar saat diajak ngobrol.">
-<link rel="icon" href="../assets/img/og-banner.png">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 </head>
 <body data-page="npc">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -61,6 +61,31 @@
         </tbody>
       </table>
 
+      <h2>Profil warga di HP</h2>
+      <p>Sejak versi 0.1c, membuka kontak warga di aplikasi HP menampilkan kartu profil lengkap:
+      julukan, peran, usia, tanggal ulang tahun, ringkasan sifat, daftar selera, dan jadwal
+      kehadiran per hari dan fase. Sebelumnya halaman kontak hanya berisi nama dan riwayat SMS.</p>
+      <table class="price-table">
+        <thead><tr><th>Warga</th><th>Julukan</th><th>Usia</th></tr></thead>
+        <tbody>
+          <tr><td>Bu Lala</td><td>Pedagang sembako &amp; sayur</td><td>Tidak dicantumkan</td></tr>
+          <tr><td>Kang Cecep</td><td>Pedagang ayam &amp; ikan</td><td>Tidak dicantumkan</td></tr>
+          <tr><td>Bu Yani</td><td>Ibu judes tetangga</td><td>40-an tahun</td></tr>
+          <tr><td>Pak Yanto</td><td>Kakek pemancing</td><td>Sudah sepuh</td></tr>
+          <tr><td>Jamal</td><td>Murid SMP bandel</td><td>13-14 tahun</td></tr>
+          <tr><td>Ustad Saipul</td><td>Ustad masjid</td><td>40-50 tahun</td></tr>
+          <tr><td>Rani</td><td>Guru BK SMP</td><td>28-32 tahun</td></tr>
+          <tr><td>Pak Damar</td><td>Pak RT</td><td>45-55 tahun</td></tr>
+          <tr><td>Mei</td><td>Pemilik Toko Perabotan</td><td>35-45 tahun</td></tr>
+          <tr><td>Tirto</td><td>Dokter Puskesmas</td><td>27-32 tahun</td></tr>
+          <tr><td>Dani</td><td>Hansip muda</td><td>24-28 tahun</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><b>Selera masih tertutup:</b> daftar suka dan tidak suka di kartu profil
+      disamarkan jadi <strong>???</strong>. Tiap kali kamu memberi hadiah, satu item yang cocok
+      akan terbuka dan tersimpan di save. Cara membukanya dibahas di halaman
+      <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</div>
+
       <h2>Siapa yang mampir sebagai pelanggan</h2>
       <p>Saat warung buka, sekitar <strong>35%</strong> pembeli yang datang adalah wajah yang
       sudah kamu kenal. Sisanya pembeli biasa tanpa nama. Siapa saja yang boleh mampir,
@@ -95,17 +120,17 @@
       <table class="price-table">
         <thead><tr><th>Warga</th><th>Lokasi &amp; waktu muncul</th></tr></thead>
         <tbody>
-          <tr><td>Bu Lala</td><td>Pasar, semua fase, libur Jumat saja.</td></tr>
-          <tr><td>Kang Cecep</td><td>Pasar, semua fase, setiap hari.</td></tr>
+          <tr><td>Bu Lala</td><td>Pasar, Pagi &amp; Siang, setiap hari.</td></tr>
+          <tr><td>Kang Cecep</td><td>Pasar, Pagi &amp; Siang, mulai hari ke-2.</td></tr>
           <tr><td>Bu Yani</td><td>Kebun di belakang rumah, Pagi setiap hari; Pasar Pagi Senin/Rabu/Jumat/Sabtu; Jalan 1 Siang Senin/Rabu/Jumat; Puskesmas Pagi+Siang Selasa/Kamis; Taman Pagi Minggu; Warteg Siang Sabtu/Minggu.</td></tr>
-          <tr><td>Pak Yanto</td><td>Dermaga (pantai), semua fase, setiap hari; Pasar Siang setiap hari.</td></tr>
-          <tr><td>Jamal</td><td>Sekolah Senin sampai Jumat (semua fase); Lapangan setiap hari, semua fase; Dermaga Pagi Sabtu/Minggu.</td></tr>
-          <tr><td>Ustad Saipul</td><td>Masjid (Jalan 2) Pagi Senin/Rabu/Kamis/Jumat, Siang Kamis/Jumat/Sabtu, Malam semua hari kecuali Selasa; Dermaga Pagi Sabtu &amp; Siang Rabu; Gunung Pagi+Siang Minggu; Taman Siang Senin.</td></tr>
+          <tr><td>Pak Yanto</td><td>Dermaga (pantai), Pagi &amp; Malam, setiap hari; Pasar Siang setiap hari.</td></tr>
+          <tr><td>Jamal</td><td>Sekolah Pagi Senin sampai Jumat; Lapangan Siang setiap hari; Dermaga Pagi Sabtu/Minggu.</td></tr>
+          <tr><td>Ustad Saipul</td><td>Masjid (Jalan 2) Pagi Senin/Rabu/Kamis/Jumat, Siang Kamis/Jumat/Sabtu, Malam semua hari kecuali Selasa; Dermaga Pagi Minggu &amp; Siang Rabu; Gunung Pagi+Siang Minggu; Taman Siang Senin.</td></tr>
           <tr><td>Rani</td><td>Sekolah Siang Senin/Rabu/Kamis; Pasar Pagi Minggu; Kafe Siang Sabtu; Lapangan Siang Selasa/Jumat; Taman Pagi Sabtu, Siang Minggu, Malam Rabu/Jumat.</td></tr>
-          <tr><td>Pak Damar</td><td>Keliling: Pasar Pagi Rabu/Kamis/Minggu; Dermaga Pagi Selasa/Jumat, Siang Rabu/Kamis/Minggu, Malam Sabtu; Jalan 1 Malam Senin/Kamis; Jalan 2 Pagi Senin, Siang Kamis, Malam Selasa/Jumat; Lapangan Pagi Sabtu, Siang Senin/Jumat, Malam Rabu; Taman Pagi Kamis, Siang Selasa/Sabtu, Malam Minggu.</td></tr>
+          <tr><td>Pak Damar</td><td>Keliling: Pasar Pagi Rabu/Minggu; Dermaga Pagi Selasa/Jumat, Siang Rabu/Minggu, Malam Sabtu; Jalan 1 Malam Senin/Kamis; Jalan 2 Pagi Senin, Siang Kamis, Malam Selasa/Jumat; Lapangan Pagi Sabtu, Siang Senin/Jumat, Malam Rabu; Taman Pagi Kamis, Siang Selasa/Sabtu, Malam Minggu.</td></tr>
           <tr><td>Mei</td><td>Toko Perabotan Pagi kecuali Selasa/Jumat, Siang kecuali Jumat; Jalan Serba Ada Pagi Jumat; Taman Siang Jumat; Puskesmas Pagi Selasa.</td></tr>
           <tr><td>Tirto</td><td>Puskesmas Pagi+Siang Senin sampai Jumat; Puskesmas Pagi Sabtu; Lapangan Pagi Minggu; Jalan Serba Ada Siang Sabtu.</td></tr>
-          <tr><td>Dani</td><td>Keliling: Jalan 1 Pagi Senin, Malam Sabtu, Kafe Siang Rabu (saat libur); Jalan 2 Pagi Minggu, Malam Senin/Jumat; Dermaga Pagi Sabtu, Malam Selasa/Kamis; Lapangan Pagi Selasa, Siang Jumat, Malam Minggu, Puskesmas Pagi Jumat; Pasar Siang Senin, Pagi libur Kamis; Sekolah Siang Selasa; Warteg Siang Sabtu.</td></tr>
+          <tr><td>Dani</td><td>Keliling: Warteg Siang Minggu; Taman Pagi Rabu, Siang Selasa/Minggu; Jalan 1 Pagi Senin, Siang Rabu di Kafe (saat libur), Malam Sabtu; Jalan 2 Pagi Minggu, Malam Senin/Rabu/Jumat; Sekolah Siang Selasa; Pasar Pagi Kamis, Siang Senin; Lapangan Pagi Selasa, Siang Jumat, Malam Minggu, Puskesmas Pagi Jumat; Dermaga Pagi Sabtu, Malam Selasa/Kamis.</td></tr>
         </tbody>
       </table>
       <div class="callout"><b>Catatan:</b> di lokasi acara seperti Lapangan Agustusan,
@@ -146,6 +171,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=9"></script>
+<script src="../assets/js/app.js?v=16"></script>
 </body>
 </html>

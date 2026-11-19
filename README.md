@@ -1,6 +1,6 @@
 # Warteg Simulator Wiki (Unofficial)
 
-Wiki fan-made berisi panduan Warteg Simulator versi 0.1b. Seluruh angka diambil dari hasil decompile game, bukan perkiraan. Dibuat dengan bantuan AI.
+Wiki fan-made berisi panduan Warteg Simulator versi 0.1c. Seluruh angka diambil dari hasil decompile game, bukan perkiraan. Dibuat dengan bantuan AI.
 
 ## Menjalankan lokal
 
@@ -37,4 +37,4 @@ File `index.html` dan semua halaman di `pages/` memuat `app.js?v=6` dan `style.c
 
 ## Sumber data
 
-Data diambil dari APK `com.wartegsim.perlium` v0.1b (kode versi 12) menggunakan jadx dan Godot RE Tools. Hasil decompile ada di folder `gdre_out/` dan `decompiled/` di luar repo ini.
+Data diambil dari APK `com.wartegsim.perlium` v0.1c (kode versi 15) menggunakan jadx dan Godot RE Tools. Hasil decompile ada di folder `gdre_out/` dan `decompiled/` di luar repo ini.

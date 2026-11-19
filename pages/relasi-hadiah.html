@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Relasi &amp; Kado — Warteg Simulator Wiki</title>
 <meta name="description" content="Cara menaikkan poin relasi di Warteg Simulator, dari ngobrol harian sampai kado. Ada aturan level, 20 hadiah di Toko Hadiah Pelangi, selera 11 warga, dan cara nasi bungkus dinilai.">
-<link rel="icon" href="../assets/img/og-banner.png">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 </head>
 <body data-page="relasi-hadiah">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -96,34 +96,39 @@
 
       <h2>Matriks selera kado</h2>
       <p>Angka di tabel ini adalah poin relasi yang masuk buatmu. Item di luar daftar suka
-      maupun tidak suka dihitung biasa saja. Bu Lala dan Kang Cecep memakai skala bawaan
-      (+5/+3/−2), sedangkan warga lain memakai +10/+2/−3.</p>
+      maupun tidak suka dihitung biasa saja. Bu Lala, Kang Cecep, dan Pak Yanto memakai skala
+      bawaan (+5/+3/−2), sedangkan delapan warga lain memakai +10/+2/−3.</p>
+      <div class="callout"><b>Selera yang belum ketahuan:</b> sejak versi 0.1c, daftar suka dan
+      tidak suka di halaman kontak HP warga tertutup tanda <strong>???</strong>. Setiap kali kamu
+      memberi hadiah, satu item yang statusnya cocok akan terbuka — kalau hadiahnya tidak masuk
+      daftar suka maupun tidak suka, tidak ada yang terbuka. Jadi tabel di bawah ini bisa dipakai
+      sebagai contekan, sementara pemain yang main tanpa wiki harus menebak lewat kado.</div>
       <table class="price-table scroll-x">
         <thead><tr>
           <th>Hadiah</th><th>Lala</th><th>Cecep</th><th>Yani</th><th>Yanto</th><th>Jamal</th>
           <th>Saipul</th><th>Rani</th><th>Damar</th><th>Mei</th><th>Tirto</th><th>Dani</th>
         </tr></thead>
         <tbody>
-          <tr><td>Gantungan Kunci</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+10</td></tr>
-          <tr><td>Buku Catatan</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
-          <tr><td>Buket Bunga</td><td>+3</td><td>−2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Pulpen Mewah</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
-          <tr><td>Bingkai Foto</td><td>+5</td><td>+3</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>−3</td></tr>
-          <tr><td>Pot Tanaman</td><td>+5</td><td>+3</td><td>+10</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Boneka Beruang</td><td>+3</td><td>−2</td><td>+10</td><td>−3</td><td>+2</td><td>+2</td><td>−3</td><td>−3</td><td>+2</td><td>−3</td><td>+2</td></tr>
-          <tr><td>Payung Lipat</td><td>+3</td><td>+3</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Tasbih Kayu</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Lilin Aromaterapi</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td></tr>
-          <tr><td>Topi Rajut</td><td>+3</td><td>+5</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td></tr>
-          <tr><td>Syal Hangat</td><td>+3</td><td>+3</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Peci Bordir</td><td>+3</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Bola Sepak Mini</td><td>−2</td><td>+3</td><td>−3</td><td>−3</td><td>+10</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>−3</td><td>+10</td></tr>
-          <tr><td>Puzzle Kayu</td><td>+3</td><td>+3</td><td>−3</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td></tr>
-          <tr><td>Kacamata Hitam</td><td>−2</td><td>+5</td><td>−3</td><td>+10</td><td>+10</td><td>−3</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+10</td></tr>
-          <tr><td>Jam Meja</td><td>+5</td><td>+5</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>−3</td></tr>
-          <tr><td>Kalung Manik</td><td>+5</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>+10</td><td>+2</td><td>+2</td></tr>
-          <tr><td>Termos Stainless</td><td>+3</td><td>+5</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td></tr>
-          <tr><td>Kotak Musik</td><td>+3</td><td>+3</td><td>+2</td><td>−3</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Gantungan Kunci</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>−3</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Buku Catatan</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Buket Bunga</td><td>+3</td><td>−2</td><td>+10</td><td>+3</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Pulpen Mewah</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Bingkai Foto</td><td>+5</td><td>+3</td><td>+2</td><td>+3</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>−3</td></tr>
+          <tr><td>Pot Tanaman</td><td>+5</td><td>+3</td><td>+10</td><td>+3</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Boneka Beruang</td><td>+3</td><td>−2</td><td>+10</td><td>−2</td><td>+2</td><td>+2</td><td>−3</td><td>−3</td><td>+2</td><td>−3</td><td>+2</td></tr>
+          <tr><td>Payung Lipat</td><td>+3</td><td>+3</td><td>+10</td><td>+5</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Tasbih Kayu</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Lilin Aromaterapi</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>+2</td><td>+2</td><td>+10</td><td>−3</td><td>+10</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Topi Rajut</td><td>+3</td><td>+5</td><td>+2</td><td>+5</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Syal Hangat</td><td>+3</td><td>+3</td><td>+10</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Peci Bordir</td><td>+3</td><td>+3</td><td>+2</td><td>+3</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Bola Sepak Mini</td><td>−2</td><td>+3</td><td>−3</td><td>+3</td><td>+10</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>−3</td><td>+10</td></tr>
+          <tr><td>Puzzle Kayu</td><td>+3</td><td>+3</td><td>−3</td><td>+3</td><td>+10</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Kacamata Hitam</td><td>−2</td><td>+5</td><td>−3</td><td>+5</td><td>+10</td><td>−3</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td></tr>
+          <tr><td>Jam Meja</td><td>+5</td><td>+5</td><td>+2</td><td>+3</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+10</td><td>+2</td><td>−3</td></tr>
+          <tr><td>Kalung Manik</td><td>+5</td><td>+3</td><td>+2</td><td>+3</td><td>+2</td><td>−3</td><td>+2</td><td>−3</td><td>+10</td><td>+2</td><td>+2</td></tr>
+          <tr><td>Termos Stainless</td><td>+3</td><td>+5</td><td>+2</td><td>+5</td><td>+2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td></tr>
+          <tr><td>Kotak Musik</td><td>+3</td><td>+3</td><td>+2</td><td>−2</td><td>+2</td><td>+2</td><td>+10</td><td>+2</td><td>+10</td><td>+2</td><td>+2</td></tr>
         </tbody>
       </table>
       <div class="callout"><b>Di luar daftar kado:</b> sebagian warga juga punya lauk atau
@@ -166,6 +171,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=9"></script>
+<script src="../assets/js/app.js?v=16"></script>
 </body>
 </html>

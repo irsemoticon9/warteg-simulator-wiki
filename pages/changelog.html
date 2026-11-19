@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catatan Versi — Warteg Simulator Wiki</title>
-<meta name="description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.1b dibanding 0.1A, dari penggorengan awal, diskon perabot, batas vitamin, sampai mancing yang lebih mudah.">
-<link rel="icon" href="../assets/img/og-banner.png">
+<meta name="description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.1c dan 0.1b, dari penggorengan awal, diskon perabot, batas vitamin, batas waktu quest, sampai profil warga di HP.">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
 <meta property="og:title" content="Catatan Versi — Warteg Simulator Wiki">
-<meta property="og:description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.1b dibanding 0.1A, dari penggorengan awal, diskon perabot, batas vitamin, sampai mancing yang lebih mudah.">
+<meta property="og:description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.1c dan 0.1b, dari penggorengan awal, diskon perabot, batas vitamin, batas waktu quest, sampai profil warga di HP.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/changelog.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 </head>
 <body data-page="changelog">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -36,6 +36,53 @@
       <h1>Catatan Versi</h1>
       <p class="lede">Daftar perubahan antar versi Warteg Simulator, dibaca langsung dari kode
       game. Cocokkan halaman panduan lain dengan versi yang tercantum di sini.</p>
+
+      <h2>Versi 0.1c</h2>
+      <p>Pembaruan yang mengubah cara kerja quest dan menambah informasi warga di HP.</p>
+
+      <h3>Quest harian</h3>
+      <ul>
+        <li>Quest sekarang punya <strong>batas waktu 3-7 hari</strong> yang diundi acak saat
+        diambil. Dulu harus diserahkan di hari yang sama.</li>
+        <li>Hanya boleh <strong>satu quest berjalan</strong>. Papan baru bisa dipakai lagi setelah
+        quest selesai, gagal, atau dibatalkan.</li>
+        <li>Fitur baru: <strong>batalkan quest</strong> dari papan dengan biaya
+        <strong>Rp 5.000</strong>, dipotong dari kas warung atau bank kalau kas kurang.</li>
+        <li>Kartu quest dan pelacak di layar menampilkan <strong>sisa hari</strong> sebelum batas
+        waktu lewat.</li>
+        <li>Pesan gagal berubah jadi "Quest gagal: batas waktu lewat…", dendanya tetap
+        <strong>6 poin reputasi</strong>.</li>
+      </ul>
+
+      <h3>Pesanan nasi bungkus dari warga</h3>
+      <ul>
+        <li>Pesanan datang sebagai <strong>tawaran lewat SMS</strong>. Kamu memilih
+        <strong>Terima</strong> atau <strong>Tolak</strong> langsung di bawah pesannya.</li>
+        <li>Tawaran yang didiamkan sampai hari berganti otomatis ditolak, tanpa denda.</li>
+        <li>Jumlahnya <strong>3-5 tawaran per musim</strong> di hari-hari tertentu, bukan lagi
+        undian harian yang bisa muncul tiap hari.</li>
+        <li>Isi pesanan hanya memakai <strong>lauk yang ada di etalase</strong>, dan etalase harus
+        sudah berisi nasi plus satu lauk.</li>
+        <li>Pesanan berhasil memberi <strong>+3 poin relasi</strong> (dulu +2); gagal atau telat
+        hanya <strong>−1</strong> (dulu −5).</li>
+      </ul>
+
+      <h3>Warga &amp; HP</h3>
+      <ul>
+        <li>Kartu kontak warga sekarang menampilkan <strong>profil</strong>: julukan, peran, usia,
+        ulang tahun, ringkasan sifat, dan <strong>jadwal kehadiran</strong> per hari dan fase.</li>
+        <li>Daftar selera suka dan tidak suka disamarkan <strong>???</strong> dan terbuka satu per
+        satu setiap kali kamu memberi hadiah yang cocok.</li>
+        <li>Pratinjau SMS di daftar chat dipangkas jadi <strong>satu baris</strong>.</li>
+      </ul>
+
+      <h3>Tampilan</h3>
+      <ul>
+        <li>Kolom kiri layar (tombol Special Kit, notifikasi, pelacak quest) bisa
+        <strong>dilipat</strong> supaya tidak menutupi jalan.</li>
+        <li>Daftar di dalam HP bisa digeser dengan <strong>usapan jari</strong>, bukan cuma lewat
+        bilah gulir kecil.</li>
+      </ul>
 
       <h2>Versi 0.1b</h2>
       <p>Pembaruan pertama setelah rilis awal. Banyak perubahannya mempermudah pemain baru.</p>
@@ -92,7 +139,7 @@
 
       <h2>Versi 0.1A</h2>
       <p>Rilis awal yang jadi basis seluruh halaman wiki ini. Semua angka di halaman lain sudah
-      diperbarui mengikuti 0.1b kecuali disebutkan lain.</p>
+      diperbarui mengikuti 0.1c kecuali disebutkan lain.</p>
     </div>
   </article>
 
@@ -103,6 +150,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=9"></script>
+<script src="../assets/js/app.js?v=16"></script>
 </body>
 </html>
