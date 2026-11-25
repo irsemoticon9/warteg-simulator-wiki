@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Romansa — Warteg Simulator Wiki</title>
-<meta name="description" content="Jalur romansa di Warteg Simulator: Rani untuk pemain cowok, Dani untuk pemain cewek. Ada empat tingkat obrolan, momen taman Rabu dan Jumat, rangkaian cutscene, SMS, sampai kado ulang tahun.">
+<title>Romansa · Warteg Simulator Wiki</title>
+<meta name="description" content="Lima jalur romansa di Warteg Simulator: Rani, Laras, Tirto, Bima, dan Dani. Ada tingkat obrolan, cutscene, SMS romantis, kado, dan kenang-kenangan.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Romansa — Warteg Simulator Wiki">
-<meta property="og:description" content="Jalur romansa di Warteg Simulator: Rani untuk pemain cowok, Dani untuk pemain cewek. Ada empat tingkat obrolan, momen taman Rabu dan Jumat, rangkaian cutscene, SMS, sampai kado ulang tahun.">
+<meta property="og:title" content="Romansa · Warteg Simulator Wiki">
+<meta property="og:description" content="Lima jalur romansa di Warteg Simulator: Rani, Laras, Tirto, Bima, dan Dani. Ada tingkat obrolan, cutscene, SMS romantis, kado, dan kenang-kenangan.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/romansa.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="romansa">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -34,31 +34,33 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Romansa</h1>
-      <p class="lede">Romansa di sini cuma punya dua jalur, dan keduanya terbuka sesuai
-      gender pemain. <strong>Rani</strong> untuk MC cowok, <strong>Dani</strong> untuk MC
-      cewek. Di halaman ini kamu akan menemukan tingkat obrolannya, adegan yang perlu
-      dilalui, serta kebiasaan kecil yang membuat hubungan itu berjalan.</p>
+      <p class="lede">V0.2B punya <strong>lima jalur romansa</strong>, bukan dua: Rani dan Laras untuk
+      MC cowok; Tirto, Bima, dan Dani untuk MC cewek. Halaman ini merangkum tingkat obrolan,
+      cutscene, SMS, kado, dan kenang-kenangannya.</p>
 
-      <h2>Dua jalur romansa</h2>
+      <h2>Lima jalur romansa</h2>
       <table class="price-table">
         <thead><tr><th>NPC</th><th>Untuk</th><th>Pekerjaan</th><th>Ulang tahun</th></tr></thead>
         <tbody>
-          <tr><td>Rani</td><td>MC cowok</td><td>Guru BK SMP, pakai seragam saat hari kerja</td><td>Musim 1 (Cerah), tgl 11</td></tr>
-          <tr><td>Dani</td><td>MC cewek</td><td>Hansip muda, seragam hansip tidak dipakai hari Rabu dan Kamis</td><td>Musim 2 (Hujan), tgl 8</td></tr>
+          <tr><td>Rani</td><td>MC cowok</td><td>Guru BK SMP</td><td>Musim 1 (Cerah), tgl 11</td></tr>
+          <tr><td>Laras</td><td>MC cowok</td><td>Penjaga Butik Cantika; butuh flag <code>laras_terbuka</code></td><td>Musim 0 (Panas), tgl 10</td></tr>
+          <tr><td>Tirto</td><td>MC cewek</td><td>Dokter Puskesmas</td><td>Musim 2 (Hujan), tgl 21</td></tr>
+          <tr><td>Bima</td><td>MC cewek</td><td>Barista Kafe Kopi Senja</td><td>Musim 1 (Cerah), tgl 5</td></tr>
+          <tr><td>Dani</td><td>MC cewek</td><td>Hansip muda; bisa jadi polisi lewat flag <code>dani_polisi</code></td><td>Musim 2 (Hujan), tgl 8</td></tr>
         </tbody>
       </table>
-      <p>Seseorang baru dihitung romantis kalau gender pemain cocok dengan jalurnya. Di
-      aplikasi HP, kartu mereka diberi label <em>Romantis</em> berwarna pink, dan progresnya
-      digambar sebagai deretan hati. Warga biasa memakai bintang.</p>
+      <p>Seseorang baru dihitung romantis kalau <code>tipe</code>-nya <em>romantis</em> dan
+      <code>romantis_untuk</code>-nya cocok dengan gender pemain. Di aplikasi HP, kartu mereka
+      diberi label <em>Romantis</em> berwarna pink dan progresnya digambar sebagai deretan hati.</p>
       <div class="callout"><b>Poin tetap dari sistem biasa:</b> ngobrol +1 per hari, kado
-      sekali sehari (suka +10, normal +2, tidak suka −3), ulang tahun ×2. Rinciannya ada di
-      halaman <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</div>
+      sekali sehari (suka +10, normal +2, tidak suka −3, tapi kado murah yang disukai tetap +5),
+      ulang tahun ×2. Rinciannya ada di halaman <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</div>
 
-      <h2>Empat tingkat obrolan di tiap fase</h2>
-      <p>Warga biasa cuma punya tiga tingkat. Rani dan Dani dapat empat:
-      <strong>0 sampai 20</strong>, <strong>21 sampai 50</strong>, <strong>51 sampai 80</strong>,
-      lalu <strong>81 sampai 100</strong>, dan semuanya berlaku di Pagi, Siang, dan Malam.
-      Perkembangannya begini:</p>
+      <h2>Tingkat obrolan</h2>
+      <p>Hanya <strong>Rani dan Dani</strong> yang punya empat tingkat:
+      <strong>0-20</strong>, <strong>21-50</strong>, <strong>51-80</strong>, dan
+      <strong>81-100</strong>. Tirto, Laras, dan Bima memakai tiga tingkat seperti warga biasa:
+      <strong>0-20</strong>, <strong>21-50</strong>, dan <strong>51-100</strong>.</p>
       <table class="price-table">
         <thead><tr><th>Poin</th><th>Rani</th><th>Dani</th></tr></thead>
         <tbody>
@@ -73,20 +75,18 @@
       <em>"Aku biasanya mampir ke taman sebentar setiap Rabu atau Jumat malam."</em></p>
 
       <h2>Momen spesial: Rani di taman tiap Rabu &amp; Jumat malam</h2>
-      <p>Ada tiga hal di dalam game yang menunjuk ke arah yang sama:</p>
       <ol>
-        <li><strong>Tempatnya.</strong> Rani hanya muncul di Taman pada malam Rabu dan Jumat;
-        di hari lain dia tidak ada di sana.</li>
+        <li><strong>Tempatnya.</strong> Rani muncul di Taman pada malam Rabu dan Jumat.</li>
         <li><strong>Ucapannya.</strong> Di obrolan malam, dia bercerita soal kebiasaan mampir
         ke taman setiap Rabu atau Jumat malam.</li>
-        <li><strong>Adegannya.</strong> Cutscene melepas penat itu hanya bisa terjadi di
-        Taman pada Malam, hari Rabu atau Jumat, dengan relasi minimal 10, adegan soal murid
-        bolos yang sudah selesai, dan jeda minimal 1 hari dari adegan tersebut.</li>
+        <li><strong>Adegannya.</strong> Cutscene melepas penat terjadi di Taman pada Malam,
+        hari Rabu atau Jumat, dengan relasi minimal 10, adegan soal murid bolos sudah selesai,
+        dan jeda minimal 1 hari dari adegan tersebut.</li>
       </ol>
 
       <h2>Cutscene romantis</h2>
-      <p>Rangkaian adegan tiap orang berjalan berurutan. Tabel berikut menyebut tempat,
-      waktu, dan syarat poin yang perlu kamu penuhi lebih dulu.</p>
+      <p>Rangkaian adegan Rani dan Dani berjalan berurutan. Tabel ini memuat pemicu yang
+      tercatat di data wiki:</p>
       <table class="price-table">
         <thead><tr><th>Adegan</th><th>Pemicu</th><th>Isi singkat</th></tr></thead>
         <tbody>
@@ -102,37 +102,53 @@
           <tr><td>Adegan Dani kelima</td><td>Gunung 1, Pagi+Siang, hari Kamis, relasi minimal 40, setelah adegan sebelumnya</td><td>Jalan ke Gunung 2, insiden monyet, foto kenangan</td></tr>
         </tbody>
       </table>
-      <p>Adegan-adegan ini terkunci setelah sekali jalan, atau punya jeda harian, jadi tidak
-      bisa diulang demi menumpuk poin. Beberapa di antaranya memberi lompatan relasi lumayan
-      besar lewat penandanya sendiri, misalnya rangkaian adegan Jamal dengan +10, +10, dan
-      +15. Pola serupa dipakai untuk menopang progres romansa.</p>
+      <p>V0.2B juga mendaftarkan adegan baru untuk jalur lain, antara lain
+      <code>bima_cs1</code> sampai <code>bima_cs5</code>, <code>laras_cs0</code> sampai
+      <code>laras_cs4</code>, <code>tirto_cs1</code> sampai <code>tirto_cs5</code>, dan
+      <code>dani_cs6_polisi</code>. Berkas <code>.res</code> untuk jalur ini sudah berhasil
+      dipulihkan, sehingga syarat dan langkahnya bisa dibaca. Misalnya
+      <code>bima_cs2_kopi_gagal</code> memakai Kafe, Siang, relasi minimal 20, dan jeda satu hari.
+      Rincian lengkap ada di halaman <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
 
       <h2>SMS romantis</h2>
-      <p>Pesan acak bisa masuk dengan peluang 10% per hari dan jeda minimal 2 hari, tapi
-      hanya untuk orang yang sudah kamu kenal. Isinya menyesuaikan poin: versi
-      <strong>biasa</strong> mulai dari poin 10, <strong>dekat</strong> mulai 25, lalu
-      <strong>romantis</strong> mulai 40. Versi romantis hanya berlaku untuk jalur yang
-      aktif, dan bobotnya tiga kali lebih besar saat dipilih.</p>
+      <p>SMS acak masuk dengan peluang 10% per hari, jeda minimal 2 hari, dan hanya mulai hari
+      ke-3. Isinya dibagi jadi tiga kumpulan poin: <strong>biasa</strong> mulai 10,
+      <strong>dekat</strong> mulai 25, dan <strong>romantis</strong> mulai 40. Kumpulan romantis
+      hanya dipakai untuk jalur yang aktif. Tidak ada bobot tiga kali lipat seperti yang
+      tercantum di wiki lama.</p>
       <ul>
         <li>Rani, versi romantis: <em>"Makasih ya udah selalu ada. Dekat kamu rasanya tenang banget."</em></li>
         <li>Dani, versi romantis: <em>"Besok kita ketemu gak? Ada tempat bagus yang pengen aku tunjukin ke kamu."</em></li>
       </ul>
+      <p>Selain SMS acak ada <strong>SmsRomantis</strong> khusus untuk lima penerima: Rani, Dani,
+      Tirto, Laras, dan Bima. Ada tiga pilihan balasan, poin 20 untuk SMS sedang dan 40 untuk
+      balasan, maksimal <strong>2 kali per minggu</strong>. Balasan terbuka di poin 40.</p>
 
       <h2>Kado &amp; ulang tahun</h2>
-      <p>Selera kado keduanya memakai poin yang sama, suka +10, normal +2, tidak suka −3:</p>
+      <p>Selera kado kelima orangnya memakai poin suka +10, normal +2, tidak suka −3
+      (kecuali kado murah yang disukai, tetap +5):</p>
       <table class="price-table">
         <thead><tr><th>NPC</th><th>Suka</th><th>Tidak suka</th></tr></thead>
         <tbody>
-          <tr><td>Rani</td><td>Bihun, lalapan, Buku Catatan, Pulpen Mewah, Lilin Aromaterapi, Buket Bunga, Kotak Musik</td><td>Ikan (kategori), Bola Sepak Mini, Boneka Beruang</td></tr>
-          <tr><td>Dani</td><td>Ayam, sambal merah, Puzzle Kayu, Bola Sepak Mini, Kacamata Hitam, Topi Rajut, Gantungan Kunci</td><td>Kangkung, Bingkai Foto, Jam Meja</td></tr>
+          <tr><td>Rani</td><td>Bihun, lalapan, Buku Catatan, Pulpen Mewah, Lilin Aromaterapi, Buket Bunga, Kotak Musik, Pembatas Buku</td><td>Ikan, Bola Sepak Mini, Boneka Beruang, Gelang Tali</td></tr>
+          <tr><td>Laras</td><td>Telur Balado, Perkedel, Buket Bunga, Syal Hangat, Topi Rajut, Bingkai Foto, Pot Tanaman, Gelang Tali</td><td>Sambal Merah, Bola Sepak Mini, Kacamata Hitam, Sandal Jepit</td></tr>
+          <tr><td>Tirto</td><td>Termos, Buku Catatan, Pulpen Mewah, Lilin Aromaterapi, Tempat Pensil</td><td>Bola Sepak Mini, Boneka Beruang, Kartu Ucapan</td></tr>
+          <tr><td>Bima</td><td>Ayam, Telur, Tempe Goreng, Termos, Boneka Beruang, Puzzle Kayu, Pin Enamel</td><td>Sambal Merah, Kalung Manik, Buket Bunga, Kipas Lipat</td></tr>
+          <tr><td>Dani</td><td>Ayam, sambal merah, Puzzle Kayu, Bola Sepak Mini, Kacamata Hitam, Topi Rajut, Gantungan Kunci, Stiker Lucu</td><td>Kangkung, Bingkai Foto, Jam Meja, Sapu Tangan</td></tr>
         </tbody>
       </table>
-      <p>Ulang tahun Rani jatuh pada Musim 1 (Cerah) tanggal 11, sedangkan Dani pada Musim 2
-      (Hujan) tanggal 8. Kado di hari itu bernilai dua kali lipat, kecuali itemnya justru
-      yang tidak disukai, dan ucapannya memakai teks bawaan yang otomatis menyisipkan nama
-      hadiah dan panggilanmu: <em>"Wah, [nama hadiah]! Ini hadiah ulang tahunku, ya?
-      Terima kasih, [panggilanmu]!"</em> Nasi bungkus buatanmu juga
-      bisa jadi kado; nilainya dihitung dari isinya terhadap daftar di atas.</p>
+      <p>Kado di hari ulang tahun bernilai dua kali lipat, kecuali itemnya justru yang tidak
+      disukai. Nasi bungkus buatanmu juga bisa jadi kado; nilainya dihitung dari isinya terhadap
+      daftar di atas.</p>
+
+      <h2>Kenang-kenangan</h2>
+      <ul>
+        <li><strong>Surat dari Dani</strong> (<code>surat_dani</code>): amplop yang minta dibaca
+        nanti, setelah dia pergi. Fotonya tersimpan sebagai <code>dani_foto1.png</code>.</li>
+        <li><strong>Syal Rajutan Laras</strong> (<code>syal_laras</code>): deskripsinya menjanjikan
+        +5% peluang Kumbang Badak, tapi konstanta di kode game adalah <strong>3%</strong>. Ada
+        ketidaksesuaian antara teks dan angka yang sebenarnya dipakai.</li>
+      </ul>
     </div>
   </article>
 
@@ -143,6 +159,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

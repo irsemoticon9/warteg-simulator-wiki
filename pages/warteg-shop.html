@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buka Warung — Warteg Simulator Wiki</title>
-<meta name="description" content="Panduan menjalankan warung Warteg Simulator: menyiapkan etalase, memasak, melayani pembeli, sampai menutup buku di akhir shift.">
+<title>Buka Warung · Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan menjalankan warung Warteg Simulator v0.2B: etalase 8 atau 16 slot, perabot Toko Perabotan Rumah Indah, Warteg Level 2 Rp 2.500.000, antrean, kesabaran pelanggan, dan QRIS.">
+<link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Buka Warung — Warteg Simulator Wiki">
-<meta property="og:description" content="Panduan menjalankan warung Warteg Simulator: menyiapkan etalase, memasak, melayani pembeli, sampai menutup buku di akhir shift.">
+<meta property="og:title" content="Buka Warung · Warteg Simulator Wiki">
+<meta property="og:description" content="Panduan menjalankan warung Warteg Simulator v0.2B: etalase 8 atau 16 slot, perabot Toko Perabotan Rumah Indah, Warteg Level 2 Rp 2.500.000, antrean, kesabaran pelanggan, dan QRIS.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/warteg-shop.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -18,11 +19,10 @@
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="../assets/img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="warteg-shop">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -35,8 +35,8 @@
     <div class="article-card">
       <h1>Buka Warung</h1>
       <p class="lede">Satu shift di warteg: menyiapkan etalase, memasak, melayani pembeli,
-      lalu menutup buku. Halaman ini menjelaskan urutannya dan angka yang membuat warung
-      ramai atau sepi.</p>
+      lalu menutup buku. Halaman ini menjelaskan urutannya, perabot yang bisa dibeli, upgrades
+      warung, dan angka antrean yang dipakai v0.2B.</p>
 
       <div class="callout"><b>Sebelum bisa buka:</b> etalase wajib berisi nasi dan minimal
       satu lauk. Tanpa itu, tombol buka warung tidak aktif.</div>
@@ -58,21 +58,72 @@
 
       <h2>Etalase dan nampan</h2>
       <ul>
-        <li>Etalase punya 8 slot nampan. Di awal permainan baru 3 yang terbuka.</li>
-        <li>Slot sisanya dibeli di Toko Perabotan milik Mei.</li>
+        <li>Etalase menampung <strong>8 slot nampan</strong>. Tanpa Etalase Tambahan, hanya
+        8 pertama yang bisa dipakai; dengan Etalase Tambahan, batasnya jadi <strong>16</strong>.</li>
+        <li>Di awal permainan baru 3 nampan yang terbuka. Nampan maksimal 16 buah.</li>
+        <li>Slot dan nampan sisanya dibeli di <strong>Toko Perabotan Rumah Indah</strong> milik Mei.</li>
         <li>Isi antar nampan bisa ditukar dengan menarik dan melepas.</li>
       </ul>
+
+      <h2>Toko Perabotan Rumah Indah</h2>
+      <p>Mei berjualan di <strong>Lapangan</strong> pada <strong>Pagi dan Siang</strong>, kadang
+      di lokasi lain pada hari tertentu. Harga di bawah berlaku normalnya. Selama <strong>10 hari
+      pertama</strong>, semua perabot dapat diskon <strong>15%</strong> yang dibulatkan ke
+      kelipatan Rp 100 dengan rumus <code>int(round(harga × 0,85 / 100)) × 100</code>.</p>
+      <table class="price-table scroll-x">
+        <thead><tr><th>Perabot</th><th class="num">Awal</th><th class="num">Maks</th><th>Harga normal</th><th>Harga hari 1-10</th></tr></thead>
+        <tbody>
+          <tr><td>Nampan Stainless</td><td class="num">3</td><td class="num">16</td><td>30.000, 35.000, 40.000, 50.000, 60.000, 65.000, 70.000, 75.000, 80.000, 85.000, 90.000, 95.000, 100.000</td><td>25.500, 29.800, 34.000, 42.500, 51.000, 55.300, 59.500, 63.800, 68.000, 72.300, 76.500, 80.800, 85.000</td></tr>
+          <tr><td>Etalase Tambahan</td><td class="num">0</td><td class="num">1</td><td class="rp">300.000</td><td class="rp">255.000</td></tr>
+          <tr><td>Lemari Penyimpanan</td><td class="num">0</td><td class="num">1</td><td class="rp">200.000</td><td class="rp">170.000</td></tr>
+          <tr><td>Penggorengan</td><td class="num">1</td><td class="num">2</td><td class="rp">180.000</td><td class="rp">153.000</td></tr>
+          <tr><td>Sambal Merah</td><td class="num">0</td><td class="num">1</td><td class="rp">25.000</td><td class="rp">21.300</td></tr>
+          <tr><td>Sambal Ijo</td><td class="num">0</td><td class="num">1</td><td class="rp">25.000</td><td class="rp">21.300</td></tr>
+          <tr><td>Wadah Lalapan</td><td class="num">0</td><td class="num">1</td><td class="rp">30.000</td><td class="rp">25.500</td></tr>
+          <tr><td>Papan Pesanan</td><td class="num">0</td><td class="num">1</td><td class="rp">40.000</td><td class="rp">34.000</td></tr>
+          <tr><td>Papan Tutup Sementara</td><td class="num">0</td><td class="num">1</td><td class="rp">60.000</td><td class="rp">51.000</td></tr>
+          <tr><td>Sticker QRIS</td><td class="num">0</td><td class="num">1</td><td class="rp">100.000</td><td class="rp">85.000</td></tr>
+          <tr><td>Catatan Pasar</td><td class="num">0</td><td class="num">1</td><td class="rp">200.000</td><td class="rp">170.000</td></tr>
+          <tr><td>Gelas Takar</td><td class="num">0</td><td class="num">1</td><td class="rp">150.000</td><td class="rp">127.500</td></tr>
+          <tr><td>Dispenser Takar Otomatis</td><td class="num">0</td><td class="num">1</td><td class="rp">250.000</td><td class="rp">212.500</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Nampan ke-9 sampai ke-16 baru bisa dibeli kalau Etalase Tambahan sudah ada.</li>
+        <li><strong>Sticker QRIS</strong> menaikkan peluang pembayaran QRIS dari 35% jadi <strong>70%</strong>.</li>
+        <li><strong>Gelas Takar</strong> and <strong>Dispenser Takar Otomatis</strong> hanya muncul kalau Warteg Level 2 sudah selesai. Dispenser awalnya dalam keadaan <strong>MATI</strong>.</li>
+      </ul>
+
+      <h2>Warteg Level 2</h2>
+      <table class="price-table">
+        <tbody>
+          <tr><td>Harga</td><td class="rp">Rp 2.500.000</td></tr>
+          <tr><td>Waktu pengerjaan</td><td class="num">3 hari</td></tr>
+          <tr><td>Tempat memesan</td><td><strong>Toko Bangunan Jaya Abadi</strong>, Jalan Serba Ada. Ngobrol dengan Pak Joko, bukan di Dermaga</td></tr>
+          <tr><td>Hasil</td><td>Interior baru dan pesanan minuman</td></tr>
+        </tbody>
+      </table>
+      <p>Setelah selesai, <strong>Bu Lala</strong> menjual bahan minuman: es batu, kopi, teh,
+      susu, gula, gula aren, dan jeruk.</p>
+
+      <h2>Pakaian dan Butik Cantika</h2>
+      <p><strong>Butik Cantika</strong> ada di Jalan Serba Ada dan buka di <strong>Pagi, Siang,
+      dan Malam</strong>. Celemek Hijau dan Celemek Cokelat untuk dua gender masing-masing
+      Rp 100.000 dan Rp 150.000. Kalau flag <code>laras_diskon</code> aktif, harganya jadi
+      Rp 90.000 dan Rp 135.000. Outfit premium harga Rp 5.000 di Android, atau Rp 9.000 di iOS;
+      rinciannya ada di halaman <a href="vip-iplan.html">VIP, IAP &amp; Iklan</a>.</p>
 
       <h2>Siapa yang datang</h2>
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Jeda datang</td><td>2-6 detik × pengali</td><td>Makin tinggi reputasi, makin ramai. Pengali turun dari 3,0 ke 1,25 saat reputasi mencapai 60</td></tr>
-          <tr><td>Kapasitas antrian</td><td>1 + reputasi ÷ 15</td><td>Maksimum 5 orang</td></tr>
-          <tr><td>Kesabaran dasar</td><td>52 detik</td><td>+7,8 detik per item pesanan, +10,4 per item gorengan. Totalnya dikali 1,3 sejak versi 0.1b, jadi pelanggan lebih sabar dari dulu</td></tr>
+          <tr><td>Jeda datang</td><td>2-6 detik × pengali</td><td>Makin tinggi reputasi, makin ramai. Pengali turun dari <strong>5,0 ke 1,5</strong> saat reputasi mencapai 100</td></tr>
+          <tr><td>Kapasitas antrian</td><td>1 + reputasi ÷ 20</td><td>Maksimum 5 orang</td></tr>
+          <tr><td>Kesabaran dasar</td><td>40 detik</td><td>+6 detik per item pesanan, +8 per item gorengan. Totalnya dikali <strong>1,5</strong></td></tr>
           <tr><td>Pelanggan NPC</td><td>35%</td><td>Sisanya warga biasa</td></tr>
           <tr><td>Bungkus (take away)</td><td>40%</td><td>Pilih piring atau bungkus saat menyusun</td></tr>
-          <tr><td>Kabur karena antrian penuh</td><td class="chip bad">rep −1</td><td>Tidak ada catatan tambahan</td></tr>
+          <tr><td>Kabur dari antrean</td><td class="chip bad">rep −1</td><td>Kalau antrean penuh atau menunggu terlalu lama</td></tr>
+          <tr><td>Pelanggan yang sedang dilayani pergi karena timeout</td><td class="chip bad">rep −3</td><td>Lebih berat daripada yang kabur dari antrean</td></tr>
           <tr><td>Kabur karena harga mahal</td><td class="chip bad">rep −2</td><td>Pesanan batal bila harga lebih dari 1,6× harga wajar</td></tr>
         </tbody>
       </table>
@@ -109,7 +160,7 @@
       <h2>Bayar dan kembalian</h2>
       <ul>
         <li>Sekitar 35% pembeli memilih QRIS. Uangnya langsung masuk bank dan tidak perlu
-        kembalian.</li>
+        kembalian. Kalau Sticker QRIS sudah terpasang, peluangnya jadi 70%.</li>
         <li>Sisanya bayar tunai: 20% pas, selebihnya pakai uang besar antara Rp 5.000 dan
         Rp 100.000. Ada 15% kemungkinan mereka hanya membawa Rp 50.000 atau Rp 100.000.</li>
         <li>Uang yang lebih besar dari harga membuka minigame kembalian. Susun pecahan
@@ -123,13 +174,13 @@
 
       <h2>Laporan tutup warung</h2>
       <p>Setelah tutup, laporan shift merangkum jumlah pelanggan yang dilayani, yang puas,
-      yang salah, yang kabur karena harga atau antrian, gorengan hangus, pendapatan,
+      yang salah, yang kabur karena harga atau antrean, gorengan hangus, pendapatan,
       perubahan reputasi, serta rasio QRIS dan tunai. Satu warung hanya bisa dibuka sekali
       per fase.</p>
 
       <h2>Bungkus untuk dibawa pulang</h2>
-      <p>Sejak versi 0.1b, nasi bungkus bisa dibuat kapan saja lewat panel persiapan warung,
-      tidak lagi terbatas pagi atau malam setelah shift. Isinya wajib
+      <p>Nasi bungkus bisa dibuat kapan saja lewat panel persiapan warung, tidak lagi
+      terbatas pagi atau malam setelah shift. Isinya wajib
       nasi plus minimal satu lauk. Nasi bungkus tersimpan di tas dengan isi yang tercatat,
       dan bisa dipakai untuk pesanan antar maupun kado.</p>
     </div>
@@ -142,6 +193,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

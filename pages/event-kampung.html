@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Event Kampung — Warteg Simulator Wiki</title>
-<meta name="description" content="Event Kampung Warteg Simulator: Kampung Meriah dan Cerdas Cermat, tanggalnya di tiap musim, lokasi acara, urutan jalannya, skor, hadiah juara Rp 50.000, dan pengumuman lewat SMS.">
+<title>Event Kampung · Warteg Simulator Wiki</title>
+<meta name="description" content="Event Kampung Warteg Simulator: Kampung Meriah, Cerdas Cermat, dan Adu Layangan, jadwal di Kalender, minigame per acara, 3 ronde, skor, hadiah juara Rp 50.000 sampai 75.000, dan pengumuman SMS dari Pak Damar.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Event Kampung — Warteg Simulator Wiki">
-<meta property="og:description" content="Event Kampung Warteg Simulator: Kampung Meriah dan Cerdas Cermat, tanggalnya di tiap musim, lokasi acara, urutan jalannya, skor, hadiah juara Rp 50.000, dan pengumuman lewat SMS.">
+<meta property="og:title" content="Event Kampung · Warteg Simulator Wiki">
+<meta property="og:description" content="Event Kampung Warteg Simulator: Kampung Meriah, Cerdas Cermat, dan Adu Layangan, jadwal di Kalender, minigame per acara, 3 ronde, skor, hadiah juara Rp 50.000 sampai 75.000, dan pengumuman SMS dari Pak Damar.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/event-kampung.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="event-kampung">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -34,40 +34,40 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Event Kampung</h1>
-      <p class="lede">Ada dua acara besar di kampung: Kampung Meriah dan Cerdas Cermat. Keduanya
-      punya tanggal tetap di kalender, lengkap dengan hadiah dan urutan acara yang sudah
-      ditentukan.</p>
+      <p class="lede">Ada tiga acara warga yang terdaftar di game: Kampung Meriah, Cerdas
+      Cermat, dan Adu Layangan. Pak Damar membawa acara di tiga lokasi berbeda, dan jadwalnya
+      bisa dilihat di aplikasi Kalender.</p>
 
-      <h2>Dua acara yang terdaftar</h2>
+      <h2>Tiga acara yang terdaftar</h2>
       <table class="price-table">
-        <thead><tr><th>Butir</th><th>Kampung Meriah</th><th>Cerdas Cermat</th></tr></thead>
+        <thead><tr><th>Acara</th><th>Minigame</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Musim</td><td>Panas</td><td>Cerah</td></tr>
-          <tr><td>Hari dalam musim</td><td>17</td><td>20</td></tr>
-          <tr><td>Hadiah juara</td><td class="rp">Rp 50.000</td><td class="rp">Rp 75.000</td></tr>
-          <tr><td>Hadiah peserta</td><td class="rp">Rp 12.500</td><td class="rp">Rp 15.000</td></tr>
-          <tr><td>Poin relasi</td><td>3</td><td>3</td></tr>
-          <tr><td>Minigame</td><td>tidak ada</td><td>kuis cerdas cermat</td></tr>
+          <tr><td>Kampung Meriah</td><td>Makan kerupuk + balap karung</td><td>Lapangan, Musim Panas hari 17</td></tr>
+          <tr><td>Cerdas Cermat</td><td>Kuis cerdas cermat</td><td>Sekolah, Musim Cerah hari 20</td></tr>
+          <tr><td>Adu Layangan</td><td>Layangan</td><td>Puncak Gunung, Musim Panas hari 27; ada uang tambahan untuk layangan yang ditangkap</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Kalender:</b> permainan punya 3 musim, yaitu Panas, Cerah,
-      dan Hujan. Tiap musim 28 hari. Jadi Kampung Meriah jatuh di hari ke-17 musim Panas,
-      sedangkan Cerdas Cermat di hari ke-20 musim Cerah.</div>
+      <div class="callout"><b>Sumber angka:</b> tiga berkas acara (<code>kampung_meriah.tres</code>,
+      <code>cerdas_cermat.tres</code>, <code>adu_layangan.tres</code>) ikut terbongkar dari
+      <code>split_assetPackInstallTime.apk</code>. Tabel di bawah memakai nilai dari berkas itu.
+      Pengaturan yang tidak ditulis di berkas memakai nilai bawaan skrip.</div>
 
-      <h2>Isi bawaan tiap acara</h2>
-      <p>Masing-masing acara punya pengaturan sendiri, dan sebagian besar punya nilai bawaan.</p>
+      <h2>Jadwal dan hadiah tiap acara</h2>
       <table class="price-table">
-        <thead><tr><th>Pengaturan</th><th>Nilai bawaan</th></tr></thead>
+        <thead><tr><th>Pengaturan</th><th>Kampung Meriah</th><th>Cerdas Cermat</th><th>Adu Layangan</th></tr></thead>
         <tbody>
-          <tr><td>Skor minimal untuk jadi juara</td><td class="num">5</td></tr>
-          <tr><td>Hadiah juara</td><td class="rp">Rp 50.000</td></tr>
-          <tr><td>Hadiah peserta</td><td class="rp">Rp 12.500</td></tr>
-          <tr><td>Poin relasi</td><td class="num">3</td></tr>
-          <tr><td>Waktu acara</td><td>Pagi, Siang, atau Malam</td></tr>
-          <tr><td>Minigame</td><td>minigame yang bisa diikuti saat acara</td></tr>
-          <tr><td>NPC tetap</td><td>NPC yang tetap tampil saat event</td></tr>
+          <tr><td>Musim dan hari</td><td>Panas, 17</td><td>Cerah, 20</td><td>Panas, 27</td></tr>
+          <tr><td>Lokasi</td><td>Lapangan</td><td>Sekolah</td><td>Puncak Gunung</td></tr>
+          <tr><td>Fase</td><td colspan="3">Pagi &amp; Siang saja (Malam tidak dipakai)</td></tr>
+          <tr><td>Peluang hadir warga</td><td class="num">100%</td><td class="num">100%</td><td class="num">80%</td></tr>
+          <tr><td>Skor minimal juara</td><td class="num">5</td><td class="num">5</td><td class="num">3</td></tr>
+          <tr><td>Hadiah juara</td><td class="rp">Rp 50.000</td><td class="rp">Rp 75.000</td><td class="rp">Rp 60.000</td></tr>
+          <tr><td>Hadiah peserta</td><td class="rp">Rp 12.500</td><td class="rp">Rp 15.000</td><td class="rp">Rp 15.000</td></tr>
+          <tr><td>Poin relasi</td><td class="num">3</td><td class="num">3</td><td class="num">3</td></tr>
+          <tr><td>Jumlah ronde</td><td class="num">3</td><td>3 (kualifikasi, semifinal, final)</td><td class="num">3</td></tr>
         </tbody>
       </table>
+      <p>Pembawa acaranya Pak Damar, dengan Kang Cecep dan Bu Lala sebagai NPC tetap.</p>
 
       <h2>Urutan acara</h2>
       <p>Acaranya berjalan dengan urutan yang tetap:</p>
@@ -88,25 +88,31 @@
       <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
 
       <h2>Skor dan peringkat</h2>
-      <p>Tiap lomba memberi skor ke kamu. Total skormu menentukan posisi akhirnya:</p>
+      <p>Tiap acara terdiri dari <strong>3 ronde</strong> dengan poin ronde
+      <strong>3 / 2 / 1</strong> untuk urutan pertama sampai ketiga. Skor ronde itu lalu
+      dikonversi jadi skor akhir acara:</p>
       <table class="price-table">
-        <thead><tr><th>Lomba</th><th>Skor yang didapat</th></tr></thead>
+        <thead><tr><th>Lomba</th><th>Konversi skor akhir</th></tr></thead>
         <tbody>
-          <tr><td>Lomba makan kerupuk</td><td>menang 3, kalah 1</td></tr>
-          <tr><td>Cerdas Cermat RT</td><td>juara 5, Final 3, Semifinal 2, Kualifikasi 1</td></tr>
-          <tr><td>Balap karung</td><td>juara 3, kedua 2, sisanya 1</td></tr>
+          <tr><td>Makan kerupuk</td><td>Total ronde ≥ 7 → skor 3; ≥ 5 → skor 2; selainnya → 1</td></tr>
+          <tr><td>Balap karung</td><td>Total ronde ≥ 7 → skor 3; ≥ 5 → skor 2; selainnya → 1</td></tr>
+          <tr><td>Cerdas Cermat</td><td>Juara 5; kalah di final 3, gugur di semifinal 2, gugur di kualifikasi 1</td></tr>
+          <tr><td>Adu Layangan</td><td>Peringkat 1 → 3, peringkat 2 → 2, selainnya → 1</td></tr>
         </tbody>
       </table>
-      <p>Kalau total skormu mencapai 5, kamu jadi juara dan membawa pulang Rp 50.000.
-      Kalau belum, kamu tetap pulang dengan Rp 12.500 sebagai peserta. Semua warga yang hadir
-      juga makin dekat denganmu 3 poin, juara atau bukan.</p>
+      <p>Batas juara <strong>skor 5</strong> untuk Kampung Meriah dan Cerdas Cermat, serta
+      <strong>skor 3</strong> untuk Adu Layangan. Hadiah juara berturut-turut
+      <strong>Rp 50.000</strong>, <strong>Rp 75.000</strong>, dan <strong>Rp 60.000</strong>.
+      Hadiah peserta <strong>Rp 12.500</strong> untuk Kampung Meriah dan
+      <strong>Rp 15.000</strong> untuk dua acara lainnya. Semua warga yang hadir mendapat
+      <strong>3 poin relasi</strong> baik kamu juara atau bukan.</p>
 
       <h2>Pengumuman dan syarat lain</h2>
       <ul>
-        <li><strong>Pengumuman sehari sebelumnya:</strong> acara besok diumumkan lewat SMS
-        menjelang hari-H. Isi pesan dan jam kirimnya tidak tercatat di data wiki.</li>
-        <li><strong>Syarat tidur:</strong> apakah kamu harus tidur dulu sebelum ikut acara tidak
-        tercatat di data wiki, jadi lebih aman dicek langsung di permainan.</li>
+        <li><strong>Pengumuman:</strong> SMS datang dari <strong>Pak Damar</strong> pada H-1 dan
+        lagi pada hari H.</li>
+        <li><strong>Wajib tidur:</strong> kalau acara dilewatkan atau action habis, game menandai
+        <code>wajib_tidur</code>: kamu harus pulang dan tidur. Penanda ini hilang saat hari berganti.</li>
         <li>Selain SMS acara, ada juga SMS terjadwal lain pada hari 2 sampai 7 dari Kang Cecep dan
         Bu Lala, serta SMS acak dari NPC yang relasinya sudah jalan. Keduanya terpisah dari
         pengumuman acara.</li>
@@ -121,6 +127,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

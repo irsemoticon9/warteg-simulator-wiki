@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VIP, IAP &amp; Iklan — Warteg Simulator Wiki</title>
-<meta name="description" content="Manfaat VIP di Warteg Simulator, pembelian dalam aplikasi, Special Launch Kit Rp 5.000, tabel peluang hadiah Kotak Tips, iklan wajib tiap 7 hari, dan proteksi crash iklan.">
+<title>VIP, IAP &amp; Iklan · Warteg Simulator Wiki</title>
+<meta name="description" content="Manfaat lengkap VIP Warteg Simulator v0.2B: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="VIP, IAP &amp; Iklan — Warteg Simulator Wiki">
-<meta property="og:description" content="Manfaat VIP di Warteg Simulator, pembelian dalam aplikasi, Special Launch Kit Rp 5.000, tabel peluang hadiah Kotak Tips, iklan wajib tiap 7 hari, dan proteksi crash iklan.">
+<meta property="og:title" content="VIP, IAP &amp; Iklan · Warteg Simulator Wiki">
+<meta property="og:description" content="Manfaat lengkap VIP Warteg Simulator v0.2B: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/vip-iplan.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="vip-iplan">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -36,33 +36,38 @@
       <h1>VIP, IAP &amp; Iklan</h1>
       <p class="lede">Halaman ini merangkum status VIP, pembelian dalam aplikasi, Special
       Launch Kit, dan sistem iklan. Semua manfaat dan angkanya dibaca dari data game
-      versi 0.1c.</p>
+      versi 0.2B.</p>
 
       <h2>VIP</h2>
-      <p>Status VIP tersimpan di perangkat dan tetap berlaku selama pembeliannya masih sah.
-      Manfaat yang tercatat:</p>
-      <ul>
-        <li><strong>Action per fase jadi 3</strong>, sedangkan pemain biasa mendapat 2.</li>
+      <p>Status VIP tersimpan di perangkat lewat <code>user://vip.cfg</code> dan tetap berlaku
+      selama pembeliannya masih sah. Daftar manfaat yang tercatat di game:</p>
+      <ol>
+        <li><strong>3 action per fase</strong>, sedangkan pemain biasa mendapat 2.</li>
         <li><strong>Bebas iklan</strong>.</li>
         <li><strong>Buka Kotak Tips tanpa nonton iklan</strong>.</li>
         <li><strong>Ojek online gratis</strong>, tarif 0 ke semua tujuan.</li>
-        <li><strong>Order Online</strong>, jadi kebutuhan warung bisa dibeli dari rumah.</li>
+        <li><strong>Order Online</strong>: barang yang dibeli langsung masuk ke inventory, tidak perlu diambil di depan warung.</li>
+        <li><strong>Mancing dan menangkap serangga sampai 7 per sesi</strong>, sementara pemain biasa dapat 5.</li>
+        <li><strong>Jadwal outfit lewat Lemari</strong>, jadi pakaian bisa diatur per hari.</li>
+        <li><strong>Papan Quest 3 tawaran per hari</strong> dan <strong>1 kali ganti tawaran per hari</strong>, sementara pemain biasa dapat 2 tawaran.</li>
         <li>Terakhir, kamu ikut mendukung developer gamenya. Terima kasih banyak.</li>
-      </ul>
-      <p>Beberapa bonus lain ikut mengecek status VIP: bonus item login harian dan kecepatan
-      x2 tanpa iklan. Di kode juga ada penanda akses butik sejak awal dan izin mengubah
-      tampilan depan warung, tetapi Butik Cantika masih berstatus segera hadir sehingga
-      belum bisa dimasuki siapa pun. Angka
-      25.000 memang tercatat sebagai harga VIP di data, tetapi pembelian yang sebenarnya
-      lewat Google Play Billing. Harga yang tampil diatur di Play Console dan tidak
-      tercantum di data game.</p>
+      </ol>
+      <div class="callout"><b>Harga:</b> konstanta di game adalah <strong>Rp 25.000</strong> untuk
+      Android atau default, dan <strong>Rp 29.000</strong> untuk iOS. Popup pembelian menampilkan
+      harga lewat <code>VipStatus.harga()</code>, jadi angka yang terlihat mengikuti platform.</div>
+      <p>Akses butik sejak awal dan izin mengubah tampilan depan warung juga mengecek status
+      VIP. <strong>Butik Cantika tidak lagi “segera hadir”</strong>: butik ini buka di
+      <strong>Pagi, Siang, dan Malam</strong>. Tab <strong>Ikan</strong> dan <strong>Serangga</strong>
+      di wiki dalam game khusus VIP, sementara tab CARA, TOKO, dan JADWAL tetap bisa dibuka
+      semua orang.</p>
 
       <h2>IAP (pembelian dalam aplikasi)</h2>
       <table class="price-table">
-        <thead><tr><th>Produk</th><th>Isi</th><th>Keterangan</th></tr></thead>
+        <thead><tr><th>Produk</th><th>Harga</th><th>Isi</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>VIP</td><td>Status VIP permanen</td><td>Ada fitur pulihkan pembelian. Verifikasi berkala mencabut VIP kalau pembeliannya tidak ditemukan di Google Play, misalnya karena refund</td></tr>
-          <tr><td>Special Launch Kit</td><td>Bonus modal Rp 150.000 dan outfit spesial</td><td>Sekali beli dan juga diverifikasi. Kalau di-refund, outfit special dikunci lagi</td></tr>
+          <tr><td>VIP</td><td class="rp">25.000 (iOS 29.000)</td><td>Status VIP permanen</td><td>Ada fitur pulihkan pembelian. Verifikasi berkala mencabut VIP kalau pembeliannya tidak ditemukan di Google Play, misalnya karena refund</td></tr>
+          <tr><td>Outfit premium</td><td class="rp">5.000 (iOS 9.000)</td><td>Satu set pakaian</td><td>Cowok: Jaket Petualang, Setelan Butler, Kemeja Putih Santai. Cewek: Gaun Pelayan Klasik, Cardigan Lavender, Overall Bunga</td></tr>
+          <tr><td>Special Launch Kit</td><td class="rp">5.000 (iOS 9.000)</td><td>Bonus modal Rp 150.000 dan outfit spesial</td><td>Sekali beli dan juga diverifikasi. Kalau di-refund, outfit special dikunci lagi</td></tr>
         </tbody>
       </table>
       <ul>
@@ -76,7 +81,7 @@
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Harga</td><td>Rp 5.000, sekali beli</td></tr>
+          <tr><td>Harga</td><td>Rp 5.000 di Android/default, Rp 9.000 di iOS, sekali beli</td></tr>
           <tr><td>Modal bonus</td><td>Rp 150.000 tunai, masuk ke kas sebagai pecahan: 20.000×2, 10.000×3, 5.000×8, 2.000×10, 1.000×10, 500×10, 100×50</td></tr>
           <tr><td>Outfit</td><td>Membuka outfit Special Launch Edition (cowok/cewek) di Lemari</td></tr>
           <tr><td>Periode penawaran</td><td>7 hari, terhitung sejak pertama main; popup penawaran tampil sekali</td></tr>
@@ -135,7 +140,7 @@
       </ul>
 
       <div class="callout"><b>Catatan netral:</b> halaman ini wiki fan-made dan datanya dibaca
-      dari file game versi 0.1c. Membeli VIP atau Special Launch Kit adalah cara langsung
+      dari file game versi 0.2B. Membeli VIP atau Special Launch Kit adalah cara langsung
       mendukung developer gamenya.</div>
     </div>
   </article>
@@ -147,6 +152,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

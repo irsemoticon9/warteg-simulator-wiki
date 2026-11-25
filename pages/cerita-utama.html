@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cerita &amp; Cutscene — Warteg Simulator Wiki</title>
+<title>Cerita &amp; Cutscene · Warteg Simulator Wiki</title>
 <meta name="description" content="Daftar adegan cerita Warteg Simulator beserta syarat munculnya: peta, fase hari, tanggal, kedekatan dengan NPC, dan urutan kejadiannya.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Cerita &amp; Cutscene — Warteg Simulator Wiki">
+<meta property="og:title" content="Cerita &amp; Cutscene · Warteg Simulator Wiki">
 <meta property="og:description" content="Daftar adegan cerita Warteg Simulator beserta syarat munculnya: peta, fase hari, tanggal, kedekatan dengan NPC, dan urutan kejadiannya.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/cerita-utama.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="cerita-utama">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -34,13 +34,14 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Cerita &amp; Cutscene</h1>
-      <p class="lede">Ada 24 adegan cerita di luar dialog harian, dan masing-masing punya syarat
-      sendiri sebelum muncul. Halaman ini mendaftarnya menurut urutan kejadian, dari warisan ibu
-      di hari pertama sampai urusan di lereng gunung.</p>
+      <p class="lede">V0.2B mendaftarkan <strong>74 adegan cerita</strong> di luar dialog harian.
+      72 berkas adegan berhasil dipulihkan beserta pemicu dan langkahnya. Hanya
+      <code>lala_info_harga</code> dan <code>lala_info_harga_telat</code> yang berkas
+      <code>.res</code>-nya tidak ditemukan, meski naskah dialognya masih tersedia.</p>
 
       <div class="callout warn"><b>Peringatan spoiler:</b> halaman ini membahas isi dan pemicu
-      semua adegan cerita. Kalau kamu ingin menemukannya sendiri dulu, sebaiknya lewati tabel
-      di bawah.</div>
+      sebagian besar adegan cerita. Kalau kamu ingin menemukannya sendiri dulu, sebaiknya lewati
+      daftar di bawah.</div>
 
       <h2>Kapan sebuah adegan diputar</h2>
       <p>Adegan cerita disimpan terpisah dari dialog harian. Permainan memeriksa daftarnya setiap
@@ -58,6 +59,10 @@
         <li>urutan tampil, dipakai saat dua adegan atau lebih cocok bersamaan; yang angkanya
         lebih besar yang menang.</li>
       </ul>
+      <p>Pemeriksaan dijeda saat ada adegan yang sedang diputar, acara kampung berjalan, hujan,
+      warung buka, dialog aktif, atau router sedang sibuk. Setiap adegan yang diputar memberi
+      penanda <code>id</code>, penanda <code>id@hari</code>, dan, kalau cuma boleh sekali,
+      penanda <code>kunci()</code>.</p>
       <p>Isi dialognya teks biasa. Ada baris narasi yang dibaca tanpa pembicara, sedangkan
       baris dengan nama di depan titik dua jadi ucapan tokoh. Ada penanda efek untuk kaget, suara,
       dan kilatan layar. Pilihan jawaban ditulis dengan tanda panah, dan beberapa di antaranya
@@ -65,7 +70,7 @@
       Sapaan menyesuaikan gender pemain, jadi otomatis berubah jadi Mas atau Mbak.</p>
 
       <h2>Adegan satu per satu</h2>
-      <p>Tabel di bawah memuat 24 adegan, disusun kira-kira menurut tanggal pemicunya. Adegan
+      <p>Daftar di bawah memuat 24 dari 74 adegan, disusun kira-kira menurut tanggal pemicunya. Adegan
       yang tidak punya batas hari mengikuti urutan rangkaiannya. Kalau dua adegan cocok muncul
       di saat yang sama, yang urutannya lebih tinggi yang menang, jadi angka urutan itu tidak
       perlu ditulis di tiap baris. Adegan yang disebut hanya sekali memang cuma diputar satu
@@ -192,6 +197,54 @@
         </div>
       </div>
 
+      <h2>Adegan tambahan yang terdaftar di v0.2B</h2>
+      <p>Engine memuat 74 berkas adegan dari folder <code>assets/scenes_spesial/</code>. Syarat
+      dan langkah 72 di antaranya kini bisa dibaca dari berkas <code>.res</code> hasil pemulihan;
+      daftar ID di bawah dipakai sebagai indeks. Dua berkas <code>lala_info_harga</code> dan
+      <code>lala_info_harga_telat</code> masih belum ditemukan:</p>
+      <div class="callout"><b>Contoh data yang terbaca:</b> <code>bima_cs2_kopi_gagal</code>
+      berlangsung di Kafe pada Siang, Kamis-Minggu, relasi minimal 20, setelah
+      <code>bima_cs1</code>, dengan jeda satu hari. <code>bu_yani_cs2_harga_mati</code>
+      berlangsung di Pasar pada Siang, hari ke-10 ke atas, relasi minimal 35, setelah adegan
+      pertama Bu Yani, dan memuat pilihan membela Bu Lala atau Bu Yani.</div>
+      <ul>
+        <li><strong>Pemain &amp; warung:</strong> <code>intro_cs0_warisan</code>,
+        <code>player_cs1_kesiangan</code>, <code>player_cs2_warteg_lv2</code>.</li>
+        <li><strong>Bima:</strong> <code>bima_cs1_pesanan_tanpa_nama</code>,
+        <code>bima_cs2_kopi_gagal</code>, <code>bima_cs3_kebetulan_lewat</code>,
+        <code>bima_cs4_puzzle_kayu</code>, <code>bima_cs5_sparring_latte</code>.</li>
+        <li><strong>Laras:</strong> <code>laras_cs0_butik_baru</code>,
+        <code>laras_cs1_padu_padan</code>, <code>laras_cs2_topi_terbang</code>,
+        <code>laras_cs3_pesanan_jam</code>, <code>laras_cs4_syal</code>.</li>
+        <li><strong>Tirto:</strong> <code>tirto_cs1_antrean</code>,
+        <code>tirto_cs2_jalan_pagi</code>, <code>tirto_cs3_stetoskop</code>,
+        <code>tirto_cs4_dokter_lelah</code>, <code>tirto_cs5_cuti</code>.</li>
+        <li><strong>Dani:</strong> <code>dani_cs1_semak</code>,
+        <code>dani_cs2_pemain_bola</code>, <code>dani_cs3_hobi</code>,
+        <code>dani_cs4_di_balik_seragam</code>, <code>dani_cs5_pendaki</code>,
+        <code>dani_cs6_polisi</code>. Yang terakhir mengubah profil dan gambar Dani jadi polisi.</li>
+        <li><strong>Pak Joko:</strong> <code>joko_cs1_meteran</code>,
+        <code>joko_cs2_cat</code>, <code>joko_cs3_semen</code>,
+        <code>joko_cs4_ikan</code>.</li>
+        <li><strong>Kang Cecep:</strong> <code>cecep_cs1_antrean</code>,
+        <code>cecep_cs2_truk</code>, <code>cecep_cs3_ikan_segar</code>.</li>
+        <li><strong>Pak Damar:</strong> <code>damar_cs1_ayam_jago</code>,
+        <code>damar_cs2_duet_dangdut</code>, <code>damar_cs3_ronda_hantu</code>,
+        <code>damar_cs4_kejutan</code>, <code>damar_cs5_ponsel</code>.</li>
+        <li><strong>Bu Yani:</strong> <code>yani_cs1_pinggang</code>,
+        <code>yani_cs2_harga_mati</code> (ID internal <code>bu_yani_cs2_harga_mati</code>),
+        <code>yani_cs3_jemuran</code>, <code>yani_cs4_sambal</code>,
+        <code>yani_cs5_senam</code>, dan <code>bu_yani_cs6_butik</code>.</li>
+        <li><strong>Pak Yanto:</strong> <code>yanto_cs1_kenalan_pancing</code>,
+        <code>yanto_cs2_serangga</code>, <code>yanto_cs3_handuk</code>,
+        <code>yanto_cs4_jemuran</code>, <code>yanto_cs5_pancing_patah</code>.</li>
+        <li><strong>Lainnya:</strong> rangkaian <code>jamal_cs1</code>–<code>jamal_cs5</code>,
+        <code>lala_cs1</code>–<code>lala_cs5</code> plus <code>lala_info_harga</code> dan
+        <code>lala_info_harga_telat</code>, <code>mei_cs1</code>–<code>mei_cs4</code>,
+        <code>mei_cs1_perkenalan_telat</code>, <code>rani_cs1</code>–<code>rani_cs5</code>, dan
+        <code>ustad_cs1</code>–<code>ustad_cs5</code>.</li>
+      </ul>
+
       <h2>Cara menyelesaikan cerita</h2>
       <p>Game tidak punya daftar tugas cerita yang bisa dicentang. Adegan muncul sendiri saat
       semua syaratnya terpenuhi, jadi cara menyelesaikannya adalah memenuhi syarat itu satu per
@@ -216,9 +269,10 @@
         hari antar adegan, jadi tidak bisa diselesaikan beruntun dalam satu hari.</li>
       </ol>
       <div class="callout warn"><b>Kalau adegan tidak mau muncul:</b> adegan tidak diputar saat
-      hujan, saat acara kampung berlangsung, atau saat warung sedang buka. Tunggu cuacanya
-      berubah, selesaikan acaranya, atau tutup warung dulu. Pindah peta atau ganti fase juga
-      memancing permainan memeriksa ulang daftar adegan.</div>
+      hujan, saat acara kampung berlangsung, saat warung sedang buka, saat ada dialog aktif,
+      atau saat router sedang sibuk. Tunggu cuacanya berubah, selesaikan acaranya, atau tutup
+      warung dulu. Pindah peta atau ganti fase juga memancing permainan memeriksa ulang daftar
+      adegan.</div>
       <p>Adegan yang bertanda hanya sekali tidak bisa diulang. Kalau sudah lewat, lanjutannya
       tetap bisa terbuka asalkan syarat adegan berikutnya terpenuhi.</p>
 
@@ -237,6 +291,17 @@
         debat (relasi 10), memotret bersama (20), curhat soal hansip (30), dan mendaki gunung (40).</li>
         <li><strong>Bu Lala, Mei, Pak Yanto, Ustad Saipul</strong>: satu sampai dua adegan yang berdiri
         sendiri, dengan syarat sekali main atau ambang relasi yang ringan.</li>
+        <li><strong>Bima</strong>: <code>bima_cs1</code> sampai <code>bima_cs5</code>, dimulai dari
+        pesanan tanpa nama, kopi gagal, kebetulan lewat, puzzle kayu, sampai sparring latte.</li>
+        <li><strong>Laras</strong>: <code>laras_cs0_butik_baru</code> membuka butik, lalu
+        <code>laras_cs1</code> sampai <code>laras_cs4_syal</code>.</li>
+        <li><strong>Tirto</strong>: <code>tirto_cs1</code> sampai <code>tirto_cs5_cuti</code>,
+        termasuk adegan dokter lelah.</li>
+        <li><strong>Pak Joko</strong>: <code>joko_cs1_meteran</code>, <code>joko_cs2_cat</code>,
+        <code>joko_cs3_semen</code>, <code>joko_cs4_ikan</code>; Pembahasan Warteg Level 2 lewat
+        <code>player_cs2_warteg_lv2</code>.</li>
+        <li><strong>Dani (v0.2B)</strong>: <code>dani_cs6_polisi</code> mengubah julukannya jadi
+        Polisi muda dan mengganti gambar profilnya.</li>
       </ul>
 
       <h2>Bedanya dengan dialog harian</h2>
@@ -261,6 +326,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

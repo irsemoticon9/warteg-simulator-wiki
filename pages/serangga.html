@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Serangga — Warteg Simulator Wiki</title>
-<meta name="description" content="Panduan Tangkap Serangga di Warteg Simulator: aturan 30 detik, radius jaring dan kaget, tabel 8 serangga dengan harga, bobot, pola gerak, dan cara menjaring tiap pola.">
+<title>Serangga · Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan Tangkap Serangga di Warteg Simulator v0.2B: aturan 30 detik, 5 tangkapan (7 VIP), 25 jenis serangga dengan harga, bobot, musim, dan pola gerak.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Serangga — Warteg Simulator Wiki">
-<meta property="og:description" content="Panduan Tangkap Serangga di Warteg Simulator: aturan 30 detik, radius jaring dan kaget, tabel 8 serangga dengan harga, bobot, pola gerak, dan cara menjaring tiap pola.">
+<meta property="og:title" content="Serangga · Warteg Simulator Wiki">
+<meta property="og:description" content="Panduan Tangkap Serangga di Warteg Simulator v0.2B: aturan 30 detik, 5 tangkapan (7 VIP), 25 jenis serangga dengan harga, bobot, musim, dan pola gerak.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/serangga.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="serangga">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -34,54 +34,85 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Serangga</h1>
-      <p class="lede">Tangkap serangga berlangsung singkat: 30 detik, jaring yang sedikit telat,
-      dan delapan jenis serangga dengan tingkah berbeda. Halaman ini mencatat aturannya sekaligus
-      cara membaca gerak tiap serangga.</p>
+      <p class="lede">Tangkap serangga berlangsung di Puncak Gunung selama 30 detik. V0.2B
+      mendaftarkan <strong>25 jenis</strong> dengan pola gerak berbeda, bukan delapan seperti di
+      wiki lama. Halaman ini mencatat aturannya sekaligus cara membaca gerak tiap serangga.</p>
 
       <h2>Aturan minigame</h2>
       <ul>
-        <li>Durasi <strong>30 detik</strong>, dengan maksimal <strong>5 tangkapan</strong> per sesi (sebelum versi 0.1b hanya 4).</li>
-        <li>Tap berarti mengayun jaring. Jaring baru aktif <strong>0,12 detik</strong> setelah tap, jadi bidik ke arah gerak serangga, bukan ke posisinya sekarang.</li>
-        <li>Radius jaring <strong>58 px</strong> ditambah 14 kali ukuran serangga. Jeda antar ayunan <strong>0,4 detik</strong>.</li>
-        <li>Di layar ada paling banyak <strong>5 serangga aktif</strong>, dan tidak pernah lebih dari 2 ekor jenis yang sama.</li>
-        <li>Jaring meleset membuat serangga dalam radius <strong>190 px</strong> panik <strong>0,9 detik</strong>. Selama panik, kecepatannya jadi 2× lipat.</li>
-        <li>Serangga pergi sendiri setelah 9-14 detik kalau harga jualnya di bawah 15.000, atau 7-10 detik kalau 15.000 ke atas.</li>
-        <li>Sesi yang berakhir tanpa tangkapan tetap memberi 1 serangga paling umum yang "nyasar" ke tas.</li>
-        <li>Hasil tangkapan masuk tas, dan layar hasil menampilkan nilai jual totalnya ke Kang Cecep.</li>
-        <li>Satu sesi memakai <strong>1 action</strong>. Sejak versi 0.1b satu spot bisa dimainkan
-        berkali-kali dalam sehari, selama action masih ada (dulu hanya sekali per hari).</li>
-      </ul>
-
-      <h3>Buff yang berlaku</h3>
-      <ul>
-        <li>Kopi Susu: radius jaring <strong>×1,35</strong>.</li>
-        <li>Es Campur: waktu <strong>+10 detik</strong>.</li>
+        <li>Lokasinya <strong>Puncak Gunung</strong>. Durasi <strong>30 detik</strong>, dengan
+        maksimal <strong>5 tangkapan</strong> per sesi atau <strong>7 untuk VIP</strong>.</li>
+        <li>Tap berarti mengayun jaring. Jaring baru aktif <strong>0,12 detik</strong> setelah tap,
+        jadi bidik ke arah gerak serangga, bukan ke posisinya sekarang. Jeda antar ayunan
+        <strong>0,4 detik</strong>.</li>
+        <li>Radius jaring <strong>58 px</strong> ditambah 14 kali ukuran serangga; Kopi Susu
+        mengalikannya dengan <strong>1,35</strong>.</li>
+        <li>Awalnya ada <strong>4 serangga</strong>. Pemeriksaan muncul tiap 1 detik, maksimal
+        <strong>5 aktif</strong>, dan tidak pernah lebih dari 2 ekor jenis yang sama.</li>
+        <li>Jaring meleset membuat serangga dalam radius <strong>190 px</strong> panik
+        <strong>0,9 detik</strong> dengan kecepatan 2× lipat.</li>
+        <li>Serangga pergi sendiri setelah 9-14 detik kalau harganya di bawah 15.000, atau 7-10
+        detik kalau 15.000 ke atas.</li>
+        <li>Sesi yang berakhir tanpa tangkapan tetap memberi 1 serangga paling umum yang "nyasar"
+        ke tas.</li>
+        <li>Satu sesi memakai <strong>1 action</strong>, dan spot yang sama bisa dimainkan
+        berkali-kali dalam sehari selama action masih ada.</li>
+        <li>Es Campur menambah waktu <strong>+10 detik</strong>.</li>
       </ul>
 
       <h2>Syarat muncul</h2>
-      <p>Tiap serangga punya daftar fase sendiri: ada yang cuma pagi, ada yang pagi dan malam.
-      Musim dan cuaca tidak berpengaruh sama sekali. Jenis yang muncul diundi menurut bobotnya,
-      jadi bobot besar berarti lebih sering kelihatan.</p>
-
-      <h2>Tabel 8 serangga</h2>
-      <table class="price-table scroll-x">
-        <thead><tr><th>Nama</th><th class="num">Harga Jual</th><th class="num">Bobot</th><th>Muncul (fase)</th><th>Pola Gerak</th><th class="num">Kecepatan</th><th class="num">Ukuran</th><th>Catatan</th></tr></thead>
+      <p>Tiap serangga punya daftar fase dan <strong>musim</strong> sendiri. Cuaca tidak punya
+      kolom di data serangga, jadi tidak ikut menyaring. Dari 25 jenis: <strong>8</strong> bisa
+      muncul di semua musim, <strong>8</strong> khusus Musim Cerah, dan <strong>9</strong> khusus
+      Musim Hujan. Jenis yang muncul diundi menurut bobotnya.</p>
+      <table class="price-table">
+        <thead><tr><th>Syarat</th><th>Nilai 1</th><th>Nilai 2</th><th>Nilai 4</th><th>Semua</th></tr></thead>
         <tbody>
-          <tr><td>Jangkrik</td><td class="rp">3.000</td><td class="num">26,0</td><td>Pagi + Malam</td><td>Lompat jeda</td><td class="num">190,0</td><td class="num">0,9</td><td>Melompat pendek, sering sembunyi; dengarkan bunyi kriiik-nya</td></tr>
-          <tr><td>Belalang Hijau</td><td class="rp">4.000</td><td class="num">24,0</td><td>Pagi + Siang</td><td>Lompat</td><td class="num">300,0</td><td class="num">1,0</td><td>Jaring saat baru mendarat</td></tr>
-          <tr><td>Kupu-kupu</td><td class="rp">6.000</td><td class="num">16,0</td><td>Pagi + Siang</td><td>Gelombang</td><td class="num">150,0</td><td class="num">1,1</td><td>Terbang melayang pelan di antara bunga</td></tr>
-          <tr><td>Capung</td><td class="rp">8.000</td><td class="num">12,0</td><td>Siang</td><td>Melesat</td><td class="num">260,0</td><td class="num">1,1</td><td>Melayang diam sebentar lalu melesat; jaring saat melayang</td></tr>
-          <tr><td>Belalang Sembah</td><td class="rp">9.000</td><td class="num">9,0</td><td>Siang</td><td>Lompat</td><td class="num">120,0</td><td class="num">1,05</td><td>Kamuflase hijau, gerak pelan</td></tr>
-          <tr><td>Tonggeret</td><td class="rp">12.000</td><td class="num">7,0</td><td>Pagi + Siang</td><td>Hinggap</td><td class="num">0,0</td><td class="num">1,0</td><td>Nempel di batang; sekali jaring meleset di dekatnya, dia terbang</td></tr>
-          <tr><td>Kunang-kunang</td><td class="rp">15.000</td><td class="num">6,0</td><td>Malam</td><td>Kedip</td><td class="num">90,0</td><td class="num">1,0</td><td>Hanya malam hari; jaring saat ekornya menyala</td></tr>
-          <tr><td>Kumbang Badak</td><td class="rp">25.000</td><td class="num">3,0</td><td>semua fase</td><td>Merayap</td><td class="num">70,0</td><td class="num">1,3</td><td>Besar, bertanduk, langka; kolektor bayar mahal</td></tr>
+          <tr><td>Fase</td><td>Pagi</td><td>Siang</td><td>Malam</td><td class="num">7</td></tr>
+          <tr><td>Musim</td><td>Panas</td><td>Cerah</td><td>Hujan</td><td class="num">7</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Quest harian</b> tipe serangga hanya memilih serangga dengan
-      bobot <strong>≥ 6,0</strong>. Daftar permintaannya ada di halaman
-      <a href="quest-harian.html">Quest Harian</a>. Saat quest serangga aktif, serangga yang
-      diminta punya peluang <strong>80%</strong> muncul di setiap gelombang — selama persediaan
-      di tas masih di bawah 2 ekor.</div>
+
+      <h2>Tabel 25 serangga</h2>
+      <table class="price-table scroll-x">
+        <thead><tr><th>Nama</th><th class="num">Harga Jual</th><th class="num">Bobot</th><th>Fase</th><th>Musim</th><th>Pola Gerak</th><th class="num">Kecepatan</th><th class="num">Ukuran</th></tr></thead>
+        <tbody>
+          <tr><td>Jangkrik</td><td class="rp">2.000</td><td class="num">26,0</td><td>Pagi + Malam</td><td>semua</td><td>Lompat jeda</td><td class="num">190,0</td><td class="num">0,9</td></tr>
+          <tr><td>Belalang Hijau</td><td class="rp">2.600</td><td class="num">24,0</td><td>Pagi + Siang</td><td>semua</td><td>Lompat</td><td class="num">300,0</td><td class="num">1,0</td></tr>
+          <tr><td>Kupu-kupu</td><td class="rp">3.900</td><td class="num">16,0</td><td>Pagi + Siang</td><td>semua</td><td>Gelombang</td><td class="num">150,0</td><td class="num">1,1</td></tr>
+          <tr><td>Capung</td><td class="rp">5.200</td><td class="num">12,0</td><td>Siang</td><td>semua</td><td>Melesat</td><td class="num">260,0</td><td class="num">1,1</td></tr>
+          <tr><td>Belalang Sembah</td><td class="rp">5.900</td><td class="num">9,0</td><td>Siang</td><td>semua</td><td>Lompat</td><td class="num">120,0</td><td class="num">1,05</td></tr>
+          <tr><td>Tonggeret</td><td class="rp">7.800</td><td class="num">7,0</td><td>Pagi + Siang</td><td>semua</td><td>Hinggap</td><td class="num">0,0</td><td class="num">1,0</td></tr>
+          <tr><td>Kunang-kunang</td><td class="rp">9.800</td><td class="num">6,0</td><td>Malam</td><td>semua</td><td>Kedip</td><td class="num">90,0</td><td class="num">1,0</td></tr>
+          <tr><td>Kumbang Badak</td><td class="rp">24.000</td><td class="num">2,0</td><td>semua</td><td>semua</td><td>Merayap</td><td class="num">70,0</td><td class="num">1,3</td></tr>
+          <tr><td>Kupu Raja</td><td class="rp">8.500</td><td class="num">7,0</td><td>Pagi + Siang</td><td>Cerah</td><td>Gelombang</td><td class="num">150,0</td><td class="num">1,15</td></tr>
+          <tr><td>Lebah Madu</td><td class="rp">6.500</td><td class="num">11,0</td><td>Siang</td><td>Cerah</td><td>Melesat</td><td class="num">330,0</td><td class="num">0,85</td></tr>
+          <tr><td>Kepik Merah</td><td class="rp">5.000</td><td class="num">14,0</td><td>Pagi + Siang</td><td>Cerah</td><td>Hinggap</td><td class="num">120,0</td><td class="num">0,75</td></tr>
+          <tr><td>Capung Merah</td><td class="rp">9.000</td><td class="num">6,0</td><td>Siang</td><td>Cerah</td><td>Melesat</td><td class="num">300,0</td><td class="num">1,1</td></tr>
+          <tr><td>Kumbang Permata</td><td class="rp">12.000</td><td class="num">4,0</td><td>Pagi + Siang</td><td>Cerah</td><td>Merayap</td><td class="num">70,0</td><td class="num">1,1</td></tr>
+          <tr><td>Belalang Daun</td><td class="rp">7.500</td><td class="num">8,0</td><td>Pagi + Siang</td><td>Cerah</td><td>Lompat</td><td class="num">300,0</td><td class="num">1,1</td></tr>
+          <tr><td>Jangkrik Emas</td><td class="rp">16.000</td><td class="num">2,2</td><td>Malam</td><td>Cerah</td><td>Lompat jeda</td><td class="num">190,0</td><td class="num">0,95</td></tr>
+          <tr><td>Belalang Sembah Bunga</td><td class="rp">14.000</td><td class="num">3,0</td><td>Siang</td><td>Cerah</td><td>Lompat</td><td class="num">250,0</td><td class="num">1,15</td></tr>
+          <tr><td>Ngengat Hujan</td><td class="rp">4.200</td><td class="num">15,0</td><td>Malam</td><td>Hujan</td><td>Gelombang</td><td class="num">140,0</td><td class="num">1,0</td></tr>
+          <tr><td>Laron</td><td class="rp">3.000</td><td class="num">24,0</td><td>Malam</td><td>Hujan</td><td>Gelombang</td><td class="num">120,0</td><td class="num">0,8</td></tr>
+          <tr><td>Kumbang Hitam</td><td class="rp">6.000</td><td class="num">9,0</td><td>Pagi + Siang + Malam</td><td>Hujan</td><td>Merayap</td><td class="num">75,0</td><td class="num">1,05</td></tr>
+          <tr><td>Ulat Daun</td><td class="rp">3.500</td><td class="num">16,0</td><td>Pagi + Siang</td><td>Hujan</td><td>Merayap</td><td class="num">55,0</td><td class="num">1,0</td></tr>
+          <tr><td>Capung Biru</td><td class="rp">9.500</td><td class="num">6,0</td><td>Pagi + Siang</td><td>Hujan</td><td>Melesat</td><td class="num">300,0</td><td class="num">1,1</td></tr>
+          <tr><td>Belalang Coklat</td><td class="rp">4.800</td><td class="num">13,0</td><td>Pagi + Siang</td><td>Hujan</td><td>Lompat</td><td class="num">290,0</td><td class="num">1,0</td></tr>
+          <tr><td>Jangkrik Hutan</td><td class="rp">5.200</td><td class="num">10,0</td><td>Malam</td><td>Hujan</td><td>Lompat jeda</td><td class="num">185,0</td><td class="num">0,95</td></tr>
+          <tr><td>Kunang-kunang Hijau</td><td class="rp">13.500</td><td class="num">4,0</td><td>Malam</td><td>Hujan</td><td>Kedip</td><td class="num">90,0</td><td class="num">1,0</td></tr>
+          <tr><td>Kumbang Rusa</td><td class="rp">28.000</td><td class="num">1,0</td><td>Malam</td><td>Hujan</td><td>Merayap</td><td class="num">60,0</td><td class="num">1,5</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout"><b>Kumbang Badak:</b> tidak muncul di spawn biasa. Ada peluang
+      <strong>20%</strong> per sesi, atau <strong>30%</strong> kalau memakai Syal Rajutan Laras.
+      Kalau dapat, jumlahnya diundi <strong>2-4 ekor</strong> dengan batas 4. Harganya
+      <strong>Rp 24.000</strong> dan bobotnya 2,0.</div>
+      <div class="callout"><b>Quest harian:</b> tipe serangga hanya memilih serangga dengan
+      bobot <strong>≥ 6,0</strong>. Saat quest aktif, serangga yang diminta punya peluang
+      <strong>80%</strong> muncul di setiap gelombang, selama persediaan di tas masih di bawah
+      2 ekor. <a href="quest-harian.html">Quest Harian</a></div>
       <p>Semua serangga bisa kamu berikan sebagai hadiah. Tidak ada serangga yang masuk daftar
       suka atau tidak suka warga mana pun, jadi reaksinya selalu normal.</p>
 
@@ -92,11 +123,11 @@
         <thead><tr><th>Pola</th><th>Patokan angkanya</th><th>Cara menjaring</th></tr></thead>
         <tbody>
           <tr><td>Lompat</td><td class="num">lompatan 120-200 px, durasi 0,36 detik, diam 0,7-1,5 detik</td><td>Tunggu sampai mendarat, lalu tap sedikit di depan titik pendaratannya. Saat panik, jeda diamnya dipangkas setengah.</td></tr>
-          <tr><td>Lompat jeda</td><td class="num">lompatan 60-110 px, durasi 0,3 detik, diam 1,1-2,3 detik</td><td>Lompatannya pendek dan diamnya panjang, jadi jeda itu waktu terbaik untuk menjaring. Jangkrik ditandai simbol nada saat diam.</td></tr>
+          <tr><td>Lompat jeda</td><td class="num">lompatan 60-110 px, durasi 0,3 detik, diam 1,1-2,3 detik</td><td>Lompatannya pendek dan diamnya panjang, jadi jeda itu waktu terbaik untuk menjaring.</td></tr>
           <tr><td>Gelombang</td><td class="num">terbang terus, ketinggian bergelombang</td><td>Bisa dijaring kapan pun selama terbang. Kejar jalurnya, bukan posisinya.</td></tr>
           <tr><td>Melesat</td><td class="num">diam 0,7-1,4 detik, melesat 0,35 detik dengan kecepatan ×2,8</td><td>Jaring saat dia melayang diam. Meleset di saat itu malah membuatnya langsung melesat menjauh.</td></tr>
-          <tr><td>Merayap</td><td class="num">bergantian diam dan jalan tiap 1-2 detik, jalan 70% kecepatan</td><td>Gerak paling lambat, dan bisa dijaring saat diam maupun merayap. Ukurannya besar (1,3), jadi radius jaring efektifnya longgar.</td></tr>
-          <tr><td>Hinggap</td><td class="num">kecepatan 0,0, tidak bergerak sendiri</td><td>Tonggeret diam terus, tapi sekali jaringmu meleset di dekatnya, dia kabur dan tidak kembali. Jangan tap asal.</td></tr>
+          <tr><td>Merayap</td><td class="num">bergantian diam dan jalan tiap 1-2 detik, jalan 70% kecepatan</td><td>Gerak paling lambat, dan bisa dijaring saat diam maupun merayap.</td></tr>
+          <tr><td>Hinggap</td><td class="num">kecepatan 0,0, tidak bergerak sendiri</td><td>Tonggeret dan kepik diam terus, tapi sekali jaringmu meleset di dekatnya, mereka kabur.</td></tr>
           <tr><td>Kedip</td><td class="num">hanya bisa dijaring saat nyala &gt; 0,55</td><td>Kunang-kunang tembus jaring saat ekornya redup. Sabar, tap tepat ketika badannya terang.</td></tr>
         </tbody>
       </table>
@@ -113,6 +144,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

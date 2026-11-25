@@ -1,13 +1,21 @@
 # Warteg Simulator Wiki (Unofficial)
 
-Wiki fan-made berisi panduan Warteg Simulator versi 0.1c. Seluruh angka diambil dari hasil decompile game, bukan perkiraan. Dibuat dengan bantuan AI.
+Wiki fan-made berisi panduan Warteg Simulator versi 0.2B (kode versi 33, paket
+`com.wartegsim.perlium`). Seluruh angka diambil dari hasil decompile APK yang
+terpasang, bukan perkiraan. Wiki ini berisi 18 halaman panduan. Dibuat dengan
+bantuan AI.
+
+Sumber data: `base.apk` + `split_assetPackInstallTime.apk` dari perangkat,
+dibongkar dengan jadx (manifest) dan Godot RE Tools v2.7.4 (aset & GDScript
+v0.2B, bytecode 4.5.0-stable). Versi game juga dikonfirmasi di
+`project.godot` (`config/version="0.2B"`).
 
 ## Menjalankan lokal
 
-Buka `index.html` langsung di browser, atau jalankan server statis:
+Buka `index.html` langsung di browser, atau jalankan server statis dari folder wiki ini:
 
 ```
-python -m http.server 8471 --directory "C:\Users\IRSE\Documents\apk\Warteg Simulator\wiki"
+python -m http.server 8471
 ```
 
 Lalu buka http://localhost:8471.
@@ -25,16 +33,7 @@ Lalu buka http://localhost:8471.
 
 ## Catatan versi aset
 
-File `index.html` dan semua halaman di `pages/` memuat `app.js?v=6` dan `style.css?v=6`. Naikkan angka versi setiap kali mengubah file JS/CSS agar browser tidak memakai salinan lama dari cache.
-
-## Struktur
-
-- `index.html` — beranda dengan daftar 17 halaman
-- `pages/` — 17 artikel wiki
-- `assets/css/style.css` — sistem desain, termasuk aturan tabel responsif
-- `assets/js/app.js` — header, navigasi, pencarian, dan daftar isi otomatis
-- `assets/img/` — ikon aplikasi, splash, dan gambar latar beranda
-
-## Sumber data
-
-Data diambil dari APK `com.wartegsim.perlium` v0.1c (kode versi 15) menggunakan jadx dan Godot RE Tools. Hasil decompile ada di folder `gdre_out/` dan `decompiled/` di luar repo ini.
+File `index.html` dan semua halaman di `pages/` memuat `app.js?v=17` dan
+`style.css?v=17`. Naikkan angka versi setiap kali mengubah file JS/CSS agar
+browser tidak memakai salinan lama dari cache. Versi 17 dipakai karena
+`assets/js/app.js` ikut diperbarui untuk data v0.2B.

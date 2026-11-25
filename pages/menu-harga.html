@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Menu &amp; Harga — Warteg Simulator Wiki</title>
-<meta name="description" content="Panduan menu warteg di Warteg Simulator: 11 menu lengkap dengan harga jual, modal, stok awal, dan peluang dipesan, plus cara mengatur harga sendiri dan mengikuti harga pasar mingguan.">
+<title>Menu &amp; Harga · Warteg Simulator Wiki</title>
+<meta name="description" content="Data menu Warteg Simulator v0.2B: 19 menu plus minyak, harga jual, modal, porsi, stok, peluang dipesan, resep lauk, 11 minuman, dan pasar mingguan.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Menu &amp; Harga — Warteg Simulator Wiki">
-<meta property="og:description" content="Panduan menu warteg di Warteg Simulator: 11 menu lengkap dengan harga jual, modal, stok awal, dan peluang dipesan, plus cara mengatur harga sendiri dan mengikuti harga pasar mingguan.">
+<meta property="og:title" content="Menu &amp; Harga · Warteg Simulator Wiki">
+<meta property="og:description" content="Data menu Warteg Simulator v0.2B: 19 menu plus minyak, harga jual, modal, porsi, stok, peluang dipesan, resep lauk, 11 minuman, dan pasar mingguan.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/menu-harga.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="menu-harga">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -34,96 +34,140 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Menu &amp; Harga</h1>
-      <p class="lede">Ada 11 menu yang bisa kamu jual di warung, dari nasi sampai lalapan.
-      Di sini kamu bisa lihat harga jual, modal, jumlah porsi, dan kapan tiap menu mulai
-      dijual pedagang. Semua angka dibaca langsung dari data game versi 0.1c.</p>
+      <p class="lede">Data game versi 0.2B memuat 19 menu warteg dan satu barang persediaan,
+      yaitu minyak goreng. Angka di halaman ini berasal dari <code>menu.tres</code> yang berhasil
+      dipulihkan. Field yang tidak ditulis di resource mengikuti bawaan skrip.</p>
 
-      <div class="callout"><b>Catatan data:</b> sebagian isian di tabel tidak ditentukan
-      khusus di data menu, jadi game memakai nilai bawaannya: jenis etalase, harga 3.000,
-      modal 1.500, 5 porsi per pembelian, stok awal 15, tersedia mulai hari ke-1, dan
-      peluang dipesan 0,3. Isi mana saja yang memakai nilai bawaan tercatat di catatan
-      sumber di bawah.</div>
+      <div class="callout"><b>Sumber data:</b> <code>menu.tres</code> berhasil dipulihkan sebagai
+      RSRC 4.7 berisi 19 menu dan satu perlengkapan. Harga, modal, stok, bahan, dan peluang pada
+      tabel diambil dari resource. Tanda 'bawaan' dipakai kalau field-nya memang tidak ditulis;
+      nilainya mengikuti <code>menu_item.gd</code>.</div>
 
-      <h2>Daftar menu (11 item)</h2>
+      <h2>Daftar menu</h2>
+      <p>Nama dan rincian 19 menu berasal dari <code>menu.tres</code>, bukan hanya daftar ID di
+      <code>kuis_bank.gd</code>. Harga di bawah adalah harga dasar sebelum pemain mengubahnya.</p>
       <table class="price-table scroll-x">
-        <thead><tr><th>Menu</th><th>Jenis</th><th class="num">Harga Jual</th><th class="num">Modal</th><th class="num">Porsi/Beli</th><th class="num">Stok Awal</th><th class="num">Hari ke-</th><th>Butuh Alat</th><th class="num">Peluang Dipesan</th></tr></thead>
+        <thead><tr><th>Menu</th><th class="num">Harga dasar</th><th class="num">Modal</th><th class="num">Stok awal</th><th class="num">Peluang</th><th>Bahan</th></tr></thead>
         <tbody>
-          <tr><td>Nasi</td><td>Etalase</td><td class="rp">4.000</td><td class="rp">2.000</td><td class="num">10</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,9</td></tr>
-          <tr><td>Ayam Goreng</td><td>Digoreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td>wajan</td><td class="num">0,35</td></tr>
-          <tr><td>Ikan Goreng</td><td>Digoreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td>wajan</td><td class="num">0,3</td></tr>
-          <tr><td>Telur</td><td>Etalase</td><td class="rp">5.000</td><td class="rp">3.000</td><td class="num">5</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,4</td></tr>
-          <tr><td>Bihun</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">10</td><td class="num">1</td><td>tidak ada</td><td class="num">0,3</td></tr>
-          <tr><td>Orek Tempe</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td>tidak ada</td><td class="num">0,3</td></tr>
-          <tr><td>Balado Kentang</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td>tidak ada</td><td class="num">0,3</td></tr>
-          <tr><td>Tumis Kangkung</td><td>Etalase</td><td class="rp">3.000</td><td class="rp">1.500</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td>tidak ada</td><td class="num">0,35</td></tr>
-          <tr><td>Sambal Merah</td><td>Pelengkap</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">10</td><td class="num">0</td><td class="num">1</td><td>wadah sambal merah</td><td class="num">0,35</td></tr>
-          <tr><td>Sambal Ijo</td><td>Pelengkap</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">10</td><td class="num">0</td><td class="num">1</td><td>wadah sambal ijo</td><td class="num">0,25</td></tr>
-          <tr><td>Lalapan</td><td>Pelengkap</td><td class="rp">2.000</td><td class="rp">1.000</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td>wadah lalapan</td><td class="num">0,25</td></tr>
+          <tr><td>Nasi</td><td class="rp">4.000</td><td class="rp">2.000</td><td class="num">10</td><td class="num">0,9</td><td>Beras</td></tr>
+          <tr><td>Ayam Goreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">0</td><td class="num">0,35</td><td>Ayam potong</td></tr>
+          <tr><td>Ikan Goreng</td><td class="rp">10.000</td><td class="rp">6.000</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Ikan</td></tr>
+          <tr><td>Empal Goreng</td><td class="rp">15.000</td><td class="rp">9.000</td><td class="num">0</td><td class="num">0,2</td><td>Daging empal</td></tr>
+          <tr><td>Telur</td><td class="rp">5.000</td><td class="rp">3.000</td><td class="num">10</td><td class="num">0,4</td><td>Telur ayam</td></tr>
+          <tr><td>Bihun</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">10</td><td class="num">0,3 bawaan</td><td>Bihun</td></tr>
+          <tr><td>Orek Tempe</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Tempe</td></tr>
+          <tr><td>Balado Kentang</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Kentang</td></tr>
+          <tr><td>Tumis Kangkung</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">0</td><td class="num">0,35</td><td>Kangkung</td></tr>
+          <tr><td>Kerang Hijau</td><td class="rp">6.000</td><td class="rp">3.500</td><td class="num">0</td><td class="num">0,25</td><td>Kerang hijau</td></tr>
+          <tr><td>Telur Balado</td><td class="rp">5.500</td><td class="rp">3.500</td><td class="num">0</td><td class="num">0,35</td><td>Telur untuk balado</td></tr>
+          <tr><td>Perkedel</td><td class="rp">3.500</td><td class="rp">1.800</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Kentang giling</td></tr>
+          <tr><td>Tahu Goreng</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Tahu</td></tr>
+          <tr><td>Tempe Goreng</td><td class="rp">3.000 bawaan</td><td class="rp">1.500 bawaan</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Tempe</td></tr>
+          <tr><td>Terong Balado</td><td class="rp">4.000</td><td class="rp">2.000</td><td class="num">0</td><td class="num">0,3 bawaan</td><td>Terong</td></tr>
+          <tr><td>Udang Pedas</td><td class="rp">9.000</td><td class="rp">5.500</td><td class="num">0</td><td class="num">0,25</td><td>Udang</td></tr>
+          <tr><td>Sambal Merah</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">0</td><td class="num">0,35</td><td>Cabai merah</td></tr>
+          <tr><td>Sambal Ijo</td><td class="rp">1.000</td><td class="rp">500</td><td class="num">0</td><td class="num">0,25</td><td>Cabai ijo</td></tr>
+          <tr><td>Lalapan</td><td class="rp">2.000</td><td class="rp">1.000</td><td class="num">0</td><td class="num">0,25</td><td>Sayur lalapan</td></tr>
         </tbody>
       </table>
-      <p>Tiap menu mengandalkan satu bahan utama. Nasi dibuat dari beras, ayam goreng dari
-      ayam potong, ikan goreng dari ikan, telur dari telur ayam, bihun goreng dari bihun,
-      orek tempe dari tempe, balado kentang dari kentang, dan tumis kangkung dari kangkung.
-      Sambal merah dibuat dari cabai merah, sambal ijo dari cabai ijo, dan lalapan dari
-      sayur lalapan.</p>
       <ul>
-        <li>Menu yang harus digoreng butuh wajan. Menu pelengkap butuh wadahnya masing-masing,
-        dan wadah itu dibeli di Toko Perabotan Mei. Cara belanjanya ada di halaman
-        Belanja &amp; Inventory.</li>
-        <li>Saat memilih pesanan, pelanggan mengundi menu memakai peluang di kolom terakhir
-        tabel.</li>
-        <li>Barang baru mulai dijual pedagang setelah hari game mencapai batasnya. Sebelum
-        hari itu, barangnya belum ada di etalase. Dari semua menu, hanya <strong>ayam goreng</strong>
-        dan <strong>ikan goreng</strong> yang baru terbuka di hari ke-2; sembilan menu lain sudah
-        ada sejak hari pertama.</li>
-        <li>Belanja bisa dibayar tunai atau QRIS.</li>
+        <li>Bawaan <code>MenuItem</code> hanya dipakai untuk field yang kosong: harga 3.000,
+        modal 1.500, 5 porsi per pembelian, stok 15, hari ke-1, dan peluang 0,3.</li>
+        <li><code>porsi_per_beli</code> tersimpan untuk Nasi dan kedua sambal, masing-masing 10.
+        16 menu lain memakai bawaan 5. Field ini belum dipakai sistem lain.</li>
+        <li>Peluang dipesan tersimpan untuk 11 menu. Nasi paling besar (0,9), disusul Telur (0,4).
+        8 menu memakai bawaan 0,3.</li>
+        <li>Bahan dan stok dibeli dari Bu Lala atau Kang Cecep. Rinciannya ada di halaman
+        <a href="belanja-inventory.html">Belanja &amp; Inventory</a>.</li>
+      </ul>
+
+      <h2>Resep lauk</h2>
+      <p>Delapan lauk tidak langsung dijual pedagang. Resepnya dibuka dulu lewat aplikasi di HP
+      dan dibayar dari saldo bank, bukan kas tunai.</p>
+      <table class="price-table">
+        <thead><tr><th>Resep</th><th class="num">Harga</th><th>Resep</th><th class="num">Harga</th></tr></thead>
+        <tbody>
+          <tr><td>Tahu Goreng</td><td class="rp">37.500</td><td>Terong Balado</td><td class="rp">62.500</td></tr>
+          <tr><td>Tempe Goreng</td><td class="rp">37.500</td><td>Telur Balado</td><td class="rp">75.000</td></tr>
+          <tr><td>Perkedel</td><td class="rp">50.000</td><td>Kerang Hijau</td><td class="rp">112.500</td></tr>
+          <tr><td>Udang Pedas</td><td class="rp">150.000</td><td>Empal Goreng</td><td class="rp">225.000</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Minuman (11 resep)</h2>
+      <p>Minuman hanya muncul sebagai pesanan setelah gerai minuman tersedia, yaitu saat Warteg
+      Level 2 selesai. Harga normalnya sebagai berikut.</p>
+      <table class="price-table">
+        <thead><tr><th>Minuman</th><th class="num">Harga Normal</th><th>Suhu</th><th>Minuman</th><th class="num">Harga Normal</th><th>Suhu</th></tr></thead>
+        <tbody>
+          <tr><td>Es Teh</td><td class="rp">5.000</td><td>es</td><td>Teh Manis Panas</td><td class="rp">4.000</td><td>panas</td></tr>
+          <tr><td>Es Jeruk Peras</td><td class="rp">8.000</td><td>es</td><td>Teh Tarik Panas</td><td class="rp">7.000</td><td>panas</td></tr>
+          <tr><td>Es Kopi Americano</td><td class="rp">12.000</td><td>es</td><td>Kopi Tubruk</td><td class="rp">6.000</td><td>panas</td></tr>
+          <tr><td>Es Kopi Susu</td><td class="rp">13.000</td><td>es</td><td>Americano Panas</td><td class="rp">10.000</td><td>panas</td></tr>
+          <tr><td>Kopi Susu Panas</td><td class="rp">12.000</td><td>panas</td><td>Susu Hangat</td><td class="rp">6.000</td><td>panas</td></tr>
+          <tr><td>Jeruk Hangat</td><td class="rp">7.000</td><td>panas</td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Harga minimum adalah modal dibulatkan ke atas ke kelipatan 500, minimal 500. Harga
+        maksimum empat kali harga normal, dengan langkah Rp 500.</li>
+        <li>Saran harga: harga normal dibulatkan ke 500, lalu minimal Rp 500 di atas harga minimum.</li>
+        <li>Batas bawah saran minuman: 85% dari harga normal, dibulatkan ke 500. Batas atas panel:
+        1,25 kali harga normal, lalu dikali 1,25 lagi dan dibulatkan ke 500. Saat menghitung reaksi
+        pelanggan, harga wajar minuman memakai 1,25 kali harga normal.</li>
+        <li>Peluang pesanan panas awalnya 0,35. Hujan menambah 0,35, Malam menambah 0,20, Siang
+        mengurangi 0,10, dan musim Panas mengurangi 0,10. Malam dan Siang saling menggantikan,
+        Pagi tidak memengaruhi peluang. Hasilnya dijaga antara 0,10 dan 0,90. Kalau suhu yang
+        terpilih tidak punya minuman yang bisa dibuat, game memakai suhu yang lain.</li>
       </ul>
 
       <h2>Atur harga sendiri</h2>
-      <p>Harga jual tiap menu bisa kamu atur sendiri dari panel kelola.</p>
       <ul>
-        <li>Sekali klik menaikkan atau menurunkan harga Rp 500.</li>
-        <li>Harga tidak bisa turun di bawah modal menu, atau Rp 500 kalau modalnya lebih
-        kecil dari itu.</li>
-        <li>Batas atasnya 4 kali harga jual dasar menu.</li>
-        <li>Semua hasil dibulatkan ke kelipatan 500 terdekat.</li>
+        <li>Sekali klik mengubah harga Rp 500.</li>
+        <li>Harga tidak boleh di bawah modal, atau Rp 500 kalau modalnya lebih kecil.</li>
+        <li>Batas atas empat kali harga jual dasar, dibulatkan ke kelipatan 500.</li>
       </ul>
-      <div class="callout warn"><b>Harga wajar memengaruhi bintang:</b> harga di atas
-      1,6 kali harga wajar membuat pelanggan kabur, sedangkan harga di bawah 0,85 kali harga
-      wajar memberi bonus bintang. Rinciannya ada di halaman Buka Warung.</div>
+      <div class="callout warn"><b>Tiga batas penilaian:</b> di atas 1,25 kali harga wajar kena
+      <span class="chip bad">−1 bintang</span>. Di atas 1,6 kali kena
+      <span class="chip bad">−2 bintang</span> dan pelanggan bisa membatalkan pesanan. Di bawah
+      0,85 kali dapat <span class="chip good">+1 bintang</span>. Untuk menu makanan, Catatan Pasar
+      memakai batas aman 0,85 sampai 1,25 kali. Panel minuman memakai batas atas 1,5625 kali
+      harga normal.</div>
 
       <h2>Harga pasar mingguan</h2>
-      <p>Modal bahan tidak diam di tempat. Harganya bergerak tiap minggu, jadi modal satu
-      porsi bisa berbeda dari minggu sebelumnya.</p>
+      <p>Modal bahan bergerak tiap minggu game. Harga jual ikan dan serangga ikut berubah dengan
+      aturan yang berbeda.</p>
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Periode</td><td class="num">7 hari</td><td>Satu harga pasar berlaku untuk satu minggu game</td></tr>
-          <tr><td>Gerak harga</td><td class="num">±12%</td><td>Pengali mingguan diacak antara −12% dan +12% dari minggu sebelumnya</td></tr>
-          <tr><td>Batas pengali</td><td class="num">80% sampai 130%</td><td>Pengali tidak pernah keluar dari 0,8 sampai 1,3 kali harga normal</td></tr>
-          <tr><td>Pembulatan</td><td class="num">Rp 100</td><td>Harga dibulatkan ke kelipatan Rp 100, minimal Rp 100</td></tr>
-          <tr><td>Hasil tetap</td><td colspan="2">Minggu yang sama selalu memberi harga yang sama, karena angkanya dihitung dari nomor minggu</td></tr>
+          <tr><td>Periode</td><td class="num">7 hari</td><td>Satu pengali berlaku untuk satu minggu game</td></tr>
           <tr><td>Minggu pertama</td><td class="num">pengali 1,0</td><td>Minggu ke-0 memakai harga normal</td></tr>
+          <tr><td>Gerak harga modal</td><td class="num">±12%</td><td>Pengali baru diambil dari ±12% pengali minggu sebelumnya</td></tr>
+          <tr><td>Batas pengali</td><td class="num">0,8 sampai 1,3</td><td>Nilai di luar rentang ini dijaga tetap di dalam rentang</td></tr>
+          <tr><td>Harga jual ikan dan serangga</td><td class="num">±10% sampai ±20%</td><td>Pengali jual diacak tiap minggu, terpisah dari pengali modal</td></tr>
+          <tr><td>Pembulatan</td><td class="num">Rp 100</td><td>Hasil dibulatkan ke ratusan terdekat, minimal Rp 100</td></tr>
+          <tr><td>Hasil tetap</td><td colspan="2">Nomor minggu menjadi penentu angka acak, jadi minggu yang sama selalu memberi harga yang sama</td></tr>
         </tbody>
       </table>
-      <p>Panel kelola menampilkan modal per porsi versi pasar beserta persen selisihnya dari
-      harga normal, lengkap dengan arah naik atau turunnya. Untung per porsi juga dihitung
-      dari harga pasar yang sedang berlaku.</p>
+      <p>Panel kelola menampilkan tanda naik atau turun beserta persentase selisih dari harga
+      normal. Catatan Pasar dari Mei memakai harga wajar hasil pengali mingguan ini untuk memberi
+      saran harga.</p>
 
       <h2>Minyak goreng</h2>
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
         <tbody>
-          <tr><td>Harga</td><td class="rp">18.000 per liter (nilai bawaan)</td></tr>
-          <tr><td>Isi</td><td class="num">10 kali masak per liter</td></tr>
-          <tr><td>Pemakaian</td><td>Satu unit minyak terpakai setiap kali menggoreng di wajan</td></tr>
-          <tr><td>Stok awal</td><td class="num">20 unit minyak</td></tr>
-          <tr><td>Beli di</td><td>Bu Lala (Pasar)</td></tr>
+          <tr><td>Harga</td><td class="rp">18.000 per liter, bawaan <code>supply_item.gd</code></td></tr>
+          <tr><td>Isi</td><td class="num">10 kali masak per liter, bawaan <code>supply_item.gd</code>; resource menulis '1 Liter · 10x masak'</td></tr>
+          <tr><td>Angka awal wajan</td><td class="num">20 unit, bukan batas atas</td></tr>
+          <tr><td>Pemakaian</td><td>Satu unit per kali menggoreng</td></tr>
+          <tr><td>Stok awal pemain baru</td><td class="num">20 unit</td></tr>
+          <tr><td>Beli di</td><td>Bu Lala di Pasar, atau lewat Order Online VIP</td></tr>
         </tbody>
       </table>
-      <p>Kalau minyak habis, wajan tidak bisa dipakai sama sekali dan game menolak dengan
-      alasan minyak. Satu-satunya jenis persediaan lain yang dikenali game adalah gas, dan
-      untuk sekarang belum ada barang gas di daftar menu.</p>
+      <p>Wajan berhenti berfungsi kalau minyak habis. Isi ulang satu botol menambah 10 kali
+      masak. Angka 20 adalah titik awal skala bar, bukan kapasitas maksimum; stok bisa melebihi
+      20 setelah pembelian. Simpanan lama yang mencatat minyak 0 akan dibaca sebagai 10 unit.</p>
     </div>
   </article>
 
@@ -134,6 +178,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ikan &amp; Mancing — Warteg Simulator Wiki</title>
-<meta name="description" content="Panduan memancing di Warteg Simulator: cara melempar, menunggu gigitan, menjaga ikan di kotak hijau, syarat muncul 25 ikan, empat tingkat pancing, umpan, dan peluang ikan langka.">
+<title>Ikan &amp; Mancing · Warteg Simulator Wiki</title>
+<meta name="description" content="Panduan memancing di Warteg Simulator v0.2B: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
 <link rel="icon" href="../assets/img/icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
-<meta property="og:title" content="Ikan &amp; Mancing — Warteg Simulator Wiki">
-<meta property="og:description" content="Panduan memancing di Warteg Simulator: cara melempar, menunggu gigitan, menjaga ikan di kotak hijau, syarat muncul 25 ikan, empat tingkat pancing, umpan, dan peluang ikan langka.">
+<meta property="og:title" content="Ikan &amp; Mancing · Warteg Simulator Wiki">
+<meta property="og:description" content="Panduan memancing di Warteg Simulator v0.2B: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/ikan-mancing.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 </head>
 <body data-page="ikan-mancing">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -44,7 +44,7 @@
       <h2>Mekanik sesi mancing</h2>
       <ul>
         <li>Satu sesi memakan <strong>1 action</strong>, dan action itu baru dipotong setelah sesi ditutup.</li>
-        <li>Jatahnya <strong>5 lemparan</strong> per sesi. Tiap lemparan menghabiskan <strong>1 umpan</strong>.</li>
+        <li>Jatahnya <strong>5 lemparan</strong> per sesi, atau <strong>7 lemparan untuk VIP</strong>. Tiap lemparan menghabiskan <strong>1 umpan</strong>.</li>
         <li>Umpan habis atau pancing belum dibeli, sesi tidak bisa dimulai. Pesan yang muncul mengarahkanmu ke Pak Yanto.</li>
         <li>Keluar dari sesi saat ikan sedang ditarik berarti ikan itu lepas.</li>
       </ul>
@@ -54,17 +54,20 @@
         <thead><tr><th>Tahap</th><th>Yang terjadi</th><th>Patokan angkanya</th></tr></thead>
         <tbody>
           <tr><td>Siap</td><td>Meter tenaga naik-turun sendiri. Tahan tombol untuk mengisi, lepas untuk melempar.</td><td class="num">kecepatan 1,2/detik, memantul di 0-1</td></tr>
-          <tr><td>Tunggu</td><td>Pelampung mengapung. Gigitan kecil berupa pelampung yang turun muncul sebelum sambaran sungguhan.</td><td class="num">tunggu 2-5 detik × pengali umpan × 1,25-0,75 sesuai tenaga lemparan × 0,6 jika buff Teh Manis</td></tr>
-          <tr><td>Sambar</td><td>Tanda "!" muncul. Tap atau tekan di jendela ini, kalau lewat ikannya pergi.</td><td class="num">jendela 0,9 detik</td></tr>
-          <tr><td>Tarik</td><td>Meter reel: jaga ikan tetap di dalam kotak hijau sampai meter penuh.</td><td class="num">meter naik 0,32/detik × (1 + bonus tarik) saat ikan di kotak; turun 0,16-0,28/detik sesuai kesulitan saat di luar</td></tr>
+          <tr><td>Tunggu</td><td>Pelampung mengapung. Gigitan kecil muncul sebelum sambaran sungguhan.</td><td class="num">tunggu 2-5 detik × pengali umpan × 1,25-0,75 sesuai tenaga lemparan × 0,6 jika buff Teh Manis</td></tr>
+          <tr><td>Sambar</td><td>Tanda "!" muncul. Tap atau tekan di jendela ini, kalau lewat ikannya pergi.</td><td class="num">jendela 0,9 detik; gigitan kecil mulai 0,8-1,6 detik, lalu 0,9-1,8 detik, dan 0,6 detik terakhir</td></tr>
+          <tr><td>Tarik</td><td>Meter reel: jaga ikan tetap di dalam kotak hijau sampai meter penuh.</td><td class="num">naik 0,32/detik × (1 + bonus tarik) di kotak; turun <strong>0,128-0,224/detik</strong> di luar kotak</td></tr>
         </tbody>
       </table>
 
       <h3>Meter reel</h3>
       <ul>
-        <li>Tinggi kotak hijau mulai dari 0,34 untuk ikan termudah dan menyusut ke 0,2 untuk yang tersulit. Angka itu masih dikali bonus area pancing dan <strong>1,25</strong> kalau buff Jus Jeruk aktif. Sejak versi 0.1b semua kotak juga <strong>20% lebih besar</strong>. Makin sulit ikannya, makin sempit kotaknya.</li>
+        <li>Tinggi kotak hijau: <code>lerp(0,34; 0,2; kesulitan)</code> × (1 + bonus area pancing)
+        × <strong>1,25</strong> kalau buff Jus Jeruk aktif × <strong>1,2</strong> dari kemudahan
+        permainan v0.2B. Makin sulit ikannya, makin sempit kotaknya.</li>
         <li>Tahan untuk menaikkan kotak (2,6/detik), lepas untuk menurunkannya (2,2/detik). Kecepatan kotak dibatasi ±1,6.</li>
-        <li>Kotak yang mentok di dasar akan memantul. Yang mentok di atas berhenti.</li>
+        <li>Kecepatan gerak ikan adalah <code>lerp(0,6; 2,4; kesulitan) × 0,8</code>. Faktor 0,8 itu
+        kemudahan v0.2B, sama seperti faktor 1,2 pada kotak hijau dan 0,8 pada penurunan meter.</li>
       </ul>
 
       <h3>Pola gerak ikan saat ditarik</h3>
@@ -77,24 +80,31 @@
           <tr><td>Tenggelam</td><td>70% menuju zona bawah (0,02-0,45), sisanya ke atas</td><td class="num">0,6-1,4 detik</td></tr>
         </tbody>
       </table>
-      <p>Kecepatan gerak ikan naik dari 0,6 ke 2,4 mengikuti tingkat kesulitannya. Sejak versi 0.1b
-      kecepatan itu dipangkas 20%, dan meter tenaga yang turun saat ikan di luar kotak juga
-      20% lebih lambat — mancing terasa lebih santai dari versi lama.</p>
 
       <h2>Siapa yang mau menggigit</h2>
-      <p>Ikan tidak muncul begitu saja. Permainan menyaring dulu siapa yang boleh ikut undian, baru
-      menghitung peluangnya:</p>
       <ol>
         <li>Ikan hanya masuk daftar calon kalau fase waktu, musim, cuaca, dan level pancingnya cocok dengan kondisi saat itu.</li>
-        <li>Bobot tiap ikan dikali pengali kondisi. Kalau kondisi sekarang termasuk yang favorit bagi ikan itu, bobotnya dikali <strong>2,0</strong> lagi untuk setiap kondisi yang cocok.</li>
-        <li>Ikan dengan kesulitan <strong>≥ 0,6</strong> mendapat tambahan dari umpan dan pancing yang kamu pakai. Makin bagus keduanya, makin sering ikan langka muncul.</li>
-        <li>Setelah semua bobot terkumpul, pemenangnya diambil lewat undian berbobot dari seluruh calon.</li>
+        <li>Bobot dasar dikali pengali kondisi dan pengali harga pancing. Kalau kondisi sekarang termasuk favorit ikan itu, bobotnya dikali <strong>2,0</strong> lagi untuk setiap kondisi yang cocok.</li>
+        <li>Ikan dengan kesulitan <strong>≥ 0,6</strong> juga dikali <code>kali_langka</code> umpan dan pancing.</li>
+        <li>Pemenangnya diambil lewat undian berbobot dari seluruh calon. Pancing yang dipakai ialah level tertinggi yang kamu miliki; umpan yang dipakai ialah item pertama di daftar umpan.</li>
       </ol>
 
+      <h3>Pengali harga pancing</h3>
+      <table class="price-table">
+        <thead><tr><th>Level pancing</th><th>Harga ikan &lt; 8.000</th><th>Harga 8.000-19.999</th><th>Harga ≥ 20.000</th></tr></thead>
+        <tbody>
+          <tr><td>0 (Bambu) &amp; 1 (Fiber)</td><td class="num">1,0</td><td class="num">1,0</td><td class="num">1,0</td></tr>
+          <tr><td>2 (Karbon)</td><td class="num">0,6</td><td class="num">1,5</td><td class="num">1,0</td></tr>
+          <tr><td>3 (Pro)</td><td class="num">0,25</td><td class="num">1,8</td><td class="num">4,0</td></tr>
+        </tbody>
+      </table>
+      <p>Artinya, pancing Pro sangat menekan ikan murah tapi besar sekali peluangnya untuk ikan
+      mahal. Saat quest ikan aktif, ikan yang diminta punya peluang <strong>80%</strong> muncul
+      lebih dulu.</p>
+
       <h3>Membaca syarat tiap ikan</h3>
-      <p>Syarat ditulis sebagai satu angka. Nilai 1, 2, dan 4 masing-masing mewakili satu kondisi,
-      dan angka 7 berarti ketiganya sekaligus. Kalau ikan boleh muncul di dua kondisi, jumlahkan
-      nilai keduanya.</p>
+      <p>Nilai 1, 2, dan 4 masing-masing mewakili satu kondisi; angka 7 berarti ketiganya
+      sekaligus. Kalau ikan boleh muncul di dua kondisi, jumlahkan keduanya.</p>
       <table class="price-table">
         <thead><tr><th>Syarat</th><th>Nilai 1</th><th>Nilai 2</th><th>Nilai 4</th><th>Semua</th></tr></thead>
         <tbody>
@@ -106,35 +116,35 @@
       </table>
 
       <h2>Tabel 25 ikan</h2>
-      <p>Urutannya mengikuti daftar di dalam game. Keterangan "semua" berarti ikan bisa muncul
-      di semua fase, musim, atau cuaca.</p>
+      <p>Harga jual di bawah adalah nilai dari data game v0.2B. Keterangan "semua" berarti ikan
+      bisa muncul di semua fase, musim, atau cuaca.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Nama</th><th class="num">Harga Jual</th><th class="num">Kesulitan</th><th>Gerak</th><th class="num">Bobot</th><th>Muncul (fase)</th><th class="num">Ukuran (cm)</th><th>Musim</th><th>Cuaca</th><th>Pancing min.</th><th>Favorit (×2,0)</th></tr></thead>
         <tbody>
-          <tr><td>Ikan Teri</td><td class="rp">3.000</td><td class="num">0,10</td><td>Lincah</td><td class="num">26,0</td><td>Pagi</td><td class="num">6-9</td><td>semua</td><td>semua</td><td>Bambu</td><td>waktu: Pagi</td></tr>
-          <tr><td>Ikan Selar</td><td class="rp">5.000</td><td class="num">0,22</td><td>Lincah</td><td class="num">20,0</td><td>Pagi + Siang</td><td class="num">12-20</td><td>Panas + Cerah</td><td>semua</td><td>Bambu</td><td>musim: Panas</td></tr>
-          <tr><td>Ikan Kembung</td><td class="rp">6.000</td><td class="num">0,20</td><td>Tenang</td><td class="num">30,0</td><td>semua</td><td class="num">15-22</td><td>semua</td><td>semua</td><td>Bambu</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Belanak</td><td class="rp">6.500</td><td class="num">0,25</td><td>Lincah</td><td class="num">16,0</td><td>Pagi + Malam</td><td class="num">20-32</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Mendung</td></tr>
-          <tr><td>Ikan Lele</td><td class="rp">7.000</td><td class="num">0,25</td><td>Tenggelam</td><td class="num">18,0</td><td>Siang + Malam</td><td class="num">20-35</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Mendung + Hujan</td></tr>
-          <tr><td>Ikan Nila</td><td class="rp">7.500</td><td class="num">0,22</td><td>Tenang</td><td class="num">18,0</td><td>Pagi + Siang</td><td class="num">18-30</td><td>Cerah + Hujan</td><td>semua</td><td>Bambu</td><td>musim: Cerah</td></tr>
-          <tr><td>Ikan Mujair</td><td class="rp">6.500</td><td class="num">0,20</td><td>Tenang</td><td class="num">18,0</td><td>Pagi + Siang</td><td class="num">14-24</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Cerah</td></tr>
-          <tr><td>Ikan Betok</td><td class="rp">4.000</td><td class="num">0,15</td><td>Lincah</td><td class="num">14,0</td><td>Siang</td><td class="num">10-16</td><td>Hujan</td><td>semua</td><td>Bambu</td><td>cuaca: Hujan</td></tr>
-          <tr><td>Ikan Bandeng</td><td class="rp">9.000</td><td class="num">0,35</td><td>Tenang</td><td class="num">22,0</td><td>semua</td><td class="num">25-40</td><td>semua</td><td>semua</td><td>Bambu</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Mas</td><td class="rp">9.000</td><td class="num">0,30</td><td>Tenang</td><td class="num">12,0</td><td>semua</td><td class="num">25-40</td><td>Cerah + Hujan</td><td>semua</td><td>Fiber</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Tongkol</td><td class="rp">12.000</td><td class="num">0,45</td><td>Lincah</td><td class="num">18,0</td><td>semua</td><td class="num">30-45</td><td>Panas + Cerah</td><td>semua</td><td>Fiber</td><td>cuaca: Cerah</td></tr>
-          <tr><td>Julung-julung</td><td class="rp">8.500</td><td class="num">0,40</td><td>Lincah</td><td class="num">12,0</td><td>Pagi</td><td class="num">20-30</td><td>Panas + Cerah</td><td>Cerah</td><td>Fiber</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Gurame</td><td class="rp">15.000</td><td class="num">0,50</td><td>Tenggelam</td><td class="num">8,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Fiber</td><td>musim: Hujan</td></tr>
-          <tr><td>Ikan Patin</td><td class="rp">11.000</td><td class="num">0,40</td><td>Tenggelam</td><td class="num">10,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>semua</td><td>Mendung + Hujan</td><td>Fiber</td><td>cuaca: Hujan</td></tr>
-          <tr><td>Ikan Bawal</td><td class="rp">14.000</td><td class="num">0,45</td><td>Lincah</td><td class="num">9,0</td><td>Siang + Malam</td><td class="num">22-32</td><td>semua</td><td>semua</td><td>Fiber</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Cakalang</td><td class="rp">14.000</td><td class="num">0,55</td><td>Lincah</td><td class="num">8,0</td><td>Pagi + Malam</td><td class="num">40-60</td><td>Panas + Cerah</td><td>semua</td><td>Karbon</td><td>waktu: Pagi</td></tr>
-          <tr><td>Ikan Kuwe</td><td class="rp">19.000</td><td class="num">0,60</td><td>Ngacak</td><td class="num">6,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
-          <tr><td>Ekor Kuning</td><td class="rp">16.000</td><td class="num">0,55</td><td>Lincah</td><td class="num">7,0</td><td>Pagi + Siang</td><td class="num">25-40</td><td>Panas + Cerah</td><td>Cerah + Mendung</td><td>Karbon</td><td>cuaca: Cerah</td></tr>
-          <tr><td>Bawal Putih</td><td class="rp">17.000</td><td class="num">0,60</td><td>Ngacak</td><td class="num">5,0</td><td>Siang + Malam</td><td class="num">30-45</td><td>semua</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
-          <tr><td>Kakap Merah</td><td class="rp">20.000</td><td class="num">0,60</td><td>Ngacak</td><td class="num">10,0</td><td>semua</td><td class="num">35-60</td><td>semua</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Gabus</td><td class="rp">15.000</td><td class="num">0,55</td><td>Ngacak</td><td class="num">7,0</td><td>Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Karbon</td><td>waktu: Malam; cuaca: Hujan</td></tr>
-          <tr><td>Ikan Tenggiri</td><td class="rp">30.000</td><td class="num">0,75</td><td>Tenggelam</td><td class="num">6,0</td><td>Siang + Malam</td><td class="num">50-80</td><td>semua</td><td>semua</td><td>Pro</td><td>tidak ada</td></tr>
-          <tr><td>Ikan Sidat</td><td class="rp">38.000</td><td class="num">0,80</td><td>Tenggelam</td><td class="num">3,0</td><td>Malam</td><td class="num">50-90</td><td>Hujan</td><td>Hujan</td><td>Pro</td><td>tidak ada</td></tr>
-          <tr><td>Kerapu Macan</td><td class="rp">45.000</td><td class="num">0,85</td><td>Ngacak</td><td class="num">3,0</td><td>Siang + Malam</td><td class="num">40-70</td><td>semua</td><td>semua</td><td>Pro</td><td>cuaca: Cerah</td></tr>
+          <tr><td>Ikan Teri</td><td class="rp">2.400</td><td class="num">0,10</td><td>Lincah</td><td class="num">26,0</td><td>Pagi</td><td class="num">6-9</td><td>semua</td><td>semua</td><td>Bambu</td><td>waktu: Pagi</td></tr>
+          <tr><td>Ikan Selar</td><td class="rp">4.000</td><td class="num">0,22</td><td>Lincah</td><td class="num">20,0</td><td>Pagi + Siang</td><td class="num">12-20</td><td>Panas + Cerah</td><td>semua</td><td>Bambu</td><td>musim: Panas</td></tr>
+          <tr><td>Ikan Kembung</td><td class="rp">4.800</td><td class="num">0,20</td><td>Tenang</td><td class="num">30,0</td><td>semua</td><td class="num">15-22</td><td>semua</td><td>semua</td><td>Bambu</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Belanak</td><td class="rp">5.200</td><td class="num">0,25</td><td>Lincah</td><td class="num">16,0</td><td>Pagi + Malam</td><td class="num">20-32</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Mendung</td></tr>
+          <tr><td>Ikan Lele</td><td class="rp">5.600</td><td class="num">0,25</td><td>Tenggelam</td><td class="num">18,0</td><td>Siang + Malam</td><td class="num">20-35</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Mendung + Hujan</td></tr>
+          <tr><td>Ikan Nila</td><td class="rp">6.000</td><td class="num">0,22</td><td>Tenang</td><td class="num">18,0</td><td>Pagi + Siang</td><td class="num">18-30</td><td>Cerah + Hujan</td><td>semua</td><td>Bambu</td><td>musim: Cerah</td></tr>
+          <tr><td>Ikan Mujair</td><td class="rp">5.200</td><td class="num">0,20</td><td>Tenang</td><td class="num">18,0</td><td>Pagi + Siang</td><td class="num">14-24</td><td>semua</td><td>semua</td><td>Bambu</td><td>cuaca: Cerah</td></tr>
+          <tr><td>Ikan Betok</td><td class="rp">3.200</td><td class="num">0,15</td><td>Lincah</td><td class="num">14,0</td><td>Siang</td><td class="num">10-16</td><td>Hujan</td><td>semua</td><td>Bambu</td><td>cuaca: Hujan</td></tr>
+          <tr><td>Ikan Bandeng</td><td class="rp">7.200</td><td class="num">0,35</td><td>Tenang</td><td class="num">22,0</td><td>semua</td><td class="num">25-40</td><td>semua</td><td>semua</td><td>Bambu</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Mas</td><td class="rp">7.200</td><td class="num">0,30</td><td>Tenang</td><td class="num">12,0</td><td>semua</td><td class="num">25-40</td><td>Cerah + Hujan</td><td>semua</td><td>Fiber</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Tongkol</td><td class="rp">9.600</td><td class="num">0,45</td><td>Lincah</td><td class="num">18,0</td><td>semua</td><td class="num">30-45</td><td>Panas + Cerah</td><td>semua</td><td>Fiber</td><td>cuaca: Cerah</td></tr>
+          <tr><td>Julung-julung</td><td class="rp">6.800</td><td class="num">0,40</td><td>Lincah</td><td class="num">12,0</td><td>Pagi</td><td class="num">20-30</td><td>Panas + Cerah</td><td>Cerah</td><td>Fiber</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Gurame</td><td class="rp">12.000</td><td class="num">0,50</td><td>Tenggelam</td><td class="num">8,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Fiber</td><td>musim: Hujan</td></tr>
+          <tr><td>Ikan Patin</td><td class="rp">8.800</td><td class="num">0,40</td><td>Tenggelam</td><td class="num">10,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>semua</td><td>Mendung + Hujan</td><td>Fiber</td><td>cuaca: Hujan</td></tr>
+          <tr><td>Ikan Bawal</td><td class="rp">11.200</td><td class="num">0,45</td><td>Lincah</td><td class="num">9,0</td><td>Siang + Malam</td><td class="num">22-32</td><td>semua</td><td>semua</td><td>Fiber</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Cakalang</td><td class="rp">11.200</td><td class="num">0,55</td><td>Lincah</td><td class="num">8,0</td><td>Pagi + Malam</td><td class="num">40-60</td><td>Panas + Cerah</td><td>semua</td><td>Karbon</td><td>waktu: Pagi</td></tr>
+          <tr><td>Ikan Kuwe</td><td class="rp">15.200</td><td class="num">0,60</td><td>Ngacak</td><td class="num">6,0</td><td>Siang + Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
+          <tr><td>Ekor Kuning</td><td class="rp">12.800</td><td class="num">0,55</td><td>Lincah</td><td class="num">7,0</td><td>Pagi + Siang</td><td class="num">25-40</td><td>Panas + Cerah</td><td>Cerah + Mendung</td><td>Karbon</td><td>cuaca: Cerah</td></tr>
+          <tr><td>Bawal Putih</td><td class="rp">13.600</td><td class="num">0,60</td><td>Ngacak</td><td class="num">5,0</td><td>Siang + Malam</td><td class="num">30-45</td><td>semua</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
+          <tr><td>Kakap Merah</td><td class="rp">16.000</td><td class="num">0,60</td><td>Ngacak</td><td class="num">10,0</td><td>semua</td><td class="num">35-60</td><td>semua</td><td>semua</td><td>Karbon</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Gabus</td><td class="rp">12.000</td><td class="num">0,55</td><td>Ngacak</td><td class="num">7,0</td><td>Malam</td><td class="num">30-50</td><td>Cerah + Hujan</td><td>semua</td><td>Karbon</td><td>waktu: Malam; cuaca: Hujan</td></tr>
+          <tr><td>Ikan Tenggiri</td><td class="rp">24.000</td><td class="num">0,75</td><td>Tenggelam</td><td class="num">6,0</td><td>Siang + Malam</td><td class="num">50-80</td><td>semua</td><td>semua</td><td>Pro</td><td>tidak ada</td></tr>
+          <tr><td>Ikan Sidat</td><td class="rp">30.400</td><td class="num">0,80</td><td>Tenggelam</td><td class="num">3,0</td><td>Malam</td><td class="num">50-90</td><td>Hujan</td><td>Hujan</td><td>Pro</td><td>tidak ada</td></tr>
+          <tr><td>Kerapu Macan</td><td class="rp">36.000</td><td class="num">0,85</td><td>Ngacak</td><td class="num">3,0</td><td>Siang + Malam</td><td class="num">40-70</td><td>semua</td><td>semua</td><td>Pro</td><td>cuaca: Cerah</td></tr>
           <tr><td>Sepatu Bekas</td><td class="rp">0</td><td class="num">0,05</td><td>Tenang</td><td class="num">6,0</td><td>semua</td><td class="num">25-30</td><td>semua</td><td>semua</td><td>Bambu</td><td>tidak ada (sampah)</td></tr>
         </tbody>
       </table>
@@ -158,6 +168,13 @@
         <li>Kalau kamu punya beberapa pancing, yang dipakai selalu yang levelnya paling tinggi.</li>
       </ul>
 
+      <h3>Mini-game simpul saat membeli pancing</h3>
+      <p>Membeli pancing baru lewat Pak Yanto memakai mini-game simpul:</p>
+      <ul>
+        <li><strong>6 simpul</strong> dengan durasi <strong>1,5 detik</strong> dan toleransi <strong>11,0</strong>.</li>
+        <li><strong>3 bintang</strong> kalau minimal 5 simpul kuat, <strong>2 bintang</strong> kalau minimal 3, selainnya <strong>1 bintang</strong>.</li>
+      </ul>
+
       <h2>Umpan</h2>
       <table class="price-table">
         <thead><tr><th>Umpan</th><th class="num">Kali Tunggu</th><th class="num">Kali Langka</th><th class="num">Harga</th><th>Catatan</th></tr></thead>
@@ -165,7 +182,7 @@
           <tr><td>Umpan Cacing</td><td class="num">1,0</td><td class="num">1,0</td><td class="rp">2.500</td><td>Satu-satunya umpan; habis 1 buah tiap lemparan kail</td></tr>
         </tbody>
       </table>
-      <p>Umpan Cacing tidak menambah peluang ikan langka sama sekali. Jadi untuk ikan dengan
+      <p>Umpan Cacing tidak menambah peluang ikan langka sama sekali. Untuk ikan dengan
       kesulitan ≥ 0,6, satu-satunya cara menaikkan peluang adalah naik level pancing.</p>
     </div>
   </article>
@@ -177,6 +194,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=16"></script>
+<script src="../assets/js/app.js?v=17"></script>
 </body>
 </html>
