@@ -6,7 +6,8 @@
     search: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></svg>',
     sun: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>',
     moon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>',
-    install: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>'
+    install: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>',
+    share: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m0 0 4 4m-4-4L8 7M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>'
   };
 
   var GROUPS = [
@@ -74,6 +75,7 @@
       '<div id="search-out"></div></div>' +
       '<button class="icon-btn" id="theme-btn" aria-label="Ganti tema terang/gelap">' + ICONS.sun + "</button>" +
       '<button class="icon-btn install-btn" id="install-btn" aria-label="Install wiki" hidden>' + ICONS.install + "</button>" +
+      '<button class="icon-btn shortcut-btn" id="shortcut-btn" type="button" aria-label="Cara simpan wiki ke layar utama" hidden>' + ICONS.share + "</button>" +
       "</div></header>" +
       '<nav class="cat-nav" aria-label="Kategori"><div class="wrap cat-row">';
     GROUPS.forEach(function (g) {
@@ -172,15 +174,9 @@
     return /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && maxTouchPoints > 1);
   }
 
-  function initShortcutHint() {
-    if (navigator.standalone === true) return;
-    var forced = /[?&]shortcut-test=ios(?:[&#]|$)/.test(window.location.search || "");
-    if (!forced && !isIOSDevice(navigator.userAgent, navigator.platform, navigator.maxTouchPoints)) return;
-    var seen = null;
-    try { seen = localStorage.getItem("warteg-wiki-ios-shortcut-hint"); } catch (e) {}
-    if (seen === "1") return;
-
+  function openShortcutModal() {
     var previous = document.activeElement;
+    if (document.getElementById("shortcut-modal")) return;
     document.body.insertAdjacentHTML("beforeend",
       '<div id="shortcut-modal" class="shortcut-modal" role="dialog" aria-modal="true" aria-labelledby="shortcut-title">' +
       '<div class="shortcut-card">' +
@@ -215,6 +211,29 @@
       if (!card.contains(e.target)) close();
     });
     document.addEventListener("keydown", onKeyDown, true);
+  }
+
+  function isShortcutContext() {
+    if (navigator.standalone === true) return false;
+    var forced = /[?&]shortcut-test=ios(?:[&#]|$)/.test(window.location.search || "");
+    return forced || isIOSDevice(navigator.userAgent, navigator.platform, navigator.maxTouchPoints);
+  }
+
+  function initShortcutHint() {
+    if (!isShortcutContext()) return;
+    var seen = null;
+    try { seen = localStorage.getItem("warteg-wiki-ios-shortcut-hint"); } catch (e) {}
+    if (seen === "1") return;
+    openShortcutModal();
+  }
+
+  function initShortcutButton() {
+    var btn = document.getElementById("shortcut-btn");
+    if (!btn || !isShortcutContext()) return;
+    btn.removeAttribute("hidden");
+    btn.addEventListener("click", function () {
+      openShortcutModal();
+    });
   }
 
   function initInstallButton() {
@@ -256,6 +275,7 @@
     var found = findPage(activeId);
     renderCrumb(page, found ? found.group : null);
     buildToc();
+    initShortcutButton();
     initShortcutHint();
     initInstallButton();
   });

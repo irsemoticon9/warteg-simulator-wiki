@@ -33,8 +33,7 @@ Lalu buka http://localhost:8471.
 
 ## Catatan versi aset
 
-File `index.html` dan semua halaman di `pages/` memuat `app.js?v=20` dan
-`style.css?v=20`. Naikkan angka versi setiap kali mengubah file JS/CSS agar
-browser tidak memakai salinan lama dari cache. Versi 20 dipakai karena
-penambahan manifest shortcut, petunjuk iOS, tombol Install, dan perbaikan
-target sentuh 44px pada header saat tombol Install muncul.
+File `index.html` dan semua halaman di `pages/` memuat `app.js?v=21` dan
+`style.css?v=21`. Naikkan angka versi setiap kali mengubah file JS/CSS agar
+browser tidak memakai salinan lama dari cache.
+Versi 21 dipakai karena penambahan ikon shortcut iOS di header, popup petunjuk pertama kali, tombol Install, dan perbaikan target sentuh 44px pada header.

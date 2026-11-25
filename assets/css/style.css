@@ -128,6 +128,8 @@ h1, h2, h3 { text-wrap: balance; }
 .install-btn { margin-left: 8px; }
 .install-btn[hidden] { display: none; }
 .install-btn:focus-visible { border-radius: 8px; }
+.shortcut-btn[hidden] { display: none; }
+.shortcut-btn:focus-visible { border-radius: 8px; }
 #search-out {
   position: absolute; top: 68px; right: max(22px, calc((100vw - 1120px) / 2 + 22px));
   width: min(380px, calc(100vw - 44px)); z-index: 40;
@@ -404,7 +406,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 /* Header sempit: tombol Install tetap 44x44 tanpa menggeser halaman */
 @media (max-width: 640px) {
-  .masthead-row { gap: 8px; }
+  .masthead-row { gap: 6px; }
   .brand small { display: none; }
   .brand strong {
     position: absolute;
@@ -417,7 +419,8 @@ h1, h2, h3 { text-wrap: balance; }
     white-space: nowrap;
     border: 0;
   }
-  .masthead-search { width: min(220px, 40vw); }
+  .masthead-search { width: auto; flex: 1 1 auto; min-width: 0; }
+  .masthead-search input { min-width: 0; }
   .install-btn { margin-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
