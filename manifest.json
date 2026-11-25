@@ -1,0 +1,14 @@
+{
+  "name": "Warteg Simulator Wiki",
+  "short_name": "Warteg Wiki",
+  "description": "Wiki fanmade Warteg Simulator v0.2B.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6eb",
+  "theme_color": "#1e6b44",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

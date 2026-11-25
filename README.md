@@ -33,6 +33,7 @@ Lalu buka http://localhost:8471.
 
 ## Catatan versi aset
 
-File `index.html` dan semua halaman di `pages/` memuat `app.js?v=18` dan
-`style.css?v=18`. Naikkan angka versi setiap kali mengubah file JS/CSS agar
-browser tidak memakai salinan lama dari cache. Versi 18 dipakai karena perubahan `style.css` pada tombol toko di hero; `app.js` memakai nomor versi yang sama.
+File `index.html` dan semua halaman di `pages/` memuat `app.js?v=19` dan
+`style.css?v=19`. Naikkan angka versi setiap kali mengubah file JS/CSS agar
+browser tidak memakai salinan lama dari cache. Versi 19 dipakai karena
+penambahan manifest shortcut, petunjuk iOS, dan tombol Install.
