@@ -5,7 +5,8 @@
   var ICONS = {
     search: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></svg>',
     sun: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>',
-    moon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>'
+    moon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>',
+    install: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>'
   };
 
   var GROUPS = [
@@ -72,6 +73,7 @@
       '<input id="search-input" type="search" placeholder="Cari panduan…" aria-label="Cari panduan">' +
       '<div id="search-out"></div></div>' +
       '<button class="icon-btn" id="theme-btn" aria-label="Ganti tema terang/gelap">' + ICONS.sun + "</button>" +
+      '<button class="icon-btn install-btn" id="install-btn" aria-label="Install wiki" hidden>' + ICONS.install + "</button>" +
       "</div></header>" +
       '<nav class="cat-nav" aria-label="Kategori"><div class="wrap cat-row">';
     GROUPS.forEach(function (g) {
@@ -166,6 +168,81 @@
     heads.forEach(function (h) { obs.observe(h); });
   }
 
+  function isIOSDevice(userAgent, platform, maxTouchPoints) {
+    return /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && maxTouchPoints > 1);
+  }
+
+  function initShortcutHint() {
+    if (navigator.standalone === true) return;
+    var forced = /[?&]shortcut-test=ios(?:[&#]|$)/.test(window.location.search || "");
+    if (!forced && !isIOSDevice(navigator.userAgent, navigator.platform, navigator.maxTouchPoints)) return;
+    var seen = null;
+    try { seen = localStorage.getItem("warteg-wiki-ios-shortcut-hint"); } catch (e) {}
+    if (seen === "1") return;
+
+    var previous = document.activeElement;
+    document.body.insertAdjacentHTML("beforeend",
+      '<div id="shortcut-modal" class="shortcut-modal" role="dialog" aria-modal="true" aria-labelledby="shortcut-title">' +
+      '<div class="shortcut-card">' +
+      '<h2 id="shortcut-title">Simpan wiki ini</h2>' +
+      '<p>Ketuk Bagikan, lalu Tambahkan ke Layar Utama agar mudah dibuka lain kali.</p>' +
+      '<button id="shortcut-ok" type="button">Mengerti</button>' +
+      "</div></div>"
+    );
+
+    var modal = document.getElementById("shortcut-modal");
+    var ok = document.getElementById("shortcut-ok");
+    var card = modal.querySelector(".shortcut-card");
+    ok.focus();
+
+    function close() {
+      try { localStorage.setItem("warteg-wiki-ios-shortcut-hint", "1"); } catch (e) {}
+      document.removeEventListener("keydown", onKeyDown, true);
+      modal.remove();
+      if (previous && typeof previous.focus === "function") previous.focus();
+    }
+    function onKeyDown(e) {
+      if (e.key === "Tab") {
+        e.preventDefault();
+        ok.focus();
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        close();
+      }
+    }
+    ok.addEventListener("click", close);
+    modal.addEventListener("click", function (e) {
+      if (!card.contains(e.target)) close();
+    });
+    document.addEventListener("keydown", onKeyDown, true);
+  }
+
+  function initInstallButton() {
+    var installPrompt = null;
+    var btn = document.getElementById("install-btn");
+    if (!btn) return;
+    window.addEventListener("beforeinstallprompt", function (e) {
+      e.preventDefault();
+      installPrompt = e;
+      btn.removeAttribute("hidden");
+    });
+    window.addEventListener("appinstalled", function () {
+      installPrompt = null;
+      btn.setAttribute("hidden", "");
+    });
+    btn.addEventListener("click", function () {
+      if (!installPrompt) return;
+      btn.setAttribute("hidden", "");
+      installPrompt.prompt();
+      var pending = installPrompt;
+      pending.userChoice.then(function () {
+        if (installPrompt === pending) installPrompt = null;
+      }, function () {
+        if (installPrompt === pending) installPrompt = null;
+      });
+    });
+  }
+
   function initTheme() {
     var saved = null;
     try { saved = localStorage.getItem("wt-theme"); } catch (e) {}
@@ -179,5 +256,7 @@
     var found = findPage(activeId);
     renderCrumb(page, found ? found.group : null);
     buildToc();
+    initShortcutHint();
+    initInstallButton();
   });
 })();
