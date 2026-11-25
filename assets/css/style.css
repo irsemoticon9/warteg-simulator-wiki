@@ -117,7 +117,7 @@ h1, h2, h3 { text-wrap: balance; }
 .masthead-search input::placeholder { color: var(--faint); }
 .icon-btn {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; border-radius: var(--radius-input);
+  width: 44px; height: 44px; flex: 0 0 44px; border-radius: var(--radius-input);
   border: 1px solid var(--line); background: var(--paper-2); color: var(--ink);
   cursor: pointer; transition: border-color 0.15s, color 0.15s;
 }
@@ -403,7 +403,7 @@ h1, h2, h3 { text-wrap: balance; }
   .price-table.scroll-x { -webkit-overflow-scrolling: touch; }
 }
 /* Header sempit: tombol Install tetap 44x44 tanpa menggeser halaman */
-@media (max-width: 420px) {
+@media (max-width: 640px) {
   .masthead-row { gap: 8px; }
   .brand small { display: none; }
   .brand strong {
