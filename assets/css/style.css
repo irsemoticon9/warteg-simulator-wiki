@@ -198,14 +198,23 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 7px; }
 .hero-cta-wrap { margin-top: 16px; }
-.hero-cta {
-  display: inline-block; padding: 9px 20px; border-radius: 8px;
-  background: #1e6b44; border: 1px solid #1e6b44;
-  color: #f6f2e4; text-decoration: none;
-  font: 600 14px "Plus Jakarta Sans";
-  transition: background 0.15s, border-color 0.15s;
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: 8px;
 }
-.hero-cta:hover { background: #278456; border-color: #278456; }
+.store-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 9px 14px;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--paper-2); color: var(--ink); text-decoration: none;
+  font: 700 13px "Plus Jakarta Sans";
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.store-btn svg {
+  width: 18px; height: 18px; flex: 0 0 auto; fill: currentColor;
+}
+.store-btn:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.store-btn:active { background: var(--wash); border-color: var(--ink-strong); }
+.store-btn:focus-visible { border-radius: 8px; }
 .hero-meta span {
   font: 600 11px "Plus Jakarta Sans";
   color: #f4eeda; padding: 4px 11px;
