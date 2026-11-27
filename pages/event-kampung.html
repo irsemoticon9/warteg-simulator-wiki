@@ -39,8 +39,8 @@
     <div class="article-card">
       <h1>Event Kampung</h1>
       <p class="lede">Ada tiga acara warga yang terdaftar di game: Kampung Meriah, Cerdas
-      Cermat, dan Adu Layangan. Pak Damar membawa acara di tiga lokasi berbeda, dan jadwalnya
-      bisa dilihat di aplikasi Kalender.</p>
+      Cermat, dan Adu Layangan. Pak Damar membawa acara ini di tiga lokasi berbeda, dan
+      jadwalnya bisa dilihat di aplikasi Kalender.</p>
 
       <h2>Tiga acara yang terdaftar</h2>
       <table class="price-table">
@@ -51,10 +51,11 @@
           <tr><td>Adu Layangan</td><td>Layangan</td><td>Puncak Gunung, Musim Panas hari 27; ada uang tambahan untuk layangan yang ditangkap</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Sumber angka:</b> tiga berkas acara (<code>kampung_meriah.tres</code>,
-      <code>cerdas_cermat.tres</code>, <code>adu_layangan.tres</code>) ikut terbongkar dari
-      <code>split_assetPackInstallTime.apk</code>. Tabel di bawah memakai nilai dari berkas itu.
-      Pengaturan yang tidak ditulis di berkas memakai nilai bawaan skrip.</div>
+      <div class="callout"><b>Sumber angka:</b> angka di tabel di bawah diambil dari tiga berkas
+      acara (<code>kampung_meriah.tres</code>, <code>cerdas_cermat.tres</code>,
+      <code>adu_layangan.tres</code>) yang ikut terbongkar dari
+      <code>split_assetPackInstallTime.apk</code>. Kalau sebuah pengaturan tidak ditulis di
+      berkas, game memakai nilai bawaan skrip.</div>
 
       <h2>Jadwal dan hadiah tiap acara</h2>
       <table class="price-table">
@@ -71,7 +72,8 @@
           <tr><td>Jumlah ronde</td><td class="num">3</td><td>3 (kualifikasi, semifinal, final)</td><td class="num">3</td></tr>
         </tbody>
       </table>
-      <p>Pembawa acaranya Pak Damar, dengan Kang Cecep dan Bu Lala sebagai NPC tetap.</p>
+      <p>Pembawa acaranya Pak Damar, dengan Kang Cecep dan Bu Lala sebagai NPC (warga yang bisa
+      diajak bicara) tetap. Poin relasi adalah angka kedekatanmu dengan warga.</p>
 
       <h2>Urutan acara</h2>
       <p>Acaranya berjalan dengan urutan yang tetap:</p>
@@ -79,22 +81,22 @@
         <li>Begitu tanggalnya cocok (musim, hari, dan fase), acara aktif. Peta berganti ke lokasi
         acara, dan NPC yang tidak termasuk daftar tetap disembunyikan.</li>
         <li>Dialog pembuka diputar.</li>
-        <li>Kamu bisa ikut minigame, dengan NPC di antrean mengajak lewat dialog biasa, atau menolak
-        dan melewatinya.</li>
-        <li>Kalau action habis sebelum acara selesai, muncul dialog capek.</li>
+        <li>Kamu bisa ikut minigame; NPC di antrean mengajak lewat dialog biasa, atau kamu
+        menolak dan melewatinya.</li>
+        <li>Kalau action (kesempatan melakukan satu kegiatan) habis sebelum acara selesai, muncul dialog capek.</li>
         <li>Setelah selesai, Pak Damar sebagai pembawa acara menyampaikan hasil. NPC lain memakai
         dialog penutupnya sendiri.</li>
         <li>Hadiah dan poin relasi dibagikan, lalu NPC kembali ke jadwal normal dan dialog sesudah
         acara terbuka.</li>
       </ol>
-      <p>Tiap acara memakai tujuh berkas dialog: pembuka, juara, percakapan biasa, capek, Damar,
-      penutup Damar, dan lewati. Formatnya dijelaskan di halaman
+      <p>Tiap acara memakai tujuh berkas dialog (berkas teks percakapan): pembuka, juara,
+      percakapan biasa, capek, Damar, penutup Damar, dan lewati. Formatnya dijelaskan di halaman
       <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
 
       <h2>Skor dan peringkat</h2>
       <p>Tiap acara terdiri dari <strong>3 ronde</strong> dengan poin ronde
       <strong>3 / 2 / 1</strong> untuk urutan pertama sampai ketiga. Skor ronde itu lalu
-      dikonversi jadi skor akhir acara:</p>
+      diubah jadi skor akhir acara:</p>
       <table class="price-table">
         <thead><tr><th>Lomba</th><th>Konversi skor akhir</th></tr></thead>
         <tbody>
@@ -113,10 +115,11 @@
 
       <h2>Pengumuman dan syarat lain</h2>
       <ul>
-        <li><strong>Pengumuman:</strong> SMS datang dari <strong>Pak Damar</strong> pada H-1 dan
-        lagi pada hari H.</li>
+        <li><strong>Pengumuman:</strong> SMS datang dari <strong>Pak Damar</strong> pada H-1
+        (sehari sebelum acara) dan lagi pada hari H (hari acara).</li>
         <li><strong>Wajib tidur:</strong> kalau acara dilewatkan atau action habis, game menandai
-        <code>wajib_tidur</code>: kamu harus pulang dan tidur. Penanda ini hilang saat hari berganti.</li>
+        <code>wajib_tidur</code> (penanda wajib tidur): kamu harus pulang dan tidur. Penanda ini
+        hilang saat hari berganti.</li>
         <li>Selain SMS acara, ada juga SMS terjadwal lain pada hari 2 sampai 7 dari Kang Cecep dan
         Bu Lala, serta SMS acak dari NPC yang relasinya sudah jalan. Keduanya terpisah dari
         pengumuman acara.</li>

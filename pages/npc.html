@@ -39,8 +39,9 @@
     <div class="article-card">
       <h1>NPC &amp; Pelanggan</h1>
       <p class="lede">Ada <strong>14 warga yang bisa diajak berinteraksi</strong> di kampung ini.
-      Halaman ini merangkum peran, usia, ulang tahun, jadwal mereka sebagai pelanggan warung,
-      dan celetukan yang keluar saat kamu mengobrol.</p>
+      NPC (warga yang bisa diajak bicara) ini punya peran, usia, dan ulang tahun masing-masing.
+      Halaman ini juga merangkum jadwal mereka sebagai pelanggan warung dan celetukan yang
+      keluar saat kamu mengobrol.</p>
 
       <h2>14 warga kampung</h2>
       <p>Kalender permainan punya tiga musim: Panas, Cerah, lalu Hujan. Urutan yang sama
@@ -49,14 +50,14 @@
       <table class="price-table">
         <thead><tr><th>ID</th><th>Nama</th><th>Peran</th><th>Tipe</th><th>Ulang tahun</th></tr></thead>
         <tbody>
-          <tr><td>dani</td><td>Dani</td><td>Hansip muda; bisa berubah jadi polisi lewat flag <code>dani_polisi</code></td><td>Romantis (cewek)</td><td>Musim 2 (Hujan), tgl 8</td></tr>
+          <tr><td>dani</td><td>Dani</td><td>Hansip muda; bisa berubah jadi polisi kalau penanda <code>dani_polisi</code> aktif</td><td>Romantis (cewek)</td><td>Musim 2 (Hujan), tgl 8</td></tr>
           <tr><td>rani</td><td>Rani</td><td>Guru Bimbingan Konseling SMP</td><td>Romantis (cowok)</td><td>Musim 1 (Cerah), tgl 11</td></tr>
           <tr><td>jamal</td><td>Jamal</td><td>Murid SMP yang bercita-cita jadi pemain bola</td><td>Teman</td><td>Musim 0 (Panas), tgl 15</td></tr>
           <tr><td>bu_yani</td><td>Bu Yani</td><td>Warga Jalan 1, ibu judes tetangga</td><td>Teman</td><td>Musim 0 (Panas), tgl 23</td></tr>
           <tr><td>pak_damar</td><td>Pak Damar</td><td>Ketua RT</td><td>Teman</td><td>Musim 1 (Cerah), tgl 19</td></tr>
           <tr><td>ustad_saipul</td><td>Ustad Saipul</td><td>Ustad / pengurus masjid Jalan 2</td><td>Teman</td><td>Musim 0 (Panas), tgl 6</td></tr>
           <tr><td>mei</td><td>Mei</td><td>Pemilik Toko Perabotan Rumah Indah</td><td>Teman</td><td>Musim 1 (Cerah), tgl 26</td></tr>
-          <tr><td>laras</td><td>Laras</td><td>Penjaga Toko Butik Cantika (bukan pemilik); baru muncul setelah flag <code>laras_terbuka</code></td><td>Romantis (cowok)</td><td>Musim 0 (Panas), tgl 10</td></tr>
+          <tr><td>laras</td><td>Laras</td><td>Penjaga Toko Butik Cantika (bukan pemilik); baru muncul setelah penanda <code>laras_terbuka</code> aktif</td><td>Romantis (cowok)</td><td>Musim 0 (Panas), tgl 10</td></tr>
           <tr><td>tirto</td><td>Tirto</td><td>Dokter umum di Puskesmas; menjual Vitamin</td><td>Romantis (cewek)</td><td>Musim 2 (Hujan), tgl 21</td></tr>
           <tr><td>bima</td><td>Bima</td><td>Barista di Kafe Kopi Senja, Jalan 1</td><td>Romantis (cewek)</td><td>Musim 1 (Cerah), tgl 5</td></tr>
           <tr><td>joko</td><td>Pak Joko</td><td>Mandor sekaligus pemilik Toko Bangunan Jaya Abadi</td><td>Teman</td><td>Musim 0 (Panas), tgl 24</td></tr>
@@ -65,7 +66,7 @@
           <tr><td>bu_lala</td><td>Bu Lala</td><td>Pedagang sembako dan sayur di Pasar</td><td>Teman</td><td>Musim 2 (Hujan), tgl 24</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Dani sang polisi:</b> setelah flag <code>dani_polisi</code> aktif,
+      <div class="callout"><b>Dani sang polisi:</b> setelah penanda <code>dani_polisi</code> aktif,
       julukannya berubah jadi <em>Polisi muda</em>, perannya jadi <em>Polisi / petugas keamanan</em>,
       kata "hansip" dalam obrolannya diganti, dan gambar profilnya memakai
       <code>dani_polisi.png</code>. Adegan pemicunya adalah <code>dani_cs6_polisi</code>.</div>
@@ -90,7 +91,7 @@
           <tr><td>Tirto</td><td>Dokter Puskesmas</td><td>27-32 tahun</td></tr>
           <tr><td>Bima</td><td>Barista Kafe Kopi Senja</td><td>25-29 tahun</td></tr>
           <tr><td>Pak Joko</td><td>Mandor &amp; pemilik toko bangunan</td><td>45-50 tahun</td></tr>
-          <tr><td>Dani</td><td>Hansip muda (Polisi muda setelah <code>dani_polisi</code>)</td><td>24-28 tahun</td></tr>
+          <tr><td>Dani</td><td>Hansip muda (Polisi muda setelah penanda <code>dani_polisi</code> aktif)</td><td>24-28 tahun</td></tr>
         </tbody>
       </table>
       <div class="callout"><b>Selera masih tertutup:</b> daftar suka dan tidak suka di kartu profil
@@ -100,7 +101,7 @@
 
       <h2>Siapa yang mampir sebagai pelanggan</h2>
       <p>Saat warung buka, sekitar <strong>35%</strong> pembeli yang datang adalah wajah yang
-      sudah kamu kenal. Sisanya pembeli biasa tanpa nama. Syarat kemunculannya:</p>
+      sudah kamu kenal. Sisanya pembeli biasa tanpa nama. Syarat munculnya:</p>
       <table class="price-table">
         <thead><tr><th>Warga</th><th>Waktu</th><th>Syarat hari</th></tr></thead>
         <tbody>
@@ -114,7 +115,7 @@
           <tr><td>Kang Cecep</td><td>Malam saja</td><td>Tidak pernah Rabu</td></tr>
           <tr><td>Bu Lala</td><td>Malam saja</td><td>Tidak pernah Jumat</td></tr>
           <tr><td>Mei</td><td>Pagi, Siang</td><td>Hanya Kamis</td></tr>
-          <tr><td>Laras</td><td>Siang: Rabu, Minggu; Malam: Senin, Kamis, Jumat, Sabtu</td><td>Harus ada flag <code>laras_terbuka</code></td></tr>
+          <tr><td>Laras</td><td>Siang: Rabu, Minggu; Malam: Senin, Kamis, Jumat, Sabtu</td><td>Harus ada penanda <code>laras_terbuka</code></td></tr>
           <tr><td>Tirto</td><td>Pagi &amp; Siang: Rabu, Sabtu, Minggu; Malam: Senin, Rabu, Sabtu</td><td>Tidak ada</td></tr>
           <tr><td>Pak Joko</td><td>Malam</td><td>Selasa, Kamis, Minggu</td></tr>
           <tr><td>Bima</td><td>Pagi &amp; Siang: Senin, Selasa, Rabu; Malam: Senin, Rabu, Kamis, Jumat, Sabtu</td><td>Tidak ada</td></tr>
@@ -123,10 +124,11 @@
         </tbody>
       </table>
       <div class="callout"><b>Nama baru di 0.2C:</b> Murid (<code>murid_b</code>) dan Pak Rustam
-      (<code>pemancing_asing</code>) terbaca langsung dari PackedScene hasil ekspor. Empat scene NPC
-      lainnya hanya berupa entri <code>.tscn.remap</code> tanpa nama tampil yang terbaca, jadi tidak
-      dimasukkan ke daftar ini.
-      Keduanya terbaca sebagai NPC dari PackedScene; apakah mereka mampir sebagai pelanggan belum bisa dipastikan.</div>
+      (<code>pemancing_asing</code>) terbaca langsung dari PackedScene hasil ekspor, yaitu berkas
+      adegan yang sudah dikemas untuk dipakai permainan. Empat scene NPC lainnya hanya berupa entri
+      <code>.tscn.remap</code> tanpa nama tampil yang terbaca, jadi tidak dimasukkan ke daftar ini.
+      Keduanya terbaca sebagai NPC dari PackedScene; apakah mereka mampir sebagai pelanggan belum
+      bisa dipastikan.</div>
       <ul>
         <li>Tirto <strong>bisa</strong> jadi tamu warung; selain itu dia menjual Vitamin di
         Puskesmas hanya saat dia sedang berada di dalam.</li>
@@ -139,13 +141,14 @@
       </ul>
 
       <h2>Rute harian warga</h2>
-      <div class="callout"><b>Data rute:</b> berkas <code>.tscn</code> asli memang tidak ada, tetapi
-      PackedScene hasil ekspor (<code>.scn</code>) untuk Pasar, Kafe, Dermaga, Lapangan, Butik,
-      Puskesmas, dan toko-toko berhasil dipulihkan. <code>npc_locator.gd</code> membaca properti
-      <code>hadir_saat</code>, <code>libur_hari</code>, <code>mulai_hari</code>, dan
-      <code>lokasi_detail</code> dari simpul NPC di peta itu, lalu <code>peta_kanvas.gd</code>
-      menampilkannya di HP. Nilai angkanya belum terekstraksi karena decoder simpul gagal, jadi
-      tabel rute lama tidak dipakai. Gunakan tabel jadwal pelanggan di atas sebagai gantinya.
+      <div class="callout"><b>Data rute:</b> berkas peta asli (<code>.tscn</code>) memang tidak ada,
+      tetapi versi ekspornya, PackedScene <code>.scn</code>, untuk Pasar, Kafe, Dermaga, Lapangan,
+      Butik, Puskesmas, dan toko-toko berhasil dipulihkan. Skrip <code>npc_locator.gd</code>
+      membaca jadwal kehadiran tiap warga dari peta itu (properti <code>hadir_saat</code>,
+      <code>libur_hari</code>, <code>mulai_hari</code>, dan <code>lokasi_detail</code>), lalu
+      <code>peta_kanvas.gd</code> menampilkannya di HP. Angka jadwalnya belum bisa dibaca karena
+      alat pembaca simpul gagal, jadi tabel rute lama tidak dipakai. Gunakan tabel jadwal
+      pelanggan di atas sebagai gantinya.
       Saat acara kampung, warga mengikuti lokasi acara: Lapangan untuk Kampung Meriah,
       Sekolah untuk Cerdas Cermat, dan Puncak Gunung untuk Adu Layangan. Kang Cecep dan
       Bu Lala selalu ada, warga lain hadir sesuai peluang acara.</div>
@@ -154,8 +157,9 @@
       <p>Saat kamu mengobrol, warga sesekali menyelipkan celetukan ringan dengan jeda
       7 sampai 14 detik. Isinya macam-macam: celetukan umum, celetukan yang berganti
       mengikuti fase Pagi, Siang, atau Malam, sapaan biasa, serta <strong>sapaan akrab</strong>
-      yang baru terbuka setelah poin relasi mencapai <strong>40</strong>. Sapaan dekat saat
-      berjalan mendekat memakai peluang 70% dan jeda 40 detik.</p>
+      yang baru terbuka setelah poin relasi (angka kedekatanmu dengan warga) mencapai
+      <strong>40</strong>. Sapaan dekat saat berjalan mendekat memakai peluang 70% dan jeda
+      40 detik.</p>
       <ul>
         <li>Bu Lala: <em>"Cabe naik lagi... pusing Ibu."</em> / akrab: <em>"Aduh, anak kesayangan Ibu dateng!"</em></li>
         <li>Pak Yanto: <em>"Handuk jimat, jangan sampai ketinggalan."</em> / akrab: <em>"Sini, [panggilanmu], Bapak ceritain soal kakap itu."</em></li>
@@ -173,24 +177,24 @@
       <strong>51 sampai 100</strong>. Hanya <strong>Rani dan Dani</strong> yang punya
       empat tingkat: 0-20, 21-50, 51-80, dan 81-100. Bu Yani, Jamal, Mei, dan Tirto
       tidak punya dialog malam, jadi menu obrolan malam mereka kosong.</p>
-      <p>Ada juga <strong>obrolan khusus</strong> yang baru aktif setelah cutscene tertentu
-      selesai. Nada bicara Bu Yani berubah setelah urusan di Puskesmas tuntas, misalnya.
-      Pilihanmu saat cutscene tawar-menawar juga ikut menentukan siapa yang dia bela.</p>
+      <p>Ada juga <strong>obrolan khusus</strong> yang baru aktif setelah cutscene (adegan cerita
+      pendek) tertentu selesai. Nada bicara Bu Yani berubah setelah urusan di Puskesmas tuntas,
+      misalnya. Pilihanmu saat cutscene tawar-menawar juga ikut menentukan siapa yang dia bela.</p>
 
       <h2>Status salting dan malu</h2>
       <p>Untuk warga romantis, poin relasi juga mengubah gaya obrolan. Berdasarkan
       <code>npc_malu.gd</code>, status <strong>salting</strong> mulai aktif pada poin
       <strong>60</strong>, lalu berganti jadi <strong>malu</strong> pada poin <strong>80</strong>.
-      Status ini hanya dipakai kalau gender pemain cocok dengan gate warga itu. Daftar kalimatnya
-      ada di <code>npc_data.gd</code>, dengan varian umum dan varian menurut fase Pagi, Siang, atau
-      Malam.</p>
+      Status ini hanya dipakai kalau gender pemain cocok dengan syarat gender warga itu. Daftar
+      kalimatnya ada di <code>npc_data.gd</code>, dengan varian umum dan varian menurut fase Pagi,
+      Siang, atau Malam.</p>
       <ul>
         <li>Bima, salting: <em>"Kopi buatanku makin enak ya. Katanya. Orang bilang. Bukan kamu yang bilang... tapi kamu boleh bilang."</em></li>
         <li>Bima, malu: <em>"Aku nggak pandai ngomong. Tapi kalau kamu di sini aku... ya, nggak mau kamu pergi dulu."</em></li>
       </ul>
       <p>Kedua contoh di atas terbaca dari kunci <code>obrolan_salting</code> dan
-      <code>obrolan_malu</code> untuk <code>bima</code> di <code>npc_data.gd</code>. Ambang statusnya
-      berasal dari <code>npc_malu.gd</code>.</p>
+      <code>obrolan_malu</code> untuk <code>bima</code> di <code>npc_data.gd</code>. Ambang
+      statusnya berasal dari <code>npc_malu.gd</code>.</p>
     </div>
   </article>
 

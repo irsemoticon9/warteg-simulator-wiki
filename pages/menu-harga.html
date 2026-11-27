@@ -38,18 +38,20 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Menu &amp; Harga</h1>
-      <p class="lede">Data game versi 0.2C memuat 19 menu warteg dan satu barang persediaan,
-      yaitu minyak goreng. Angka di halaman ini berasal dari <code>menu.tres</code> yang berhasil
-      dipulihkan. Field yang tidak ditulis di resource mengikuti bawaan skrip.</p>
+      <p class="lede">Versi 0.2C punya 19 menu warteg dan satu barang persediaan, yaitu minyak
+      goreng. Semua angka di halaman ini diambil dari berkas data menu (<code>menu.tres</code>)
+      yang berhasil dipulihkan. Kalau satu nilai tidak ditulis di berkas itu, game memakai angka
+      bawaan dari skripnya.</p>
 
       <div class="callout"><b>Sumber data:</b> <code>menu.tres</code> berhasil dipulihkan sebagai
-      RSRC 4.7 berisi 19 menu dan satu perlengkapan. Harga, modal, stok, bahan, dan peluang pada
-      tabel diambil dari resource. Tanda 'bawaan' dipakai kalau field-nya memang tidak ditulis;
-      nilainya mengikuti <code>menu_item.gd</code>.</div>
+      format berkas Godot (RSRC 4.7) dan berisi 19 menu serta satu perlengkapan. Harga, modal, stok, bahan, dan peluang
+      di tabel diambil dari berkas itu. Tanda 'bawaan' berarti nilainya tidak ditulis di berkas,
+      jadi game memakai angka dari <code>menu_item.gd</code> (skrip aturan tiap menu).</div>
 
       <h2>Daftar menu</h2>
-      <p>Nama dan rincian 19 menu berasal dari <code>menu.tres</code>, bukan hanya daftar ID di
-      <code>kuis_bank.gd</code>. Harga di bawah adalah harga dasar sebelum pemain mengubahnya.</p>
+      <p>Nama dan rincian 19 menu diambil dari <code>menu.tres</code>. Daftar nomor menu di
+      <code>kuis_bank.gd</code> hanya berisi nomornya. Harga di bawah adalah harga dasar sebelum
+      kamu mengubahnya.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Menu</th><th class="num">Harga dasar</th><th class="num">Modal</th><th class="num">Stok awal</th><th class="num">Peluang</th><th>Bahan</th></tr></thead>
         <tbody>
@@ -75,19 +77,21 @@
         </tbody>
       </table>
       <ul>
-        <li>Bawaan <code>MenuItem</code> hanya dipakai untuk field yang kosong: harga 3.000,
-        modal 1.500, 5 porsi per pembelian, stok 15, hari ke-1, dan peluang 0,3.</li>
-        <li><code>porsi_per_beli</code> tersimpan untuk Nasi dan kedua sambal, masing-masing 10.
-        16 menu lain memakai bawaan 5. Field ini belum dipakai sistem lain.</li>
-        <li>Peluang dipesan tersimpan untuk 11 menu. Nasi paling besar (0,9), disusul Telur (0,4).
-        8 menu memakai bawaan 0,3.</li>
+        <li>Kalau satu nilai tidak ditulis di berkas menu, game memakai bawaan
+        <code>MenuItem</code> (aturan dasar satu menu): harga 3.000, modal 1.500, 5 porsi per
+        pembelian, stok 15, hari ke-1, dan peluang 0,3.</li>
+        <li>Jumlah porsi per pembelian (<code>porsi_per_beli</code>) tersimpan khusus untuk Nasi
+        dan kedua sambal, masing-masing 10. 16 menu lain memakai bawaan 5. Nilai ini belum
+        dipakai bagian game lain.</li>
+        <li>Peluang dipesan (seberapa sering pembeli memilih menu itu) tersimpan untuk 11 menu.
+        Nasi paling besar (0,9), disusul Telur (0,4). 8 menu memakai bawaan 0,3.</li>
         <li>Bahan dan stok dibeli dari Bu Lala atau Kang Cecep. Rinciannya ada di halaman
         <a href="belanja-inventory.html">Belanja &amp; Inventory</a>.</li>
       </ul>
 
       <h2>Resep lauk</h2>
-      <p>Delapan lauk tidak langsung dijual pedagang. Resepnya dibuka dulu lewat aplikasi di HP
-      dan dibayar dari saldo bank, bukan kas tunai.</p>
+      <p>Delapan lauk belum bisa dijual sejak awal. Resepnya harus dibuka dulu lewat aplikasi di
+      HP, dan biayanya dipotong dari saldo bank, bukan dari uang tunai di laci.</p>
       <table class="price-table">
         <thead><tr><th>Resep</th><th class="num">Harga</th><th>Resep</th><th class="num">Harga</th></tr></thead>
         <tbody>
@@ -99,7 +103,7 @@
       </table>
 
       <h2>Minuman (11 resep)</h2>
-      <p>Minuman hanya muncul sebagai pesanan setelah gerai minuman tersedia, yaitu saat Warteg
+      <p>Minuman baru muncul sebagai pesanan setelah gerai minuman berdiri, yaitu setelah Warteg
       Level 2 selesai. Harga normalnya sebagai berikut.</p>
       <table class="price-table">
         <thead><tr><th>Minuman</th><th class="num">Harga Normal</th><th>Suhu</th><th>Minuman</th><th class="num">Harga Normal</th><th>Suhu</th></tr></thead>
@@ -113,40 +117,42 @@
         </tbody>
       </table>
       <ul>
-        <li>Harga minimum adalah modal dibulatkan ke atas ke kelipatan 500, minimal 500. Harga
-        maksimum empat kali harga normal, dengan langkah Rp 500.</li>
-        <li>Saran harga: harga normal dibulatkan ke 500, lalu minimal Rp 500 di atas harga minimum.</li>
-        <li>Batas bawah saran minuman: 85% dari harga normal, dibulatkan ke 500. Batas atas panel:
-        1,25 kali harga normal, lalu dikali 1,25 lagi dan dibulatkan ke 500. Saat menghitung reaksi
-        pelanggan, harga wajar minuman memakai 1,25 kali harga normal.</li>
-        <li>Peluang pesanan panas awalnya 0,35. Hujan menambah 0,35, Malam menambah 0,20, Siang
-        mengurangi 0,10, dan musim Panas mengurangi 0,10. Malam dan Siang saling menggantikan,
-        Pagi tidak memengaruhi peluang. Hasilnya dijaga antara 0,10 dan 0,90. Kalau suhu yang
-        terpilih tidak punya minuman yang bisa dibuat, game memakai suhu yang lain.</li>
+        <li>Harga terendah adalah modal yang dibulatkan ke atas ke kelipatan 500, minimal Rp 500.
+        Harga tertinggi empat kali harga normal, dengan langkah Rp 500.</li>
+        <li>Saran harga: harga normal dibulatkan ke 500, lalu minimal Rp 500 di atas harga
+        terendah.</li>
+        <li>Untuk minuman, batas bawah saran adalah 85% dari harga normal, dibulatkan ke 500.
+        Batas atas panel adalah 1,25 kali harga normal, lalu dikali 1,25 lagi dan dibulatkan ke
+        500. Saat menghitung reaksi pelanggan, harga wajar (patokan harga yang dianggap pantas)
+        minuman memakai 1,25 kali harga normal.</li>
+        <li>Peluang pesanan minuman panas awalnya 0,35. Hujan menambah 0,35, Malam menambah 0,20,
+        Siang mengurangi 0,10, dan musim Panas mengurangi 0,10. Malam dan Siang saling
+        menggantikan, Pagi tidak memengaruhi peluang. Hasilnya dijaga antara 0,10 dan 0,90. Kalau
+        suhu yang terpilih tidak punya minuman yang bisa dibuat, game memakai suhu yang lain.</li>
       </ul>
 
       <h2>Atur harga sendiri</h2>
       <ul>
         <li>Sekali klik mengubah harga Rp 500.</li>
         <li>Harga tidak boleh di bawah modal, atau Rp 500 kalau modalnya lebih kecil.</li>
-        <li>Batas atas empat kali harga jual dasar, dibulatkan ke kelipatan 500.</li>
+        <li>Harga tertinggi empat kali harga dasar, dibulatkan ke kelipatan 500.</li>
       </ul>
-      <div class="callout warn"><b>Tiga batas penilaian:</b> di atas 1,25 kali harga wajar kena
-      <span class="chip bad">−1 bintang</span>. Di atas 1,6 kali kena
-      <span class="chip bad">−2 bintang</span> dan pelanggan bisa membatalkan pesanan. Di bawah
-      0,85 kali dapat <span class="chip good">+1 bintang</span>. Untuk menu makanan, Catatan Pasar
-      memakai batas aman 0,85 sampai 1,25 kali. Panel minuman memakai batas atas 1,5625 kali
-      harga normal.</div>
+      <div class="callout warn"><b>Tiga batas penilaian:</b> kalau harga di atas 1,25 kali harga
+      wajar, kamu kena <span class="chip bad">−1 bintang</span>. Di atas 1,6 kali kena
+      <span class="chip bad">−2 bintang</span> dan pelanggan bisa membatalkan pesanan. Kalau harga
+      di bawah 0,85 kali, kamu dapat <span class="chip good">+1 bintang</span>. Untuk menu makanan,
+      Catatan Pasar memakai batas aman 0,85 sampai 1,25 kali. Panel minuman memakai batas atas
+      1,5625 kali harga normal.</div>
 
       <h2>Jumlah lauk minimal</h2>
-      <p>Di 0.2C, warteg dengan <strong>200 bintang</strong> ke atas wajib memajang minimal
-      <strong>4 lauk</strong>. Pada <strong>300 bintang</strong> ke atas, syaratnya naik menjadi
-      minimal <strong>5 lauk</strong>. Kalau jumlah lauk kurang dari syarat itu, pembeli
-      menganggap menu sepi lalu pergi dari warung.</p>
+      <p>Di 0.2C, warteg dengan <strong>200 bintang</strong> atau lebih wajib memajang minimal
+      <strong>4 lauk</strong>. Di <strong>300 bintang</strong> atau lebih, syaratnya naik jadi
+      minimal <strong>5 lauk</strong>. Kalau lauk yang dipajang kurang dari syarat itu, pembeli
+      menganggap menunya sepi lalu pergi.</p>
 
       <h2>Harga pasar mingguan</h2>
-      <p>Modal bahan bergerak tiap minggu game. Harga jual ikan dan serangga ikut berubah dengan
-      aturan yang berbeda.</p>
+      <p>Harga modal bahan berubah setiap minggu game. Harga jual ikan dan serangga juga berubah,
+      dengan aturan sendiri.</p>
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Nilai</th><th>Keterangan</th></tr></thead>
         <tbody>
@@ -167,17 +173,18 @@
       <table class="price-table">
         <thead><tr><th>Hal</th><th>Nilai</th></tr></thead>
         <tbody>
-          <tr><td>Harga</td><td class="rp">18.000 per liter, bawaan <code>supply_item.gd</code></td></tr>
-          <tr><td>Isi</td><td class="num">10 kali masak per liter, bawaan <code>supply_item.gd</code>; resource menulis '1 Liter · 10x masak'</td></tr>
+          <tr><td>Harga</td><td class="rp">18.000 per liter, bawaan <code>supply_item.gd</code> (skrip aturan satu botol minyak)</td></tr>
+          <tr><td>Isi</td><td class="num">10 kali masak per liter, bawaan; berkas itu menulis '1 Liter · 10x masak'</td></tr>
           <tr><td>Angka awal wajan</td><td class="num">20 unit, bukan batas atas</td></tr>
           <tr><td>Pemakaian</td><td>Satu unit per kali menggoreng</td></tr>
           <tr><td>Stok awal pemain baru</td><td class="num">20 unit</td></tr>
           <tr><td>Beli di</td><td>Bu Lala di Pasar, atau lewat Order Online VIP</td></tr>
         </tbody>
       </table>
-      <p>Wajan berhenti berfungsi kalau minyak habis. Isi ulang satu botol menambah 10 kali
-      masak. Angka 20 adalah titik awal skala bar, bukan kapasitas maksimum; stok bisa melebihi
-      20 setelah pembelian. Simpanan lama yang mencatat minyak 0 akan dibaca sebagai 10 unit.</p>
+      <p>Wajan tidak bisa dipakai kalau minyak habis. Satu botol isi ulang menambah 10 kali
+      masak. Angka 20 adalah titik awal pengisian bar minyak, bukan batas maksimum, jadi stok bisa
+      melebihi 20 setelah kamu membeli. Data simpanan lama yang mencatat minyak 0 akan dibaca
+      sebagai 10 unit.</p>
     </div>
   </article>
 

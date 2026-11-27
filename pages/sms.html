@@ -38,29 +38,29 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>SMS &amp; Balasan</h1>
-      <p class="lede">Di Warteg Simulator 0.2C ada dua sistem SMS yang berdampingan. SmsRomantis
-      adalah sistem lama untuk lima penerima yang sudah dijelaskan di halaman
+      <p class="lede">Di Warteg Simulator 0.2C ada dua sistem SMS yang jalan bersama. SmsRomantis
+      adalah sistem lama untuk lima penerima, dijelaskan di halaman
       <a href="romansa.html">Romansa</a>. SmsBalasPesan adalah sistem balasan umum yang lebih
-      luas, dengan 14 pengirim dan 408 pesan. Halaman ini merangkum pengirim, contoh balasan,
-      dan aturan yang bisa dibuktikan dari script.</p>
+      luas, dengan 14 pengirim dan 408 pesan. Halaman ini memuat daftar pengirim, contoh balasan,
+      dan aturan yang terbaca dari isi program.</p>
 
-      <h2>Dua sistem yang berdampingan</h2>
+      <h2>Dua sistem yang jalan bersama</h2>
       <table class="price-table">
         <thead><tr><th>Sistem</th><th>Jangkauan</th><th>Catatan</th></tr></thead>
         <tbody>
-          <tr><td><code>SmsRomantis</code></td><td>Lima penerima romantis</td><td>Rani, Dani, Tirto, Laras, dan Bima. Poin sedang 20, poin balasan 40, tiga pilihan, maksimal 2 kali per minggu. Rinciannya ada di <a href="romansa.html">Romansa</a>.</td></tr>
-          <tr><td><code>SmsBalasPesan</code></td><td><strong>14 pengirim</strong> dan <strong>408 pesan</strong></td><td>Teks pesan disimpan per pengirim di <code>sms_balas_pesan.gd</code>. Balasan diambil dari daftar khusus untuk teks itu atau dari kategori umum, romantis, dan pacar.</td></tr>
+          <tr><td><code>SmsRomantis</code></td><td>Lima penerima romantis</td><td>Rani, Dani, Tirto, Laras, dan Bima. SMS tingkat sedang: 20 poin. Balasan: 40 poin. Tiga pilihan, maksimal 2 kali per minggu. Rinciannya ada di <a href="romansa.html">Romansa</a>.</td></tr>
+          <tr><td><code>SmsBalasPesan</code></td><td><strong>14 pengirim</strong> dan <strong>408 pesan</strong></td><td>Teks pesan disimpan per pengirim di berkas <code>sms_balas_pesan.gd</code>. Balasan diambil dari daftar khusus untuk teks itu, atau dari kategori umum, romantis, dan pacar.</td></tr>
         </tbody>
       </table>
-      <p>Keduanya tidak saling menggantikan. SMS romantis untuk jalur lima warga tetap memakai
-      aturan di <code>sms_romantis.gd</code>, sementara balasan umum memakai
-      <code>sms_balas.gd</code>. Status pacar yang dipakai sistem balasan berhubungan dengan
-      aturan di halaman <a href="pacaran.html">Pacaran</a>.</p>
+      <p>Keduanya berjalan sendiri-sendiri. SMS romantis untuk jalur lima warga tetap memakai
+      aturan di <code>sms_romantis.gd</code>, sedangkan balasan umum memakai
+      <code>sms_balas.gd</code>. Status pacar yang dipakai sistem balasan mengikuti aturan di
+      halaman <a href="pacaran.html">Pacaran</a>.</p>
 
       <h2>14 pengirim dan contoh balasannya</h2>
       <p>Jumlah di bawah dihitung dari entri pesan di <code>sms_balas_pesan.gd</code>. Kolom
-      terakhir hanya satu contoh opsi balasan yang bisa dipilih pemain, bukan cuplikan
-      percakapan lengkap.</p>
+      terakhir hanya satu contoh pilihan balasan untuk pemain, bukan cuplikan percakapan
+      lengkap.</p>
       <table class="price-table">
         <thead><tr><th>Pengirim</th><th>Jumlah pesan</th><th>Contoh balasan singkat</th></tr></thead>
         <tbody>
@@ -81,56 +81,46 @@
         </tbody>
       </table>
       <p>Jumlah seluruhnya <strong>408 pesan</strong>. Isi ke-408 pesan tidak ditranskrip di wiki.
-      Contoh di tabel diambil dari opsi balasan yang tercatat di dalam data, jadi teksnya
-      adalah kalimat pemain, bukan kalimat balasan dari NPC.</p>
+      Contoh di tabel diambil dari pilihan balasan yang tercatat di dalam data, jadi teksnya
+      kalimat pemain, bukan kalimat balasan dari NPC (warga di dalam game).</p>
 
-      <h2>Aturan yang bisa dibuktikan dari script</h2>
+      <h2>Aturan yang terbaca dari isi program</h2>
       <ul>
-        <li><code>sms_inbox.gd</code>: <code>check()</code> dipanggil ketika tanggal berubah
-        lewat <code>GameCalendar.day_changed</code>, dan sekali saat node siap lewat
-        <code>call_deferred()</code>. Setiap entri <code>SmsSchedule.DAFTAR</code> dengan
-        <code>hari</code> tidak lebih besar dari <code>get_total_day()</code> dan belum ada
-        di <code>_terkirim</code> dikirim sekali. Setelah itu fungsi memanggil
-        <code>SmsRomantis.harian(today)</code> dan <code>TirtoUndangan.harian()</code>.</li>
-        <li><code>sms_inbox.gd</code>: <code>kirim_sesuai_waktu()</code> membaca
-        <code>fase</code> dari <code>SmsBalasPesan.WAKTU[teks]</code> dengan nilai awal 0.
-        Bila kalender tidak ada atau fase saat ini sudah mencapai nilai itu, pesan dikirim
-        langsung. Bila belum, pesan disimpan di antrean <code>sms_tunda</code> bersama
-        <code>dari</code>, <code>teks</code>, <code>ekstra</code>, <code>fase</code>, dan
-        <code>hari</code>.</li>
-        <li><code>sms_inbox.gd</code>: <code>kirim_tertunda()</code> berjalan saat
-        <code>GameCalendar.phase_changed</code>. Pesan dari antrean dikirim hanya jika
-        <code>hari</code> yang tersimpan sama dengan <code>get_total_day()</code> dan
-        <code>fase</code> tidak lebih besar dari fase saat ini. Antrean ditulis ulang dengan
-        sisa entri yang harinya masih sama, jadi entri dari hari lain tidak ikut dikirim
-        pada pergantian fase itu.</li>
-        <li><code>sms_balas.gd</code>: <code>layak()</code> menolak pesan sistem, pesan
-        pesanan, pesan yang sudah punya <code>balasan</code>, dan teks yang memuat
-        <code>(Pilih Terima atau Tolak</code>. Pengirim juga harus punya data di
-        <code>SmsBalasData.DATA</code>. <code>pesan_bisa_dibalas(dari)</code> mengambil
-        pesan pertama dari pengirim itu (pesan terbaru, karena inbox memakai
-        <code>push_front</code>); bila pesan itu tidak lolos pemeriksaan, hasilnya kamus
-        kosong.</li>
-        <li><code>sms_balas.gd</code>: <code>kategori()</code> memilih <code>pacar</code>
-        bila pesan bertanda <code>romantis</code> dan <code>NpcPacar.aktif(id)</code> benar,
-        memilih <code>romantis</code> bila pesan bertanda <code>romantis</code>, data
-        pengirim memiliki kumpulan romantis, pengirimnya termasuk NPC romantis, dan poin
-        relasi minimal 40, lalu memilih <code>umum</code> untuk sisanya.
-        <code>opsi()</code> memakai daftar khusus bila <code>kunci</code> atau teks pesan
-        cocok dengan entri di <code>SmsBalasPesan.DATA</code>. Bila tidak cocok, dia
-        mengambil maksimal tiga opsi dari kumpulan kategori itu, atau dari daftar balas
-        pacar untuk kategori pacar.</li>
+        <li><strong>Pesan terjadwal menurut hari.</strong> Daftar pesan diperiksa setiap kali
+        tanggal berganti, dan sekali lagi saat layar SMS pertama kali siap. Pesan yang harinya
+        sudah tiba (termasuk hari ini) dan belum pernah dikirim akan dikirim satu kali. Setelah pemeriksaan itu,
+        program juga memeriksa SMS romantis harian dan undangan dari Tirto.</li>
+        <li><strong>Pesan yang menunggu fase tertentu.</strong> Tiap pesan punya catatan fase
+        (bagian hari, misalnya pagi atau malam) kapan boleh muncul. Pesan tanpa catatan fase
+        dianggap fase 0. Kalau data kalender tidak ada atau fase itu sudah tercapai, pesan
+        langsung dikirim. Kalau belum, pesan disimpan dulu di antrean bersama pengirim, isi
+        pesan, data tambahan, fase, dan harinya.</li>
+        <li><strong>Pengiriman saat fase berganti.</strong> Antrean diperiksa lagi setiap kali
+        fase berganti. Pesan hanya dikirim kalau harinya sama dengan hari sekarang dan fasenya
+        sudah tercapai. Antrean lalu ditulis ulang sehingga hanya menyisakan pesan dari hari
+        yang sama, jadi pesan dari hari lain ikut hilang dari antrean pada pergantian fase itu.</li>
+        <li><strong>Pesan yang bisa dibalas.</strong> Pesan sistem, pesan pesanan, pesan yang
+        sudah punya balasan, dan pesan yang memuat teks <code>(Pilih Terima atau Tolak</code>
+        tidak bisa dibalas. Pengirimnya juga harus punya data balasan. Yang dipakai adalah pesan
+        terbaru dari pengirim itu, karena pesan baru masuk di urutan paling atas. Kalau pesan
+        terbaru tidak lolos pemeriksaan, tidak ada pilihan balasan yang muncul.</li>
+        <li><strong>Pilihan balasan.</strong> Balasan dibagi tiga kategori: pacar, romantis, dan
+        umum. Kategori pacar dipakai kalau pesan bertanda romantis dan kamu sedang berpacaran
+        dengan pengirimnya. Kategori romantis dipakai kalau pesan bertanda romantis, pengirimnya
+        warga romantis, punya kumpulan balasan romantis, dan poin relasi minimal 40. Sisanya
+        masuk kategori umum. Kalau ada daftar balasan khusus untuk pesan itu, daftar itu yang
+        dipakai. Kalau tidak ada, muncul paling banyak tiga pilihan dari kategorinya, atau dari
+        daftar balasan pacar untuk kategori pacar.</li>
       </ul>
-      <p>Pemicu per pesan belum diverifikasi satu per satu; sebagian entri WAKTU memuat
-      fase dan hari, tetapi wiki tidak merincinya. Sumber aturan umum:
-      <code>sms_inbox.gd</code> dan <code>sms_balas.gd</code>. Sumber sebagian entri
-      <code>WAKTU</code>: <code>sms_balas_pesan.gd</code>.</p>
+      <p>Pemicu tiap pesan belum diperiksa satu per satu. Sebagian pesan punya catatan fase dan
+      hari, tetapi wiki belum merincinya. Aturan umum dibaca dari <code>sms_inbox.gd</code> dan
+      <code>sms_balas.gd</code>. Sebagian data waktu ada di <code>sms_balas_pesan.gd</code>.</p>
 
       <h2>Ringkasan</h2>
       <p>SMS romantis lama tetap menjadi bagian dari lima jalur di
       <a href="romansa.html">Romansa</a>, sedangkan balasan umum memakai 14 pengirim dan
-      408 pesan di halaman ini. Kalau kamu menanyakan poin, status pacar, atau kunci adegan
-      yang dipakai kategori <code>pacar</code>, lihat <a href="pacaran.html">Pacaran</a>.</p>
+      408 pesan di halaman ini. Kalau kamu menanyakan poin, status pacar, atau adegan yang
+      terkunci untuk kategori <code>pacar</code>, lihat <a href="pacaran.html">Pacaran</a>.</p>
     </div>
   </article>
 

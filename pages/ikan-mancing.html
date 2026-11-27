@@ -38,18 +38,21 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Ikan &amp; Mancing</h1>
-      <p class="lede">Satu sesi mancing berjalan dalam empat tahap: lempar, tunggu, hentak, lalu
-      tarik. Halaman ini mengurai tiap tahap, plus daftar 25 ikan yang bisa kamu dapat dan alat
-      yang menaikkan peluangnya.</p>
+      <p class="lede">Satu sesi mancing berjalan dalam empat tahap: lempar, tunggu, sambar, lalu
+      tarik. Halaman ini menjelaskan tiap tahap, ditambah daftar 25 ikan yang bisa kamu dapat dan
+      alat yang menaikkan peluangnya.</p>
 
-      <div class="callout"><b>Lokasi:</b> spot pancing ada di <strong>Dermaga/Pantai</strong>. Kalau kamu
+      <div class="callout"><b>Lokasi:</b> tempat memancing ada di <strong>Dermaga/Pantai</strong>. Kalau kamu
       belum punya pancing, kamu diarahkan ke Pak Yanto yang menjual pancing dan umpan.</div>
 
-      <h2>Mekanik sesi mancing</h2>
+      <h2>Aturan satu sesi mancing</h2>
       <ul>
-        <li>Satu sesi memakan <strong>1 action</strong>, dan action itu baru dipotong setelah sesi ditutup.</li>
-        <li>Jatahnya <strong>5 lemparan</strong> per sesi, atau <strong>7 lemparan untuk VIP</strong>. Tiap lemparan menghabiskan <strong>1 umpan</strong>.</li>
-        <li>Umpan habis atau pancing belum dibeli, sesi tidak bisa dimulai. Pesan yang muncul mengarahkanmu ke Pak Yanto.</li>
+        <li>Satu sesi memakan <strong>1 action</strong> (satu jatah tindakan), dan action itu baru
+        dipotong setelah sesi ditutup.</li>
+        <li>Jatahnya <strong>5 lemparan</strong> per sesi, atau <strong>7 lemparan untuk VIP</strong>.
+        Tiap lemparan menghabiskan <strong>1 umpan</strong>.</li>
+        <li>Kalau umpan habis atau pancing belum dibeli, sesi tidak bisa dimulai. Pesan yang muncul
+        mengarahkanmu ke Pak Yanto.</li>
         <li>Keluar dari sesi saat ikan sedang ditarik berarti ikan itu lepas.</li>
       </ul>
 
@@ -68,10 +71,13 @@
       <ul>
         <li>Tinggi kotak hijau: <code>lerp(0,34; 0,2; kesulitan)</code> × (1 + bonus area pancing)
         × <strong>1,25</strong> kalau buff Jus Jeruk aktif × <strong>1,2</strong> dari kemudahan
-        permainan v0.2C. Makin sulit ikannya, makin sempit kotaknya.</li>
-        <li>Tahan untuk menaikkan kotak (2,6/detik), lepas untuk menurunkannya (2,2/detik). Kecepatan kotak dibatasi ±1,6.</li>
-        <li>Kecepatan gerak ikan adalah <code>lerp(0,6; 2,4; kesulitan) × 0,8</code>. Faktor 0,8 itu
-        kemudahan v0.2C, sama seperti faktor 1,2 pada kotak hijau dan 0,8 pada penurunan meter.</li>
+        permainan v0.2C. Makin sulit ikannya, makin sempit kotaknya. Angka di dalam
+        <code>lerp</code> adalah campuran dari nilai rendah ke tinggi.</li>
+        <li>Tahan untuk menaikkan kotak (2,6 per detik), lepas untuk menurunkannya (2,2 per detik).
+        Kecepatan kotak dibatasi ±1,6.</li>
+        <li>Kecepatan gerak ikan adalah <code>lerp(0,6; 2,4; kesulitan) × 0,8</code>. Faktor 0,8
+        itu kemudahan v0.2C, sama seperti faktor 1,2 pada kotak hijau dan 0,8 pada penurunan
+        meter.</li>
       </ul>
 
       <h3>Pola gerak ikan saat ditarik</h3>
@@ -87,10 +93,16 @@
 
       <h2>Siapa yang mau menggigit</h2>
       <ol>
-        <li>Ikan hanya masuk daftar calon kalau fase waktu, musim, cuaca, dan level pancingnya cocok dengan kondisi saat itu.</li>
-        <li>Bobot dasar dikali pengali kondisi dan pengali harga pancing. Kalau kondisi sekarang termasuk favorit ikan itu, bobotnya dikali <strong>2,0</strong> lagi untuk setiap kondisi yang cocok.</li>
-        <li>Ikan dengan kesulitan <strong>≥ 0,6</strong> juga dikali <code>kali_langka</code> umpan dan pancing.</li>
-        <li>Pemenangnya diambil lewat undian berbobot dari seluruh calon. Pancing yang dipakai ialah level tertinggi yang kamu miliki; umpan yang dipakai ialah item pertama di daftar umpan.</li>
+        <li>Ikan hanya masuk daftar calon kalau fase waktu, musim, cuaca, dan level pancingnya
+        cocok dengan kondisi saat itu.</li>
+        <li>Bobot dasar (peluang relatif) dikali pengali kondisi dan pengali harga pancing. Kalau
+        kondisi sekarang termasuk favorit ikan itu, bobotnya dikali <strong>2,0</strong> lagi untuk
+        setiap kondisi yang cocok.</li>
+        <li>Ikan dengan kesulitan <strong>≥ 0,6</strong> juga dikali <code>kali_langka</code>
+        (pengali ikan langka) dari umpan dan pancing.</li>
+        <li>Pemenangnya diambil lewat undian berbobot dari seluruh calon. Pancing yang dipakai
+        ialah level tertinggi yang kamu miliki; umpan yang dipakai ialah item pertama di daftar
+        umpan.</li>
       </ol>
 
       <h3>Pengali harga pancing</h3>
@@ -102,9 +114,9 @@
           <tr><td>3 (Pro)</td><td class="num">0,25</td><td class="num">1,8</td><td class="num">4,0</td></tr>
         </tbody>
       </table>
-      <p>Artinya, pancing Pro sangat menekan ikan murah tapi besar sekali peluangnya untuk ikan
-      mahal. Saat quest ikan aktif, ikan yang diminta punya peluang <strong>80%</strong> muncul
-      lebih dulu.</p>
+      <p>Jadi dengan pancing Pro, ikan di bawah 8.000 jarang muncul (pengali 0,25), sedangkan ikan
+      20.000 ke atas lebih sering muncul (pengali 4,0). Saat quest ikan aktif, ikan yang diminta
+      punya peluang <strong>80%</strong> muncul lebih dulu.</p>
 
       <h3>Membaca syarat tiap ikan</h3>
       <p>Nilai 1, 2, dan 4 masing-masing mewakili satu kondisi; angka 7 berarti ketiganya

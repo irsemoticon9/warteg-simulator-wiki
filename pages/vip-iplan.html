@@ -38,40 +38,41 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>VIP, IAP &amp; Iklan</h1>
-      <p class="lede">Halaman ini merangkum status VIP, pembelian dalam aplikasi, Special
-      Launch Kit, dan sistem iklan. Semua manfaat dan angkanya dibaca dari data game
+      <p class="lede">Halaman ini menjelaskan status VIP, pembelian di dalam aplikasi,
+      Special Launch Kit, dan iklan. Semua manfaat dan angkanya diambil dari data game
       versi 0.2C.</p>
 
       <h2>VIP</h2>
-      <p>Status VIP tersimpan di perangkat lewat <code>user://vip.cfg</code> dan tetap berlaku
-      selama pembeliannya masih sah. Daftar manfaat yang tercatat di game:</p>
+      <p>Status VIP tersimpan di perangkat dalam berkas catatan <code>user://vip.cfg</code>
+      dan tetap berlaku selama pembeliannya masih sah. Berikut manfaat yang tercatat di game:</p>
       <ol>
-        <li><strong>3 action per fase</strong>, sedangkan pemain biasa mendapat 2.</li>
+        <li><strong>3 action per fase</strong> (action adalah kesempatan melakukan satu kegiatan), sedangkan pemain biasa mendapat 2.</li>
         <li><strong>Bebas iklan</strong>.</li>
-        <li><strong>Buka Kotak Tips tanpa nonton iklan</strong>.</li>
-        <li><strong>Ojek online gratis</strong>, tarif 0 ke semua tujuan.</li>
-        <li><strong>Order Online</strong>: barang yang dibeli langsung masuk ke inventory, tidak perlu diambil di depan warung.</li>
+        <li><strong>Buka Kotak Tips tanpa menonton iklan</strong>.</li>
+        <li><strong>Ojek online gratis</strong>, ongkosnya 0 ke semua tujuan.</li>
+        <li><strong>Order Online</strong> (belanja lewat aplikasi): barang yang dibeli langsung masuk ke tas barang (inventory), tidak perlu diambil di depan warung.</li>
         <li><strong>Mancing dan menangkap serangga sampai 7 per sesi</strong>, sementara pemain biasa dapat 5.</li>
-        <li><strong>Jadwal outfit lewat Lemari</strong>, jadi pakaian bisa diatur per hari.</li>
-        <li><strong>Papan Quest 3 tawaran per hari</strong> dan <strong>1 kali ganti tawaran per hari</strong>, sementara pemain biasa dapat 2 tawaran.</li>
-        <li>Terakhir, kamu ikut mendukung developer gamenya. Terima kasih banyak.</li>
+        <li><strong>Jadwal pakaian (outfit) lewat Lemari</strong>, jadi pakaian bisa diatur untuk tiap hari.</li>
+        <li><strong>Papan Quest (papan tugas harian) memberi 3 tawaran per hari</strong> dan <strong>1 kali ganti tawaran per hari</strong>, sementara pemain biasa dapat 2 tawaran.</li>
+        <li>Terakhir, kamu ikut mendukung pembuat gamenya.</li>
       </ol>
-      <div class="callout"><b>Harga:</b> konstanta di game adalah <strong>Rp 25.000</strong> untuk
-      Android atau default, dan <strong>Rp 29.000</strong> untuk iOS. Popup pembelian menampilkan
-      harga lewat <code>VipStatus.harga()</code>, jadi angka yang terlihat mengikuti platform.</div>
+      <div class="callout"><b>Harga:</b> harga bawaan di game adalah <strong>Rp 25.000</strong> untuk
+      Android atau default, dan <strong>Rp 29.000</strong> untuk iOS. Jendela pembelian menampilkan
+      harga lewat <code>VipStatus.harga()</code> (pembaca harga sesuai platform), jadi angka yang
+      terlihat mengikuti perangkat.</div>
       <p>Akses butik sejak awal dan izin mengubah tampilan depan warung juga mengecek status
-      VIP. <strong>Butik Cantika tidak lagi “segera hadir”</strong>: butik ini buka di
-      <strong>Pagi, Siang, dan Malam</strong>. Tab <strong>Ikan</strong> dan <strong>Serangga</strong>
-      di wiki dalam game khusus VIP, sementara tab CARA, TOKO, dan JADWAL tetap bisa dibuka
-      semua orang.</p>
+      VIP. <strong>Butik Cantika sekarang sudah buka, tidak lagi "segera hadir"</strong>, dan
+      buka pada <strong>Pagi, Siang, dan Malam</strong>. Tab <strong>Ikan</strong> dan
+      <strong>Serangga</strong> di wiki dalam game khusus VIP, sementara tab CARA, TOKO, dan
+      JADWAL tetap bisa dibuka semua orang.</p>
 
       <h2>IAP (pembelian dalam aplikasi)</h2>
       <table class="price-table">
         <thead><tr><th>Produk</th><th>Harga</th><th>Isi</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>VIP</td><td class="rp">25.000 (iOS 29.000)</td><td>Status VIP permanen</td><td>Ada fitur pulihkan pembelian. Verifikasi berkala mencabut VIP kalau pembeliannya tidak ditemukan di Google Play, misalnya karena refund</td></tr>
+          <tr><td>VIP</td><td class="rp">25.000 (iOS 29.000)</td><td>Status VIP permanen</td><td>Ada fitur untuk memulihkan pembelian. Pengecekan berkala mencabut VIP kalau pembeliannya tidak ditemukan di Google Play, misalnya karena uangnya dikembalikan (refund)</td></tr>
           <tr><td>Outfit premium</td><td class="rp">5.000 (iOS 9.000)</td><td>Satu set pakaian</td><td>Cowok: Jaket Petualang, Setelan Butler, Kemeja Putih Santai. Cewek: Gaun Pelayan Klasik, Cardigan Lavender, Overall Bunga</td></tr>
-          <tr><td>Special Launch Kit</td><td class="rp">5.000 (iOS 9.000)</td><td>Bonus modal Rp 150.000 dan outfit spesial</td><td>Sekali beli dan juga diverifikasi. Kalau di-refund, outfit special dikunci lagi</td></tr>
+          <tr><td>Special Launch Kit</td><td class="rp">5.000 (iOS 9.000)</td><td>Bonus modal Rp 150.000 dan outfit spesial</td><td>Sekali beli dan juga ikut dicek. Kalau uangnya dikembalikan (refund), outfit spesial dikunci lagi</td></tr>
         </tbody>
       </table>
       <ul>
@@ -82,9 +83,9 @@
       </ul>
 
       <h2>Kartu Mitra Mei</h2>
-      <p>Kartu Mitra Mei memakai flag <code>mei_diskon</code>. Saat flag ini aktif, harga yang
-      dikenakan turun <strong>10%</strong>. Hasilnya dibulatkan ke <strong>ratusan terdekat</strong>,
-      jadi kelipatan Rp 100, mengikuti rumus
+      <p>Kartu Mitra Mei memakai penanda <code>mei_diskon</code> (penanda diskon Mei). Saat penanda
+      ini aktif, harga yang dibayar turun <strong>10%</strong>. Hasilnya dibulatkan ke
+      <strong>ratusan terdekat</strong>, jadi kelipatan Rp 100, mengikuti rumus
       <code>int(round(harga * (100 - 10) / 100.0 / 100.0)) * 100</code>. Rincian hadiah dan item
       spesial lainnya ada di halaman <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</p>
 
@@ -95,7 +96,7 @@
           <tr><td>Harga</td><td>Rp 5.000 di Android/default, Rp 9.000 di iOS, sekali beli</td></tr>
           <tr><td>Modal bonus</td><td>Rp 150.000 tunai, masuk ke kas sebagai pecahan: 20.000×2, 10.000×3, 5.000×8, 2.000×10, 1.000×10, 500×10, 100×50</td></tr>
           <tr><td>Outfit</td><td>Membuka outfit Special Launch Edition (cowok/cewek) di Lemari</td></tr>
-          <tr><td>Periode penawaran</td><td>7 hari, terhitung sejak pertama main; popup penawaran tampil sekali</td></tr>
+          <tr><td>Periode penawaran</td><td>7 hari, dihitung sejak pertama kali main; jendela penawaran tampil sekali</td></tr>
           <tr><td>Sekali saja</td><td>Bonus modal hanya diberikan satu kali</td></tr>
           <tr><td>Penyimpanan</td><td>Tersimpan di perangkat dan tetap ada setelah game ditutup</td></tr>
         </tbody>
@@ -105,10 +106,10 @@
 
       <h2>Iklan dengan hadiah (AdMob)</h2>
       <p>Iklan dengan hadiah dipakai di dua tempat: Kotak Tips dan kecepatan x2. Pemain VIP
-      melewati semua iklan dan tetap dapat hadiahnya.</p>
+      melewati semua iklan dan tetap mendapat hadiahnya.</p>
       <h3>Kotak Tips</h3>
-      <p>Isi Kotak Tips berupa uang acak antara Rp 5.000 dan Rp 100.000, diundi memakai tabel
-      bobot. Persen di bawah dihitung dari total bobot 99,06.</p>
+      <p>Isi Kotak Tips berupa uang acak antara Rp 5.000 dan Rp 100.000, dipilih memakai tabel
+      bobot (peluang tiap nilai). Persen di bawah dihitung dari total bobot 99,06.</p>
       <table class="price-table">
         <thead><tr><th class="num">Hadiah</th><th class="num">Bobot</th><th class="num">Peluang</th></tr></thead>
         <tbody>
@@ -129,30 +130,31 @@
       </table>
       <h3>Kecepatan x2</h3>
       <ul>
-        <li>Setelah menonton iklan, tombol kecepatan menawarkan x2 selama 5 menit, alias
-        300 detik.</li>
-        <li>Kecepatan yang benar-benar dipakai mesin game adalah 1,7 kali sejak versi 0.1b
+        <li>Setelah menonton iklan, tombol kecepatan menawarkan x2 selama 5 menit
+        (300 detik).</li>
+        <li>Kecepatan yang benar-benar berjalan di game adalah 1,7 kali sejak versi 0.1b
         (sebelumnya 1,5 kali), sementara label di
         layar menulis x2.</li>
         <li>Tidak berlaku saat minigame terbuka (warteg, mancing, serangga, kerja RT, kuli, Iqro,
         sepak bola, kerupuk, balap karung, cerdas cermat). Timer tetap berjalan.</li>
-        <li>VIP bisa menyalakan x2 terus tanpa iklan, dan sisa waktunya ikut tersimpan di save.</li>
+        <li>Pemain VIP bisa menyalakan x2 terus tanpa iklan, dan sisa waktunya ikut tersimpan
+        di data simpanan (save).</li>
       </ul>
       <h3>Iklan wajib &amp; jaga-jaga crash</h3>
       <ul>
         <li>Iklan wajib tiap 7 hari: pemain non-VIP mendapat iklan saat jumlah hari game
         kelipatan 7.</li>
-        <li>Jaga-jaga kalau iklan bikin game tertutup: sebelum iklan tampil, game menulis
+        <li>Jaga-jaga kalau iklan membuat game tertutup: sebelum iklan tampil, game menulis
         penanda kecil di penyimpanan perangkat, lalu menghapusnya setelah iklan selesai.
-        Kalau penanda itu masih ada saat game dibuka lagi, berarti iklan sempat bikin game
+        Kalau penanda itu masih ada saat game dibuka lagi, berarti iklan sempat membuat game
         tertutup. Fitur iklannya dimatikan dan game mencatat bahwa iklan gagal dimuat.</li>
         <li>Batas muat iklan 15 detik dan tonton maksimal 180 detik. ID unit iklannya
         tercantum di catatan sumber di bawah.</li>
       </ul>
 
-      <div class="callout"><b>Catatan netral:</b> halaman ini wiki fan-made dan datanya dibaca
+      <div class="callout"><b>Catatan netral:</b> halaman ini wiki fan-made dan datanya diambil
       dari file game versi 0.2C. Membeli VIP atau Special Launch Kit adalah cara langsung
-      mendukung developer gamenya.</div>
+      mendukung pembuat gamenya.</div>
     </div>
   </article>
 

@@ -38,15 +38,16 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Relasi &amp; Kado</h1>
-      <p class="lede">Poin relasi naiknya pelan-pelan: satu obrolan sehari, satu kado sehari,
-      plus tebakan yang pas soal selera orangnya. Di halaman ini ada daftar <strong>34 hadiah biasa</strong>
-      dan <strong>2 hadiah khusus</strong> beserta harganya, selera <strong>14 warga</strong>, dan cara
-      nasi bungkus buatanmu dinilai.</p>
+      <p class="lede">Poin relasi (angka kedekatan dengan warga) naik pelan-pelan: satu obrolan
+      sehari, satu kado sehari, plus tebakan yang pas soal selera orangnya. Di halaman ini ada
+      daftar <strong>34 hadiah biasa</strong> dan <strong>2 hadiah khusus</strong> beserta
+      harganya, selera <strong>14 warga</strong>, dan cara nasi bungkus buatanmu dinilai.</p>
 
       <h2>Poin relasi</h2>
-      <p>Tiap orang punya catatan poinnya sendiri. Sebelum jadian, angkanya berhenti di
-      <strong>100</strong> (10 poin per level, maksimal level 10). Setelah jadian, kapnya naik jadi
-      <strong>200</strong>. Alur lengkapnya ada di halaman <a href="pacaran.html">Pacaran</a>.</p>
+      <p>Tiap warga punya catatan poinnya sendiri. Sebelum jadian, angkanya berhenti di
+      <strong>100</strong> (10 poin per level, maksimal level 10). Setelah jadian, batasnya naik
+      jadi <strong>200</strong>. Alur lengkapnya ada di halaman
+      <a href="pacaran.html">Pacaran</a>.</p>
       <table class="price-table">
         <thead><tr><th>Aksi</th><th>Poin</th><th>Keterangan</th></tr></thead>
         <tbody>
@@ -55,9 +56,10 @@
           <tr><td>Kado normal</td><td><span class="chip">+3</span> / <span class="chip">+2</span></td><td>Bawaan +3; nilai khusus +2</td></tr>
           <tr><td>Kado tidak suka</td><td><span class="chip bad">−2</span> / <span class="chip bad">−3</span></td><td>Bawaan −2; nilai khusus −3</td></tr>
           <tr><td>Kado saat ulang tahun warga</td><td>×2</td><td>Poin didobel, kecuali item tidak disukai</td></tr>
-          <tr><td>Pesanan NPC berhasil / gagal</td><td><span class="chip good">+3</span> / <span class="chip bad">−1</span></td><td>Dari sistem Pesanan NPC</td></tr>
+          <tr><td>Pesanan NPC berhasil / gagal</td><td><span class="chip good">+3</span> / <span class="chip bad">-1</span></td><td>Dari sistem Pesanan NPC</td></tr>
         </tbody>
       </table>
+      <p class="callout">NPC adalah warga yang bisa diajak bicara. Pesanan NPC berarti permintaan dari warga itu.</p>
       <ul>
         <li>Kado dibatasi <strong>sekali per hari untuk tiap warga</strong>. Ngasih lagi di hari yang
         sama tidak membawa efek apa pun.</li>
@@ -65,18 +67,20 @@
         Jamal, Ustad Saipul, Rani, Pak Damar, Mei, Tirto, Laras, Bima, dan Dani.
         <strong>Bu Lala, Kang Cecep, Pak Yanto, dan Pak Joko</strong> memakai nilai bawaan
         (+5/+3/−2).</li>
-        <li>Baru ada aturan <strong>kado murah</strong> (Yoyo, Stiker, Pin, Gelang, Kartu Ucapan,
+        <li>Ada juga aturan <strong>kado murah</strong> (Yoyo, Stiker, Pin, Gelang, Kartu Ucapan,
         Sabun Wangi, Sapu Tangan, Kipas Lipat, Sandal Jepit, Dompet Koin, Cangkir Keramik,
         Lampu Tidur Mini, Pembatas Buku, dan Tempat Pensil). Kalau orangnya suka, poinnya
         <strong>dipaksa +5</strong> walaupun dia termasuk warga bernilai khusus.</li>
-        <li>Poin juga bisa masuk dari <strong>cutscene, acara kampung, mini-game NPC</strong>,
-        dan Pesanan NPC, jadi ngobrol dan kado bukan satu-satunya jalan.</li>
+        <li>Poin juga bisa masuk dari <strong>adegan cerita (cutscene), acara kampung,
+        mini-game NPC</strong>, dan Pesanan NPC, jadi ngobrol dan kado bukan satu-satunya
+        jalan.</li>
         <li>Level naik setiap 10 poin. Tingkat obrolan mengikuti poin:
         <strong>0 sampai 20</strong>, <strong>21 sampai 50</strong>, dan
         <strong>51 sampai 100</strong> untuk warga teman. Hanya Rani dan Dani yang punya
         empat tingkat; lihat <a href="romansa.html">Romansa</a>.</li>
-        <li>Begitu kamu pertama kali berkenalan, permainan mencatat flag
-        <code>kenal_&lt;id&gt;</code>. Catatan itu dipakai untuk dialog dan pesan selanjutnya.</li>
+        <li>Begitu kamu pertama kali berkenalan, permainan mencatat penanda
+        <code>kenal_&lt;id&gt;</code> (tanda bahwa warga itu sudah kamu kenal). Catatan itu
+        dipakai untuk dialog dan pesan selanjutnya.</li>
       </ul>
 
       <h2>Daftar hadiah</h2>
@@ -124,32 +128,35 @@
           <tr><td>36</td><td>Cokelat Pahit</td><td class="num rp">Rp 500.000</td></tr>
         </tbody>
       </table>
-      <p>Dua baris terakhir adalah hadiah khusus. <strong>Mawar</strong> diberikan ke target
-      romantis setelah <strong>10 cutscene selesai</strong>, dengan relasi <strong>minimal 95</strong>,
-      dan hanya saat pemain tidak sedang berpacaran. <strong>Cokelat Pahit</strong> hanya dijual saat
-      pemain sedang berpacaran; memberikannya mengakhiri hubungan dan relasinya <strong>menjadi 40</strong>.
-      Rincian alurnya ada di halaman <a href="pacaran.html">Pacaran</a>.</p>
+      <p>Dua baris terakhir adalah hadiah khusus. <strong>Mawar</strong> diberikan ke warga jalur
+      romansa yang sedang kamu dekati setelah <strong>10 adegan cerita selesai</strong>, dengan relasi
+      <strong>minimal 95</strong>, dan hanya saat kamu tidak sedang berpacaran.
+      <strong>Cokelat Pahit</strong> hanya dijual saat kamu sedang berpacaran. Memberikannya
+      mengakhiri hubungan dan relasinya <strong>menjadi 40</strong>. Rincian alurnya ada di
+      halaman <a href="pacaran.html">Pacaran</a>.</p>
 
-      <h2>Item spesial dari cutscene</h2>
+      <h2>Item spesial dari adegan cerita</h2>
       <p>Kedua item ini tidak masuk daftar 34 hadiah biasa di atas.</p>
       <ul>
         <li><strong>Surat dari Tirto</strong> (<code>surat_tirto</code>): <em>"Selembar surat dari
-        Tirto. Katanya, baca kalau sudah sendirian."</em> Isinya empat halaman teks. Undangan Gunung
-        yang memakai flag <code>tirto_undangan_gunung</code> dan adegan <code>tirto_cs9_pengakuan</code>
-        hanya untuk CEWEK, karena kode berhenti lebih awal bila gender pemain bukan CEWEK. SMS dari
-        Tirto lalu mengundang pemain ke Gunung.</li>
+        Tirto. Katanya, baca kalau sudah sendirian."</em> Isinya empat halaman teks. Undangan ke
+        Gunung memakai penanda <code>tirto_undangan_gunung</code> dan adegan
+        <code>tirto_cs9_pengakuan</code>, dan hanya berlaku untuk pemain CEWEK: program berhenti
+        lebih awal kalau gender pemain bukan CEWEK. SMS dari Tirto lalu mengundang pemain ke
+        Gunung.</li>
         <li><strong>Beruang dari Bima</strong> (<code>beruang_bima</code>): selama item ada di tas,
-        pelanggan warteg lebih maklum soal harga, dengan efek <strong>+10%</strong> (konstanta
-        <code>BONUS = 0.1</code>). Item ini berkaitan dengan adegan <code>bima_cs8_kopi_pahit_ekstra</code>,
-        dan Bima mengirim SMS susulan: <em>"Boneka beruang itu... sudah kumasukkan ke tasmu. Kafe
-        nggak punya tempat. Jangan salah paham, {panggilan}."</em></li>
+        pelanggan warteg lebih maklum soal harga, dengan efek <strong>+10%</strong> (angka bonus
+        <code>0.1</code> di dalam program). Item ini berkaitan dengan adegan
+        <code>bima_cs8_kopi_pahit_ekstra</code>, dan Bima mengirim SMS susulan: <em>"Boneka
+        beruang itu... sudah kumasukkan ke tasmu. Kafe nggak punya tempat. Jangan salah paham,
+        {panggilan}."</em></li>
       </ul>
 
       <h2>Selera tiap warga</h2>
       <p>Daftar suka dan tidak suka di kartu kontak HP warga tertutup tanda <strong>???</strong>.
-      Setiap kali kamu memberi hadiah, satu item yang statusnya cocok akan terbuka, kalau
+      Setiap kali kamu memberi hadiah, satu item yang statusnya cocok akan terbuka. Kalau
       hadiahnya tidak masuk daftar suka maupun tidak suka, tidak ada yang terbuka. Berikut
-      contekan lengkapnya dari data game.</p>
+      daftar lengkapnya dari data game.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Warga</th><th>Suka</th><th>Tidak suka</th></tr></thead>
         <tbody>
@@ -169,15 +176,15 @@
           <tr><td>Dani</td><td>Ayam, Sambal Merah, Puzzle Kayu, Bola Sepak Mini, Kacamata Hitam, Topi Rajut, Gantungan Kunci, Stiker Lucu</td><td>Kangkung, Bingkai Foto, Jam Meja, Sapu Tangan</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Ingat aturan murah:</b> walaupun Misalnya Dani menyukai Stiker Lucu,
-      poinnya tetap <strong>+5</strong>, bukan +10, karena stiker termasuk kado murah.</div>
+      <div class="callout"><b>Ingat aturan murah:</b> walaupun Dani menyukai Stiker Lucu, poinnya
+      tetap <strong>+5</strong>, bukan +10, karena stiker termasuk kado murah.</div>
 
       <h2>Skor rasa nasi bungkus</h2>
       <p>Nasi bungkus buatanmu juga bisa jadi kado. Isinya wajib ada <strong>nasi</strong> dan
       minimal <strong>1 lauk selain nasi</strong>. Sambal merah, sambal hijau, dan lalapan
       dihitung pelengkap saja, jadi tidak bisa menggantikan lauk.</p>
-      <p>Penilaiannya sederhana. Isi bungkus dicocokkan dengan daftar suka dan tidak suka
-      penerimanya, lalu hasilnya jatuh ke salah satu dari tiga kemungkinan:</p>
+      <p>Isi bungkus dicocokkan dengan daftar suka dan tidak suka penerimanya. Hasilnya masuk
+      salah satu dari tiga kemungkinan:</p>
       <table class="price-table">
         <thead><tr><th>Isi bungkus</th><th>Hasil selera</th></tr></thead>
         <tbody>

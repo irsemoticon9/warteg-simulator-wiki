@@ -38,24 +38,25 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Romansa</h1>
-      <p class="lede">V0.2C punya <strong>lima jalur romansa</strong>, bukan dua: Rani dan Laras untuk
-      MC cowok; Tirto, Bima, dan Dani untuk MC cewek. Halaman ini merangkum tingkat obrolan,
-      cutscene, SMS, kado, dan kenang-kenangannya.</p>
+      <p class="lede">V0.2C punya <strong>lima jalur romansa</strong>: Rani dan Laras untuk pemain
+      cowok; Tirto, Bima, dan Dani untuk pemain cewek. Pemain adalah MC (tokoh yang kamu mainkan).
+      Halaman ini memuat tingkat obrolan, adegan cerita (cutscene), SMS, kado, dan
+      kenang-kenangannya.</p>
 
       <h2>Lima jalur romansa</h2>
       <table class="price-table">
-        <thead><tr><th>NPC</th><th>Untuk</th><th>Pekerjaan</th><th>Ulang tahun</th></tr></thead>
+        <thead><tr><th>Warga</th><th>Untuk</th><th>Pekerjaan</th><th>Ulang tahun</th></tr></thead>
         <tbody>
-          <tr><td>Rani</td><td>MC cowok</td><td>Guru BK SMP</td><td>Musim 1 (Cerah), tgl 11</td></tr>
-          <tr><td>Laras</td><td>MC cowok</td><td>Penjaga Butik Cantika; butuh flag <code>laras_terbuka</code></td><td>Musim 0 (Panas), tgl 10</td></tr>
-          <tr><td>Tirto</td><td>MC cewek</td><td>Dokter Puskesmas</td><td>Musim 2 (Hujan), tgl 21</td></tr>
-          <tr><td>Bima</td><td>MC cewek</td><td>Barista Kafe Kopi Senja</td><td>Musim 1 (Cerah), tgl 5</td></tr>
-          <tr><td>Dani</td><td>MC cewek</td><td>Hansip muda; bisa jadi polisi lewat flag <code>dani_polisi</code></td><td>Musim 2 (Hujan), tgl 8</td></tr>
+          <tr><td>Rani</td><td>Pemain cowok</td><td>Guru BK SMP</td><td>Musim 1 (Cerah), tgl 11</td></tr>
+          <tr><td>Laras</td><td>Pemain cowok</td><td>Penjaga Butik Cantika; baru terbuka setelah penanda <code>laras_terbuka</code> aktif</td><td>Musim 0 (Panas), tgl 10</td></tr>
+          <tr><td>Tirto</td><td>Pemain cewek</td><td>Dokter Puskesmas</td><td>Musim 2 (Hujan), tgl 21</td></tr>
+          <tr><td>Bima</td><td>Pemain cewek</td><td>Barista Kafe Kopi Senja</td><td>Musim 1 (Cerah), tgl 5</td></tr>
+          <tr><td>Dani</td><td>Pemain cewek</td><td>Hansip muda; bisa jadi polisi lewat penanda <code>dani_polisi</code></td><td>Musim 2 (Hujan), tgl 8</td></tr>
         </tbody>
       </table>
-      <p>Seseorang baru dihitung romantis kalau <code>tipe</code>-nya <em>romantis</em> dan
-      <code>romantis_untuk</code>-nya cocok dengan gender pemain. Di aplikasi HP, kartu mereka
-      diberi label <em>Romantis</em> berwarna pink dan progresnya digambar sebagai deretan hati.</p>
+      <p>Seseorang dihitung sebagai jalur romansa kalau tipenya romantis dan cocok dengan gender
+      pemain. Di aplikasi HP, kartu mereka diberi label <em>Romantis</em> berwarna pink dan
+      progresnya digambar sebagai deretan hati.</p>
       <div class="callout"><b>Poin tetap dari sistem biasa:</b> ngobrol +1 per hari, kado
       sekali sehari (suka +10, normal +2, tidak suka −3, tapi kado murah yang disukai tetap +5),
       ulang tahun ×2. Rinciannya ada di halaman <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</div>
@@ -91,9 +92,9 @@
         dan jeda minimal 1 hari dari adegan tersebut.</li>
       </ol>
 
-      <h2>Cutscene romantis</h2>
-      <p>Rangkaian adegan Rani dan Dani berjalan berurutan. Tabel ini memuat pemicu yang
-      tercatat di data wiki:</p>
+      <h2>Adegan cerita romantis</h2>
+      <p>Rangkaian adegan Rani dan Dani berjalan berurutan. Tabel ini memuat pemicu (syarat
+      agar adegan muncul) yang tercatat di data wiki:</p>
       <table class="price-table">
         <thead><tr><th>Adegan</th><th>Pemicu</th><th>Isi singkat</th></tr></thead>
         <tbody>
@@ -109,27 +110,28 @@
           <tr><td>Adegan Dani kelima</td><td>Gunung 1, Pagi+Siang, hari Kamis, relasi minimal 40, setelah adegan sebelumnya</td><td>Jalan ke Gunung 2, insiden monyet, foto kenangan</td></tr>
         </tbody>
       </table>
-      <p>V0.2C juga mendaftarkan adegan baru untuk jalur lain, antara lain
-      <code>bima_cs1</code> sampai <code>bima_cs5</code>, <code>laras_cs0</code> sampai
-      <code>laras_cs4</code>, <code>tirto_cs1</code> sampai <code>tirto_cs5</code>, dan
-      <code>dani_cs6_polisi</code>. Berkas <code>.res</code> untuk jalur ini sudah berhasil
-      dipulihkan, sehingga syarat dan langkahnya bisa dibaca. Misalnya
-      <code>bima_cs2_kopi_gagal</code> memakai Kafe, Siang, relasi minimal 20, dan jeda satu hari.
-      Rincian lengkap ada di halaman <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
+      <p>V0.2C juga punya adegan baru untuk jalur lain, antara lain <code>bima_cs1</code> sampai
+      <code>bima_cs5</code>, <code>laras_cs0</code> sampai <code>laras_cs4</code>,
+      <code>tirto_cs1</code> sampai <code>tirto_cs5</code>, dan <code>dani_cs6_polisi</code>
+      (cs adalah singkatan cutscene). Berkas adegan untuk jalur ini sudah berhasil dipulihkan,
+      sehingga syarat dan langkahnya bisa dibaca. Misalnya <code>bima_cs2_kopi_gagal</code>
+      memakai Kafe, Siang, relasi minimal 20, dan jeda satu hari. Rincian lengkap ada di halaman
+      <a href="cerita-utama.html">Cerita &amp; Cutscene</a>.</p>
 
       <h2>SMS romantis</h2>
       <p>SMS acak masuk dengan peluang 10% per hari, jeda minimal 2 hari, dan hanya mulai hari
-      ke-3. Isinya dibagi jadi tiga kumpulan poin: <strong>biasa</strong> mulai 10,
+      ke-3. Isinya dibagi tiga kumpulan menurut poin minimal: <strong>biasa</strong> mulai 10,
       <strong>dekat</strong> mulai 25, dan <strong>romantis</strong> mulai 40. Kumpulan romantis
-      hanya dipakai untuk jalur yang aktif. Tidak ada bobot tiga kali lipat seperti yang
+      hanya dipakai untuk jalur yang sedang aktif. Tidak ada bobot tiga kali lipat seperti yang
       tercantum di wiki lama.</p>
       <ul>
         <li>Rani, versi romantis: <em>"Makasih ya udah selalu ada. Dekat kamu rasanya tenang banget."</em></li>
         <li>Dani, versi romantis: <em>"Besok kita ketemu gak? Ada tempat bagus yang pengen aku tunjukin ke kamu."</em></li>
       </ul>
       <p>Selain SMS acak ada <strong>SmsRomantis</strong> khusus untuk lima penerima: Rani, Dani,
-      Tirto, Laras, dan Bima. Ada tiga pilihan balasan, poin 20 untuk SMS sedang dan 40 untuk
-      balasan, maksimal <strong>2 kali per minggu</strong>. Balasan terbuka di poin 40.</p>
+      Tirto, Laras, dan Bima. Tiap SMS memberi tiga pilihan balasan. SMS tingkat sedang: 20 poin.
+      Balasan: 40 poin. Paling banyak <strong>2 kali per minggu</strong>. Pilihan
+      balasan baru terbuka saat poin mencapai 40.</p>
       <p>Sistem balasan umum yang lebih luas didokumentasikan di halaman
       <a href="sms.html">SMS &amp; Balasan</a>.</p>
 
@@ -153,10 +155,10 @@
       <h2>Kenang-kenangan</h2>
       <ul>
         <li><strong>Surat dari Dani</strong> (<code>surat_dani</code>): amplop yang minta dibaca
-        nanti, setelah dia pergi. Fotonya tersimpan sebagai <code>dani_foto1.png</code>.</li>
+        nanti, setelah dia pergi. Fotonya tersimpan sebagai berkas <code>dani_foto1.png</code>.</li>
         <li><strong>Syal Rajutan Laras</strong> (<code>syal_laras</code>): deskripsinya menjanjikan
-        +5% peluang Kumbang Badak, tapi konstanta di kode game adalah <strong>3%</strong>. Ada
-        ketidaksesuaian antara teks dan angka yang sebenarnya dipakai.</li>
+        +5% peluang Kumbang Badak, tetapi angka yang benar-benar dipakai game adalah
+        <strong>3%</strong>. Teks dan angka itu tidak cocok.</li>
       </ul>
     </div>
   </article>

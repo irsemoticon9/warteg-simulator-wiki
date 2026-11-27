@@ -38,62 +38,62 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Pacaran</h1>
-      <p class="lede">Di Warteg Simulator 0.2C, pacaran mengubah kap poin relasi, menambah hati pink,
-      dan mengunci jalur romantis lain selama hubungan berlangsung. Halaman ini merangkum angka,
-      alur jadian dan putus, serta lima target yang bisa dipilih.</p>
+      <p class="lede">Di Warteg Simulator 0.2C, punya pacar mengubah batas poin relasi (angka
+      kedekatan dengan warga), menambah tanda hati pink, dan menutup jalur romantis lain selama
+      hubungan berjalan. Halaman ini memuat angka, alur jadian dan putus, serta lima warga yang
+      bisa dipacari.</p>
 
       <h2>Batas poin dan hati pink</h2>
-      <p>Sebelum jadian, poin relasi memakai batas normal <strong>100</strong>. Setelah resmi
-      berpacaran, batasnya naik jadi <strong>200</strong> poin. Saat jadian, poin diangkat ke
-      <strong>101</strong> bila nilainya masih di bawah itu.</p>
+      <p>Sebelum jadian, poin relasi berhenti di <strong>100</strong>. Setelah resmi berpacaran,
+      batasnya naik jadi <strong>200</strong> poin. Saat jadian, poin langsung diangkat ke
+      <strong>101</strong> kalau nilainya masih di bawah itu.</p>
       <table class="price-table">
-        <thead><tr><th>Nilai di kode</th><th>Arti di permainan</th></tr></thead>
+        <thead><tr><th>Yang diatur</th><th>Nilai dan artinya</th></tr></thead>
         <tbody>
-          <tr><td><code>Relationship.POIN_MAKS = 100</code></td><td>Kap relasi biasa sebelum ada pacar.</td></tr>
-          <tr><td><code>POIN_MAKS_PACAR = 200</code></td><td>Kap relasi sesudah jadian.</td></tr>
-          <tr><td><code>POIN_AWAL_PACAR = 101</code></td><td>Poin awal yang diberikan saat jadian bila poin masih kurang.</td></tr>
-          <tr><td><code>POIN_PER_HATI_PINK = 20</code></td><td>Tambah <strong>20</strong> poin untuk satu hati pink.</td></tr>
-          <tr><td><code>HATI_MAKS = 5</code></td><td>Jumlah hati pink paling banyak <strong>5</strong>.</td></tr>
+          <tr><td>Batas relasi biasa</td><td><strong>100</strong> poin sebelum punya pacar.</td></tr>
+          <tr><td>Batas setelah jadian</td><td><strong>200</strong> poin.</td></tr>
+          <tr><td>Poin awal saat jadian</td><td><strong>101</strong>, diberikan kalau poinmu masih di bawahnya.</td></tr>
+          <tr><td>Satu hati pink</td><td>Tambah <strong>20</strong> poin.</td></tr>
+          <tr><td>Jumlah hati pink</td><td>Paling banyak <strong>5</strong>.</td></tr>
         </tbody>
       </table>
-      <p>Jadi tiap 20 poin di atas batas 100 menambah satu hati pink, sampai batas 5 hati.
-      Rincian perolehan poin harian, kado, dan ulang tahun ada di
+      <p>Jadi tiap 20 poin di atas batas 100 menambah satu hati pink, sampai 5 hati.
+      Rincian cara menambah poin harian, kado, dan ulang tahun ada di
       <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</p>
 
       <h2>Jadian, ditolak, dan putus</h2>
       <ul>
-        <li><strong>Jadian:</strong> flag <code>_pacar</code> dipasang dan poin diangkat ke 101
-        bila belum sampai ke angka itu.</li>
-        <li><strong>Ditolak:</strong> penalti <code>-30</code> poin
-        (<code>POIN_TURUN_DITOLAK = 30</code>) dan flag <code>_ditolak</code> dipasang.</li>
-        <li><strong>Tembak ulang dengan Mawar:</strong> target masih bisa diajak jadian lagi
-        selama adegan ke-10 selesai, relasi minimal <strong>95</strong> poin
-        (<code>POIN_TEMBAK_ULANG = 95</code>), dan pemain belum punya pacar. Mawar dijual di
+        <li><strong>Jadian:</strong> permainan memasang penanda <code>_pacar</code> (catatan
+        bahwa kamu sedang punya pacar) dan menaikkan poin ke 101 kalau belum sampai situ.</li>
+        <li><strong>Ditolak:</strong> poin relasi turun <strong>30</strong>, dan permainan
+        memasang penanda <code>_ditolak</code>.</li>
+        <li><strong>Tembak ulang dengan Mawar:</strong> warga yang sama masih bisa diajak jadian
+        lagi setelah adegan ke-10 selesai, relasi
+        minimal <strong>95</strong> poin, dan kamu belum punya pacar. Mawar dijual di
         Toko Hadiah.</li>
-        <li><strong>Putus:</strong> flag <code>_pacar</code> dihapus, flag <code>_putus</code>
-        dipasang, dan poin relasi turun ke <strong>40</strong>
-        (<code>POIN_SETELAH_PUTUS = 40</code>). Batas poin kembali ke 100 sampai jadian lagi.</li>
+        <li><strong>Putus:</strong> penanda <code>_pacar</code> dihapus, penanda
+        <code>_putus</code> dipasang, dan poin relasi turun ke <strong>40</strong>. Batas poin
+        kembali ke 100 sampai jadian lagi.</li>
       </ul>
 
       <h2>Peringatan saat berpacaran</h2>
-      <div class="callout"><b>Kutipan kode:</b> teks di bawah diambil dari
+      <div class="callout"><b>Kutipan kode:</b> teks di bawah diambil dari berkas
       <code>pacaran.gd</code> baris 109 sampai 113. Tanda <code>%s</code> diganti dengan nama
-      target saat pesan tampil di game.</div>
+      warga yang kamu dekati saat pesan tampil di game.</div>
       <blockquote>
         <p>Sebelum lanjut, perhatikan:</p>
         <p>Jika kamu berpacaran dengan %s, cutscene ke-9 dan ke-10 warga romantis lainnya akan TERKUNCI (selama kalian masih berpacaran).</p>
         <p>Kalau kamu menolak, kamu masih bisa menembak %s lagi nanti dengan item "Mawar" yang dijual di Toko Hadiah.</p>
       </blockquote>
-      <p>Dengan kata lain, selama kamu berpacaran dengan satu orang, adegan ke-9 dan ke-10
-      keempat warga romantis lain terkunci. Pengecekan ini memakai
-      <code>Pacaran.adegan_terkunci</code>.</p>
+      <p>Jadi selama kamu berpacaran dengan satu orang, adegan ke-9 dan ke-10 keempat warga
+      romantis lain terkunci. Pemeriksaannya memakai <code>Pacaran.adegan_terkunci</code>.</p>
 
-      <h2>Lima target romantis</h2>
-      <p>Kelima target memakai gate gender dari <code>romantis_untuk</code> di
-      <code>npc_data.gd</code>. ID di kolom terakhir adalah nilai <code>ADEGAN_10</code> di
-      <code>pacaran.gd</code>, yaitu adegan yang harus selesai sebelum Mawar bisa dipakai.</p>
+      <h2>Lima warga yang bisa dipacari</h2>
+      <p>Kelima warga ini hanya bisa didekati kalau gender pemain cocok. Syarat gender itu
+      disimpan di data warga (<code>npc_data.gd</code>, kolom <code>romantis_untuk</code>).
+      Kolom terakhir berisi nama adegan ke-10 yang harus selesai sebelum Mawar bisa dipakai.</p>
       <table class="price-table">
-        <thead><tr><th>Target</th><th>Gate gender</th><th>ID adegan ke-10</th></tr></thead>
+        <thead><tr><th>Warga</th><th>Gender pemain</th><th>Adegan ke-10</th></tr></thead>
         <tbody>
           <tr><td><code>dani</code></td><td>CEWEK</td><td><code>dani_cs10_janji_puncak</code></td></tr>
           <tr><td><code>tirto</code></td><td>CEWEK</td><td><code>tirto_cs10_pertanyaan</code></td></tr>
@@ -102,8 +102,9 @@
           <tr><td><code>rani</code></td><td>COWOK</td><td><code>rani_cs10_senja_di_dermaga</code></td></tr>
         </tbody>
       </table>
-      <p>Untuk obrolan dan cutscene sebelumnya, lihat <a href="romansa.html">Romansa</a>.
-      Balasan pesan yang lebih luas dibahas di <a href="sms.html">SMS &amp; Balasan</a>.</p>
+      <p>Untuk obrolan dan adegan cerita (cutscene) sebelum jadian, lihat
+      <a href="romansa.html">Romansa</a>. Balasan pesan yang lebih luas dibahas di
+      <a href="sms.html">SMS &amp; Balasan</a>.</p>
     </div>
   </article>
 

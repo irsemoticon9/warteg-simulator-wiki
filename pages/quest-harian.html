@@ -39,9 +39,9 @@
     <div class="article-card">
       <h1>Quest Harian</h1>
       <p class="lede">Papan Quest menawarkan dua pekerjaan setiap hari (tiga untuk VIP).
-      Halaman ini menjelaskan jenis quest, rumus hadiah yang memakai pengali 3,0,
+      Halaman ini menjelaskan jenis quest (tugas), rumus hadiah yang memakai pengali 3,0,
       batas waktunya, quest BANTUAN yang berisi 12 tugas mini-game, dan sistem Pesanan NPC
-      yang terpisah.</p>
+      (pesanan dari warga) yang terpisah.</p>
 
       <h2>Cara kerja papan quest</h2>
       <ul>
@@ -51,11 +51,13 @@
         sekali per hari; VIP juga mendapat satu kali ganti per hari.</li>
         <li>Hanya boleh <strong>satu quest berjalan</strong>. Papan baru bisa diambil lagi setelah
         quest itu selesai, gagal, atau kamu batalkan.</li>
-        <li>Penerima quest dipilih dari <strong>14 NPC</strong>: Bu Lala, Kang Cecep, Bu Yani,
+        <li>Penerima quest dipilih dari <strong>14 NPC</strong> (warga yang bisa diajak bicara):
+        Bu Lala, Kang Cecep, Bu Yani,
         Pak Yanto, Jamal, Ustad Saipul, Rani, Pak Damar, Mei, Tirto, Laras, Dani, Pak Joko,
         dan Bima. Kalau daftar kosong, Pak Damar jadi cadangan.</li>
         <li>Jenis dasarnya ada tiga: <strong>bungkus, ikan, bantu</strong>. Jenis
-        <strong>serangga</strong> ditambahkan setelah flag <code>yanto_cs2_serangga</code> aktif.</li>
+        <strong>serangga</strong> ditambahkan setelah penanda <code>yanto_cs2_serangga</code>
+        aktif, yaitu setelah cerita serangga bersama Pak Yanto selesai.</li>
       </ul>
 
       <h2>Batas waktu dan pembatalan</h2>
@@ -146,8 +148,8 @@
         </tbody>
       </table>
       <div class="callout"><b>Bedanya dengan quest biasa:</b> BANTUAN <strong>tidak memakai
-      action</strong>, berlaku <strong>hari itu saja</strong>, dan kalau gagal orangnya bilang
-      akan mengurus sendiri, <strong>reputasi tidak berkurang</strong>.</div>
+      action</strong> (jatah tindakan), berlaku <strong>hari itu saja</strong>, dan kalau gagal
+      orangnya bilang akan mengurus sendiri, <strong>reputasi tidak berkurang</strong>.</div>
 
       <h2>Cara menyelesaikan quest</h2>
       <p>Untuk quest bungkus, ikan, dan serangga, urutannya tetap sama: ambil, siapkan
@@ -192,8 +194,8 @@
         <li>Pesanan hanya berisi lauk yang <strong>sedang ada di etalase</strong>, dan warung harus
         sudah berisi nasi plus minimal satu lauk.</li>
         <li>Maksimal <strong>3 pesanan aktif</strong> sekaligus.</li>
-        <li>Pesanan berhasil menambah <strong>+3 poin relasi</strong>; pesanan gagal atau telat
-        hanya mengurangi <strong>1 poin</strong>.</li>
+        <li>Pesanan berhasil menambah <strong>+3 poin relasi</strong> (angka kedekatanmu dengan
+        warga); pesanan gagal atau telat hanya mengurangi <strong>1 poin</strong>.</li>
       </ul>
       <table class="price-table">
         <thead><tr><th>Butir</th><th>Nilai</th></tr></thead>

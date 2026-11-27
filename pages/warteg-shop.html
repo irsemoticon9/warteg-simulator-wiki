@@ -38,9 +38,9 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Buka Warung</h1>
-      <p class="lede">Satu shift di warteg: menyiapkan etalase, memasak, melayani pembeli,
-      lalu menutup buku. Halaman ini menjelaskan urutannya, perabot yang bisa dibeli, upgrades
-      warung, dan angka antrean yang dipakai v0.2C.</p>
+      <p class="lede">Satu shift di warteg berjalan begini: menyiapkan etalase, memasak, melayani
+      pembeli, lalu menutup buku. Halaman ini menjelaskan urutannya, perabot yang bisa dibeli,
+      peningkatan warung (upgrade), dan angka antrean yang dipakai v0.2C.</p>
 
       <div class="callout"><b>Sebelum bisa buka:</b> etalase wajib berisi nasi dan minimal
       satu lauk. Tanpa itu, tombol buka warung tidak aktif.</div>
@@ -50,15 +50,15 @@
         <li><strong>Persiapan pagi.</strong> Isi nampan etalase, atur harga di panel kelola,
         dan goreng stok awal.</li>
         <li><strong>Buka warung.</strong> Membuka warung menghabiskan seluruh jatah action
-        di fase itu. Satu fase berjalan 300 detik.</li>
+        (tindakan) di fase itu. Satu fase berjalan 300 detik.</li>
         <li><strong>Layani pembeli.</strong> Ambil pesanan, masak, susun piring, lalu terima
         pembayaran.</li>
         <li><strong>Tutup buku.</strong> Rekap pelanggan, pendapatan, dan reputasi muncul di
         akhir shift.</li>
       </ol>
-      <p>Kalau kamu buka saat siang dan waktunya habis, warung lanjut buka sendiri di fase
-      malam dengan waktu yang direset. Stok yang habis total menutup warung lebih cepat,
-      dengan pesan “Dagangan ludes!”.</p>
+      <p>Kalau kamu buka saat Siang dan waktunya habis, warung lanjut buka sendiri di fase Malam
+      dengan waktu yang direset. Kalau stok habis total, warung tutup lebih cepat dan muncul pesan
+      "Dagangan ludes!".</p>
 
       <h2>Etalase dan nampan</h2>
       <ul>
@@ -71,7 +71,7 @@
 
       <h2>Toko Perabotan Rumah Indah</h2>
       <p>Mei berjualan di <strong>Lapangan</strong> pada <strong>Pagi dan Siang</strong>, kadang
-      di lokasi lain pada hari tertentu. Harga di bawah berlaku normalnya. Selama <strong>10 hari
+      di lokasi lain pada hari tertentu. Harga di bawah adalah harga normal. Selama <strong>10 hari
       pertama</strong>, semua perabot dapat diskon <strong>15%</strong> yang dibulatkan ke
       kelipatan Rp 100 dengan rumus <code>int(round(harga × 0,85 / 100)) × 100</code>.</p>
       <table class="price-table scroll-x">
@@ -94,8 +94,9 @@
       </table>
       <ul>
         <li>Nampan ke-9 sampai ke-16 baru bisa dibeli kalau Etalase Tambahan sudah ada.</li>
-        <li><strong>Sticker QRIS</strong> menaikkan peluang pembayaran QRIS dari 35% jadi <strong>70%</strong>.</li>
-        <li><strong>Gelas Takar</strong> and <strong>Dispenser Takar Otomatis</strong> hanya muncul kalau Warteg Level 2 sudah selesai. Dispenser awalnya dalam keadaan <strong>MATI</strong>.</li>
+        <li>Sticker QRIS menaikkan peluang pembayaran QRIS dari 35% jadi 70%.</li>
+        <li>Gelas Takar dan Dispenser Takar Otomatis hanya muncul kalau Warteg Level 2 sudah
+        selesai. Dispenser awalnya dalam keadaan MATI.</li>
       </ul>
 
       <h2>Warteg Level 2</h2>
@@ -113,9 +114,9 @@
       <h2>Pakaian dan Butik Cantika</h2>
       <p><strong>Butik Cantika</strong> ada di Jalan Serba Ada dan buka di <strong>Pagi, Siang,
       dan Malam</strong>. Celemek Hijau dan Celemek Cokelat untuk dua gender masing-masing
-      Rp 100.000 dan Rp 150.000. Kalau flag <code>laras_diskon</code> aktif, harganya jadi
-      Rp 90.000 dan Rp 135.000. Outfit premium harga Rp 5.000 di Android, atau Rp 9.000 di iOS;
-      rinciannya ada di halaman <a href="vip-iplan.html">VIP, IAP &amp; Iklan</a>.</p>
+      Rp 100.000 dan Rp 150.000. Kalau penanda diskon Laras (<code>laras_diskon</code>) aktif,
+      harganya jadi Rp 90.000 dan Rp 135.000. Pakaian premium harga Rp 5.000 di Android, atau
+      Rp 9.000 di iOS; rinciannya ada di halaman <a href="vip-iplan.html">VIP, IAP &amp; Iklan</a>.</p>
 
       <h2>Siapa yang datang</h2>
       <table class="price-table">
@@ -124,11 +125,11 @@
           <tr><td>Jeda datang</td><td>2-6 detik × pengali</td><td>Makin tinggi reputasi, makin ramai. Pengali turun dari <strong>5,0 ke 1,5</strong> saat reputasi mencapai 100</td></tr>
           <tr><td>Kapasitas antrian</td><td>1 + reputasi ÷ 20</td><td>Maksimum 5 orang</td></tr>
           <tr><td>Kesabaran dasar</td><td>40 detik</td><td>+6 detik per item pesanan, +8 per item gorengan. Totalnya dikali <strong>1,5</strong></td></tr>
-          <tr><td>Pelanggan NPC</td><td>35%</td><td>Sisanya warga biasa</td></tr>
+          <tr><td>Pelanggan NPC (warga yang bisa diajak bicara)</td><td>35%</td><td>Sisanya warga biasa</td></tr>
           <tr><td>Bungkus (take away)</td><td>40%</td><td>Pilih piring atau bungkus saat menyusun</td></tr>
-          <tr><td>Kabur dari antrean</td><td class="chip bad">rep −1</td><td>Kalau antrean penuh atau menunggu terlalu lama</td></tr>
-          <tr><td>Pelanggan yang sedang dilayani pergi karena timeout</td><td class="chip bad">rep −3</td><td>Lebih berat daripada yang kabur dari antrean</td></tr>
-          <tr><td>Kabur karena harga mahal</td><td class="chip bad">rep −2</td><td>Pesanan batal bila harga lebih dari 1,6× harga wajar</td></tr>
+          <tr><td>Kabur dari antrean</td><td class="chip bad">reputasi −1</td><td>Kalau antrean penuh atau menunggu terlalu lama</td></tr>
+          <tr><td>Pelanggan yang sedang dilayani pergi karena timeout</td><td class="chip bad">reputasi −3</td><td>Lebih berat daripada yang kabur dari antrean</td></tr>
+          <tr><td>Kabur karena harga mahal</td><td class="chip bad">reputasi −2</td><td>Pesanan batal bila harga lebih dari 1,6× harga wajar</td></tr>
         </tbody>
       </table>
 
@@ -145,7 +146,7 @@
       </table>
 
       <h2>Bintang dan reputasi</h2>
-      <p>Waktu kamu menekan “Selesaikan”, pesanan mulai dari 5 bintang. Setiap kesalahan
+      <p>Saat kamu menekan "Selesaikan", pesanan mulai dari 5 bintang. Setiap kesalahan
       memotong nilainya:</p>
       <table class="price-table">
         <thead><tr><th>Kondisi</th><th>Efek</th></tr></thead>
@@ -167,10 +168,10 @@
         kembalian. Kalau Sticker QRIS sudah terpasang, peluangnya jadi 70%.</li>
         <li>Sisanya bayar tunai: 20% pas, selebihnya pakai uang besar antara Rp 5.000 dan
         Rp 100.000. Ada 15% kemungkinan mereka hanya membawa Rp 50.000 atau Rp 100.000.</li>
-        <li>Uang yang lebih besar dari harga membuka minigame kembalian. Susun pecahan
-        sesuai selisihnya.</li>
+        <li>Uang yang lebih besar dari harga membuka minigame kembalian. Susun pecahan sesuai
+        selisihnya.</li>
         <li>Kalau gagal, sistem menawarkan QRIS. Menolaknya bisa memicu komplain
-        “Masa warteg gak ada kembalian sih…” dengan peluang 30% dan
+        "Masa warteg gak ada kembalian sih..." dengan peluang 30% dan
         <span class="chip bad">−2★</span>.</li>
       </ul>
       <div class="callout warn"><b>Kas di laci ikut berkurang:</b> uang kembalian diambil

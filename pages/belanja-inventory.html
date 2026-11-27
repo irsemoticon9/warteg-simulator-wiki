@@ -43,10 +43,10 @@
       Toko Bangunan Jaya Abadi sudah bisa dibuka di v0.2B.</p>
 
       <h2>Jam buka toko</h2>
-      <p>Waktu dibagi tiga fase: Pagi, Siang, dan Malam. Kalau di luar jadwal, pintu memakai
-      label "Tutup" atau "Segera hadir". Scene kafe dan toko hadiah ikut dipulihkan, tetapi node
-      kasirnya memakai <code>MapDoor</code> berbasis jarak tanpa properti jadwal, jadi jam yang
-      tidak punya sumber tidak dicantumkan.</p>
+      <p>Waktu game dibagi tiga fase: Pagi, Siang, dan Malam. Di luar jadwal, pintu diberi label
+      "Tutup" atau "Segera hadir". Data kafe dan toko hadiah ikut dipulihkan, tetapi node kasirnya hanya
+      memakai pemicu jarak (<code>MapDoor</code>) tanpa aturan jam. Karena itu jam buka yang tidak
+      ada sumbernya tidak dicantumkan di sini.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Tempat</th><th>Penjaga</th><th>Buka</th></tr></thead>
         <tbody>
@@ -58,22 +58,22 @@
           <tr><td>Puskesmas (Lapangan)</td><td>Dokter Tirto</td><td>Vitamin dijual saat Tirto bertugas di dalam Puskesmas pada hari kerja. Rabu, Sabtu, dan Minggu ia tidak menjual vitamin</td></tr>
           <tr><td>Toko Perabotan Rumah Indah (Lapangan)</td><td>Mei</td><td>Pagi &amp; Siang. Selasa hanya Siang, Jumat tutup, dan ikut tutup saat Mei ada acara kampung</td></tr>
           <tr><td>Butik Cantika (Jalan Serba Ada)</td><td>Laras</td><td><span class="chip good">selalu buka</span>: Pagi, Siang, dan Malam</td></tr>
-          <tr><td>Toko Bangunan Jaya Abadi (Jalan Serba Ada)</td><td>Pak Joko</td><td>Tempat upgrade Warteg Level 2. Ajakan bicara juga bisa dari depan Jalan Serba Ada, bukan di Dermaga</td></tr>
-          <tr><td>Warungmu sendiri</td><td>Kamu</td><td>Siang &amp; Malam, sesuai jatah action</td></tr>
+          <tr><td>Toko Bangunan Jaya Abadi (Jalan Serba Ada)</td><td>Pak Joko</td><td>Tempat meningkatkan Warteg ke Level 2. Ajakan bicara juga bisa dari depan Jalan Serba Ada, bukan di Dermaga</td></tr>
+          <tr><td>Warungmu sendiri</td><td>Kamu</td><td>Siang &amp; Malam, sesuai jatah action (tindakan)</td></tr>
         </tbody>
       </table>
       <div class="callout"><b>Praktisnya:</b> belanja bahan dari pasar umumnya Pagi atau Siang.
-      Teks kalender di HP menyebut kedua pedagang buka Senin-Minggu, tetapi katalog terjemahan
-      game mencatat libur pasar Bu Lala pada Senin dan Kang Cecep pada Rabu. Kecuali Order Online
-      VIP, Malam yang masih bisa dikunjungi adalah Dermaga dan Butik Cantika. Kalau borong perabot,
-      ingat Selasa cuma buka Siang dan Jumat tutup.</div>
+      Teks kalender di HP menyebut kedua pedagang buka Senin sampai Minggu, tetapi katalog
+      terjemahan game mencatat Bu Lala libur Senin dan Kang Cecep libur Rabu. Kecuali lewat Order
+      Online VIP, tempat yang bisa dikunjungi pada Malam hanya Dermaga dan Butik Cantika. Kalau
+      mau borong perabot, ingat Mei hanya buka Siang pada Selasa dan tutup pada Jumat.</div>
 
       <h2>Bahan dari pasar</h2>
-      <p>Harga mengikuti pasar mingguan dari modal dasar. Bu Lala memberi diskon
-      <span class="chip good">10%</span> kalau flag diskonnya aktif, dibulatkan ke ratusan
-      terdekat, termasuk untuk pesanan online. Modal dasar berasal dari <code>menu.tres</code>
-      yang berhasil dipulihkan, misalnya Beras Rp 2.000, Ayam potong Rp 6.000, dan Cabai merah
-      Rp 500. Enam menu tanpa nilai modal memakai bawaan Rp 1.500.</p>
+      <p>Harga bahan mengikuti pasar mingguan yang dihitung dari modal dasar. Bu Lala memberi
+      diskon <span class="chip good">10%</span> kalau penanda diskonnya aktif, dibulatkan ke
+      ratusan terdekat, termasuk untuk pesanan online. Modal dasar berasal dari
+      <code>menu.tres</code> yang berhasil dipulihkan, misalnya Beras Rp 2.000, Ayam potong
+      Rp 6.000, dan Cabai merah Rp 500. Enam menu tanpa nilai modal memakai bawaan Rp 1.500.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Bahan</th><th>Dijual di</th><th>Dipakai untuk</th></tr></thead>
         <tbody>
@@ -123,7 +123,7 @@
       total hari game belum melewati hari ke-10. Harga diskon dibulatkan ke ratusan terdekat.
       Sisa hari penawarannya ditampilkan di toko.</div>
       <p>Daftar harga normal diambil dari <code>perabot_list.tres</code> yang berhasil dipulihkan.
-      Jumlah unit berikutnya naik sesuai jumlah yang sudah kamu punya.</p>
+      Harga unit berikutnya naik sesuai jumlah perabot yang sudah kamu punya.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Perabot</th><th class="num">Harga normal</th><th class="num">Awal</th><th class="num">Maks</th><th>Fungsi</th></tr></thead>
         <tbody>
@@ -142,9 +142,9 @@
           <tr><td>Dispenser Takar Otomatis</td><td class="rp">250.000</td><td class="num">0</td><td class="num">1</td><td>Setelah Level 2, kondisi awalnya mati</td></tr>
         </tbody>
       </table>
-      <p>Nilai Awal dan Maks tersimpan di resource hanya untuk Nampan dan Penggorengan. Perabot
-      lain memakai bawaan <code>PerabotItem</code>, yaitu 0 dan 1. Teks fungsi diringkas dari
-      <code>deskripsi</code> resource.</p>
+      <p>Nilai Awal dan Maks hanya tersimpan di berkas data untuk Nampan dan Penggorengan. Perabot
+      lain memakai bawaan <code>PerabotItem</code> (aturan dasar perabot), yaitu 0 dan 1. Kolom
+      Fungsi diringkas dari deskripsi di berkas itu.</p>
       <p>Perabot juga bisa dipesan lewat Order Online dari Mei dengan ongkir Rp 8.000 per toko
       per hari. Kiriman langsung masuk perabot warung.</p>
 
@@ -160,9 +160,9 @@
         </tbody>
       </table>
 
-      <h2>Outfit dari Butik Cantika</h2>
+      <h2>Pakaian dari Butik Cantika</h2>
       <p>Butik di Jalan Serba Ada buka di semua fase. Pakaian diganti lewat Lemari di Kamar, dan
-      pemain VIP bisa mengatur jadwal outfit per hari.</p>
+      pemain VIP bisa mengatur jadwal pakaian per hari.</p>
       <table class="price-table">
         <thead><tr><th>Kategori</th><th>Harga</th><th>Daftar</th></tr></thead>
         <tbody>
@@ -176,18 +176,19 @@
       <ul>
         <li>Hanya pakaian sesuai gender pemain yang muncul di Lemari.</li>
         <li>Kalau pakaian aktif tidak valid atau masih terkunci, game kembali ke pakaian bawaan.</li>
-        <li>Skrip menyediakan pengecekan status VIP untuk akses butik awal dan tampilan depan
-        warung, tetapi pemanggilnya tidak ditemukan di hasil pemulihan, jadi perilaku akhirnya
-        belum terverifikasi.</li>
+        <li>Skrip punya pengecekan status VIP untuk akses awal butik dan tampilan depan warung,
+        tetapi bagian yang memanggilnya tidak ditemukan di hasil pemulihan. Perilaku akhirnya
+        belum bisa dipastikan.</li>
       </ul>
 
       <h2>Toko hadiah</h2>
-      <p>Data game memuat 34 hadiah. Tabel ini menampilkan 20 hadiah harga menengah dan atas;
-      14 hadiah murah Rp 3.000 sampai Rp 16.000 ada di halaman
+      <p>Data game memuat 34 hadiah. Tabel ini menampilkan 20 hadiah berharga menengah dan atas.
+      14 hadiah murah, Rp 3.000 sampai Rp 16.000, ada di halaman
       <a href="relasi-hadiah.html">Relasi &amp; Kado</a>. Satu transaksi maksimal 9 hadiah, dibayar
-      tunai atau QRIS. Nilai bawaan poin relasi adalah <span class="chip good">suka +5</span>, biasa +3,
-      <span class="chip bad">tidak suka −2</span>. Sebagian warga memakai +10/+2/−3, kado murah
-      yang disukai tetap +5, dan ulang tahun menggandakan poin. Rinciannya ada di halaman
+      tunai atau QRIS. Poin relasi (angka kedekatanmu dengan warga) bawaannya: hadiah yang disukai
+      <span class="chip good">+5</span>, biasa +3, yang tidak disukai
+      <span class="chip bad">−2</span>. Sebagian warga memakai +10/+2/−3, kado murah yang disukai
+      tetap +5, dan ulang tahun menggandakan poin. Rinciannya ada di halaman
       <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</p>
       <table class="price-table">
         <thead><tr><th>Hadiah</th><th class="num">Harga</th><th>Hadiah</th><th class="num">Harga</th></tr></thead>
@@ -218,8 +219,8 @@
           <tr><td>Syarat beli</td><td>Dokter Tirto harus berada di dalam Puskesmas</td></tr>
         </tbody>
       </table>
-      <p>Vitamin berguna saat action habis padahal masih ada pesanan atau antrean. Pemain VIP
-      punya 3 action per fase, jadi lebih jarang membutuhkannya.</p>
+      <p>Vitamin berguna saat jatah action (tindakan per fase) habis padahal masih ada pesanan
+      atau antrean. Pemain VIP punya 3 action per fase, jadi lebih jarang membutuhkannya.</p>
     </div>
   </article>
 

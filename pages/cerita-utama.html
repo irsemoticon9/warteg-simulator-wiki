@@ -48,161 +48,163 @@
       daftar di bawah.</div>
 
       <h2>Kapan sebuah adegan diputar</h2>
-      <p>Adegan cerita disimpan terpisah dari dialog harian. Permainan memeriksa daftarnya setiap
-      kali kamu pindah peta, berganti fase, atau berganti hari. Kalau beberapa adegan cocok pada
-      saat yang sama, yang urutannya paling tinggi yang dimainkan. Syaratnya bisa berbeda-beda:</p>
+      <p>Cutscene (adegan cerita pendek) disimpan terpisah dari dialog harian. Permainan
+      memeriksa daftarnya setiap kali kamu pindah peta, berganti fase hari, atau berganti hari.
+      Kalau beberapa adegan cocok pada saat yang sama, adegan dengan urutan paling tinggi yang
+      dimainkan. Syarat tiap adegan bisa berbeda:</p>
       <ul>
         <li>peta tempat adegan itu muncul;</li>
         <li>waktu hari, misalnya pagi, siang, atau malam, bahkan pagi sekaligus siang;</li>
         <li>rentang hari, dari hari paling awal sampai paling akhir;</li>
         <li>hari dalam musim, dihitung 1 sampai 28;</li>
-        <li>kedekatan dengan NPC tertentu, dengan ambang poin minimal;</li>
-        <li>kejadian yang harus sudah selesai lebih dulu, misalnya adegan sebelumnya;</li>
+        <li>poin relasi (angka kedekatanmu dengan warga) terhadap NPC (warga yang bisa diajak
+        bicara) tertentu, dengan ambang poin minimal;</li>
+        <li>adegan lain yang harus sudah selesai lebih dulu, misalnya adegan sebelumnya;</li>
         <li>penanda untuk adegan yang cuma main sekali seumur permainan;</li>
         <li>jarak minimal beberapa hari dari adegan sebelumnya dalam satu rangkaian;</li>
         <li>urutan tampil, dipakai saat dua adegan atau lebih cocok bersamaan; yang angkanya
         lebih besar yang menang.</li>
       </ul>
       <p>Pemeriksaan dijeda saat ada adegan yang sedang diputar, acara kampung berjalan, hujan,
-      warung buka, dialog aktif, atau router sedang sibuk. Setiap adegan yang diputar memberi
-      penanda <code>id</code>, penanda <code>id@hari</code>, dan, kalau cuma boleh sekali,
-      penanda <code>kunci()</code>.</p>
-      <p>Isi dialognya teks biasa. Ada baris narasi yang dibaca tanpa pembicara, sedangkan
-      baris dengan nama di depan titik dua jadi ucapan tokoh. Ada penanda efek untuk kaget, suara,
-      dan kilatan layar. Pilihan jawaban ditulis dengan tanda panah, dan beberapa di antaranya
-      langsung membuka panel: belanja, tukar barang, mengobrol, memberi hadiah, atau membeli pancing.
-      Sapaan menyesuaikan gender pemain, jadi otomatis berubah jadi Mas atau Mbak.</p>
+      warung buka, dialog aktif, atau saat perpindahan layar masih berjalan. Setiap adegan yang
+      diputar meninggalkan penanda: ID adegan (nomor adegan), ID plus tanggal (<code>id@hari</code>), dan
+      penanda <code>kunci()</code> kalau adegan itu cuma boleh sekali.</p>
+      <p>Isi dialognya teks biasa. Ada baris narasi yang dibaca tanpa pembicara, sedangkan baris
+      dengan nama di depan titik dua jadi ucapan tokoh. Ada penanda efek untuk kaget, suara, dan
+      kilatan layar. Pilihan jawaban ditulis dengan tanda panah, dan beberapa di antaranya
+      langsung membuka panel: belanja, tukar barang, mengobrol, memberi hadiah, atau membeli
+      pancing. Sapaan menyesuaikan gender pemain, jadi otomatis berubah jadi Mas atau Mbak.</p>
 
       <h2>Adegan satu per satu</h2>
-      <p>Daftar di bawah memuat 24 dari 118 adegan, disusun kira-kira menurut tanggal pemicunya. Adegan
-      yang tidak punya batas hari mengikuti urutan rangkaiannya. Kalau dua adegan cocok muncul
-      di saat yang sama, yang urutannya lebih tinggi yang menang, jadi angka urutan itu tidak
-      perlu ditulis di tiap baris. Adegan yang disebut hanya sekali memang cuma diputar satu
-      kali seumur permainan.</p>
+      <p>Daftar di bawah memuat 24 dari 118 adegan, disusun kira-kira menurut tanggal pemicunya.
+      Adegan yang tidak punya batas hari mengikuti urutan rangkaiannya. Kalau dua adegan cocok
+      muncul di saat yang sama, yang urutannya lebih tinggi yang menang, jadi angka urutan itu
+      tidak perlu ditulis di tiap baris. Adegan yang disebut hanya sekali memang cuma diputar
+      satu kali seumur permainan.</p>
       <div class="scene-list">
         <div class="scene-item">
           <p class="scene-title">Warisan (pembuka)</p>
           <p class="scene-npc">Pak Damar</p>
-          <p class="scene-desc">Hari 1, di Warteg. Tampil langsung begitu cerita dimulai dan hanya sekali. Ilustrasi "Warisan Ibu" diputar dulu, lalu Pak Damar mampir menyapa. Setelah adegan ini kamu dianggap sudah kenal Pak Damar dan poin relasinya naik 2.</p>
+          <p class="scene-desc">Hari 1, di Warteg. Muncul langsung begitu cerita dimulai dan cuma sekali. Ilustrasi "Warisan Ibu" tampil dulu, lalu Pak Damar mampir menyapa. Setelah adegan ini kamu dianggap sudah kenal Pak Damar dan poin relasinya naik 2.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Kesiangan</p>
-          <p class="scene-desc">Hari 1, di Jalan 2, setelah tutorial dasar selesai, dan hanya sekali. Kartu info menjelaskan bahwa warteg buka Siang dan Malam.</p>
+          <p class="scene-desc">Hari 1, di Jalan 2, setelah tutorial dasar selesai, dan cuma sekali. Kartu info menjelaskan bahwa warteg buka Siang dan Malam.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Perkenalan di Dermaga</p>
           <p class="scene-npc">Pak Yanto</p>
-          <p class="scene-desc">Pertama kali kamu masuk Dermaga, sejak hari 1, pagi sampai malam, dan hanya sekali. Kamu diberi Pancing Bambu plus 5 umpan cacing, dan poin relasi dengan Pak Yanto naik 5.</p>
+          <p class="scene-desc">Pertama kali kamu masuk Dermaga, sejak hari 1, pagi sampai malam, dan cuma sekali. Kamu diberi Pancing Bambu plus 5 umpan cacing, dan poin relasi dengan Pak Yanto naik 5.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Serangga di Gunung</p>
           <p class="scene-npc">Pak Yanto</p>
-          <p class="scene-desc">Pertama kali kamu masuk Gunung 1, dan hanya sekali. Pak Yanto menjelaskan serangga di gunung, mengajakmu jalan sampai puncak Gunung 2, lalu menunjukkan titik mencari serangga. Poin relasi naik 3. Setelah adegan ini, quest jenis serangga mulai muncul di papan quest.</p>
+          <p class="scene-desc">Pertama kali kamu masuk Gunung 1, dan cuma sekali. Pak Yanto menjelaskan serangga di gunung, mengajakmu jalan sampai puncak Gunung 2, lalu menunjukkan titik mencari serangga. Poin relasi naik 3. Setelah adegan ini, tugas mencari serangga mulai muncul di papan quest (papan tugas).</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Mei datang ke warteg</p>
           <p class="scene-npc">Mei</p>
-          <p class="scene-desc">Hari 2, di Warteg, pagi atau siang, dan hanya sekali. Mei memperkenalkan Toko Perabotannya.</p>
+          <p class="scene-desc">Hari 2, di Warteg, pagi atau siang, dan cuma sekali. Mei memperkenalkan Toko Perabotannya.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Mei datang lagi (versi telat)</p>
           <p class="scene-npc">Mei</p>
-          <p class="scene-desc">Hari 3 ke atas, pagi atau siang, kalau perkenalan Mei di hari kedua terlewat. Versi telatnya, juga hanya sekali.</p>
+          <p class="scene-desc">Hari 3 ke atas, pagi atau siang, kalau perkenalan Mei di hari kedua terlewat. Ini versi telatnya, juga cuma sekali.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Bolos Sekolah</p>
           <p class="scene-npc">Jamal</p>
-          <p class="scene-desc">Hari 3 ke atas, di Dermaga, pagi, pada hari Senin, Selasa, atau Jumat, ketika relasimu dengan Jamal sudah minimal 10 dan kalian sudah kenalan. Poin relasi naik 10.</p>
+          <p class="scene-desc">Hari 3 ke atas, di Dermaga, pagi, pada hari Senin, Selasa, atau Jumat, saat poin relasimu dengan Jamal sudah minimal 10 dan kalian sudah kenalan. Poin relasi naik 10.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Suara dari Semak-Semak</p>
           <p class="scene-npc">Dani, Bu Lala</p>
-          <p class="scene-desc">Di Taman, malam hari, kapan pun itu, tanpa syarat poin relasi. Kamu dan Dani mencari kucing Belang; Bu Lala menyusul ke taman.</p>
+          <p class="scene-desc">Di Taman, malam hari, kapan pun, tanpa syarat poin relasi. Kamu dan Dani mencari kucing Belang; Bu Lala menyusul ke taman.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Pinggang Bu Yani</p>
           <p class="scene-npc">Bu Yani</p>
-          <p class="scene-desc">Hari 4 ke atas, di Lapangan, pagi, ketika relasimu dengan Bu Yani sudah minimal 15 dan kalian sudah kenalan. Kamu menemaninya ke Puskesmas; poin relasi naik 10.</p>
+          <p class="scene-desc">Hari 4 ke atas, di Lapangan, pagi, saat poin relasimu dengan Bu Yani sudah minimal 15 dan kalian sudah kenalan. Kamu menemaninya ke Puskesmas; poin relasi naik 10.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Info Harga Pasar</p>
           <p class="scene-npc">Bu Lala</p>
-          <p class="scene-desc">Hari 7, di Warteg, pagi atau siang, dan hanya sekali. Bu Lala bercerita soal harga pasar mingguan.</p>
+          <p class="scene-desc">Hari 7, di Warteg, pagi atau siang, dan cuma sekali. Bu Lala bercerita soal harga pasar mingguan.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Info Harga Pasar (versi telat)</p>
           <p class="scene-npc">Bu Lala</p>
-          <p class="scene-desc">Hari 8 ke atas, pagi atau siang, kalau info harga di hari ketujuh terlewat. Versi telatnya, juga hanya sekali.</p>
+          <p class="scene-desc">Hari 8 ke atas, pagi atau siang, kalau info harga di hari ketujuh terlewat. Ini versi telatnya, juga cuma sekali.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Gak Selamanya Menang</p>
           <p class="scene-npc">Jamal</p>
-          <p class="scene-desc">Hari 7 ke atas, di Lapangan, siang, ketika relasimu dengan Jamal sudah minimal 35 dan adegan Bolos Sekolah sudah selesai. Musiknya sedih; poin relasi naik 10.</p>
+          <p class="scene-desc">Hari 7 ke atas, di Lapangan, siang, saat poin relasimu dengan Jamal sudah minimal 35 dan adegan Bolos Sekolah sudah selesai. Musiknya sedih; poin relasi naik 10.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Murid yang Sulit Diatur</p>
           <p class="scene-npc">Rani, Jamal</p>
-          <p class="scene-desc">Di Sekolah, pagi, pada hari Senin sampai Jumat, ketika kamu sudah kenalan dengan Rani. Rani menegur Jamal.</p>
+          <p class="scene-desc">Di Sekolah, pagi, pada hari Senin sampai Jumat, saat kamu sudah kenalan dengan Rani. Rani menegur Jamal.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Masa Depan Seorang Pemain Bola</p>
           <p class="scene-npc">Dani, Rani, Jamal</p>
-          <p class="scene-desc">Di Lapangan, pagi atau siang, pada hari Senin, Selasa, atau Jumat, ketika relasimu dengan Dani sudah minimal 10 dan adegan Suara dari Semak-Semak sudah selesai. Rani dan Jamal berdebat, Dani jadi penengah.</p>
+          <p class="scene-desc">Di Lapangan, pagi atau siang, pada hari Senin, Selasa, atau Jumat, saat poin relasimu dengan Dani sudah minimal 10 dan adegan Suara dari Semak-Semak sudah selesai. Rani dan Jamal berdebat, Dani jadi penengah.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Waktu untuk Bernapas</p>
           <p class="scene-npc">Rani</p>
-          <p class="scene-desc">Di Taman, malam, pada hari Rabu atau Jumat, ketika relasimu dengan Rani sudah minimal 10 dan adegan Murid yang Sulit Diatur sudah selesai, dengan jeda minimal satu hari dari adegan itu. Musiknya sedih.</p>
+          <p class="scene-desc">Di Taman, malam, pada hari Rabu atau Jumat, saat poin relasimu dengan Rani sudah minimal 10 dan adegan Murid yang Sulit Diatur sudah selesai, dengan jeda minimal satu hari dari adegan itu. Musiknya sedih.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Harga Mati</p>
           <p class="scene-npc">Bu Yani, Bu Lala</p>
-          <p class="scene-desc">Hari 10 ke atas, di Pasar, siang, ketika relasimu dengan Bu Yani sudah minimal 35 dan adegan Pinggang Bu Yani sudah selesai. Ada pilihan membela Bu Lala atau Bu Yani, dan pilihanmu itu diingat untuk cerita selanjutnya.</p>
+          <p class="scene-desc">Hari 10 ke atas, di Pasar, siang, saat poin relasimu dengan Bu Yani sudah minimal 35 dan adegan Pinggang Bu Yani sudah selesai. Ada pilihan membela Bu Lala atau Bu Yani, dan pilihanmu itu diingat untuk cerita selanjutnya.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Dani dan Hobinya</p>
           <p class="scene-npc">Dani</p>
-          <p class="scene-desc">Di Taman, siang, pada hari Rabu atau Kamis, ketika relasimu dengan Dani sudah minimal 20 dan adegan Masa Depan Seorang Pemain Bola sudah selesai. Kamu memotret bersama.</p>
+          <p class="scene-desc">Di Taman, siang, pada hari Rabu atau Kamis, saat poin relasimu dengan Dani sudah minimal 20 dan adegan Masa Depan Seorang Pemain Bola sudah selesai. Kamu memotret bersama.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Terlalu Asyik Membaca</p>
           <p class="scene-npc">Rani</p>
-          <p class="scene-desc">Di Jalan Serba Ada, siang, pada hari Sabtu, ketika relasimu dengan Rani sudah minimal 20, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
+          <p class="scene-desc">Di Jalan Serba Ada, siang, pada hari Sabtu, saat poin relasimu dengan Rani sudah minimal 20, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Gue Mau Berubah</p>
           <p class="scene-npc">Jamal</p>
-          <p class="scene-desc">Hari 14 ke atas, di Sekolah, pagi, pada hari Senin sampai Jumat, ketika relasimu dengan Jamal sudah minimal 65 dan adegan Gak Selamanya Menang sudah selesai. Poin relasi naik 15.</p>
+          <p class="scene-desc">Hari 14 ke atas, di Sekolah, pagi, pada hari Senin sampai Jumat, saat poin relasimu dengan Jamal sudah minimal 65 dan adegan Gak Selamanya Menang sudah selesai. Poin relasi naik 15.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Obrolan di Kafe</p>
           <p class="scene-npc">Rani</p>
-          <p class="scene-desc">Di Kafe di Jalan 1, siang, pada hari Sabtu, ketika relasimu dengan Rani sudah minimal 30, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
+          <p class="scene-desc">Di Kafe di Jalan 1, siang, pada hari Sabtu, saat poin relasimu dengan Rani sudah minimal 30, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Di Balik Seragam Hansip</p>
           <p class="scene-npc">Dani</p>
-          <p class="scene-desc">Di Dermaga, siang, ketika relasimu dengan Dani sudah minimal 30 dan adegan Dani dan Hobinya sudah selesai. Dani curhat soal pandangan warga terhadap hansip, musiknya sedih. Dia tampil memakai seragam hansip, kecuali di hari Rabu dan Kamis saat dia berpakaian santai.</p>
+          <p class="scene-desc">Di Dermaga, siang, saat poin relasimu dengan Dani sudah minimal 30 dan adegan Dani dan Hobinya sudah selesai. Dani curhat soal pandangan warga terhadap hansip, musiknya sedih. Dia tampil memakai seragam hansip, kecuali di hari Rabu dan Kamis saat dia berpakaian santai.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Belanja di Pasar</p>
           <p class="scene-npc">Rani</p>
-          <p class="scene-desc">Di Pasar, pagi, pada hari Minggu, ketika relasimu dengan Rani sudah minimal 40, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
+          <p class="scene-desc">Di Pasar, pagi, pada hari Minggu, saat poin relasimu dengan Rani sudah minimal 40, dengan jeda minimal satu hari dari adegan sebelumnya.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Sehari Menjadi Pendaki</p>
           <p class="scene-npc">Dani</p>
-          <p class="scene-desc">Di Gunung 1, pagi atau siang, pada hari Kamis, ketika relasimu dengan Dani sudah minimal 40 dan adegan Di Balik Seragam Hansip sudah selesai. Kalian jalan sampai Gunung 2, ada insiden monyet, dan foto kenangan.</p>
+          <p class="scene-desc">Di Gunung 1, pagi atau siang, pada hari Kamis, saat poin relasimu dengan Dani sudah minimal 40 dan adegan Di Balik Seragam Hansip sudah selesai. Kalian jalan sampai Gunung 2, ada insiden monyet, dan foto kenangan.</p>
         </div>
         <div class="scene-item">
           <p class="scene-title">Pengusir Hantu Gunung</p>
           <p class="scene-npc">Ustad Saipul</p>
-          <p class="scene-desc">Di Gunung 1, pagi atau siang, pada hari Minggu, ketika relasimu dengan Ustad Saipul sudah minimal 5. Pengusir hantu yang komedi, dengan 3 pilihan jawaban.</p>
+          <p class="scene-desc">Di Gunung 1, pagi atau siang, pada hari Minggu, saat poin relasimu dengan Ustad Saipul sudah minimal 5. Pengusir hantu yang komedi, dengan 3 pilihan jawaban.</p>
         </div>
       </div>
 
       <h2>Indeks adegan terdaftar</h2>
-      <p>Engine memuat 118 berkas adegan dari folder <code>assets/scenes_spesial/</code>. Syarat
+      <p>Permainan memuat 118 berkas adegan dari folder <code>assets/scenes_spesial/</code>. Syarat
       dan langkah 116 di antaranya kini bisa dibaca dari berkas <code>.res</code> hasil pemulihan;
       daftar ID di bawah dipakai sebagai indeks. Dua berkas <code>lala_info_harga</code> dan
       <code>lala_info_harga_telat</code> masih belum ditemukan:</p>
@@ -242,17 +244,18 @@
         <li><strong>Pak Yanto:</strong> <code>yanto_cs1_kenalan_pancing</code>,
         <code>yanto_cs2_serangga</code>, <code>yanto_cs3_handuk</code>,
         <code>yanto_cs4_jemuran</code>, <code>yanto_cs5_pancing_patah</code>.</li>
-        <li><strong>Lainnya:</strong> rangkaian <code>jamal_cs1</code>–<code>jamal_cs5</code>,
-        <code>lala_cs1</code>–<code>lala_cs5</code> plus <code>lala_info_harga</code> dan
-        <code>lala_info_harga_telat</code>, <code>mei_cs1</code>–<code>mei_cs4</code>,
-        <code>mei_cs1_perkenalan_telat</code>, <code>rani_cs1</code>–<code>rani_cs5</code>, dan
-        <code>ustad_cs1</code>–<code>ustad_cs5</code>.</li>
+        <li><strong>Lainnya:</strong> rangkaian <code>jamal_cs1</code> sampai
+        <code>jamal_cs5</code>, <code>lala_cs1</code> sampai <code>lala_cs5</code> plus
+        <code>lala_info_harga</code> dan <code>lala_info_harga_telat</code>,
+        <code>mei_cs1</code> sampai <code>mei_cs4</code>,
+        <code>mei_cs1_perkenalan_telat</code>, <code>rani_cs1</code> sampai
+        <code>rani_cs5</code>, dan <code>ustad_cs1</code> sampai <code>ustad_cs5</code>.</li>
       </ul>
 
       <h2>Cara menyelesaikan cerita</h2>
-      <p>Game tidak punya daftar tugas cerita yang bisa dicentang. Adegan muncul sendiri saat
-      semua syaratnya terpenuhi, jadi cara menyelesaikannya adalah memenuhi syarat itu satu per
-      satu:</p>
+      <p>Permainan tidak punya daftar tugas cerita yang bisa dicentang. Adegan muncul sendiri
+      saat semua syaratnya terpenuhi, jadi cara menyelesaikannya adalah memenuhi syarat itu satu
+      per satu:</p>
       <ol>
         <li><strong>Kenalan dulu.</strong> Ajak bicara warga yang belum kamu kenal supaya dialog
         perkenalannya terbuka dan poin relasi mulai terkumpul.</li>
@@ -274,9 +277,9 @@
       </ol>
       <div class="callout warn"><b>Kalau adegan tidak mau muncul:</b> adegan tidak diputar saat
       hujan, saat acara kampung berlangsung, saat warung sedang buka, saat ada dialog aktif,
-      atau saat router sedang sibuk. Tunggu cuacanya berubah, selesaikan acaranya, atau tutup
-      warung dulu. Pindah peta atau ganti fase juga memancing permainan memeriksa ulang daftar
-      adegan.</div>
+      atau saat permainan masih sibuk memuat perpindahan. Tunggu cuacanya berubah, selesaikan
+      acaranya, atau tutup warung dulu. Pindah peta atau ganti fase juga membuat permainan
+      memeriksa ulang daftar adegan.</div>
       <p>Adegan yang bertanda hanya sekali tidak bisa diulang. Kalau sudah lewat, lanjutannya
       tetap bisa terbuka asalkan syarat adegan berikutnya terpenuhi.</p>
 
@@ -291,18 +294,19 @@
         <li><strong>Rani</strong>: kenalan, adegan menegur Jamal, adegan bernapas (relasi 10),
         membaca (20), kafe (30), lalu pasar (40). Empat adegan terakhir butuh jeda satu hari dari
         adegan sebelumnya.</li>
-        <li><strong>Dani</strong>: adegan mencari kucing Belang tanpa syarat poin, lalu jadi penengah
-        debat (relasi 10), memotret bersama (20), curhat soal hansip (30), dan mendaki gunung (40).</li>
-        <li><strong>Bu Lala, Mei, Pak Yanto, Ustad Saipul</strong>: satu sampai dua adegan yang berdiri
-        sendiri, dengan syarat sekali main atau ambang relasi yang ringan.</li>
-        <li><strong>Bima</strong>: <code>bima_cs1</code> sampai <code>bima_cs5</code>, dimulai dari
-        pesanan tanpa nama, kopi gagal, kebetulan lewat, puzzle kayu, sampai sparring latte.</li>
+        <li><strong>Dani</strong>: adegan mencari kucing Belang tanpa syarat poin, lalu jadi
+        penengah debat (relasi 10), memotret bersama (20), curhat soal hansip (30), dan mendaki
+        gunung (40).</li>
+        <li><strong>Bu Lala, Mei, Pak Yanto, Ustad Saipul</strong>: satu sampai dua adegan yang
+        berdiri sendiri, dengan syarat sekali main atau ambang relasi yang ringan.</li>
+        <li><strong>Bima</strong>: <code>bima_cs1</code> sampai <code>bima_cs5</code>, dimulai
+        dari pesanan tanpa nama, kopi gagal, kebetulan lewat, puzzle kayu, sampai sparring latte.</li>
         <li><strong>Laras</strong>: <code>laras_cs0_butik_baru</code> membuka butik, lalu
         <code>laras_cs1</code> sampai <code>laras_cs4_syal</code>.</li>
         <li><strong>Tirto</strong>: <code>tirto_cs1</code> sampai <code>tirto_cs5_cuti</code>,
         termasuk adegan dokter lelah.</li>
         <li><strong>Pak Joko</strong>: <code>joko_cs1_meteran</code>, <code>joko_cs2_cat</code>,
-        <code>joko_cs3_semen</code>, <code>joko_cs4_ikan</code>; Pembahasan Warteg Level 2 lewat
+        <code>joko_cs3_semen</code>, <code>joko_cs4_ikan</code>; pembahasan Warteg Level 2 lewat
         <code>player_cs2_warteg_lv2</code>.</li>
         <li><strong>Dani (v0.2B)</strong>: <code>dani_cs6_polisi</code> mengubah julukannya jadi
         Polisi muda dan mengganti gambar profilnya.</li>
@@ -310,16 +314,17 @@
 
       <h2>Adegan baru di 0.2C</h2>
       <p>Versi 0.2C menambahkan <strong>44 scene ID</strong> baru di
-      <code>assets/scenes_spesial/</code>. Ke-44 scene ID itu memuat <strong>94 berkas dialog
-      varian</strong>, bukan 94 scene ID. Rincian varian per warga adalah Bima 9, Bu Yani 10,
-      Dani 10, Laras 11, Mei 12, Rani 10, Tirto 11, Ustad 10, dan Pak Yanto 11.</p>
-      <p>Syaratnya mengikuti pola yang sama seperti adegan lama, dengan rentang
-      <code>tanggal</code> <strong>0 sampai 28</strong>, <code>relasi_poin_min</code>
-      <strong>0 sampai 200</strong>, pembatas <code>untuk_gender</code>, serta penanda
-      <code>butuh_warung_tutup</code> dan <code>butuh_spawn</code>. Adegan ke-9 dan ke-10 dari
-      warga romantis lain dikunci selama pemain berpacaran lewat
-      <code>Pacaran.adegan_terkunci</code>. Aturan lengkapnya ada di halaman
-      <a href="pacaran.html">Pacaran</a>.</p>
+      <code>assets/scenes_spesial/</code>. Ke-44 scene ID (nomor adegan) itu memuat
+      <strong>94 berkas dialog varian</strong>, bukan 94 adegan terpisah. Rincian varian per
+      warga: Bima 9, Bu Yani 10, Dani 10, Laras 11, Mei 12, Rani 10, Tirto 11, Ustad 10, dan
+      Pak Yanto 11.</p>
+      <p>Syaratnya mengikuti pola yang sama seperti adegan lama. Rentangnya
+      <code>tanggal</code> <strong>0 sampai 28</strong> (hari ke berapa adegan boleh muncul),
+      <code>relasi_poin_min</code> <strong>0 sampai 200</strong> (poin relasi minimal), pembatas
+      <code>untuk_gender</code>, serta penanda <code>butuh_warung_tutup</code> dan
+      <code>butuh_spawn</code>. Adegan ke-9 dan ke-10 dari warga romantis lain dikunci selama
+      pemain berpacaran lewat <code>Pacaran.adegan_terkunci</code>. Aturan lengkapnya ada di
+      halaman <a href="pacaran.html">Pacaran</a>.</p>
       <ul>
         <li><strong>Bima:</strong> <code>bima_cs6_catatan_inventaris</code>,
         <code>bima_cs7_bukan_buat_kamu</code>, <code>bima_cs8_kopi_pahit_ekstra</code>,
@@ -353,14 +358,15 @@
 
       <h2>Bedanya dengan dialog harian</h2>
       <p>Dialog harian diatur terpisah. Tiap warga punya dua set dialog: satu untuk sapaan biasa,
-      satu untuk perkenalan. Selama kamu belum pernah berkenalan dengan NPC itu, yang dipakai versi
-      perkenalan, dan permainan langsung menandainya sekaligus menambah poin relasi. Beberapa NPC
-      juga punya dialog khusus menurut tempat, misalnya Jamal di lapangan, Mei di luar warung, atau
-      Bu Yani di Puskesmas. Ada pula dialog untuk pertemuan pertama belajar hiragana dan mengaji.</p>
+      satu untuk perkenalan. Selama kamu belum pernah berkenalan dengan warga itu, yang dipakai
+      versi perkenalan, dan permainan langsung menandainya sekaligus menambah poin relasi.
+      Beberapa warga juga punya dialog khusus menurut tempat, misalnya Jamal di lapangan, Mei di
+      luar warung, atau Bu Yani di Puskesmas. Ada pula dialog untuk pertemuan pertama belajar
+      hiragana dan mengaji.</p>
 
       <h2>Saat event kampung berlangsung</h2>
-      <p>Selama acara kampung, dialog NPC diganti sementara. Pak Damar sebagai pembawa acara punya
-      ucapannya sendiri, begitu juga NPC lain. Rinciannya ada di halaman
+      <p>Selama acara kampung, dialog warga diganti sementara. Pak Damar sebagai pembawa acara
+      punya ucapannya sendiri, begitu juga warga lain. Rinciannya ada di halaman
       <a href="event-kampung.html">Event Kampung</a>. Tiap acara memakai tujuh set dialog:
       pembuka, juara, percakapan biasa, capek, Damar, penutup Damar, dan lewati.</p>
     </div>

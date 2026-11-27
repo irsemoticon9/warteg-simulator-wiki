@@ -38,10 +38,10 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Buff Kafe</h1>
-      <p class="lede">Kafe Kopi Senja menjual delapan makanan dan minuman yang memberi buff.
-      Ada satu buff kesembilan yang tidak dijual, yaitu <strong>Susu Madu Bima</strong> yang
-      datang sebagai hadiah. Tiap item ditujukan untuk satu minigame dan efeknya terasa kalau
-      diminum sebelum kegiatan dimulai.</p>
+      <p class="lede">Kafe Kopi Senja menjual delapan makanan dan minuman yang memberi buff (efek
+      tambahan sementara). Ada satu buff kesembilan yang tidak dijual, yaitu <strong>Susu Madu
+      Bima</strong> yang datang sebagai hadiah. Tiap item ditujukan untuk satu minigame dan
+      efeknya terasa kalau diminum sebelum kegiatan dimulai.</p>
 
       <h2>Daftar buff (9 item)</h2>
       <table class="price-table scroll-x">
@@ -58,11 +58,13 @@
           <tr><td>Susu Madu Bima</td><td class="rp">0, hadiah</td><td class="num">tidak dijual</td><td>Buka Warung</td><td>Kesabaran pelanggan ×1,40</td></tr>
         </tbody>
       </table>
-      <p>Kolom “dengan kartu Bima” berlaku kalau flag <code>bima_kartu_kafe</code> aktif.
-      Diskonnya <strong>10%</strong> dan dibulatkan ke kelipatan Rp 100.</p>
-      <div class="callout"><b>Susu Madu tidak tampil di etalase:</b> item ini ditandai
-      <code>hadiah: true</code>, jadi UI toko kafe melewatkannya. Bima memberikannya langsung
-      lewat interaksi dengannya, dan efeknya lebih kuat daripada Mie Goreng Spesial.</div>
+      <p>Kolom "dengan kartu Bima" berlaku kalau penanda <code>bima_kartu_kafe</code> (penanda
+      kartu Bima di data permainan) aktif. Diskonnya <strong>10%</strong> dan dibulatkan ke
+      kelipatan Rp 100.</p>
+      <div class="callout"><b>Susu Madu tidak tampil di etalase:</b> item ini ditandai sebagai
+      hadiah (<code>hadiah: true</code>), jadi tampilan toko kafe melewatkannya. Bima
+      memberikannya langsung lewat interaksi dengannya, dan efeknya lebih kuat daripada Mie
+      Goreng Spesial.</div>
 
       <h2>Cara kerja buff</h2>
       <ul>
@@ -88,8 +90,8 @@
           <tr><td>Buka Warung</td><td>Mie Goreng Spesial (15.000), Susu Madu Bima (hadiah)</td><td>Susu Madu memberi ×1,40, mie goreng memberi ×1,30 dan bisa dibeli kapan saja</td></tr>
         </tbody>
       </table>
-      <div class="callout"><b>Pilihan hemat:</b> Pisang Goreng Rp 6.000 jadi buff termurah,
-      sementara Mie Goreng Spesial Rp 15.000 pas untuk shift warung yang ramai. Kalau Bima
+      <div class="callout"><b>Pilihan hemat:</b> Pisang Goreng Rp 6.000 adalah buff termurah,
+      sedangkan Mie Goreng Spesial Rp 15.000 cocok untuk shift warung yang ramai. Kalau Bima
       sudah memberi Susu Madu, simpan untuk hari yang benar-benar ramai karena efeknya ×1,40.</div>
     </div>
   </article>
