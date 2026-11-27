@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ikan &amp; Mancing · Warteg Simulator Wiki</title>
-<meta name="description" content="Panduan memancing di Warteg Simulator v0.2B: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
+<meta name="description" content="Panduan memancing di Warteg Simulator v0.2C: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
 <link rel="icon" href="../assets/img/icon.png">
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
 <meta property="og:title" content="Ikan &amp; Mancing · Warteg Simulator Wiki">
-<meta property="og:description" content="Panduan memancing di Warteg Simulator v0.2B: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
+<meta property="og:description" content="Panduan memancing di Warteg Simulator v0.2C: mekanik 5 lemparan (7 VIP), 25 ikan dengan harga jual asli, empat tingkat pancing, umpan, mini-game simpul, dan pengali langka.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/ikan-mancing.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
 </head>
 <body data-page="ikan-mancing">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -68,10 +68,10 @@
       <ul>
         <li>Tinggi kotak hijau: <code>lerp(0,34; 0,2; kesulitan)</code> × (1 + bonus area pancing)
         × <strong>1,25</strong> kalau buff Jus Jeruk aktif × <strong>1,2</strong> dari kemudahan
-        permainan v0.2B. Makin sulit ikannya, makin sempit kotaknya.</li>
+        permainan v0.2C. Makin sulit ikannya, makin sempit kotaknya.</li>
         <li>Tahan untuk menaikkan kotak (2,6/detik), lepas untuk menurunkannya (2,2/detik). Kecepatan kotak dibatasi ±1,6.</li>
         <li>Kecepatan gerak ikan adalah <code>lerp(0,6; 2,4; kesulitan) × 0,8</code>. Faktor 0,8 itu
-        kemudahan v0.2B, sama seperti faktor 1,2 pada kotak hijau dan 0,8 pada penurunan meter.</li>
+        kemudahan v0.2C, sama seperti faktor 1,2 pada kotak hijau dan 0,8 pada penurunan meter.</li>
       </ul>
 
       <h3>Pola gerak ikan saat ditarik</h3>
@@ -120,8 +120,9 @@
       </table>
 
       <h2>Tabel 25 ikan</h2>
-      <p>Harga jual di bawah adalah nilai dari data game v0.2B. Keterangan "semua" berarti ikan
-      bisa muncul di semua fase, musim, atau cuaca.</p>
+      <p>Harga jual di bawah adalah nilai dari data game v0.2C. Keterangan "semua" berarti ikan
+      bisa muncul di semua fase, musim, atau cuaca. Versi 0.2C tidak menambah ikan baru, jadi
+      daftar 25 ikan ini tetap lengkap.</p>
       <table class="price-table scroll-x">
         <thead><tr><th>Nama</th><th class="num">Harga Jual</th><th class="num">Kesulitan</th><th>Gerak</th><th class="num">Bobot</th><th>Muncul (fase)</th><th class="num">Ukuran (cm)</th><th>Musim</th><th>Cuaca</th><th>Pancing min.</th><th>Favorit (×2,0)</th></tr></thead>
         <tbody>
@@ -171,6 +172,10 @@
         <li>Pancing dibeli dari Pak Yanto lewat toko pancingnya, yang terbuka dari pilihan dialog beli pancing.</li>
         <li>Kalau kamu punya beberapa pancing, yang dipakai selalu yang levelnya paling tinggi.</li>
       </ul>
+      <p>Pancing yang sudah dibeli bisa dijual lagi ke Pak Yanto seharga <strong>75%</strong> dari
+      harga beli. Aturannya memakai <code>jual_pancing = 0.75</code>, jadi harga jual pancing
+      dihitung dari harga beli dikali 0,75 lalu dibulatkan. Pancing terakhir yang masih kamu
+      miliki tidak bisa dijual.</p>
 
       <h3>Mini-game simpul saat membeli pancing</h3>
       <p>Membeli pancing baru lewat Pak Yanto memakai mini-game simpul:</p>
@@ -198,6 +203,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=21"></script>
+<script src="../assets/js/app.js?v=22"></script>
 </body>
 </html>

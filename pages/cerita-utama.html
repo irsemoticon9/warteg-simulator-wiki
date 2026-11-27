@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
 </head>
 <body data-page="cerita-utama">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -38,8 +38,8 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Cerita &amp; Cutscene</h1>
-      <p class="lede">V0.2B mendaftarkan <strong>74 adegan cerita</strong> di luar dialog harian.
-      72 berkas adegan berhasil dipulihkan beserta pemicu dan langkahnya. Hanya
+      <p class="lede">V0.2C mendaftarkan <strong>118 adegan cerita</strong> di luar dialog harian.
+      116 berkas adegan berhasil dipulihkan beserta pemicu dan langkahnya. Hanya
       <code>lala_info_harga</code> dan <code>lala_info_harga_telat</code> yang berkas
       <code>.res</code>-nya tidak ditemukan, meski naskah dialognya masih tersedia.</p>
 
@@ -74,7 +74,7 @@
       Sapaan menyesuaikan gender pemain, jadi otomatis berubah jadi Mas atau Mbak.</p>
 
       <h2>Adegan satu per satu</h2>
-      <p>Daftar di bawah memuat 24 dari 74 adegan, disusun kira-kira menurut tanggal pemicunya. Adegan
+      <p>Daftar di bawah memuat 24 dari 118 adegan, disusun kira-kira menurut tanggal pemicunya. Adegan
       yang tidak punya batas hari mengikuti urutan rangkaiannya. Kalau dua adegan cocok muncul
       di saat yang sama, yang urutannya lebih tinggi yang menang, jadi angka urutan itu tidak
       perlu ditulis di tiap baris. Adegan yang disebut hanya sekali memang cuma diputar satu
@@ -201,9 +201,9 @@
         </div>
       </div>
 
-      <h2>Adegan tambahan yang terdaftar di v0.2B</h2>
-      <p>Engine memuat 74 berkas adegan dari folder <code>assets/scenes_spesial/</code>. Syarat
-      dan langkah 72 di antaranya kini bisa dibaca dari berkas <code>.res</code> hasil pemulihan;
+      <h2>Indeks adegan terdaftar</h2>
+      <p>Engine memuat 118 berkas adegan dari folder <code>assets/scenes_spesial/</code>. Syarat
+      dan langkah 116 di antaranya kini bisa dibaca dari berkas <code>.res</code> hasil pemulihan;
       daftar ID di bawah dipakai sebagai indeks. Dua berkas <code>lala_info_harga</code> dan
       <code>lala_info_harga_telat</code> masih belum ditemukan:</p>
       <div class="callout"><b>Contoh data yang terbaca:</b> <code>bima_cs2_kopi_gagal</code>
@@ -308,6 +308,49 @@
         Polisi muda dan mengganti gambar profilnya.</li>
       </ul>
 
+      <h2>Adegan baru di 0.2C</h2>
+      <p>Versi 0.2C menambahkan <strong>44 scene ID</strong> baru di
+      <code>assets/scenes_spesial/</code>. Ke-44 scene ID itu memuat <strong>94 berkas dialog
+      varian</strong>, bukan 94 scene ID. Rincian varian per warga adalah Bima 9, Bu Yani 10,
+      Dani 10, Laras 11, Mei 12, Rani 10, Tirto 11, Ustad 10, dan Pak Yanto 11.</p>
+      <p>Syaratnya mengikuti pola yang sama seperti adegan lama, dengan rentang
+      <code>tanggal</code> <strong>0 sampai 28</strong>, <code>relasi_poin_min</code>
+      <strong>0 sampai 200</strong>, pembatas <code>untuk_gender</code>, serta penanda
+      <code>butuh_warung_tutup</code> dan <code>butuh_spawn</code>. Adegan ke-9 dan ke-10 dari
+      warga romantis lain dikunci selama pemain berpacaran lewat
+      <code>Pacaran.adegan_terkunci</code>. Aturan lengkapnya ada di halaman
+      <a href="pacaran.html">Pacaran</a>.</p>
+      <ul>
+        <li><strong>Bima:</strong> <code>bima_cs6_catatan_inventaris</code>,
+        <code>bima_cs7_bukan_buat_kamu</code>, <code>bima_cs8_kopi_pahit_ekstra</code>,
+        <code>bima_cs9_balasan_halaman</code>, <code>bima_cs10_latte_belum_selesai</code>.</li>
+        <li><strong>Bu Yani:</strong> <code>bu_yani_cs7_arisan_rt</code>,
+        <code>bu_yani_cs8_adu_ngeyel</code>, <code>bu_yani_cs9_album_foto</code>,
+        <code>bu_yani_cs10_ulang_tahun</code>.</li>
+        <li><strong>Dani:</strong> <code>dani_cs7_semua_tahu</code>,
+        <code>dani_cs8_tangan_gemetar</code>, <code>dani_cs9_tiga_pertanyaan</code>,
+        <code>dani_cs10_janji_puncak</code>.</li>
+        <li><strong>Laras:</strong> <code>laras_cs6_meteran</code>,
+        <code>laras_cs7_tawar_pelan_pelan</code>, <code>laras_cs8_model_dadakan</code>,
+        <code>laras_cs9_surat_dari_kota</code>, <code>laras_cs10_jaket_satu_kalimat</code>.</li>
+        <li><strong>Mei:</strong> <code>mei_cs5_sofa_nyangkut</code>,
+        <code>mei_cs6_ruang_impian</code>, <code>mei_cs7_lupa_istirahat</code>,
+        <code>mei_cs8_meja_peninggalan_ibu</code>, <code>mei_cs9_pembeli_misterius</code>,
+        <code>mei_cs10_cabang_pertama</code>.</li>
+        <li><strong>Rani:</strong> <code>rani_cs6_kopi_tanpa_filter</code>,
+        <code>rani_cs7_alarm_yang_telat</code>, <code>rani_cs8_gosip_halaman</code>,
+        <code>rani_cs9_nyaris</code>, <code>rani_cs10_senja_di_dermaga</code>.</li>
+        <li><strong>Tirto:</strong> <code>tirto_cs6_latihan</code>,
+        <code>tirto_cs7_beda_arah</code>, <code>tirto_cs8_antar_pulang</code>,
+        <code>tirto_cs9_pengakuan</code>, <code>tirto_cs10_pertanyaan</code>.</li>
+        <li><strong>Ustad:</strong> <code>ustad_cs6_tantangan_sambal</code>,
+        <code>ustad_cs7_peci_baru</code>, <code>ustad_cs8_kopi_pertama</code>,
+        <code>ustad_cs9_wasit_dadakan</code>, <code>ustad_cs10_ceramah_tanpa_catatan</code>.</li>
+        <li><strong>Pak Yanto:</strong> <code>yanto_cs6_adu_sabar</code>,
+        <code>yanto_cs7_surat_dalam_botol</code>, <code>yanto_cs8_bintang_di_karang</code>,
+        <code>yanto_cs9_perahu_bapak</code>, <code>yanto_cs10_fajar_pertama</code>.</li>
+      </ul>
+
       <h2>Bedanya dengan dialog harian</h2>
       <p>Dialog harian diatur terpisah. Tiap warga punya dua set dialog: satu untuk sapaan biasa,
       satu untuk perkenalan. Selama kamu belum pernah berkenalan dengan NPC itu, yang dipakai versi
@@ -330,6 +373,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=21"></script>
+<script src="../assets/js/app.js?v=22"></script>
 </body>
 </html>

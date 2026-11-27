@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VIP, IAP &amp; Iklan · Warteg Simulator Wiki</title>
-<meta name="description" content="Manfaat lengkap VIP Warteg Simulator v0.2B: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
+<meta name="description" content="Manfaat lengkap VIP Warteg Simulator v0.2C: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
 <link rel="icon" href="../assets/img/icon.png">
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
 <meta property="og:title" content="VIP, IAP &amp; Iklan · Warteg Simulator Wiki">
-<meta property="og:description" content="Manfaat lengkap VIP Warteg Simulator v0.2B: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
+<meta property="og:description" content="Manfaat lengkap VIP Warteg Simulator v0.2C: 3 action, bebas iklan, 7 tangkapan, 3 tawaran quest, Order Online, harga Rp 25.000 (iOS Rp 29.000), Special Launch Kit, dan Kotak Tips.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/vip-iplan.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
 </head>
 <body data-page="vip-iplan">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -40,7 +40,7 @@
       <h1>VIP, IAP &amp; Iklan</h1>
       <p class="lede">Halaman ini merangkum status VIP, pembelian dalam aplikasi, Special
       Launch Kit, dan sistem iklan. Semua manfaat dan angkanya dibaca dari data game
-      versi 0.2B.</p>
+      versi 0.2C.</p>
 
       <h2>VIP</h2>
       <p>Status VIP tersimpan di perangkat lewat <code>user://vip.cfg</code> dan tetap berlaku
@@ -80,6 +80,13 @@
         <li>Batas waktu tunggu: koneksi atau pengecekan 20 detik, pembayaran maksimal 180 detik.</li>
         <li>Pembelian langsung dikonfirmasi otomatis setelah sukses.</li>
       </ul>
+
+      <h2>Kartu Mitra Mei</h2>
+      <p>Kartu Mitra Mei memakai flag <code>mei_diskon</code>. Saat flag ini aktif, harga yang
+      dikenakan turun <strong>10%</strong>. Hasilnya dibulatkan ke <strong>ratusan terdekat</strong>,
+      jadi kelipatan Rp 100, mengikuti rumus
+      <code>int(round(harga * (100 - 10) / 100.0 / 100.0)) * 100</code>. Rincian hadiah dan item
+      spesial lainnya ada di halaman <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</p>
 
       <h2>Special Launch Kit</h2>
       <table class="price-table">
@@ -144,7 +151,7 @@
       </ul>
 
       <div class="callout"><b>Catatan netral:</b> halaman ini wiki fan-made dan datanya dibaca
-      dari file game versi 0.2B. Membeli VIP atau Special Launch Kit adalah cara langsung
+      dari file game versi 0.2C. Membeli VIP atau Special Launch Kit adalah cara langsung
       mendukung developer gamenya.</div>
     </div>
   </article>
@@ -156,6 +163,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=21"></script>
+<script src="../assets/js/app.js?v=22"></script>
 </body>
 </html>

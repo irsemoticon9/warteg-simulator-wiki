@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semua Mini-Game · Warteg Simulator Wiki</title>
-<meta name="description" content="Daftar mini-game Warteg Simulator v0.2B: 15 konteks yang menjeda x2, warung, mancing, serangga, kerja RT, kuli, 41 varian bantuan Mei, Iqro, Hiragana, dan event kampung.">
+<meta name="description" content="Daftar mini-game Warteg Simulator v0.2C: 15 konteks yang menjeda x2, warung, mancing, serangga, kerja RT, kuli, 41 varian bantuan Mei, Iqro, Hiragana, dan event kampung.">
 <link rel="icon" href="../assets/img/icon.png">
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
 <meta property="og:title" content="Semua Mini-Game · Warteg Simulator Wiki">
-<meta property="og:description" content="Daftar mini-game Warteg Simulator v0.2B: 15 konteks yang menjeda x2, warung, mancing, serangga, kerja RT, kuli, 41 varian bantuan Mei, Iqro, Hiragana, dan event kampung.">
+<meta property="og:description" content="Daftar mini-game Warteg Simulator v0.2C: 15 konteks yang menjeda x2, warung, mancing, serangga, kerja RT, kuli, 41 varian bantuan Mei, Iqro, Hiragana, dan event kampung.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/minigame.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
 </head>
 <body data-page="minigame">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -38,9 +38,9 @@
     <div id="crumb-root"></div>
     <div class="article-card">
       <h1>Semua Mini-Game</h1>
-      <p class="lede">Kode v0.2B mengenal 15 konteks yang menjeda kecepatan x2, dari warung dan
+      <p class="lede">Kode 0.2C mengenal 15 konteks yang menjeda kecepatan x2, dari warung dan
       mancing sampai perjalanan ojek. Halaman ini merangkum aturan tiap sesi, upah pekerjaan,
-      dan 41 varian mini-game bantuan dari Mei.</p>
+      41 varian mini-game bantuan dari Mei, dan sembilan mini-game yang masuk lewat cutscene.</p>
 
       <div class="callout warn"><b>Cara kerja x2:</b> tombolnya bertuliskan x2, tetapi pengali
       asli mesin game adalah <strong>1,7</strong>. Kecepatan ini berlaku di luar mini-game dan
@@ -65,6 +65,50 @@
         <li>OjekPerjalanan, urutan perjalanan ojek, bukan mini-game interaktif.</li>
         <li>CerdasCermatMinigame.</li>
       </ol>
+
+      <h2>Mini-game dalam cutscene 0.2C</h2>
+      <p>Sembilan sesi berikut dipicu dari cutscene baru, bukan dari daftar konteks pengjeda x2
+      di atas dan bukan pula varian bantuan Mei. Mekaniknya dibaca dari skrip mini-game di
+      paket 0.2C.</p>
+      <h3>Amplas &amp; Poles</h3>
+      <p>Pemain menekan dan menggeser secara mendatar searah serat kayu. Tahap 1 adalah AMPLAS
+      sampai permukaan halus, lalu tahap 2 adalah POLES sampai mengilap. Gerakan melawan serat
+      dilarang, dan hasil akhir bergantung pada sisa goresan serta kilap meja.</p>
+      <h3>Belok Sofa</h3>
+      <p>Pemain menahan tombol DORONG untuk menggerakkan sofa, memakai tombol PUTAR KIRI atau
+      PUTAR KANAN di tikungan, lalu kembali mendorong sampai ujung gang. Sofa tidak boleh
+      menyentuh dinding, karena benturan mengurangi hasil akhir.</p>
+      <h3>Redam Pedas</h3>
+      <p>Sambal Bu Yani membuat meter pedas Ustad naik. Pemain mengetuk AIR, KERUPUK, atau NASI
+      supaya meter tidak penuh selama enam suapan dengan jeda lima detik. Air membuat kembung,
+      kerupuk punya jeda sendiri, dan nasi hanya tersedia tiga kali.</p>
+      <h3>Pelanggaran!</h3>
+      <p>Pemain bertindak sebagai wasit dadakan dalam sepuluh kejadian. Pada kontak keras yang
+      ditandai kilatan merah dan lawan jatuh, pemain harus mengetuk pemain yang menyeruduk untuk
+      meniup peluit. Pada kontak bersih, pemain tidak boleh mengetuk siapa pun.</p>
+      <h3>Susun Album</h3>
+      <p>Foto album Bu Yani berantakan. Pemain memilih satu FOTO, lalu memilih KETERANGAN yang
+      cocok dengan gambar di foto itu. Ada lima foto dengan cerita dan komentar pasangan yang
+      sudah ditentukan, dan salah pasangan mengurangi nilai akhir.</p>
+      <h3>Sajikan Arisan</h3>
+      <p>Pemain memilih MENU di baki, lalu mengetuk TAMU yang memesannya. Setiap tamu mengucapkan
+      kalimat pesanan yang harus dicermati, misalnya kopi pahit untuk Pak Damar atau teh manis
+      untuk Ustad Saipul. Salah menyajikan memicu gosip dan mengurangi hasil.</p>
+      <h3>Juri Ikan Dermaga</h3>
+      <p>Bu Yani dan Pak Yanto berdebat, jadi pemain memilih ikan paling segar dalam lima ronde.
+      Tanda yang dipakai adalah mata jernih, insang merah cerah, dan kulit mengkilap. Skrip induk
+      <code>cecep_segar.gd</code> memberi alasan untuk ciri buruk, seperti mata keruh, insang
+      pucat kecoklatan, dan kulit kusam.</p>
+      <h3>Adu Sabar</h3>
+      <p>Pemain tidak boleh menekan saat pelampung hanya main-main. Tombol TARIK hanya boleh
+      ditekan saat gigitan asli, yaitu pelampung tenggelam dan tanda <code>!</code> muncul.
+      Permainan memakai tiga ronde dengan jeda dasar 7, 9, dan 11 detik serta jendela reaksi
+      1,4 detik.</p>
+      <h3>Baca Tanda Alam</h3>
+      <p>Pemain melihat gambar tanda alam, lalu memilih arti yang benar sementara Pak Yanto
+      menunggu. Soal yang terbaca mencakup camar yang menukik menandakan kawanan ikan, bintang
+      yang hampir tidak bergeser menunjuk utara, garis basah tinggi di tiang dermaga sebagai
+      pertanda menaikkan perahu ke pasir, dan lampu di atas air yang dipasang nelayan.</p>
 
       <h2>Warteg Shop (Buka Warung)</h2>
       <p>Alur inti permainan: isi etalase, masak di wajan, layani pelanggan selama 300 detik per
@@ -317,6 +361,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=21"></script>
+<script src="../assets/js/app.js?v=22"></script>
 </body>
 </html>

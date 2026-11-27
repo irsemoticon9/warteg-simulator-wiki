@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catatan Versi · Warteg Simulator Wiki</title>
-<meta name="description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.2B, 0.1c, dan 0.1b, dari Warteg Level 2 dan menu minuman, pekerjaan sampingan baru, quest BANTUAN, sampai profil warga di HP.">
+<meta name="description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.2C, 0.2B, 0.1c, dan 0.1b, dari pacaran dan hadiah, item spesial, cerita dan mini-game, SMS, sampai Warteg Level 2 dan profil warga di HP.">
 <link rel="icon" href="../assets/img/icon.png">
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warteg Simulator Wiki">
 <meta property="og:title" content="Catatan Versi · Warteg Simulator Wiki">
-<meta property="og:description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.2B, 0.1c, dan 0.1b, dari Warteg Level 2 dan menu minuman, pekerjaan sampingan baru, quest BANTUAN, sampai profil warga di HP.">
+<meta property="og:description" content="Catatan versi Warteg Simulator: apa yang berubah di 0.2C, 0.2B, 0.1c, dan 0.1b, dari pacaran dan hadiah, item spesial, cerita dan mini-game, SMS, sampai Warteg Level 2 dan profil warga di HP.">
 <meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/changelog.html">
 <meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
 </head>
 <body data-page="changelog">
 <a class="skip-link" href="#konten">Langsung ke konten</a>
@@ -40,6 +40,65 @@
       <h1>Catatan Versi</h1>
       <p class="lede">Daftar perubahan antar versi Warteg Simulator, dibaca langsung dari kode
       game. Cocokkan halaman panduan lain dengan versi yang tercantum di sini.</p>
+
+      <h2>Versi 0.2C</h2>
+      <p>Versi yang terpasang sekarang: <strong>versionCode 34</strong>, paket
+      <code>com.wartegsim.perlium</code>. Angka di halaman lain sekarang mengikuti
+      <strong>0.2C</strong>. Bagian 0.2B di bawah tetap disimpan sebagai catatan historis.</p>
+
+      <h3>Pacaran dan hadiah</h3>
+      <ul>
+        <li>Sistem pacaran punya kap <strong>200 poin</strong> setelah jadian, mulai dari
+        <strong>101</strong>, tambah <strong>20</strong> per hati pink dengan batas 5 hati,
+        turun <strong>30</strong> saat ditolak, dan relasi turun ke <strong>40</strong> setelah
+        putus. Rinciannya ada di halaman <a href="pacaran.html">Pacaran</a>.</li>
+        <li>Ada <strong>dua hadiah khusus</strong>, Mawar dan Cokelat Pahit, masing-masing
+        <strong>Rp 500.000</strong>. Mawar dipakai untuk menyatakan cinta lagi pada target
+        romantis setelah 10 cutscene selesai dan relasi minimal 95. Cokelat Pahit mengakhiri
+        hubungan dan membuat relasi turun jadi 40. Syarat lengkap ada di
+        <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</li>
+      </ul>
+
+      <h3>Item spesial</h3>
+      <ul>
+        <li><strong>Surat dari Tirto</strong> dan <strong>Beruang dari Bima</strong> masuk ke
+        daftar item. Beruang dari Bima memberi <strong>+10%</strong> toleransi harga selama
+        ada di tas, dengan adegan <code>bima_cs8_kopi_pahit_ekstra</code> dan SMS susulan dari
+        Bima. Undangan gunung dari Tirto hanya untuk CEWEK. Rinciannya ada di
+        <a href="relasi-hadiah.html">Relasi &amp; Kado</a>.</li>
+      </ul>
+
+      <h3>Cerita dan mini-game</h3>
+      <ul>
+        <li>Ada <strong>44 scene ID baru</strong> di <code>assets/scenes_spesial/</code> dan
+        <strong>94 varian dialog</strong> baru. Keduanya berbeda: 94 itu varian a/b/c dan turunan
+        gender untuk ke-44 scene ID, bukan 94 scene ID. Daftar adegan dan syarat kemunculannya
+        dibahas di halaman cerita utama, termasuk penguncian adegan ke-9 dan ke-10 saat
+        berpacaran seperti dijelaskan di <a href="pacaran.html">Pacaran</a>.</li>
+        <li><strong>Sembilan mini-game baru</strong> masuk lewat cutscene: Amplas &amp; Poles,
+        Belok Sofa, Redam Pedas, Pelanggaran!, Susun Album, Sajikan Arisan, Juri Ikan Dermaga,
+        Adu Sabar, dan Baca Tanda Alam. Daftar 15 konteks dan 41 varian bantuan Mei yang lama
+        tetap dipakai.</li>
+      </ul>
+
+      <h3>SMS</h3>
+      <ul>
+        <li>Sistem balasan umum <code>SmsBalasPesan</code> memuat <strong>14 pengirim</strong>
+        dan <strong>408 pesan</strong>. Sistem <code>SmsRomantis</code> yang lama untuk lima
+        penerima tetap berdampingan. Pengirim, contoh balasan, dan batasannya ada di
+        <a href="sms.html">SMS &amp; Balasan</a>.</li>
+      </ul>
+
+      <h3>Ekonomi</h3>
+      <ul>
+        <li>Pancing yang sudah dibeli bisa dijual lagi ke Pak Yanto seharga <strong>75%</strong>
+        dari harga beli, kecuali pancing terakhir yang masih dimiliki pemain.</li>
+        <li>Warteg <strong>200 bintang</strong> ke atas wajib memajang minimal <strong>4 lauk</strong>,
+        dan <strong>300 bintang</strong> ke atas minimal <strong>5 lauk</strong>. Kalau tidak,
+        pembeli menganggap menu sepi lalu pindah warung.</li>
+        <li>Kartu Mitra Mei membawa <strong>diskon Mei 10%</strong> dengan harga yang dibulatkan
+        ke kelipatan ratusan terdekat.</li>
+      </ul>
 
       <h2>Versi 0.2B</h2>
       <p>Versi yang terpasang saat wiki ini diperbarui: <strong>versionCode 33</strong>,
@@ -203,7 +262,7 @@
       </ul>
 
       <h2>Versi 0.1A</h2>
-      <p>Rilis awal. Angka di halaman lain sekarang mengikuti <strong>0.2B</strong>; bagian yang
+      <p>Rilis awal. Angka di halaman lain sekarang mengikuti <strong>0.2C</strong>; bagian yang
       masih menyebut 0.1b/0.1c adalah catatan historis kapan sebuah mekanik pertama kali muncul.</p>
     </div>
   </article>
@@ -215,6 +274,6 @@
   <span><b>Unofficial Wiki</b></span>
   <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
 </footer>
-<script src="../assets/js/app.js?v=21"></script>
+<script src="../assets/js/app.js?v=22"></script>
 </body>
 </html>

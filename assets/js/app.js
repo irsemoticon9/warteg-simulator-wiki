@@ -22,7 +22,9 @@
     { id: "karakter", label: "Karakter", items: [
       { id: "npc", href: "pages/npc.html", title: "NPC & Pelanggan", desc: "14 warga, jadwal, peran", kw: "npc warga profil jadwal lokasi peta pelanggan kontak hp" },
       { id: "relasi-hadiah", href: "pages/relasi-hadiah.html", title: "Relasi & Kado", desc: "Poin, preferensi, ulang tahun", kw: "relasi poin kado hadiah toko pelangi selera suka tidak suka ulang tahun teman" },
-      { id: "romansa", href: "pages/romansa.html", title: "Romansa", desc: "5 jalur, tier dialog", kw: "romansa cinta rani dani tier dialog pacar" }
+      { id: "romansa", href: "pages/romansa.html", title: "Romansa", desc: "5 jalur, tier dialog", kw: "romansa cinta rani dani tier dialog pacar" },
+      { id: "pacaran", href: "pages/pacaran.html", title: "Pacaran", desc: "Poin, Mawar, jalur romantis", kw: "pacaran pacar jadian ditolak putus hati pink mawar cokelat pahit romantis gender" },
+      { id: "sms", href: "pages/sms.html", title: "SMS & Balasan", desc: "14 pengirim, balasan chat", kw: "sms balasan pesan chat pengirim romantis sms romantis inbox" }
     ]},
     { id: "ekonomi", label: "Data & Ekonomi", items: [
       { id: "warteg-shop", href: "pages/warteg-shop.html", title: "Buka Warung", desc: "Loop inti: etalase, masak, layani", tag: "INTI", kw: "warung buka etalase masak goreng wajan layani pelanggan tutup shift nasi bungkus" },
@@ -158,7 +160,7 @@
       html += '<a href="#' + h.id + '">' + h.textContent + "</a>";
     });
     note.innerHTML = html + "</nav>" +
-      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.2B (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
+      '<div class="rail-note"><b>Sumber:</b> dipanen langsung dari kode game v0.2C (decompile). Angka adalah nilai asli, bukan perkiraan.</div>';
     var links = note.querySelectorAll("nav a");
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

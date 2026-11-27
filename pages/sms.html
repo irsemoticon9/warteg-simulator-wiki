@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMS &amp; Balasan · Warteg Simulator Wiki</title>
+<meta name="description" content="Sistem balasan SMS di Warteg Simulator 0.2C: 14 pengirim, 408 pesan, aturan balasan, dan perbedaan dengan SmsRomantis untuk lima penerima.">
+<link rel="icon" href="../assets/img/icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Warteg Wiki">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Warteg Simulator Wiki">
+<meta property="og:title" content="SMS &amp; Balasan · Warteg Simulator Wiki">
+<meta property="og:description" content="Sistem balasan SMS di Warteg Simulator 0.2C: 14 pengirim, 408 pesan, aturan balasan, dan perbedaan dengan SmsRomantis untuk lima penerima.">
+<meta property="og:url" content="https://irsemoticon9.github.io/warteg-simulator-wiki/pages/sms.html">
+<meta property="og:image" content="https://irsemoticon9.github.io/warteg-simulator-wiki/assets/img/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Warteg Simulator Wiki">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=22">
+</head>
+<body data-page="sms">
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+<div id="shell-root"></div>
+<div id="search-out"></div>
+
+<main class="wrap with-toc" id="konten">
+  <article class="article">
+    <div id="crumb-root"></div>
+    <div class="article-card">
+      <h1>SMS &amp; Balasan</h1>
+      <p class="lede">Di Warteg Simulator 0.2C ada dua sistem SMS yang berdampingan. SmsRomantis
+      adalah sistem lama untuk lima penerima yang sudah dijelaskan di halaman
+      <a href="romansa.html">Romansa</a>. SmsBalasPesan adalah sistem balasan umum yang lebih
+      luas, dengan 14 pengirim dan 408 pesan. Halaman ini merangkum pengirim, contoh balasan,
+      dan aturan yang bisa dibuktikan dari script.</p>
+
+      <h2>Dua sistem yang berdampingan</h2>
+      <table class="price-table">
+        <thead><tr><th>Sistem</th><th>Jangkauan</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td><code>SmsRomantis</code></td><td>Lima penerima romantis</td><td>Rani, Dani, Tirto, Laras, dan Bima. Poin sedang 20, poin balasan 40, tiga pilihan, maksimal 2 kali per minggu. Rinciannya ada di <a href="romansa.html">Romansa</a>.</td></tr>
+          <tr><td><code>SmsBalasPesan</code></td><td><strong>14 pengirim</strong> dan <strong>408 pesan</strong></td><td>Teks pesan disimpan per pengirim di <code>sms_balas_pesan.gd</code>. Balasan diambil dari daftar khusus untuk teks itu atau dari kategori umum, romantis, dan pacar.</td></tr>
+        </tbody>
+      </table>
+      <p>Keduanya tidak saling menggantikan. SMS romantis untuk jalur lima warga tetap memakai
+      aturan di <code>sms_romantis.gd</code>, sementara balasan umum memakai
+      <code>sms_balas.gd</code>. Status pacar yang dipakai sistem balasan berhubungan dengan
+      aturan di halaman <a href="pacaran.html">Pacaran</a>.</p>
+
+      <h2>14 pengirim dan contoh balasannya</h2>
+      <p>Jumlah di bawah dihitung dari entri pesan di <code>sms_balas_pesan.gd</code>. Kolom
+      terakhir hanya satu contoh opsi balasan yang bisa dipilih pemain, bukan cuplikan
+      percakapan lengkap.</p>
+      <table class="price-table">
+        <thead><tr><th>Pengirim</th><th>Jumlah pesan</th><th>Contoh balasan singkat</th></tr></thead>
+        <tbody>
+          <tr><td><code>kang_cecep</code></td><td>7</td><td>Waalaikumsalam, Kang. Ikannya sudah saya terima, makasih!</td></tr>
+          <tr><td><code>bu_lala</code></td><td>13</td><td>Asyik, orek tempe warteg bakal ada nih.</td></tr>
+          <tr><td><code>bu_yani</code></td><td>5</td><td>Aduh Bu, dikompres hangat dulu.</td></tr>
+          <tr><td><code>bima</code></td><td>65</td><td>Kopi susu gula aren? Kedengarannya enak.</td></tr>
+          <tr><td><code>joko</code></td><td>5</td><td>Siap, Pak. Salam kenal dari warteg.</td></tr>
+          <tr><td><code>pak_yanto</code></td><td>5</td><td>Wah, rezeki. Umpannya saya siapkan, Pak.</td></tr>
+          <tr><td><code>jamal</code></td><td>5</td><td>Seru tuh! Siapa aja yang main, Mal?</td></tr>
+          <tr><td><code>ustad_saipul</code></td><td>5</td><td>Waalaikumsalam, Ustad. Aamiin, semoga Ustad juga.</td></tr>
+          <tr><td><code>pak_damar</code></td><td>11</td><td>Siap, Pak RT. Depan warteg saya sapu.</td></tr>
+          <tr><td><code>mei</code></td><td>6</td><td>Nampan barunya model apa, Mei?</td></tr>
+          <tr><td><code>laras</code></td><td>65</td><td>Pagi, Laras. Kain barunya warna apa?</td></tr>
+          <tr><td><code>tirto</code></td><td>70</td><td>Siap, Dok. Air putih dan tidur cukup.</td></tr>
+          <tr><td><code>rani</code></td><td>73</td><td>Halo, Rani. Kamu juga ya.</td></tr>
+          <tr><td><code>dani</code></td><td>73</td><td>Selamat pagi! Semangat patrolinya.</td></tr>
+        </tbody>
+      </table>
+      <p>Jumlah seluruhnya <strong>408 pesan</strong>. Isi ke-408 pesan tidak ditranskrip di wiki.
+      Contoh di tabel diambil dari opsi balasan yang tercatat di dalam data, jadi teksnya
+      adalah kalimat pemain, bukan kalimat balasan dari NPC.</p>
+
+      <h2>Aturan yang bisa dibuktikan dari script</h2>
+      <ul>
+        <li><code>sms_inbox.gd</code>: <code>check()</code> dipanggil ketika tanggal berubah
+        lewat <code>GameCalendar.day_changed</code>, dan sekali saat node siap lewat
+        <code>call_deferred()</code>. Setiap entri <code>SmsSchedule.DAFTAR</code> dengan
+        <code>hari</code> tidak lebih besar dari <code>get_total_day()</code> dan belum ada
+        di <code>_terkirim</code> dikirim sekali. Setelah itu fungsi memanggil
+        <code>SmsRomantis.harian(today)</code> dan <code>TirtoUndangan.harian()</code>.</li>
+        <li><code>sms_inbox.gd</code>: <code>kirim_sesuai_waktu()</code> membaca
+        <code>fase</code> dari <code>SmsBalasPesan.WAKTU[teks]</code> dengan nilai awal 0.
+        Bila kalender tidak ada atau fase saat ini sudah mencapai nilai itu, pesan dikirim
+        langsung. Bila belum, pesan disimpan di antrean <code>sms_tunda</code> bersama
+        <code>dari</code>, <code>teks</code>, <code>ekstra</code>, <code>fase</code>, dan
+        <code>hari</code>.</li>
+        <li><code>sms_inbox.gd</code>: <code>kirim_tertunda()</code> berjalan saat
+        <code>GameCalendar.phase_changed</code>. Pesan dari antrean dikirim hanya jika
+        <code>hari</code> yang tersimpan sama dengan <code>get_total_day()</code> dan
+        <code>fase</code> tidak lebih besar dari fase saat ini. Antrean ditulis ulang dengan
+        sisa entri yang harinya masih sama, jadi entri dari hari lain tidak ikut dikirim
+        pada pergantian fase itu.</li>
+        <li><code>sms_balas.gd</code>: <code>layak()</code> menolak pesan sistem, pesan
+        pesanan, pesan yang sudah punya <code>balasan</code>, dan teks yang memuat
+        <code>(Pilih Terima atau Tolak</code>. Pengirim juga harus punya data di
+        <code>SmsBalasData.DATA</code>. <code>pesan_bisa_dibalas(dari)</code> mengambil
+        pesan pertama dari pengirim itu (pesan terbaru, karena inbox memakai
+        <code>push_front</code>); bila pesan itu tidak lolos pemeriksaan, hasilnya kamus
+        kosong.</li>
+        <li><code>sms_balas.gd</code>: <code>kategori()</code> memilih <code>pacar</code>
+        bila pesan bertanda <code>romantis</code> dan <code>NpcPacar.aktif(id)</code> benar,
+        memilih <code>romantis</code> bila pesan bertanda <code>romantis</code>, data
+        pengirim memiliki kumpulan romantis, pengirimnya termasuk NPC romantis, dan poin
+        relasi minimal 40, lalu memilih <code>umum</code> untuk sisanya.
+        <code>opsi()</code> memakai daftar khusus bila <code>kunci</code> atau teks pesan
+        cocok dengan entri di <code>SmsBalasPesan.DATA</code>. Bila tidak cocok, dia
+        mengambil maksimal tiga opsi dari kumpulan kategori itu, atau dari daftar balas
+        pacar untuk kategori pacar.</li>
+      </ul>
+      <p>Pemicu per pesan belum diverifikasi satu per satu; sebagian entri WAKTU memuat
+      fase dan hari, tetapi wiki tidak merincinya. Sumber aturan umum:
+      <code>sms_inbox.gd</code> dan <code>sms_balas.gd</code>. Sumber sebagian entri
+      <code>WAKTU</code>: <code>sms_balas_pesan.gd</code>.</p>
+
+      <h2>Ringkasan</h2>
+      <p>SMS romantis lama tetap menjadi bagian dari lima jalur di
+      <a href="romansa.html">Romansa</a>, sedangkan balasan umum memakai 14 pengirim dan
+      408 pesan di halaman ini. Kalau kamu menanyakan poin, status pacar, atau kunci adegan
+      yang dipakai kategori <code>pacar</code>, lihat <a href="pacaran.html">Pacaran</a>.</p>
+    </div>
+  </article>
+
+  <aside><div class="toc-note" id="toc-root"></div></aside>
+</main>
+
+<footer class="footer wrap">
+  <span><b>Unofficial Wiki</b></span>
+  <span>Fan-made · by <a href="https://www.threads.com/@irsemoticon_" target="_blank" rel="noopener">Irse Surya Bagaskara</a></span>
+</footer>
+<script src="../assets/js/app.js?v=22"></script>
+</body>
+</html>
