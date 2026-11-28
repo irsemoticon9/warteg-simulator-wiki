@@ -282,3 +282,11 @@
     initInstallButton();
   });
 })();
+
+(function () {
+  if (!(window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules'))) return;
+  var el = document.createElement('script');
+  el.type = 'speculationrules';
+  el.textContent = JSON.stringify({ prerender: [{ source: 'document', where: { selector_matches: "a[href$='.html']" }, eagerness: 'moderate' }] });
+  document.head.appendChild(el);
+})();

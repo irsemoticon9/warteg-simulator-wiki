@@ -34,7 +34,7 @@ Lalu buka http://localhost:8471.
 
 ## Catatan versi aset
 
-File `index.html` dan semua halaman di `pages/` memuat `app.js?v=22` dan
-`style.css?v=22`. Naikkan angka versi setiap kali mengubah file JS/CSS supaya
+File `index.html` dan semua halaman di `pages/` memuat `app.js?v=23` dan
+`style.css?v=23`. Naikkan angka versi setiap kali mengubah file JS/CSS supaya
 browser tidak memakai salinan lama dari cache.
-Versi 22 dipakai karena pembaruan konten 0.2C.
+Versi 23 dipakai karena transisi antarhalaman dan prerender tautan ditambahkan setelah pembaruan konten 0.2C.
