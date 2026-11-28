@@ -30,8 +30,8 @@
       { id: "warteg-shop", href: "pages/warteg-shop.html", title: "Buka Warung", desc: "Loop inti: etalase, masak, layani", tag: "INTI", kw: "warung buka etalase masak goreng wajan layani pelanggan tutup shift nasi bungkus" },
       { id: "menu-harga", href: "pages/menu-harga.html", title: "Menu & Harga", desc: "19 menu, resep & pasar mingguan", kw: "menu harga jual modal untung nasi ayam ikan telur sayur minuman resep" },
       { id: "uang-bank", href: "pages/uang-bank.html", title: "Uang, Kas & Bank", desc: "Pecahan, QRIS, tagihan", kw: "uang kas bank tabungan qris tunai tagihan ojek online ongkir" },
-      { id: "belanja-inventory", href: "pages/belanja-inventory.html", title: "Belanja & Inventory", desc: "Bahan, perabot, outfit", kw: "belanja toko pasar jam buka tutup bahan perabot mei butik outfit hadiah pelangi vitamin puskesmas inventory tas" },
-      { id: "buff-kafe", href: "pages/buff-kafe.html", title: "Buff Kafe", desc: "9 item & efeknya", kw: "kafe kopi minuman buff teh jus jeruk mie goreng" }
+      { id: "belanja-inventory", href: "pages/belanja-inventory.html", title: "Belanja & Inventory", desc: "Bahan, perabot, pakaian", kw: "belanja toko pasar jam buka tutup bahan perabot mei butik outfit hadiah pelangi vitamin puskesmas inventory tas" },
+      { id: "buff-kafe", href: "pages/buff-kafe.html", title: "Efek Makanan Kafe", desc: "9 item & efeknya", kw: "kafe kopi minuman buff efek makanan teh jus jeruk mie goreng" }
     ]},
     { id: "koleksi", label: "Koleksi & Mini-Game", items: [
       { id: "ikan-mancing", href: "pages/ikan-mancing.html", title: "Ikan & Mancing", desc: "DB ikan, syarat, umpan", kw: "mancing ikan pancing umpan dermaga joran reel" },

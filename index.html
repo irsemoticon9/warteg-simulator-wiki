@@ -16,8 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logo Warteg Simulator Wiki">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#f7f3e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f140f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f3e8">
 <link rel="icon" href="assets/img/icon.png">
 <link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
@@ -26,7 +25,8 @@
 <link rel="preload" as="image" href="assets/img/hero-warteg.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="assets/css/style.css?v=22">
 </head>
 <body data-page="index">
@@ -74,7 +74,7 @@
     <div class="board">
       <a class="board-item" href="pages/npc.html"><span class="no">04</span><span class="name">NPC &amp; Pelanggan</span><span class="dots"></span><span class="desc">14 warga, jadwal, peran</span></a>
       <a class="board-item" href="pages/relasi-hadiah.html"><span class="no">05</span><span class="name">Relasi &amp; Kado</span><span class="dots"></span><span class="desc">Poin, preferensi, ulang tahun</span></a>
-      <a class="board-item" href="pages/romansa.html"><span class="no">06</span><span class="name">Romansa</span><span class="dots"></span><span class="desc">5 jalur, tier dialog</span></a>
+      <a class="board-item" href="pages/romansa.html"><span class="no">06</span><span class="name">Romansa</span><span class="dots"></span><span class="desc">5 jalur, tingkat obrolan</span></a>
       <a class="board-item" href="pages/pacaran.html"><span class="no">07</span><span class="name">Pacaran</span><span class="dots"></span><span class="desc">Poin, Mawar, jalur romantis</span></a>
       <a class="board-item" href="pages/sms.html"><span class="no">08</span><span class="name">SMS &amp; Balasan</span><span class="dots"></span><span class="desc">14 pengirim, balasan chat</span></a>
     </div>
@@ -83,20 +83,20 @@
   <section class="board-section" id="ekonomi" aria-label="Data dan ekonomi">
     <div class="board-head"><h2>Data &amp; Ekonomi</h2><small>5 halaman</small></div>
     <div class="board">
-      <a class="board-item" href="pages/warteg-shop.html"><span class="no">09</span><span class="name">Buka Warung</span><span class="dots"></span><span class="desc">Loop inti: etalase, masak, layani</span><span class="tag">INTI</span></a>
+      <a class="board-item" href="pages/warteg-shop.html"><span class="no">09</span><span class="name">Buka Warung</span><span class="dots"></span><span class="desc">Alur utama: etalase, masak, layani</span><span class="tag">INTI</span></a>
       <a class="board-item" href="pages/menu-harga.html"><span class="no">10</span><span class="name">Menu &amp; Harga</span><span class="dots"></span><span class="desc">19 menu, resep &amp; pasar mingguan</span></a>
       <a class="board-item" href="pages/uang-bank.html"><span class="no">11</span><span class="name">Uang, Kas &amp; Bank</span><span class="dots"></span><span class="desc">Pecahan, QRIS, tagihan</span></a>
-      <a class="board-item" href="pages/belanja-inventory.html"><span class="no">12</span><span class="name">Belanja &amp; Inventory</span><span class="dots"></span><span class="desc">Bahan, perabot, outfit</span></a>
-      <a class="board-item" href="pages/buff-kafe.html"><span class="no">13</span><span class="name">Buff Kafe</span><span class="dots"></span><span class="desc">9 item &amp; efeknya</span></a>
+      <a class="board-item" href="pages/belanja-inventory.html"><span class="no">12</span><span class="name">Belanja &amp; Inventory</span><span class="dots"></span><span class="desc">Bahan, perabot, pakaian</span></a>
+      <a class="board-item" href="pages/buff-kafe.html"><span class="no">13</span><span class="name">Efek Makanan Kafe</span><span class="dots"></span><span class="desc">9 item &amp; efeknya</span></a>
     </div>
   </section>
 
   <section class="board-section" id="koleksi" aria-label="Koleksi dan mini-game">
     <div class="board-head"><h2>Koleksi &amp; Mini-Game</h2><small>3 halaman</small></div>
     <div class="board">
-      <a class="board-item" href="pages/ikan-mancing.html"><span class="no">14</span><span class="name">Ikan &amp; Mancing</span><span class="dots"></span><span class="desc">DB ikan, syarat, umpan</span></a>
+      <a class="board-item" href="pages/ikan-mancing.html"><span class="no">14</span><span class="name">Ikan &amp; Mancing</span><span class="dots"></span><span class="desc">Daftar ikan, syarat, umpan</span></a>
       <a class="board-item" href="pages/serangga.html"><span class="no">15</span><span class="name">Serangga</span><span class="dots"></span><span class="desc">25 jenis, pola gerak, harga</span></a>
-      <a class="board-item" href="pages/minigame.html"><span class="no">16</span><span class="name">Semua Mini-Game</span><span class="dots"></span><span class="desc">15 konteks, 41 bantuan Mei</span></a>
+      <a class="board-item" href="pages/minigame.html"><span class="no">16</span><span class="name">Semua Mini-Game</span><span class="dots"></span><span class="desc">15 situasi, 41 bantuan Mei</span></a>
     </div>
   </section>
 
